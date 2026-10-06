@@ -1,0 +1,225 @@
+/* ==========================================================================
+   STACKLY TRAVEL & TOURISM - RESPONSIVE STYLES
+   Breakpoints: 1200px, 992px, 768px, 576px, 375px, 320px
+   ========================================================================== */
+
+/* Large Tablets & Small Desktops (max-width: 1199px) */
+@media (max-width: 1199px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+  
+  .tour-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .search-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .search-form-grid button {
+    grid-column: span 2;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .nav-menu, .nav-actions .btn-outline {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .hero-title {
+    font-size: 2.7rem;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .page-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .feature-grid,
+  .testi-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .auth-body-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  
+  .auth-sidebar-hero {
+    min-height: auto;
+    padding: 36px 28px;
+  }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .section-padding-sm {
+    padding: 40px 0;
+  }
+  
+  .hero-main {
+    min-height: auto;
+    padding: 80px 0 90px 0;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+  
+  .search-strip-wrap {
+    margin-top: -30px;
+  }
+  
+  .search-box-card {
+    padding: 22px 18px;
+  }
+  
+  .search-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .search-form-grid button {
+    grid-column: span 1;
+  }
+  
+  .tour-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .auth-form-card {
+    padding: 30px 20px;
+  }
+  
+  .social-auth-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cta-banner {
+    padding: 50px 20px;
+  }
+  
+  .cta-banner h2 {
+    font-size: 2.1rem;
+  }
+  
+  .error-code {
+    font-size: 5rem;
+  }
+  
+  .error-card {
+    padding: 40px 20px;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .page-hero-title {
+    font-size: 1.9rem;
+  }
+  
+  .btn {
+    padding: 11px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .nav-container {
+    padding: 0 16px;
+    height: 70px;
+  }
+  
+  .brand-logo-img {
+    height: 34px;
+  }
+  
+  .brand-text-badge {
+    font-size: 1.2rem;
+  }
+  
+  .auth-fixed-header {
+    padding: 0 16px;
+    height: 65px;
+  }
+}
+
+/* Ultra Small Screens (320px - 375px) */
+@media (max-width: 375px) {
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .hero-actions .btn {
+    width: 100%;
+  }
+  
+  .pricing-price {
+    font-size: 2.4rem;
+  }
+}
+

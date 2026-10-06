@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | Stackly Travel & Tourism</title>
+  <meta name="description" content="Register for a Stackly Travel account. Access curated wilderness expeditions, track bookings, and connect with certified guides.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="auth-page-wrapper">
+
+  <!-- Fixed Auth Header (NO NAVBAR) -->
+  <header class="auth-fixed-header">
+    <a href="index.html" class="brand-logo-link" title="Return to Stackly Home">
+      <img src="assets/images/logo.svg" alt="Stackly Travel Logo" class="brand-logo-img">
+    </a>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <a href="index.html" class="btn btn-sm btn-outline">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+      </a>
+      <a href="sign-in.html" class="btn btn-sm btn-secondary">
+        Sign In
+      </a>
+    </div>
+  </header>
+
+  <!-- Split Layout Container -->
+  <main class="auth-body-container" style="align-items:flex-start; margin-top:20px; margin-bottom:40px;">
+    <!-- Left Hero & Benefits Column -->
+    <div class="auth-sidebar-hero" style="position:sticky; top:95px;">
+      <div class="auth-hero-header">
+        <span class="badge-tag badge-secondary" style="background:rgba(232,96,76,0.3); color:#FFFFFF;">
+          <i class="fa-solid fa-compass"></i> Join The Collective
+        </span>
+        <h2>Unlock The World's Great Expeditions</h2>
+        <p>Register as a Traveler, Tour Guide, Agency Partner, or Administrator to access the complete Stackly ecosystem.</p>
+      </div>
+
+      <ul class="auth-benefits-list">
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Guaranteed first access to limited-capacity seasonal tours</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Direct satellite manifest tracking and digital gear checklists</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Dedicated 24/7 expedition support desk</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Earn Adventure Points redeemable for future expeditions</span>
+        </li>
+      </ul>
+
+      <div class="auth-testimonial-pill">
+        <p>"Signing up took minutes, and being able to choose my specific role gave me exactly the tools I needed for our alpine crew."</p>
+        <strong style="font-size:0.8rem; color:#FFFFFF;">— David S., Alpine Explorer</strong>
+      </div>
+    </div>
+
+    <!-- Right Registration Form Card -->
+    <div class="auth-form-card">
+      <h1 class="auth-form-title">Create Your Account</h1>
+      <p class="auth-form-sub">Join thousands of adventurers worldwide. All fields marked (<span style="color:var(--error);">*</span>) are required.</p>
+
+      <!-- Alert Box for Validation / Feedback -->
+      <div id="signUpAlert" style="display:none;"></div>
+
+      <form id="signUpForm" novalidate>
+        <!-- Username & Role -->
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label for="regUsername" class="form-label">Username <span class="req">*</span></label>
+            <input type="text" id="regUsername" class="form-control" placeholder="explorer_alex" required autocomplete="username">
+            <div class="invalid-feedback">Username must be at least 3 characters and unique.</div>
+          </div>
+          <div class="form-group">
+            <label for="regRole" class="form-label">Account Role <span class="req">*</span></label>
+            <select id="regRole" class="form-control" required>
+              <option value="">Select your role...</option>
+              <option value="traveler">Traveler / Explorer</option>
+              <option value="guide">Tour Guide / Operator</option>
+              <option value="agency">Agency Partner</option>
+              <option value="admin">Travel Admin</option>
+            </select>
+            <div class="invalid-feedback">Please select an account role.</div>
+          </div>
+        </div>
+
+        <!-- First & Last Name -->
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label for="regFirstName" class="form-label">First Name <span class="req">*</span></label>
+            <input type="text" id="regFirstName" class="form-control" placeholder="Alex" required autocomplete="given-name">
+            <div class="invalid-feedback">First name is required.</div>
+          </div>
+          <div class="form-group">
+            <label for="regLastName" class="form-label">Last Name <span class="req">*</span></label>
+            <input type="text" id="regLastName" class="form-control" placeholder="Sterling" required autocomplete="family-name">
+            <div class="invalid-feedback">Last name is required.</div>
+          </div>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group">
+          <label for="regEmail" class="form-label">Email Address <span class="req">*</span></label>
+          <input type="email" id="regEmail" class="form-control" placeholder="alex.sterling@example.com" required autocomplete="email">
+          <div class="invalid-feedback">Please provide a valid, unused email address.</div>
+        </div>
+
+        <!-- Password with Strength Indicator & Toggle -->
+        <div class="form-group">
+          <label for="regPassword" class="form-label">Password <span class="req">*</span></label>
+          <div class="password-input-wrap">
+            <input type="password" id="regPassword" class="form-control" placeholder="Min. 8 chars, uppercase, number & symbol" required autocomplete="new-password">
+            <button type="button" class="password-toggle-btn" data-target="regPassword" aria-label="Toggle password visibility">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="pwd-strength-bar">
+            <div class="pwd-strength-fill" id="pwdStrengthFill"></div>
+          </div>
+          <div class="pwd-strength-text" id="pwdStrengthText">Enter a secure password</div>
+          <div class="invalid-feedback">Password must have at least 8 characters, an uppercase letter, lowercase letter, a number, and a special symbol (@$!%*?&).</div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="form-group">
+          <label for="regConfirmPassword" class="form-label">Confirm Password <span class="req">*</span></label>
+          <div class="password-input-wrap">
+            <input type="password" id="regConfirmPassword" class="form-control" placeholder="Re-enter password" required autocomplete="new-password">
+            <button type="button" class="password-toggle-btn" data-target="regConfirmPassword" aria-label="Toggle password visibility">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="invalid-feedback">Passwords do not match. Please verify both entries.</div>
+        </div>
+
+        <!-- Mobile Number with Split Country Code -->
+        <div class="form-group">
+          <label class="form-label">Mobile Number <span class="req">*</span></label>
+          <div style="display:grid; grid-template-columns: 110px 1fr; gap:10px;">
+            <select id="regPhoneCode" class="form-control" aria-label="Country Code">
+              <option value="+91">+91 (IN)</option>
+              <option value="+1">+1 (US)</option>
+              <option value="+44">+44 (UK)</option>
+              <option value="+41">+41 (CH)</option>
+              <option value="+255">+255 (TZ)</option>
+              <option value="+81">+81 (JP)</option>
+              <option value="+61">+61 (AU)</option>
+            </select>
+            <input type="tel" id="regPhone" class="form-control" placeholder="9876543210" required>
+          </div>
+          <div class="invalid-feedback">Please enter a valid numeric phone number.</div>
+        </div>
+
+        <!-- Address -->
+        <div class="form-group">
+          <label for="regAddress" class="form-label">Residential Address <span class="opt">(Optional)</span></label>
+          <input type="text" id="regAddress" class="form-control" placeholder="City, State, Country">
+          <div class="invalid-feedback">Please enter at least 5 characters for your address.</div>
+        </div>
+
+        <!-- Terms & Conditions Checkbox (Mandatory, link to 404) -->
+        <div class="form-group" style="margin-bottom:14px;">
+          <label style="display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; cursor:pointer;">
+            <input type="checkbox" id="regTerms" required style="margin-top:3px; width:16px; height:16px;">
+            <span>
+              I agree to the <a href="404.html" style="color:var(--primary); text-decoration:underline;">Terms of Use</a> and <a href="404.html" style="color:var(--primary); text-decoration:underline;">Privacy Policy</a>. <span class="req">*</span>
+            </span>
+          </label>
+          <div class="invalid-feedback" style="display:block; margin-left:26px;" id="termsFeedback"></div>
+        </div>
+
+        <!-- Newsletter Opt-in Checkbox (Optional, link to 404) -->
+        <div class="form-group">
+          <label style="display:flex; align-items:flex-start; gap:10px; font-size:0.85rem; color:var(--text-muted); cursor:pointer;">
+            <input type="checkbox" id="regNewsletter" style="margin-top:3px; width:16px; height:16px;">
+            <span>
+              I would like to receive newsletters, seasonal expedition announcements, and adventure travel updates. <a href="404.html" style="color:var(--secondary); text-decoration:underline;">Read More</a>
+            </span>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top:12px;">
+          <i class="fa-solid fa-user-plus"></i> Complete Registration
+        </button>
+      </form>
+
+      <!-- Social Registration (All redirect to 404) -->
+      <div class="auth-divider">
+        <span>Or register using social media</span>
+      </div>
+
+      <div class="social-auth-grid">
+        <a href="404.html" class="social-auth-btn" title="Sign up with Google" aria-label="Google">
+          <i class="fa-brands fa-google"></i>
+        </a>
+        <a href="404.html" class="social-auth-btn" title="Sign up with Apple" aria-label="Apple">
+          <i class="fa-brands fa-apple"></i>
+        </a>
+        <a href="404.html" class="social-auth-btn" title="Sign up with Microsoft" aria-label="Microsoft">
+          <i class="fa-brands fa-microsoft"></i>
+        </a>
+        <a href="404.html" class="social-auth-btn" title="Sign up with Facebook" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+
+      <div style="text-align:center; margin-top:24px; font-size:0.92rem; color:var(--text-muted);">
+        Already registered? 
+        <a href="sign-in.html" style="color:var(--primary); font-weight:700;">Sign In here</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Packages | Stackly Travel & Tourism</title>
+  <meta name="description" content="Transparent, all-inclusive expedition pricing with no hidden fees. Flexible deposit options and 100% weather safety guarantees.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logo-white.svg" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Pricing & Packages...</div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar (100% Full Width) -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link" title="Stackly Travel & Tourism">
+        <img src="assets/images/logo.svg" alt="Stackly Logo" class="brand-logo-img">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="tours.html" class="nav-link">Tours & Safaris <i class="fa-solid fa-angle-down" style="font-size:0.75rem; margin-left:3px;"></i></a>
+            <div class="nav-dropdown">
+              <a href="tours.html" class="dropdown-link">All Expeditions <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="tours.html" class="dropdown-link">African Safaris <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="tours.html" class="dropdown-link">Alpine Treks <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="tours.html" class="dropdown-link">Island & Marine Escapes <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="tours.html" class="dropdown-link">Cultural Odysseys <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link">Pricing & Packages</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="sign-in.html" class="btn btn-outline btn-sm">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-sm">Sign Up</a>
+        <button type="button" class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-drawer">
+      <div>
+        <div class="mobile-drawer-header">
+          <a href="index.html" class="brand-logo-link">
+            <img src="assets/images/logo.svg" alt="Stackly Logo" style="height:36px;">
+          </a>
+          <button type="button" class="mobile-drawer-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="tours.html" class="nav-link">Tours & Safaris</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing & Packages</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="mobile-nav-cta">
+        <a href="sign-in.html" class="btn btn-outline btn-block">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-block">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero-title">Transparent Travel Packages</h1>
+        <p class="page-hero-desc">All-inclusive wilderness expeditions. No surprise gear fees, hidden park surcharges, or booking gotchas.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i>
+          <span>Pricing & Packages</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TIER PACKAGES -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag badge-secondary"><i class="fa-solid fa-tags"></i> Expedition Tiers</span>
+          <h2 class="section-title">Select Your Travel Comfort</h2>
+          <p class="section-desc">Choose between small group explorations, premium comfort lodges, or bespoke private charter expeditions.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1 -->
+          <div class="pricing-card">
+            <h3 class="pricing-name">Explorer Standard</h3>
+            <p class="pricing-desc">Ideal for spirited travelers seeking authentic wilderness immersion with small groups.</p>
+            <div class="pricing-price">$1,450 <span>/ guest</span></div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check check"></i> Small group format (Max 10-12 guests)</li>
+              <li><i class="fa-solid fa-check check"></i> Certified Local Wilderness Guide</li>
+              <li><i class="fa-solid fa-check check"></i> Eco-Camp & 3-Star Traditional Chalets</li>
+              <li><i class="fa-solid fa-check check"></i> All National Park Entry Permits</li>
+              <li><i class="fa-solid fa-check check"></i> Breakfasts & Field Trail Lunches</li>
+              <li><i class="fa-solid fa-xmark cross"></i> Private 4x4 Vehicle Exclusivity</li>
+              <li><i class="fa-solid fa-xmark cross"></i> High-Altitude Medevac Insurance</li>
+            </ul>
+            <!-- Action button redirecting to 404 -->
+            <a href="404.html" class="btn btn-outline btn-action btn-block">Select Explorer</a>
+          </div>
+
+          <!-- Tier 2 (Featured) -->
+          <div class="pricing-card featured">
+            <div class="pricing-ribbon">Most Popular</div>
+            <h3 class="pricing-name">Wilderness Pro</h3>
+            <p class="pricing-desc">Our flagship premium experience with 5-star wilderness lodges and master alpinists.</p>
+            <div class="pricing-price">$2,650 <span>/ guest</span></div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check check"></i> Ultra-intimate group (Max 6 guests)</li>
+              <li><i class="fa-solid fa-check check"></i> Master IFMGA / Senior Safari Ranger</li>
+              <li><i class="fa-solid fa-check check"></i> Boutique 5-Star Eco Lodges & Glamping</li>
+              <li><i class="fa-solid fa-check check"></i> All Conservation Permits & Fast-Track</li>
+              <li><i class="fa-solid fa-check check"></i> Full Gourmet Board (All Meals & Wine)</li>
+              <li><i class="fa-solid fa-check check"></i> Garmin Satellite SOS & Medevac Included</li>
+              <li><i class="fa-solid fa-xmark cross"></i> Private Chartered Aircraft</li>
+            </ul>
+            <a href="404.html" class="btn btn-primary btn-action btn-block">Select Wilderness Pro</a>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="pricing-card">
+            <h3 class="pricing-name">Elite Private Charter</h3>
+            <p class="pricing-desc">Completely custom route, private bush flight, personal camp chef, and flexible dates.</p>
+            <div class="pricing-price">$4,850 <span>/ guest</span></div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check check"></i> 100% Private Party (You & Your Crew)</li>
+              <li><i class="fa-solid fa-check check"></i> Dedicated Lead Guide + Private Field Chef</li>
+              <li><i class="fa-solid fa-check check"></i> Exclusive Luxury Reserves & Private Villas</li>
+              <li><i class="fa-solid fa-check check"></i> Private Bush Flight & Heli-Transfers</li>
+              <li><i class="fa-solid fa-check check"></i> Unlimited Fine Dining & Premium Cellar</li>
+              <li><i class="fa-solid fa-check check"></i> Dedicated Wilderness Doctor On Call</li>
+              <li><i class="fa-solid fa-check check"></i> Portable Starlink Satellite System</li>
+            </ul>
+            <a href="404.html" class="btn btn-outline btn-action btn-block">Design Custom Route</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PACKAGE COMPARISON MATRIX -->
+    <section class="section-padding" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag badge-primary"><i class="fa-solid fa-table-list"></i> Side-by-Side</span>
+          <h2 class="section-title">Expedition Feature Comparison</h2>
+          <p class="section-desc">Review inclusions across each tier before reserving your spot.</p>
+        </div>
+
+        <div style="background:#FFFFFF; border-radius:var(--radius-lg); border:1px solid var(--border); overflow-x:auto; box-shadow:var(--shadow-sm);">
+          <table style="width:100%; border-collapse:collapse; min-width:650px;">
+            <thead>
+              <tr style="background:var(--bg-surface); text-align:left;">
+                <th style="padding:18px 24px; font-size:0.95rem;">Feature</th>
+                <th style="padding:18px 24px; font-size:0.95rem; text-align:center;">Explorer Standard</th>
+                <th style="padding:18px 24px; font-size:0.95rem; text-align:center; color:var(--secondary);">Wilderness Pro</th>
+                <th style="padding:18px 24px; font-size:0.95rem; text-align:center;">Elite Private</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:16px 24px; font-weight:600;">Max Group Size</td>
+                <td style="padding:16px 24px; text-align:center; color:var(--text-muted);">10 - 12</td>
+                <td style="padding:16px 24px; text-align:center; font-weight:700;">6 Guests</td>
+                <td style="padding:16px 24px; text-align:center; font-weight:700;">Private (1-8)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:16px 24px; font-weight:600;">Wilderness Lodging</td>
+                <td style="padding:16px 24px; text-align:center; color:var(--text-muted);">3-Star Eco Chalets</td>
+                <td style="padding:16px 24px; text-align:center; font-weight:700;">5-Star Luxury Tented</td>
+                <td style="padding:16px 24px; text-align:center; font-weight:700;">Ultra-Luxury Private Estate</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:16px 24px; font-weight:600;">Internal Transfers</td>
+                <td style="padding:16px 24px; text-align:center; color:var(--text-muted);">Group 4x4 Mini-van</td>
+                <td style="padding:16px 24px; text-align:center; font-weight:700;">Custom Safari Land Cruiser</td>
+                <td style="padding:16px 24px; text-align:center; font-weight:700;">Private Bush Plane / Heli</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:16px 24px; font-weight:600;">All Park & Peak Permits</td>
+                <td style="padding:16px 24px; text-align:center;"><i class="fa-solid fa-check" style="color:var(--primary);"></i> Included</td>
+                <td style="padding:16px 24px; text-align:center;"><i class="fa-solid fa-check" style="color:var(--primary);"></i> Included</td>
+                <td style="padding:16px 24px; text-align:center;"><i class="fa-solid fa-check" style="color:var(--primary);"></i> VIP Fast Track</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border);">
+                <td style="padding:16px 24px; font-weight:600;">Medevac & Satellite SOS</td>
+                <td style="padding:16px 24px; text-align:center; color:var(--text-muted);">$80 Add-on</td>
+                <td style="padding:16px 24px; text-align:center;"><i class="fa-solid fa-check" style="color:var(--primary);"></i> Included</td>
+                <td style="padding:16px 24px; text-align:center;"><i class="fa-solid fa-check" style="color:var(--primary);"></i> Dedicated Escort</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: WHAT'S ALWAYS INCLUDED -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag badge-secondary"><i class="fa-solid fa-shield-heart"></i> The Standard</span>
+          <h2 class="section-title">Every Stackly Journey Includes</h2>
+          <p class="section-desc">No hidden fees, no nickel-and-diming in the wild.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-passport"></i></div>
+            <h3 class="feature-title">All Government Permits</h3>
+            <p class="feature-desc">National park fees, wilderness camping permits, tribal concessions, and conservation taxes are 100% pre-paid.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-kit-medical"></i></div>
+            <h3 class="feature-title">Wilderness First Aid</h3>
+            <p class="feature-desc">All leaders carry comprehensive trauma gear, pulse oximeters, automated defibrillators, and emergency oxygen tanks.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h3 class="feature-title">Porter Fair-Wage Guarantee</h3>
+            <p class="feature-desc">We mandate warm sleeping quarters, nutritious food, appropriate load limits, and medical care for all field support crew.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: GUARANTEE & FLEXIBILITY POLICY -->
+    <section class="section-padding" style="background-color: var(--bg-surface);">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:50px; align-items:center;">
+          <div>
+            <span class="badge-tag badge-primary"><i class="fa-solid fa-handshake"></i> Peace of Mind</span>
+            <h2 class="section-title">Our Flexible Booking & Weather Guarantee</h2>
+            <p style="font-size:1.05rem; color:var(--text-main); margin-bottom:18px;">
+              Unpredictable mountain weather or global changes should never cost you your dream vacation.
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:16px;">
+              <li style="display:flex; gap:12px;">
+                <i class="fa-solid fa-circle-check" style="color:var(--primary); margin-top:4px;"></i>
+                <span><strong>Deposit Transferability:</strong> Transfer your 20% deposit to any future trip within 24 months free of penalty.</span>
+              </li>
+              <li style="display:flex; gap:12px;">
+                <i class="fa-solid fa-circle-check" style="color:var(--primary); margin-top:4px;"></i>
+                <span><strong>Summit Weather Buffer:</strong> We bake contingency ascent windows into our alpine treks to maximize your summit odds.</span>
+              </li>
+              <li style="display:flex; gap:12px;">
+                <i class="fa-solid fa-circle-check" style="color:var(--primary); margin-top:4px;"></i>
+                <span><strong>Zero Credit Card Fees:</strong> Pay securely online via international cards with zero payment processing surcharge.</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=900&auto=format&fit=crop" alt="Happy traveler" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: TRAVELER VALUE TESTIMONIALS -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag badge-secondary"><i class="fa-solid fa-comments"></i> Real Feedback</span>
+          <h2 class="section-title">What Explorers Say About Our Value</h2>
+        </div>
+
+        <div class="testi-grid">
+          <div class="testi-card">
+            <p class="testi-quote">"Having every single permit and tip calculated into the price made our Serengeti trip completely stress-free. The luxury mobile camp surpassed 5-star hotels."</p>
+            <div class="testi-user">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" class="testi-avatar" alt="Liam O'Connor">
+              <div>
+                <div class="testi-name">Liam O'Connor</div>
+                <div class="testi-role">Wilderness Pro Traveler</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <p class="testi-quote">"We opted for the Elite Private Charter in Patagonia. Having our own helicopter transfer saved 14 hours on rough gravel roads. Worth every single cent."</p>
+            <div class="testi-user">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" class="testi-avatar" alt="Chloe Davenport">
+              <div>
+                <div class="testi-name">Chloe Davenport</div>
+                <div class="testi-role">Elite Private Explorer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <p class="testi-quote">"As a solo traveler, the Explorer Standard group was the perfect balance between price and high-grade safety. I made lifelong friends on the trail."</p>
+            <div class="testi-user">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop" class="testi-avatar" alt="Maya Chen">
+              <div>
+                <div class="testi-name">Maya Chen</div>
+                <div class="testi-role">Solo Adventurer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FINAL CTA -->
+    <section class="section-padding-sm" style="margin-bottom: 60px;">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Secure Your 2026-2027 Expedition Rate</h2>
+          <p>Locked-in guaranteed pricing with only 20% down. Remaining balance due 45 days prior to departure.</p>
+          <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+            <a href="404.html" class="btn btn-primary btn-lg btn-action">
+              <i class="fa-solid fa-lock"></i> Lock In My Rate
+            </a>
+            <a href="contact.html" class="btn btn-outline-white btn-lg">
+              <i class="fa-solid fa-comments"></i> Consult An Advisor
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONSISTENT FOOTER ACROSS THE WEBSITE -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" title="Stackly Travel & Tourism">
+            <img src="assets/images/logo-white.svg" alt="Stackly Travel Logo" class="footer-logo-img">
+          </a>
+          <p>
+            Stackly Travel & Tourism is an adventurous expedition operator dedicated to responsible, awe-inspiring global journeys across wilderness summits, deep oceans, and wildlife habitats.
+          </p>
+          <div class="social-links">
+            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Tours & Safaris</a></li>
+            <li><a href="pricing.html"><i class="fa-solid fa-chevron-right"></i> Pricing & Packages</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+            <li><a href="sign-in.html"><i class="fa-solid fa-chevron-right"></i> Traveler Sign In</a></li>
+            <li><a href="sign-up.html"><i class="fa-solid fa-chevron-right"></i> Register Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Expeditions</h4>
+          <ul class="footer-links">
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Serengeti Safaris</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Swiss Alps Trekking</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Arctic Aurora Trails</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Galápagos Marine Eco</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Patagonian Glaciers</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Kyoto Historic Routes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Expedition HQ</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919876543210">+91 9876543210</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:hello@thestackly.com">hello@thestackly.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Stackly Travel & Tourism. All rights reserved. Designed for Adventurers.
+        </div>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms & Conditions</a>
+          <a href="404.html">Cookie Policy</a>
+          <a href="404.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

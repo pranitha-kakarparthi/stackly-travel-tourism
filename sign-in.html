@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | Stackly Travel & Tourism</title>
+  <meta name="description" content="Sign in to your Stackly Travel account. Access your itineraries, bookings, expedition gear manifests, and travel documents.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body class="auth-page-wrapper">
+
+  <!-- Fixed Auth Header (NO NAVBAR) -->
+  <header class="auth-fixed-header">
+    <a href="index.html" class="brand-logo-link" title="Return to Stackly Home">
+      <img src="assets/images/logo.svg" alt="Stackly Travel Logo" class="brand-logo-img">
+    </a>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <a href="index.html" class="btn btn-sm btn-outline">
+        <i class="fa-solid fa-arrow-left"></i> Back to Home
+      </a>
+      <a href="sign-up.html" class="btn btn-sm btn-primary">
+        Create Account
+      </a>
+    </div>
+  </header>
+
+  <!-- Split Layout Container -->
+  <main class="auth-body-container">
+    <!-- Left Hero & Benefits Column -->
+    <div class="auth-sidebar-hero">
+      <div class="auth-hero-header">
+        <span class="badge-tag badge-secondary" style="background:rgba(232,96,76,0.3); color:#FFFFFF;">
+          <i class="fa-solid fa-passport"></i> Explorer Portal
+        </span>
+        <h2>Your Wilderness Journey Begins Here</h2>
+        <p>Log in to manage your active expeditions, download SAT-navigation routes, and coordinate with your field guides.</p>
+      </div>
+
+      <ul class="auth-benefits-list">
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Live flight and bush-strip transfer itinerary updates</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Direct satellite dispatch chat with your assigned guide</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Downloadable offline topographic route maps and permits</span>
+        </li>
+        <li>
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Role-aware portal for Travelers, Guides, Agencies, and Admins</span>
+        </li>
+      </ul>
+
+      <div class="auth-testimonial-pill">
+        <p>"Accessing our safari permits and checking in with Dr. Ndidi through the Stackly portal made our trip effortless."</p>
+        <strong style="font-size:0.8rem; color:#FFFFFF;">— Elena R., Wildlife Photographer</strong>
+      </div>
+    </div>
+
+    <!-- Right Authentication Form Card -->
+    <div class="auth-form-card">
+      <h1 class="auth-form-title">Sign In to Account</h1>
+      <p class="auth-form-sub">Enter your verified credentials to access your travel dashboard.</p>
+
+      <!-- Alert Box for Validation / Feedback -->
+      <div id="loginAlert" style="display:none;"></div>
+
+      <form id="signInForm" novalidate>
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="loginEmail" class="form-label">Email Address <span class="req">*</span></label>
+          <input type="email" id="loginEmail" class="form-control" placeholder="explorer@example.com" required autocomplete="email">
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+
+        <!-- Password Field with Toggle Eye Icon -->
+        <div class="form-group">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+            <label for="loginPassword" class="form-label" style="margin-bottom:0;">Password <span class="req">*</span></label>
+            <!-- Forgot Password redirects to 404 per instructions -->
+            <a href="404.html" class="forgot-pwd-link" style="font-size:0.82rem; color:var(--secondary); font-weight:600;">Forgot Password?</a>
+          </div>
+          <div class="password-input-wrap">
+            <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required autocomplete="current-password">
+            <button type="button" class="password-toggle-btn" data-target="loginPassword" aria-label="Toggle password visibility">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div class="invalid-feedback">Please enter your account password.</div>
+        </div>
+
+        <!-- Role Selector Dropdown -->
+        <div class="form-group">
+          <label for="loginRole" class="form-label">Login As / Role <span class="req">*</span></label>
+          <select id="loginRole" class="form-control" required>
+            <option value="">Select your role...</option>
+            <option value="traveler">Traveler / Explorer</option>
+            <option value="guide">Tour Guide / Operator</option>
+            <option value="agency">Agency Partner</option>
+            <option value="admin">Travel Admin</option>
+          </select>
+          <div class="invalid-feedback">Please select your role from the list.</div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top:12px;">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to Dashboard
+        </button>
+      </form>
+
+      <!-- Social Logins (All redirect to 404 per instructions) -->
+      <div class="auth-divider">
+        <span>Or connect with social</span>
+      </div>
+
+      <div class="social-auth-grid">
+        <a href="404.html" class="social-auth-btn" title="Sign In with Google" aria-label="Google">
+          <i class="fa-brands fa-google"></i>
+        </a>
+        <a href="404.html" class="social-auth-btn" title="Sign In with Apple" aria-label="Apple">
+          <i class="fa-brands fa-apple"></i>
+        </a>
+        <a href="404.html" class="social-auth-btn" title="Sign In with Microsoft" aria-label="Microsoft">
+          <i class="fa-brands fa-microsoft"></i>
+        </a>
+        <a href="404.html" class="social-auth-btn" title="Sign In with Facebook" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+
+      <div style="text-align:center; margin-top:24px; font-size:0.92rem; color:var(--text-muted);">
+        Don't have an account yet? 
+        <a href="sign-up.html" style="color:var(--primary); font-weight:700;">Create Account</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
+

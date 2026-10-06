@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours & Safaris | Stackly Travel & Tourism</title>
+  <meta name="description" content="Explore our global catalog of wild expeditions, wildlife safaris, alpine climbs, and eco-retreats.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logo-white.svg" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Tours & Safaris...</div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar (100% Full Width) -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link" title="Stackly Travel & Tourism">
+        <img src="assets/images/logo.svg" alt="Stackly Logo" class="brand-logo-img">
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="tours.html" class="nav-link">Tours & Safaris <i class="fa-solid fa-angle-down" style="font-size:0.75rem; margin-left:3px;"></i></a>
+            <div class="nav-dropdown">
+              <a href="tours.html" class="dropdown-link">All Expeditions <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="tours.html" class="dropdown-link">African Safaris <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="tours.html" class="dropdown-link">Alpine Treks <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="tours.html" class="dropdown-link">Island & Marine Escapes <i class="fa-solid fa-arrow-right"></i></a>
+              <a href="tours.html" class="dropdown-link">Cultural Odysseys <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="pricing.html" class="nav-link">Pricing & Packages</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="sign-in.html" class="btn btn-outline btn-sm">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-sm">Sign Up</a>
+        <button type="button" class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
+    <div class="mobile-nav-drawer">
+      <div>
+        <div class="mobile-drawer-header">
+          <a href="index.html" class="brand-logo-link">
+            <img src="assets/images/logo.svg" alt="Stackly Logo" style="height:36px;">
+          </a>
+          <button type="button" class="mobile-drawer-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="tours.html" class="nav-link">Tours & Safaris</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing & Packages</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="mobile-nav-cta">
+        <a href="sign-in.html" class="btn btn-outline btn-block">Sign In</a>
+        <a href="sign-up.html" class="btn btn-primary btn-block">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-hero-title">Worldwide Tours & Safaris</h1>
+        <p class="page-hero-desc">Discover hand-crafted wilderness treks, coastal explorations, and private wildlife safaris.</p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i>
+          <span>Tours & Safaris</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SEARCH & FILTER BAR -->
+    <section class="search-strip-wrap">
+      <div class="container">
+        <div class="search-box-card">
+          <form class="search-form-grid search-form">
+            <div class="search-field">
+              <label><i class="fa-solid fa-earth-americas"></i> Region</label>
+              <select required aria-label="Region Filter">
+                <option value="all">All Continents</option>
+                <option value="africa">Sub-Saharan Africa</option>
+                <option value="europe">European Alps</option>
+                <option value="asia">Himalayas & East Asia</option>
+                <option value="americas">The Americas & Arctic</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label><i class="fa-solid fa-person-hiking"></i> Activity</label>
+              <select required aria-label="Activity Filter">
+                <option value="all">Any Activity</option>
+                <option value="safari">4x4 Game Tracking</option>
+                <option value="trekking">Mountain Trekking</option>
+                <option value="scuba">Marine Scuba Diving</option>
+                <option value="cultural">Heritage & Monasteries</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label><i class="fa-solid fa-gauge-high"></i> Difficulty</label>
+              <select required aria-label="Difficulty Filter">
+                <option value="easy">Easy (Casual Walker)</option>
+                <option value="moderate" selected>Moderate (Active Explorer)</option>
+                <option value="challenging">Challenging (Alpine Summit)</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label><i class="fa-solid fa-hourglass-half"></i> Duration</label>
+              <select required aria-label="Duration Filter">
+                <option value="short">5 - 7 Days</option>
+                <option value="medium" selected>8 - 12 Days</option>
+                <option value="long">14+ Days</option>
+              </select>
+            </div>
+            <!-- Action button redirecting to 404 -->
+            <button type="submit" class="btn btn-primary btn-action" style="height: 52px;">
+              <i class="fa-solid fa-filter"></i> Apply Filter
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: FEATURED EXPEDITIONS GRID (6 TOURS) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag badge-secondary"><i class="fa-solid fa-compass"></i> Full Expedition Roster</span>
+          <h2 class="section-title">Curated Expeditions For 2026-2027</h2>
+          <p class="section-desc">Each itinerary includes luxury eco-lodging, all ground transfers, gourmet meals, and certified field leaders.</p>
+        </div>
+
+        <div class="tour-grid">
+          <!-- Tour 1 -->
+          <article class="tour-card">
+            <div class="tour-thumb">
+              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800&auto=format&fit=crop" alt="Serengeti Safari">
+              <span class="tour-badge">Tanzania</span>
+              <div class="tour-price-badge">From <span>$2,850</span></div>
+            </div>
+            <div class="tour-body">
+              <div class="tour-meta">
+                <span><i class="fa-regular fa-clock"></i> 8 Days</span>
+                <span><i class="fa-solid fa-users"></i> Max 6 / Vehicle</span>
+              </div>
+              <h3 class="tour-title"><a href="404.html" class="btn-action">The Great Serengeti Migration & Ngorongoro</a></h3>
+              <p class="tour-desc">Witness predators in action, track the endangered black rhino, and rest at our private solar-powered wilderness camp.</p>
+              <div class="tour-footer">
+                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.96 <span>(128)</span></div>
+                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 2 -->
+          <article class="tour-card">
+            <div class="tour-thumb">
+              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop" alt="Swiss Alps Hiking">
+              <span class="tour-badge">Switzerland</span>
+              <div class="tour-price-badge">From <span>$1,980</span></div>
+            </div>
+            <div class="tour-body">
+              <div class="tour-meta">
+                <span><i class="fa-regular fa-clock"></i> 6 Days</span>
+                <span><i class="fa-solid fa-users"></i> Max 8 Guests</span>
+              </div>
+              <h3 class="tour-title"><a href="404.html" class="btn-action">Zermatt Glacier Circuit & Matterhorn Ridge</a></h3>
+              <p class="tour-desc">Alpine meadow singletracks, panoramic Gornergrat cogwheel railway, and fondue dinners at historic timber chalets.</p>
+              <div class="tour-footer">
+                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.92 <span>(94)</span></div>
+                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 3 -->
+          <article class="tour-card">
+            <div class="tour-thumb">
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop" alt="Lofoten Islands Norway">
+              <span class="tour-badge">Norway</span>
+              <div class="tour-price-badge">From <span>$2,450</span></div>
+            </div>
+            <div class="tour-body">
+              <div class="tour-meta">
+                <span><i class="fa-regular fa-clock"></i> 7 Days</span>
+                <span><i class="fa-solid fa-users"></i> Max 10 Guests</span>
+              </div>
+              <h3 class="tour-title"><a href="404.html" class="btn-action">Lofoten Aurora Borealis & Fjord Kayaking</a></h3>
+              <p class="tour-desc">Stay in renovated traditional red rorbuer fishermen cabins and chase the vibrant Northern Lights across jagged Arctic fjords.</p>
+              <div class="tour-footer">
+                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.98 <span>(115)</span></div>
+                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 4 -->
+          <article class="tour-card">
+            <div class="tour-thumb">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt="Patagonia Trekking">
+              <span class="tour-badge">Chile & Argentina</span>
+              <div class="tour-price-badge">From <span>$3,200</span></div>
+            </div>
+            <div class="tour-body">
+              <div class="tour-meta">
+                <span><i class="fa-regular fa-clock"></i> 11 Days</span>
+                <span><i class="fa-solid fa-users"></i> Max 8 Guests</span>
+              </div>
+              <h3 class="tour-title"><a href="404.html" class="btn-action">Patagonia W-Trek & Grey Glacier Ice Hike</a></h3>
+              <p class="tour-desc">Crampon-led walk across blue glacier ice, condor viewing, and world-renowned views of the Torres del Paine horn peaks.</p>
+              <div class="tour-footer">
+                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.99 <span>(142)</span></div>
+                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 5 -->
+          <article class="tour-card">
+            <div class="tour-thumb">
+              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop" alt="Galápagos Islands">
+              <span class="tour-badge">Ecuador</span>
+              <div class="tour-price-badge">From <span>$3,650</span></div>
+            </div>
+            <div class="tour-body">
+              <div class="tour-meta">
+                <span><i class="fa-regular fa-clock"></i> 8 Days</span>
+                <span><i class="fa-solid fa-users"></i> Max 12 Guests</span>
+              </div>
+              <h3 class="tour-title"><a href="404.html" class="btn-action">Galápagos Catamaran & Giant Tortoise Odyssey</a></h3>
+              <p class="tour-desc">Private charter catamaran cruising between volcanic islands, swimming alongside marine iguanas and sea lions.</p>
+              <div class="tour-footer">
+                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.97 <span>(89)</span></div>
+                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tour 6 -->
+          <article class="tour-card">
+            <div class="tour-thumb">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Raja Ampat Islands">
+              <span class="tour-badge">Indonesia</span>
+              <div class="tour-price-badge">From <span>$2,900</span></div>
+            </div>
+            <div class="tour-body">
+              <div class="tour-meta">
+                <span><i class="fa-regular fa-clock"></i> 9 Days</span>
+                <span><i class="fa-solid fa-users"></i> Max 10 Guests</span>
+              </div>
+              <h3 class="tour-title"><a href="404.html" class="btn-action">Raja Ampat Coral Triangle Liveaboard</a></h3>
+              <p class="tour-desc">Diving the richest marine biodiversity epicenter on Earth, uninhabited limestone karst lagoons, and private sandbars.</p>
+              <div class="tour-footer">
+                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.95 <span>(74)</span></div>
+                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Now</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: VIP EXPEDITION SERVICES -->
+    <section class="section-padding" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag badge-primary"><i class="fa-solid fa-concierge-bell"></i> Bespoke Services</span>
+          <h2 class="section-title">VIP & Private Expedition Amenities</h2>
+          <p class="section-desc">Elevate your wilderness travel with tailored logistics, dedicated aircraft, and private camp masters.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-plane-departure"></i></div>
+            <h3 class="feature-title">Private Bush Flights</h3>
+            <p class="feature-desc">Bypass long road transfers with private Cessna Caravan flights landing directly on secluded backcountry bush strips.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-satellite"></i></div>
+            <h3 class="feature-title">High-Speed Starlink</h3>
+            <p class="feature-desc">Stay seamlessly connected even in the heart of the Sahara or Patagonia with ultra-compact portable satellite units.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-user-doctor"></i></div>
+            <h3 class="feature-title">Expedition Medic Escort</h3>
+            <p class="feature-desc">Optional dedicated wilderness physician accompanying private family or corporate summit teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SAFETY PROTOCOLS & GEAR ADVISORY -->
+    <section class="section-padding">
+      <div class="container">
+        <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:50px; align-items:center;">
+          <div>
+            <span class="badge-tag badge-secondary"><i class="fa-solid fa-shield"></i> Expedition Readiness</span>
+            <h2 class="section-title">Comprehensive Field Safety & Gear Standards</h2>
+            <p style="color:var(--text-main); font-size:1.05rem; margin-bottom:18px;">
+              Your safety is never compromised. We supply all high-altitude tents, mountaineering ropes, satellite emergency beacons, and specialized cold-weather sleep systems.
+            </p>
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <div style="display:flex; gap:14px; align-items:flex-start;">
+                <i class="fa-solid fa-square-check" style="color:var(--primary); font-size:1.2rem; margin-top:3px;"></i>
+                <div>
+                  <strong>Mandatory Acclimatization Profiles:</strong>
+                  <p style="color:var(--text-muted); font-size:0.9rem;">Scientifically planned ascent profiles minimizing altitude sickness risks.</p>
+                </div>
+              </div>
+              <div style="display:flex; gap:14px; align-items:flex-start;">
+                <i class="fa-solid fa-square-check" style="color:var(--primary); font-size:1.2rem; margin-top:3px;"></i>
+                <div>
+                  <strong>Garmin inReach Global SOS:</strong>
+                  <p style="color:var(--text-muted); font-size:0.9rem;">Live satellite telemetry monitoring your exact location with our 24/7 central ops center.</p>
+                </div>
+              </div>
+              <div style="display:flex; gap:14px; align-items:flex-start;">
+                <i class="fa-solid fa-square-check" style="color:var(--primary); font-size:1.2rem; margin-top:3px;"></i>
+                <div>
+                  <strong>All-Inclusive Medical Evacuation:</strong>
+                  <p style="color:var(--text-muted); font-size:0.9rem;">Comprehensive helicopter medevac coverage included in every alpine booking.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=900&auto=format&fit=crop" alt="Mountaineering gear" style="border-radius:var(--radius-lg); box-shadow:var(--shadow-lg);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section class="section-padding" style="background-color: var(--bg-surface);">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge-tag badge-primary"><i class="fa-solid fa-circle-question"></i> Tour Clarity</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-desc">Everything you need to know before joining a Stackly expedition.</p>
+        </div>
+
+        <div style="max-width:850px; margin:0 auto; display:flex; flex-direction:column; gap:18px;">
+          <div style="background:#FFFFFF; border-radius:var(--radius-md); padding:24px; border:1px solid var(--border);">
+            <h4 style="font-size:1.15rem; margin-bottom:10px;"><i class="fa-solid fa-circle-question" style="color:var(--secondary); margin-right:8px;"></i> What fitness level is required?</h4>
+            <p style="color:var(--text-muted); font-size:0.95rem;">Each tour is graded from Easy (accessible to anyone comfortable walking 5km/day) to Challenging (requiring multi-day aerobic stamina with pack weight). Check individual tour difficulty indicators.</p>
+          </div>
+
+          <div style="background:#FFFFFF; border-radius:var(--radius-md); padding:24px; border:1px solid var(--border);">
+            <h4 style="font-size:1.15rem; margin-bottom:10px;"><i class="fa-solid fa-circle-question" style="color:var(--secondary); margin-right:8px;"></i> Are solo travelers welcome?</h4>
+            <p style="color:var(--text-muted); font-size:0.95rem;">Absolutely! Roughly 40% of our guests join solo. You can either share a twin tent/room with an adventurer of the same gender or opt for a private single room supplement.</p>
+          </div>
+
+          <div style="background:#FFFFFF; border-radius:var(--radius-md); padding:24px; border:1px solid var(--border);">
+            <h4 style="font-size:1.15rem; margin-bottom:10px;"><i class="fa-solid fa-circle-question" style="color:var(--secondary); margin-right:8px;"></i> What happens if weather cancels an ascent?</h4>
+            <p style="color:var(--text-muted); font-size:0.95rem;">Safety always takes precedence. We build reserve summit buffer days into our itineraries. If conditions remain severe, we activate pre-planned contingency cultural routes without additional cost.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: FINAL CTA -->
+    <section class="section-padding-sm" style="margin-bottom: 60px;">
+      <div class="container">
+        <div class="cta-banner">
+          <h2>Find Your Next Epic Quest</h2>
+          <p>Book with flexibility. 100% refundable deposits up to 60 days before expedition departure.</p>
+          <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+            <a href="404.html" class="btn btn-primary btn-lg btn-action">
+              <i class="fa-solid fa-calendar-check"></i> Reserve Tour Seat
+            </a>
+            <a href="contact.html" class="btn btn-outline-white btn-lg">
+              <i class="fa-solid fa-envelope"></i> Request Custom Route
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONSISTENT FOOTER ACROSS THE WEBSITE -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" title="Stackly Travel & Tourism">
+            <img src="assets/images/logo-white.svg" alt="Stackly Travel Logo" class="footer-logo-img">
+          </a>
+          <p>
+            Stackly Travel & Tourism is an adventurous expedition operator dedicated to responsible, awe-inspiring global journeys across wilderness summits, deep oceans, and wildlife habitats.
+          </p>
+          <div class="social-links">
+            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-btn" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Tours & Safaris</a></li>
+            <li><a href="pricing.html"><i class="fa-solid fa-chevron-right"></i> Pricing & Packages</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+            <li><a href="sign-in.html"><i class="fa-solid fa-chevron-right"></i> Traveler Sign In</a></li>
+            <li><a href="sign-up.html"><i class="fa-solid fa-chevron-right"></i> Register Account</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Expeditions</h4>
+          <ul class="footer-links">
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Serengeti Safaris</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Swiss Alps Trekking</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Arctic Aurora Trails</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Galápagos Marine Eco</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Patagonian Glaciers</a></li>
+            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Kyoto Historic Routes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Contact Expedition HQ</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919876543210">+91 9876543210</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:hello@thestackly.com">hello@thestackly.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Stackly Travel & Tourism. All rights reserved. Designed for Adventurers.
+        </div>
+        <div class="footer-legal-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms & Conditions</a>
+          <a href="404.html">Cookie Policy</a>
+          <a href="404.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
