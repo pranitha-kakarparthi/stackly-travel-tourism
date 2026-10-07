@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Admin Dashboard | Stackly Travel & Tourism</title>
+  <meta name="description" content="Central administrative and fleet management console for Stackly Travel global expedition networks.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Admin Console...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Brand logo strictly redirects to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Travel Administrator</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Central Control</div>
+        <a href="dashboard-admin.html" class="dash-nav-item active">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
+          <i class="fa-solid fa-globe"></i>
+          <span>Global Fleet</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
+          <i class="fa-solid fa-users-gear"></i>
+          <span>User Accounts</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
+          <i class="fa-solid fa-tower-observation"></i>
+          <span>Crisis Dispatch</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">System Audit</div>
+        <a href="dashboard-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-sliders"></i>
+          <span>System Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-file-waveform"></i>
+          <span>Audit Logs</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">AD</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Root Admin</div>
+            <div class="dash-user-role-label">System Administrator</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2 id="dashGreetingHeading">Welcome, Administrator!</h2>
+          <p id="dashLoginTimestamp">Operations System: Global Fleet Green Across All Zones</p>
+        </div>
+
+        <div class="dash-top-actions">
+          <span class="dash-role-badge">Super Admin Level 4</span>
+          <a href="404.html" class="dash-action-btn" title="System Security Alerts" style="width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:#FFFFFF; display:flex; align-items:center; justify-content:center; color:var(--dark);">
+            <i class="fa-solid fa-shield-halved"></i>
+          </a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: GLOBAL PLATFORM KPIS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon primary"><i class="fa-solid fa-globe"></i></div>
+            <div class="kpi-meta">
+              <h4>Total Bookings</h4>
+              <div class="kpi-value">1,280</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-dollar-sign"></i></div>
+            <div class="kpi-meta">
+              <h4>Gross Revenue</h4>
+              <div class="kpi-value">$1,420,000</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon accent"><i class="fa-solid fa-user-shield"></i></div>
+            <div class="kpi-meta">
+              <h4>Active Guides</h4>
+              <div class="kpi-value">64 In Field</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon info"><i class="fa-solid fa-server"></i></div>
+            <div class="kpi-meta">
+              <h4>Telemetry Health</h4>
+              <div class="kpi-value">99.98%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: GLOBAL OPERATIONS DISPATCH TABLE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Real-Time Field Operations Dispatch</h3>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Launch Map Grid</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Expedition Sector</th>
+                  <th>Groups Active</th>
+                  <th>Total Travelers</th>
+                  <th>Safety Status</th>
+                  <th>Lead Officer</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>East Africa (Serengeti / Ngorongoro)</strong></td>
+                  <td>8 Tours</td>
+                  <td>64 Travelers</td>
+                  <td><span class="dash-status confirmed">Optimal Green</span></td>
+                  <td>Ranger A. Ndidi</td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Inspect</a></td>
+                </tr>
+                <tr>
+                  <td><strong>European Alps (Zermatt / Mont Blanc)</strong></td>
+                  <td>6 Tours</td>
+                  <td>42 Climbers</td>
+                  <td><span class="dash-status confirmed">Optimal Green</span></td>
+                  <td>Guide J. Meyer</td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Inspect</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Himalayan Ridge (Annapurna Sanctuary)</strong></td>
+                  <td>4 Tours</td>
+                  <td>32 Climbers</td>
+                  <td><span class="dash-status confirmed">Optimal Green</span></td>
+                  <td>Sherpa P. Tenzing</td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Inspect</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Galápagos Archipelagos (Western Isles)</strong></td>
+                  <td>3 Catamarans</td>
+                  <td>36 Passengers</td>
+                  <td><span class="dash-status confirmed">Optimal Green</span></td>
+                  <td>Capt. R. Morales</td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Inspect</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 3: SATELLITE FLEET TELEMETRY -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Garmin inReach & Starlink Terminal Health</h3>
+            <span style="font-size:0.8rem; color:var(--primary); font-weight:700;"><i class="fa-solid fa-satellite"></i> 48 Terminals Online</span>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:14px;">All active backcountry units broadcasting 10-minute automated breadcrumb coordinates to Salem HQ Operations Desk.</p>
+        </div>
+
+        <!-- SECTION 4: CRISIS MEDEVAC RESPONSE CENTER -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Emergency Response & Medevac Standing Orders</h3>
+          </div>
+          <div style="padding:14px; background:var(--bg-subtle); border-radius:8px; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <strong>Global Rescue Medevac Helicopter Standby Active</strong>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">Fast-response rotorcraft staged in Arusha, Kathmandu, and Zermatt.</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Protocols</a>
+          </div>
+        </div>
+
+        <!-- SECTION 5: USER ROLE GOVERNANCE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Registered Accounts & Access Roles</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage Users</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; text-align:center;">
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px;">
+              <h4 style="font-size:1.5rem; color:var(--primary); font-weight:800;">4,820</h4>
+              <small>Travelers</small>
+            </div>
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px;">
+              <h4 style="font-size:1.5rem; color:var(--secondary); font-weight:800;">64</h4>
+              <small>Guides</small>
+            </div>
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px;">
+              <h4 style="font-size:1.5rem; color:var(--accent); font-weight:800;">180</h4>
+              <small>Agencies</small>
+            </div>
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px;">
+              <h4 style="font-size:1.5rem; color:#1E429F; font-weight:800;">6</h4>
+              <small>Admins</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 6: REVENUE ANALYTICS & SETTLEMENT -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Financial Settlement & Park Concession Taxes</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>National Park Royalties Paid</strong>
+              <p style="font-size:1.2rem; font-weight:800; color:var(--primary); margin-top:4px;">$248,500 USD</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Agency Commissions Settled</strong>
+              <p style="font-size:1.2rem; font-weight:800; color:var(--secondary); margin-top:4px;">$184,200 USD</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Conservation Reinvestment (10%)</strong>
+              <p style="font-size:1.2rem; font-weight:800; color:#10B981; margin-top:4px;">$142,000 USD</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 7: CONSERVATION & TREE COUNTER -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Environmental Conservation & Carbon Offset Audit</h3>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-main);">
+            <strong>240,000 Native Trees Planted</strong> across Tanzanian and Andean buffer zones. Verified by Global Carbon Registry.
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+

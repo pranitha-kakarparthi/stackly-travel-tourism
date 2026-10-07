@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traveler Dashboard | Stackly Travel & Tourism</title>
+  <meta name="description" content="Explorer portal for tracking active wilderness bookings, day-to-day itineraries, and field guide communication.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Explorer Portal...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Brand logo strictly redirects to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Traveler / Explorer</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Main Menu</div>
+        <a href="dashboard-traveler.html" class="dash-nav-item active">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
+          <i class="fa-solid fa-compass"></i>
+          <span>Expeditions</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Itineraries</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Safety & Permits</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Preferences</div>
+        <a href="dashboard-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>24/7 Field Support</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar User Footer with Sign Out -->
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">EX</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Explorer</div>
+            <div class="dash-user-role-label">Traveler</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <!-- Topbar Header -->
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2 id="dashGreetingHeading">Welcome, Explorer!</h2>
+          <p id="dashLoginTimestamp">Active Session: Verified & Secured</p>
+        </div>
+
+        <div class="dash-top-actions">
+          <span class="dash-role-badge">Verified Traveler</span>
+          <!-- Notification button redirects to 404 -->
+          <a href="404.html" class="dash-action-btn" title="Notifications" style="width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:#FFFFFF; display:flex; align-items:center; justify-content:center; color:var(--dark);">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+        </div>
+      </header>
+
+      <!-- Dashboard Sections Container (7 Sections) -->
+      <div class="dash-content">
+        <!-- SECTION 1: KPI CARDS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon primary"><i class="fa-solid fa-compass"></i></div>
+            <div class="kpi-meta">
+              <h4>Active Expeditions</h4>
+              <div class="kpi-value">2</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-earth-americas"></i></div>
+            <div class="kpi-meta">
+              <h4>Visited Regions</h4>
+              <div class="kpi-value">14</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon accent"><i class="fa-solid fa-award"></i></div>
+            <div class="kpi-meta">
+              <h4>Adventure Points</h4>
+              <div class="kpi-value">2,850</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon info"><i class="fa-solid fa-heart"></i></div>
+            <div class="kpi-meta">
+              <h4>Wishlist Tours</h4>
+              <div class="kpi-value">5 Saved</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2 & 3: BOOKINGS TABLE & TIMELINE -->
+        <div class="dash-two-col">
+          <!-- SECTION 2: BOOKED EXPEDITIONS TABLE -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3 class="dash-card-title">My Booked Expeditions</h3>
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Book New Tour</a>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Destination & Route</th>
+                    <th>Departure Date</th>
+                    <th>Guests</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Serengeti Safari & Ngorongoro</strong><br><small style="color:var(--text-muted);">Tanzania, Africa</small></td>
+                    <td>Oct 24, 2026</td>
+                    <td>2 Guests</td>
+                    <td><span class="dash-status confirmed">Confirmed</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Manage</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Swiss Alpine Glacier Trail</strong><br><small style="color:var(--text-muted);">Zermatt, Switzerland</small></td>
+                    <td>Dec 10, 2026</td>
+                    <td>4 Guests</td>
+                    <td><span class="dash-status pending">Pending Gear Check</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Manage</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Kyoto Zen & Bamboo Groves</strong><br><small style="color:var(--text-muted);">Kyoto, Japan</small></td>
+                    <td>Mar 15, 2027</td>
+                    <td>1 Guest</td>
+                    <td><span class="dash-status completed">Paid & Ready</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Manage</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SECTION 3: TRIP TIMELINE & DISPATCH -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <h3 class="dash-card-title">Expedition Day-by-Day</h3>
+            </div>
+            <div class="timeline-list">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h5>Oct 23: Virtual Guide Briefing</h5>
+                  <p>Pre-trip briefing with Dr. Amara Ndidi at 18:00 IST.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h5>Oct 24: Kilimanjaro Airport Arrival</h5>
+                  <p>Private 4x4 transfer to Arusha Eco Wilderness Camp.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h5>Oct 26: Ngorongoro Crater Descent</h5>
+                  <p>Full day game drive tracking black rhino and big cats.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: GEAR MANIFEST CHECKLIST -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Wilderness Gear Checklist (Serengeti Safari)</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download Full PDF</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px; border:1px solid var(--border);">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong>Neutral Bush Attire</strong>
+                <span class="dash-status confirmed"><i class="fa-solid fa-check"></i> Packed</span>
+              </div>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">Khaki/tan long sleeves, wide-brim safari hat.</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px; border:1px solid var(--border);">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong>Telephoto Lens & Body</strong>
+                <span class="dash-status confirmed"><i class="fa-solid fa-check"></i> Packed</span>
+              </div>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">100-400mm lens + spare dust-sealed camera body.</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px; border:1px solid var(--border);">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong>Yellow Fever Card</strong>
+                <span class="dash-status pending"><i class="fa-solid fa-clock"></i> Upload Needed</span>
+              </div>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">Mandatory for Tanzanian immigration clearance.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: LIVE WEATHER & FIELD ADVISORY -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Field Weather & Trail Advisory</h3>
+            <span style="font-size:0.8rem; color:var(--primary); font-weight:700;"><i class="fa-solid fa-signal"></i> Telemetry Live</span>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
+            <div style="text-align:center; padding:16px; background:#F8FAFC; border-radius:8px;">
+              <i class="fa-solid fa-sun" style="font-size:2rem; color:#F59E0B; margin-bottom:8px;"></i>
+              <h4 style="font-size:1rem; margin-bottom:2px;">Serengeti Central</h4>
+              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">28°C / 82°F</p>
+              <small style="color:var(--text-muted);">Dry savannah conditions, ideal visibility</small>
+            </div>
+            <div style="text-align:center; padding:16px; background:#F8FAFC; border-radius:8px;">
+              <i class="fa-solid fa-cloud-sun" style="font-size:2rem; color:#3B82F6; margin-bottom:8px;"></i>
+              <h4 style="font-size:1rem; margin-bottom:2px;">Ngorongoro Rim</h4>
+              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">16°C / 61°F</p>
+              <small style="color:var(--text-muted);">Chilly evening winds, fleece layer required</small>
+            </div>
+            <div style="text-align:center; padding:16px; background:#F8FAFC; border-radius:8px;">
+              <i class="fa-solid fa-mountain" style="font-size:2rem; color:#10B981; margin-bottom:8px;"></i>
+              <h4 style="font-size:1rem; margin-bottom:2px;">Kilimanjaro Base</h4>
+              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">12°C / 54°F</p>
+              <small style="color:var(--text-muted);">Clear skies across Machame trailhead</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 6: DIRECT GUIDE DISPATCH MESSAGES -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Field Guide Dispatch Chat</h3>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Open SAT Chat</a>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="display:flex; gap:14px; padding:12px; background:var(--bg-subtle); border-radius:8px;">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop" style="width:44px; height:44px; border-radius:50%; object-fit:cover;" alt="Dr. Amara Ndidi">
+              <div>
+                <strong>Dr. Amara Ndidi (Lead Safari Naturalist)</strong>
+                <p style="font-size:0.88rem; color:var(--text-main); margin-top:2px;">"Jambo! Our tracking team spotted the pride of lions near the Mara crossing yesterday. The camp setup is ready for your arrival next week."</p>
+                <small style="color:var(--text-muted);">Sent today via Satellite Uplink #2</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 7: PERMIT & DOCUMENT VAULT -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Digital Travel & Permit Vault</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Upload Document</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Document Type</th>
+                  <th>Authority / Park</th>
+                  <th>Expiry Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Tanzania TANAPA Conservation Pass</strong></td>
+                  <td>Serengeti National Park</td>
+                  <td>Valid for Tour</td>
+                  <td><span class="dash-status confirmed">Verified</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Garmin Medevac High-Altitude Policy</strong></td>
+                  <td>Global Rescue Alliance</td>
+                  <td>Nov 2026</td>
+                  <td><span class="dash-status confirmed">Active</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+

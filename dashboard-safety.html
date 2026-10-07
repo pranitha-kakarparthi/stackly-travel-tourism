@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safety & Permits | Stackly Travel & Tourism</title>
+  <meta name="description" content="Access safety certificates, satellite SOS beacon instructions, and park entry permits.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Safety Protocols...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Logo click redirects strictly to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Safety & Permits</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Main Menu</div>
+        <a href="dashboard-traveler.html" class="dash-nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
+          <i class="fa-solid fa-compass"></i>
+          <span>Expeditions</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Itineraries</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item active">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Safety & Permits</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Preferences</div>
+        <a href="dashboard-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>24/7 Field Support</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">EX</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Explorer</div>
+            <div class="dash-user-role-label">Traveler</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2>Wilderness Safety & Legal Permits</h2>
+          <p>Verified insurance coverage, emergency medevac contacts, and park credentials</p>
+        </div>
+        <div class="dash-top-actions">
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Download Safety Card</a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: SAFETY METRICS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon primary"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="kpi-meta">
+              <h4>Safety Standard</h4>
+              <div class="kpi-value">ISO 31030</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-helicopter"></i></div>
+            <div class="kpi-meta">
+              <h4>Medevac Standby</h4>
+              <div class="kpi-value">24/7 Active</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon accent"><i class="fa-solid fa-passport"></i></div>
+            <div class="kpi-meta">
+              <h4>Permits Cleared</h4>
+              <div class="kpi-value">100% Ready</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon info"><i class="fa-solid fa-satellite"></i></div>
+            <div class="kpi-meta">
+              <h4>SAT Beacon Status</h4>
+              <div class="kpi-value">Online Green</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: INSURANCE & MEDEVAC POLICY CARD -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Comprehensive Expedition Medical Insurance</h3>
+            <span class="dash-status confirmed">Active Coverage</span>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-main); margin-bottom:12px;">Policy Provider: <strong>Global Rescue International Medevac</strong> (Policy Ref: #GRA-889104).</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; font-size:0.9rem; color:var(--text-muted);">
+            <li><i class="fa-solid fa-check" style="color:var(--primary); margin-right:6px;"></i> Up to $500,000 USD emergency airlift and field hospital transport coverage.</li>
+            <li><i class="fa-solid fa-check" style="color:var(--primary); margin-right:6px;"></i> High-altitude mountaineering up to 6,000 meters elevation included.</li>
+            <li><i class="fa-solid fa-check" style="color:var(--primary); margin-right:6px;"></i> Scuba diving chamber treatment coverage in remote marine zones.</li>
+          </ul>
+        </div>
+
+        <!-- SECTION 3: PERMIT VAULT TABLE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Expedition Park Permits Roster</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Print All Permits</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Jurisdiction / Park</th>
+                  <th>Permit Code</th>
+                  <th>Valid Range</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Tanzania TANAPA Serengeti Concession</td>
+                  <td>#TZ-SER-2026</td>
+                  <td>Oct 24 - Oct 31, 2026</td>
+                  <td><span class="dash-status confirmed">Valid</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
+                </tr>
+                <tr>
+                  <td>Ngorongoro Conservation Area Authority (NCAA)</td>
+                  <td>#TZ-NCAA-901</td>
+                  <td>Oct 26, 2026</td>
+                  <td><span class="dash-status confirmed">Valid</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 4: SATELLITE SOS BEACON OPERATION GUIDE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Field SOS Beacon Quick Guide</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Step 1: Lift Safety Guard</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Flip the protective red safety toggle on the Garmin inReach unit.</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Step 2: Press & Hold SOS</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Hold for 5 seconds until continuous audible beacon beep initiates.</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Step 3: Keep Sky Clear</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Maintain unobstructed view of the sky for satellite lock.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: VACCINATIONS & HEALTH CLEARANCE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Regional Vaccine & Health Disclosures</h3>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted);">Yellow Fever immunization certificate verified. Malaria oral prophylaxis prescribed and confirmed with travel physician.</p>
+        </div>
+
+        <!-- SECTION 6: 24/7 CRISIS DISPATCH CONTACTS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Emergency Field Hotlines</h3>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <strong>Stackly Global Crisis Response Desk: Salem HQ</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Satellite Direct: +91 9876543210 (24 Hours Active)</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Test Satellite Link</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+

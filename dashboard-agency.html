@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agency Partner Dashboard | Stackly Travel & Tourism</title>
+  <meta name="description" content="Wholesale agency portal for booking client expeditions, tracking commission payouts, and co-branded promotional assets.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Agency Partner Portal...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Brand logo strictly redirects to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Agency Partner</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Partner Portal</div>
+        <a href="dashboard-agency.html" class="dash-nav-item active">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Wholesale Tours</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
+          <i class="fa-solid fa-receipt"></i>
+          <span>Commission Ledger</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
+          <i class="fa-solid fa-file-contract"></i>
+          <span>Partner Contract</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Marketing & Support</div>
+        <a href="dashboard-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>Agency Desk</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">AG</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Partner Lead</div>
+            <div class="dash-user-role-label">Agency Tier: Gold</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2 id="dashGreetingHeading">Welcome, Agency Partner!</h2>
+          <p id="dashLoginTimestamp">Partner Account: Global Tier 1 Authorized</p>
+        </div>
+
+        <div class="dash-top-actions">
+          <span class="dash-role-badge">Gold Explorer Partner</span>
+          <a href="404.html" class="dash-action-btn" title="Partner Notifications" style="width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:#FFFFFF; display:flex; align-items:center; justify-content:center; color:var(--dark);">
+            <i class="fa-regular fa-bell"></i>
+          </a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: COMMERCIAL KPIS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon primary"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="kpi-meta">
+              <h4>Partner Bookings</h4>
+              <div class="kpi-value">142 Expeditions</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-wallet"></i></div>
+            <div class="kpi-meta">
+              <h4>Commission Paid</h4>
+              <div class="kpi-value">$28,450 USD</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon accent"><i class="fa-solid fa-medal"></i></div>
+            <div class="kpi-meta">
+              <h4>Agency Status</h4>
+              <div class="kpi-value">Gold Explorer</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon info"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="kpi-meta">
+              <h4>Conversion Rate</h4>
+              <div class="kpi-value">22.4%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: CLIENT BOOKINGS & COMMISSION LEDGER -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Recent Client Bookings & Commission Settlement</h3>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Export Tax Statement</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Booking Ref</th>
+                  <th>Client Party</th>
+                  <th>Package Name</th>
+                  <th>Total Gross</th>
+                  <th>Commission (15%)</th>
+                  <th>Payout Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#STK-9021</td>
+                  <td>Marcus Vance Family</td>
+                  <td>Costa Rica Cloud Forest Odyssey</td>
+                  <td>$5,400</td>
+                  <td>$810.00</td>
+                  <td><span class="dash-status confirmed">Settled</span></td>
+                </tr>
+                <tr>
+                  <td>#STK-9022</td>
+                  <td>Sarah Jenkins</td>
+                  <td>Patagonia Torres del Paine Trek</td>
+                  <td>$3,850</td>
+                  <td>$577.50</td>
+                  <td><span class="dash-status confirmed">Settled</span></td>
+                </tr>
+                <tr>
+                  <td>#STK-9023</td>
+                  <td>Hiroshi Tanaka Group</td>
+                  <td>Serengeti Luxury Migration Safari</td>
+                  <td>$12,600</td>
+                  <td>$1,890.00</td>
+                  <td><span class="dash-status pending">Processing Bank Wire</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 3: WHOLESALE INVENTORY ALLOCATION -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Reserved Wholesale Tour Allocations (2026-2027)</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Request Block Seats</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>African Safaris Block</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">18/25 seats confirmed for Q4 2026.</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Swiss Alps Summer Block</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">14/15 seats confirmed for Q3 2027.</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Galápagos Catamaran Charter</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Full vessel buyout scheduled Dec 2026.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: CLIENT INQUIRY PIPELINE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Active Client Lead Pipeline</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; text-align:center;">
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px;">
+              <h4 style="font-size:1.6rem; color:var(--primary); font-weight:800;">18</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Quotes Sent</p>
+            </div>
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px;">
+              <h4 style="font-size:1.6rem; color:var(--accent); font-weight:800;">7</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Pending Deposit</p>
+            </div>
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px;">
+              <h4 style="font-size:1.6rem; color:#10B981; font-weight:800;">142</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted);">Total Completed Trips</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: CO-OP MARKETING ASSETS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Co-Branded Marketing & Brochure Kit</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download 4K Media Kit</a>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted);">High-resolution expedition imagery, white-label client itineraries, and social video reels formatted for Instagram & LinkedIn campaigns.</p>
+        </div>
+
+        <!-- SECTION 6: MONTHLY PAYOUT SCHEDULE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Upcoming Commission Payout Schedule</h3>
+          </div>
+          <div style="padding:14px; background:var(--bg-surface); border-radius:8px; display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <strong>Next Scheduled Wire Settlement: October 31, 2026</strong>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:2px;">Direct Wire Transfer to Registered Agency Swift Account</p>
+            </div>
+            <span style="font-size:1.3rem; font-weight:800; color:var(--primary);">$4,260.00</span>
+          </div>
+        </div>
+
+        <!-- SECTION 7: AGENCY DESK TICKET -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Partner Priority Helpdesk</h3>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:16px;">Dedicated wholesale desk response guarantee within 2 hours for active traveler adjustments.</p>
+          <a href="404.html" class="btn btn-primary dash-action-btn"><i class="fa-solid fa-ticket"></i> Open Priority Ticket</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+

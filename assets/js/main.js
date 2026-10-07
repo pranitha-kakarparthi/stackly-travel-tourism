@@ -158,13 +158,14 @@ function initContactForm() {
 
   const nameInput = document.getElementById('contactName');
   const emailInput = document.getElementById('contactEmail');
+  const countryCodeSelect = document.getElementById('contactCountryCode');
   const phoneInput = document.getElementById('contactPhone');
   const subjectInput = document.getElementById('contactSubject');
   const messageInput = document.getElementById('contactMessage');
   const charCount = document.getElementById('charCount');
   const alertBox = document.getElementById('formAlert');
 
-  // Character counter for message field
+  // Character counter for message field (Optional field)
   if (messageInput && charCount) {
     messageInput.addEventListener('input', () => {
       const len = messageInput.value.length;
@@ -178,9 +179,12 @@ function initContactForm() {
   }
 
   // Real-time input cleanup
-  [nameInput, emailInput, phoneInput, subjectInput, messageInput].forEach(field => {
+  [nameInput, emailInput, countryCodeSelect, phoneInput, subjectInput, messageInput].forEach(field => {
     if (field) {
       field.addEventListener('input', () => {
+        field.classList.remove('is-invalid');
+      });
+      field.addEventListener('change', () => {
         field.classList.remove('is-invalid');
       });
     }
@@ -191,38 +195,46 @@ function initContactForm() {
     let firstInvalid = null;
 
     // Reset validations
-    [nameInput, emailInput, phoneInput, subjectInput, messageInput].forEach(f => {
+    [nameInput, emailInput, countryCodeSelect, phoneInput, subjectInput, messageInput].forEach(f => {
       if (f) f.classList.remove('is-invalid');
     });
 
-    // Validate Name
-    if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
-      nameInput.classList.add('is-invalid');
+    // 1. Validate Name: Required and MUST accept ONLY alphabets
+    const nameVal = nameInput ? nameInput.value.trim() : '';
+    const nameAlphaRegex = /^[A-Za-z\s]+$/;
+    if (!nameVal || nameVal.length < 2 || !nameAlphaRegex.test(nameVal)) {
+      if (nameInput) nameInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = nameInput;
     }
 
-    // Validate Email
+    // 2. Validate Email: Required standard format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
-      emailInput.classList.add('is-invalid');
+    if (!emailInput || !emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+      if (emailInput) emailInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = emailInput;
     }
 
-    // Validate Phone
-    const phoneRegex = /^[0-9+\s\-()]{7,16}$/;
-    if (!phoneInput.value.trim() || !phoneRegex.test(phoneInput.value.trim())) {
-      phoneInput.classList.add('is-invalid');
+    // 3. Country Code Selector: Required
+    if (countryCodeSelect && !countryCodeSelect.value) {
+      countryCodeSelect.classList.add('is-invalid');
+      if (!firstInvalid) firstInvalid = countryCodeSelect;
+    }
+
+    // 4. Validate Mobile Number: Fixed 10 digit length
+    const phoneVal = phoneInput ? phoneInput.value.trim().replace(/\D/g, '') : '';
+    if (!phoneInput || phoneVal.length !== 10) {
+      if (phoneInput) phoneInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = phoneInput;
     }
 
-    // Validate Subject
-    if (!subjectInput.value.trim()) {
-      subjectInput.classList.add('is-invalid');
+    // 5. Validate Subject: Required
+    if (!subjectInput || !subjectInput.value.trim()) {
+      if (subjectInput) subjectInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = subjectInput;
     }
 
-    // Validate Message
-    if (!messageInput.value.trim() || messageInput.value.trim().length < 10) {
+    // 6. Message is OPTIONAL per requirements. Validate only if exceeds 500
+    if (messageInput && messageInput.value.length > 500) {
       messageInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = messageInput;
     }
@@ -233,7 +245,7 @@ function initContactForm() {
       return;
     }
 
-    // If valid, show success state & redirect action
+    // If valid, show success state & redirect action to 404
     if (alertBox) {
       alertBox.className = 'alert alert-success';
       alertBox.style.display = 'block';
@@ -248,7 +260,6 @@ function initContactForm() {
       if (charCount) charCount.textContent = '0/500';
 
       setTimeout(() => {
-        // Redirect to 404 as all action submissions lead to 404 per requirements
         window.location.href = '404.html';
       }, 1500);
     }

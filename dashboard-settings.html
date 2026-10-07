@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Settings | Stackly Travel & Tourism</title>
+  <meta name="description" content="Manage personal explorer profile, notification preferences, emergency contacts, and security credentials.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Account Settings...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Logo click redirects strictly to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Account Settings</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Main Menu</div>
+        <a href="dashboard-traveler.html" class="dash-nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
+          <i class="fa-solid fa-compass"></i>
+          <span>Expeditions</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Itineraries</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Safety & Permits</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Preferences</div>
+        <a href="dashboard-settings.html" class="dash-nav-item active">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>24/7 Field Support</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">EX</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Explorer</div>
+            <div class="dash-user-role-label">Traveler</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2>Account Preferences & Security</h2>
+          <p>Update personal credentials, dietary requirements, and expedition notifications</p>
+        </div>
+        <div class="dash-top-actions">
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Save Changes</a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: PROFILE OVERVIEW -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Explorer Profile Details</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div class="form-group">
+              <label class="form-label">Full Display Name</label>
+              <input type="text" class="form-control" value="Alexander Sterling" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Registered Email</label>
+              <input type="email" class="form-control" value="alexander.sterling@example.com" placeholder="Email" readonly>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: EMERGENCY CONTACTS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Emergency Kin Contacts</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div class="form-group">
+              <label class="form-label">Primary Contact Name</label>
+              <input type="text" class="form-control" value="Eleanor Sterling (Spouse)" placeholder="Kin Name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Kin Contact Phone</label>
+              <input type="tel" class="form-control" value="+91 9876543210" placeholder="Phone">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: DIETARY & HEALTH PREFERENCES -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Expedition Dietary & Medical Disclosures</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div class="form-group">
+              <label class="form-label">Dietary Plan</label>
+              <select class="form-control">
+                <option selected>Gluten-Free Omnivore</option>
+                <option>Vegetarian</option>
+                <option>Vegan</option>
+                <option>No Restrictions</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Blood Group</label>
+              <input type="text" class="form-control" value="O Positive (O+)" placeholder="Blood Group">
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: NOTIFICATION SETTINGS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Satellite Dispatch & SMS Notifications</h3>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <label style="display:flex; gap:10px; align-items:center; font-size:0.9rem;">
+              <input type="checkbox" checked> Receive SMS alerts on daily departure times and gate passes
+            </label>
+            <label style="display:flex; gap:10px; align-items:center; font-size:0.9rem;">
+              <input type="checkbox" checked> Send automated trail check-in alerts to emergency kin contacts
+            </label>
+          </div>
+        </div>
+
+        <!-- SECTION 5: SECURITY & TWO-FACTOR AUTH -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Two-Factor Authentication (2FA)</h3>
+            <span class="dash-status confirmed">Enabled</span>
+          </div>
+          <p style="font-size:0.9rem; color:var(--text-muted);">Secured via Authenticator App for satellite login credentials.</p>
+        </div>
+
+        <!-- SECTION 6: DATA PRIVACY & STORAGE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Local Session & Cache Controls</h3>
+          </div>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:12px;">Your session data is securely maintained in browser local storage.</p>
+          <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Export Profile Data (JSON)</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+

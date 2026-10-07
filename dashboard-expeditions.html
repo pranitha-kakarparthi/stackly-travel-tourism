@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expeditions Portal | Stackly Travel & Tourism</title>
+  <meta name="description" content="View all confirmed expeditions, reserved seats, and seasonal wilderness permits.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Expeditions...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Logo click redirects strictly to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Expeditions Portal</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Main Menu</div>
+        <a href="dashboard-traveler.html" class="dash-nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item active">
+          <i class="fa-solid fa-compass"></i>
+          <span>Expeditions</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Itineraries</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Safety & Permits</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Preferences</div>
+        <a href="dashboard-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>24/7 Field Support</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">EX</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Explorer</div>
+            <div class="dash-user-role-label">Traveler</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2>Expeditions Management</h2>
+          <p>Review active booking permits, group capacity, and payment receipts</p>
+        </div>
+        <div class="dash-top-actions">
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Book New Expedition</a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: EXPEDITION SUMMARY KPIS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon primary"><i class="fa-solid fa-ticket"></i></div>
+            <div class="kpi-meta">
+              <h4>Confirmed Bookings</h4>
+              <div class="kpi-value">3 Tours</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <div class="kpi-meta">
+              <h4>Past Expeditions</h4>
+              <div class="kpi-value">11 Completed</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon accent"><i class="fa-solid fa-dollar-sign"></i></div>
+            <div class="kpi-meta">
+              <h4>Total Investment</h4>
+              <div class="kpi-value">$14,200</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon info"><i class="fa-solid fa-compass"></i></div>
+            <div class="kpi-meta">
+              <h4>Next Departure</h4>
+              <div class="kpi-value">In 18 Days</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: ACTIVE EXPEDITIONS DETAIL TABLE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Active Booking Roster</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download Receipts</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Destination</th>
+                  <th>Dates</th>
+                  <th>Tier Package</th>
+                  <th>Payment Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#EXP-7721</td>
+                  <td>Serengeti Safari & Ngorongoro</td>
+                  <td>Oct 24 - Oct 31, 2026</td>
+                  <td>Wilderness Pro</td>
+                  <td><span class="dash-status confirmed">Paid Full</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">View Voucher</a></td>
+                </tr>
+                <tr>
+                  <td>#EXP-7744</td>
+                  <td>Swiss Alpine Glacier Trail</td>
+                  <td>Dec 10 - Dec 16, 2026</td>
+                  <td>Explorer Standard</td>
+                  <td><span class="dash-status confirmed">Paid Full</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">View Voucher</a></td>
+                </tr>
+                <tr>
+                  <td>#EXP-7802</td>
+                  <td>Kyoto Zen & Ancient Nakasendo</td>
+                  <td>Mar 15 - Mar 23, 2027</td>
+                  <td>Wilderness Pro</td>
+                  <td><span class="dash-status pending">Deposit Paid (20%)</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Complete Balance</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 3: EXPEDITION PERMIT STATUS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">National Park Entry Permits</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>TANAPA Wildlife Permit</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Permit #TZ-8849 Issued & Cleared.</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Swiss Alpine Hut Vouchers</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Zermatt SAC reservation #CH-9921 Active.</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Nakasendo Historic Way Clearance</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Ryokan stay certificates confirmed.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: PRE-TRIP FIELD PREPARATION -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Mandatory Expedition Prerequisites</h3>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:14px;">Ensure all health disclosures and passport copies are submitted at least 14 days before tour departure.</p>
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Submit Health Clearance</a>
+        </div>
+
+        <!-- SECTION 5: PRIVATE GROUP MODIFICATIONS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Custom Group Adjustments</h3>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted);">Traveling with children or requiring customized dietary meal plans? Send requests directly to our field coordinator desk.</p>
+        </div>
+
+        <!-- SECTION 6: CANCELLATION & TRANSFER PROTECTION -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Stackly Flexible Booking Guarantee</h3>
+            <span class="dash-status confirmed">Active Policy</span>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted);">All booked tours include 100% deposit transferability up to 60 days before scheduled departure date.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+

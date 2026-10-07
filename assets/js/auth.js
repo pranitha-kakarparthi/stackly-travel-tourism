@@ -102,51 +102,56 @@ function initSignIn(form) {
 
     // Check localStorage users
     const users = JSON.parse(localStorage.getItem('users') || '[]');
-    const matchedUser = users.find(u => u.email.toLowerCase() === email && u.password === password && u.role === role);
+    let matchedUser = users.find(u => u.email.toLowerCase() === email && u.role === role);
 
-    if (matchedUser) {
-      // Store current user session
-      const sessionUser = {
-        id: matchedUser.id,
-        username: matchedUser.username || matchedUser.firstName,
-        firstName: matchedUser.firstName,
-        lastName: matchedUser.lastName,
-        email: matchedUser.email,
-        role: matchedUser.role,
-        roleLabel: matchedUser.roleLabel || getRoleLabel(matchedUser.role),
+    if (!matchedUser) {
+      // Per specification: "Should be able to login to dashboard with any valid email address and password that passes the form validations."
+      const namePart = email.split('@')[0].replace(/[._-]/g, ' ');
+      const formattedName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
+      matchedUser = {
+        id: 'USR-' + Date.now(),
+        username: email.split('@')[0],
+        firstName: formattedName,
+        lastName: 'Explorer',
+        email: email,
+        password: password,
+        role: role,
+        roleLabel: getRoleLabel(role),
         lastLogin: new Date().toISOString()
       };
-      localStorage.setItem('currentUser', JSON.stringify(sessionUser));
-
-      if (alertBox) {
-        alertBox.className = 'alert alert-success';
-        alertBox.style.display = 'block';
-        alertBox.style.backgroundColor = '#DEF7EC';
-        alertBox.style.color = '#03543F';
-        alertBox.style.padding = '12px';
-        alertBox.style.borderRadius = '8px';
-        alertBox.style.marginBottom = '16px';
-        alertBox.textContent = '✓ Sign in successful! Redirecting to your dashboard...';
-      }
-
-      setTimeout(() => {
-        window.location.href = 'dashboard.html';
-      }, 700);
-    } else {
-      // Failed login feedback
-      if (alertBox) {
-        alertBox.className = 'alert alert-danger';
-        alertBox.style.display = 'block';
-        alertBox.style.backgroundColor = '#FDE8E8';
-        alertBox.style.color = '#9B1C1C';
-        alertBox.style.padding = '12px';
-        alertBox.style.borderRadius = '8px';
-        alertBox.style.marginBottom = '16px';
-        alertBox.textContent = 'Invalid credentials or role mismatch. Please check your details or create a new account.';
-      }
-      emailInput.classList.add('is-invalid');
-      emailInput.focus();
+      users.push(matchedUser);
+      localStorage.setItem('users', JSON.stringify(users));
     }
+
+    // Store active session in localStorage
+    const sessionUser = {
+      id: matchedUser.id,
+      username: matchedUser.username || matchedUser.firstName,
+      firstName: matchedUser.firstName,
+      lastName: matchedUser.lastName,
+      email: matchedUser.email,
+      role: matchedUser.role,
+      roleLabel: matchedUser.roleLabel || getRoleLabel(matchedUser.role),
+      lastLogin: new Date().toISOString()
+    };
+    localStorage.setItem('currentUser', JSON.stringify(sessionUser));
+
+    if (alertBox) {
+      alertBox.className = 'alert alert-success';
+      alertBox.style.display = 'block';
+      alertBox.style.backgroundColor = '#DEF7EC';
+      alertBox.style.color = '#03543F';
+      alertBox.style.padding = '12px';
+      alertBox.style.borderRadius = '8px';
+      alertBox.style.marginBottom = '16px';
+      alertBox.textContent = '✓ Sign in successful! Redirecting to your dashboard...';
+    }
+
+    // Role-specific dashboard route
+    const targetDashboard = getRoleDashboard(matchedUser.role);
+    setTimeout(() => {
+      window.location.href = targetDashboard;
+    }, 700);
   });
 }
 
@@ -347,6 +352,16 @@ function getRoleLabel(role) {
     'agency': 'Agency Partner',
     'admin': 'Travel Admin'
   };
-  return roles[role] || 'Traveler';
+  return roles[role] || 'Traveler / Explorer';
+}
+
+function getRoleDashboard(role) {
+  const dashboards = {
+    'traveler': 'dashboard-traveler.html',
+    'guide': 'dashboard-guide.html',
+    'agency': 'dashboard-agency.html',
+    'admin': 'dashboard-admin.html'
+  };
+  return dashboards[role] || 'dashboard.html';
 }
 

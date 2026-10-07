@@ -20,7 +20,7 @@
   <div id="siteLoader" class="site-loader" aria-live="polite">
     <div class="loader-content">
       <div class="loader-logo-wrap">
-        <img src="assets/images/logo-white.svg" alt="Stackly Travel">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
       </div>
       <div class="loader-spinner"></div>
       <div class="loader-text">Loading Portal Session...</div>
@@ -31,43 +31,43 @@
     <!-- Sidebar -->
     <aside class="dash-sidebar">
       <div class="dash-sidebar-brand">
-        <!-- Logo click redirects to Home -->
+        <!-- Logo click strictly redirects to index.html -->
         <a href="index.html" title="Return to Stackly Home">
-          <img src="assets/images/logo-white.svg" alt="Stackly Logo">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
         </a>
       </div>
 
       <nav class="dash-nav" aria-label="Dashboard Navigation">
         <div class="dash-nav-header">Main Menu</div>
-        <div class="dash-nav-item active">
+        <a href="dashboard-traveler.html" class="dash-nav-item active">
           <i class="fa-solid fa-chart-pie"></i>
           <span>Overview</span>
-        </div>
-        <div class="dash-nav-item dash-action-btn">
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
           <i class="fa-solid fa-compass"></i>
           <span>Expeditions</span>
-        </div>
-        <div class="dash-nav-item dash-action-btn">
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
           <i class="fa-solid fa-calendar-days"></i>
           <span>Itineraries</span>
-        </div>
-        <div class="dash-nav-item dash-action-btn">
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
           <i class="fa-solid fa-shield-halved"></i>
           <span>Safety & Permits</span>
-        </div>
+        </a>
 
         <div class="dash-nav-header" style="margin-top:14px;">Preferences</div>
-        <div class="dash-nav-item dash-action-btn">
+        <a href="dashboard-settings.html" class="dash-nav-item">
           <i class="fa-solid fa-gear"></i>
           <span>Settings</span>
-        </div>
-        <div class="dash-nav-item dash-action-btn">
-          <i class="fa-solid fa-circle-question"></i>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
           <span>24/7 Field Support</span>
-        </div>
+        </a>
       </nav>
 
-      <!-- Sidebar User Footer -->
+      <!-- Sidebar User Footer with Sign Out -->
       <div class="dash-user-footer">
         <div class="dash-user-info">
           <div class="dash-user-avatar dash-user-initials">ST</div>
@@ -76,7 +76,7 @@
             <div class="dash-user-role-label dash-user-display-role">Traveler</div>
           </div>
         </div>
-        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.1rem; padding:4px;">
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
           <i class="fa-solid fa-arrow-right-from-bracket"></i>
         </button>
       </div>
@@ -84,33 +84,23 @@
 
     <!-- Main Content Area -->
     <main class="dash-main">
-      <!-- Topbar Header -->
       <header class="dash-topbar">
         <div class="dash-greeting-box">
-          <!-- Dynamic Time-Based Greeting + Name -->
           <h2 id="dashGreetingHeading">Welcome, Explorer!</h2>
           <p id="dashLoginTimestamp">Active Session: Verified & Secured</p>
         </div>
 
         <div class="dash-top-actions">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <span class="dash-role-badge dash-user-display-role" style="margin-top:0;">Traveler</span>
-            <a href="index.html" class="btn btn-sm btn-outline" style="border-radius:var(--radius-sm); padding:7px 14px;">
-              <i class="fa-solid fa-house"></i> View Website
-            </a>
-          </div>
-
-          <!-- Notification Trigger (Action button redirects to 404) -->
-          <button type="button" class="dash-action-btn" title="Notifications" style="width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:#FFFFFF; cursor:pointer; display:flex; align-items:center; justify-content:center; color:var(--dark);">
+          <span class="dash-role-badge dash-user-display-role">Traveler</span>
+          <a href="404.html" class="dash-action-btn" title="Notifications" style="width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:#FFFFFF; display:flex; align-items:center; justify-content:center; color:var(--dark);">
             <i class="fa-regular fa-bell"></i>
-          </button>
+          </a>
         </div>
       </header>
 
-      <!-- Dashboard Role-Aware Dynamic Container -->
       <div class="dash-content">
         <div id="dashRoleContainer">
-          <!-- Populated dynamically by dashboard.js based on role -->
+          <!-- Populated or redirected by dashboard.js based on role -->
         </div>
       </div>
     </main>
@@ -121,4 +111,3 @@
   <script src="assets/js/dashboard.js"></script>
 </body>
 </html>
-

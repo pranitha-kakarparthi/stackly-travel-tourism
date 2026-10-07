@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itineraries & Routes | Stackly Travel & Tourism</title>
+  <meta name="description" content="Day-by-day expedition waypoints, GPS trail tracks, and camp coordinate details.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Itineraries...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Logo click redirects strictly to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Itineraries & Routes</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Main Menu</div>
+        <a href="dashboard-traveler.html" class="dash-nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
+          <i class="fa-solid fa-compass"></i>
+          <span>Expeditions</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item active">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Itineraries</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Safety & Permits</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Preferences</div>
+        <a href="dashboard-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>24/7 Field Support</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">EX</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Explorer</div>
+            <div class="dash-user-role-label">Traveler</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2>Expedition Itineraries</h2>
+          <p>Detailed day-by-day routing, flight transfers, and GPS coordinates</p>
+        </div>
+        <div class="dash-top-actions">
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Download GPX Tracks</a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: ROUTE METRICS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon primary"><i class="fa-solid fa-route"></i></div>
+            <div class="kpi-meta">
+              <h4>Total Distance</h4>
+              <div class="kpi-value">184 km</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-mountain"></i></div>
+            <div class="kpi-meta">
+              <h4>Total Ascent</h4>
+              <div class="kpi-value">4,200 m</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon accent"><i class="fa-solid fa-bed"></i></div>
+            <div class="kpi-meta">
+              <h4>Camp Stages</h4>
+              <div class="kpi-value">5 Camps</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon info"><i class="fa-solid fa-map-pin"></i></div>
+            <div class="kpi-meta">
+              <h4>Waypoints</h4>
+              <div class="kpi-value">32 GPS Pins</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: DAY-BY-DAY ITINERARY CARDS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Serengeti & Ngorongoro Circuit (8 Days)</h3>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h5>Day 1: Arrival & Kilimanjaro Airport Meet-and-Greet</h5>
+                <p>Private Land Cruiser transfer to Arusha Eco Wilderness Camp. Dinner briefing with lead ranger Dr. Ndidi.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h5>Day 2-3: Central Serengeti Seronera River Valley</h5>
+                <p>Morning and late afternoon game tracking for big cats. Sundowner cocktails overlooking Moru Kopjes.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h5>Day 4-5: Northern Serengeti Mara River Crossings</h5>
+                <p>Witness the Great Migration crossing crocodile-filled river bends. Stay at mobile luxury tented camp.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h5>Day 6-7: Ngorongoro Crater Floor Safari</h5>
+                <p>600-meter descent into the caldera. Full day tracking black rhino, flamingo flocks, and hippo pools.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h5>Day 8: Cultural Visit & Departure Flight</h5>
+                <p>Maasai village walking tour followed by private bush flight transfer to Kilimanjaro International Airport.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: OFFLINE TOPOGRAPHIC MAP DOWNLOAD -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Offline GPS Maps & Terrain Files</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Export KML / GPX</a>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted);">Compatible with Garmin, Suunto, Coros, and Gaia GPS smartphone navigation apps.</p>
+        </div>
+
+        <!-- SECTION 4: FLIGHT & VEHICLE TRANSFER LOGISTICS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Internal Transport Logistics</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;">
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Bush Flight: Coastal Aviation #CQ-441</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Kogatende Airstrip to Arusha Airport (Departure 10:15 AM).</p>
+            </div>
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Vehicle: Custom 4x4 Safari Land Cruiser</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Equipped with pop-up photography roof & AC power invertor.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: ELEVATION & ACCLIMATIZATION PROFILE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Daily Elevation Track</h3>
+          </div>
+          <div style="padding:14px; background:var(--bg-surface); border-radius:8px;">
+            <p style="font-size:0.92rem; color:var(--text-main);">Max Altitude: 2,286m at Ngorongoro Rim. Average Plateau Altitude: 1,500m. Mild temperature variation between 14°C - 28°C.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 6: PACKING WEIGHT LIMIT ADVISORY -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Bush Aircraft Luggage Protocol</h3>
+            <span class="dash-status confirmed">15 kg Limit Strict</span>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted);">Strict soft-sided duffel luggage policy for bush airstrip flights without rigid outer frames.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+

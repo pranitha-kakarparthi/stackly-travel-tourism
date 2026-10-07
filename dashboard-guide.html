@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Guide Dashboard | Stackly Travel & Tourism</title>
+  <meta name="description" content="Field operational center for certified wilderness tour guides and alpine leaders.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Guide Operations...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Brand logo strictly redirects to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Tour Guide / Operator</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Field Operations</div>
+        <a href="dashboard-guide.html" class="dash-nav-item active">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
+          <i class="fa-solid fa-person-hiking"></i>
+          <span>Assigned Tours</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
+          <i class="fa-solid fa-route"></i>
+          <span>Route Logs</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
+          <i class="fa-solid fa-kit-medical"></i>
+          <span>Medical Protocols</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Preferences</div>
+        <a href="dashboard-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-tower-broadcast"></i>
+          <span>HQ Dispatch SOS</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">GD</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Lead Guide</div>
+            <div class="dash-user-role-label">Field Ranger</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2 id="dashGreetingHeading">Welcome, Lead Guide!</h2>
+          <p id="dashLoginTimestamp">Field Telemetry: Connected via Starlink Uplink</p>
+        </div>
+
+        <div class="dash-top-actions">
+          <span class="dash-role-badge">Certified Wilderness Lead</span>
+          <a href="404.html" class="dash-action-btn" title="Emergency Broadcast" style="width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:#FFFFFF; display:flex; align-items:center; justify-content:center; color:var(--dark);">
+            <i class="fa-solid fa-walkie-talkie"></i>
+          </a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: GUIDE OPERATIONAL KPIS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon primary"><i class="fa-solid fa-person-hiking"></i></div>
+            <div class="kpi-meta">
+              <h4>Assigned Expeditions</h4>
+              <div class="kpi-value">4 Active</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-users"></i></div>
+            <div class="kpi-meta">
+              <h4>Travelers Guided</h4>
+              <div class="kpi-value">48 Explorers</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon accent"><i class="fa-solid fa-star"></i></div>
+            <div class="kpi-meta">
+              <h4>Leader Rating</h4>
+              <div class="kpi-value">4.97 / 5.0</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon info"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="kpi-meta">
+              <h4>Safety Certification</h4>
+              <div class="kpi-value">WFA Verified</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: ASSIGNED EXPEDITIONS MANIFEST -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Assigned Field Tours</h3>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Update Manifest</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Route Title</th>
+                  <th>Dates</th>
+                  <th>Group Size</th>
+                  <th>Field Comms Channel</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Annapurna Base Camp High Ridge</strong></td>
+                  <td>Oct 15 - Oct 25, 2026</td>
+                  <td>12 / 12 (Full)</td>
+                  <td>SAT Beacon #SAT-882</td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">View Roster</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Iceland Aurora & Glacial Traverse</strong></td>
+                  <td>Nov 05 - Nov 12, 2026</td>
+                  <td>8 / 10 Climbers</td>
+                  <td>Reykjavik Ops Link</td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">View Roster</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 3: SATELLITE DISPATCH LOG -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Live Satellite Ops Dispatch Log</h3>
+            <span style="font-size:0.8rem; color:var(--primary); font-weight:700;"><i class="fa-solid fa-satellite"></i> Online</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
+              <span class="dash-status confirmed">Normal Ping</span>
+              <strong style="margin-left:8px;">Base Camp Machame: Check-in verified.</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Barometric pressure steady at 680 hPa. Clear trail conditions towards Lava Tower.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: ASCENT TIMELINE & ELEVATION -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Acclimatization & Elevation Profile</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px; text-align:center;">
+            <div style="padding:14px; background:var(--bg-surface); border-radius:8px;">
+              <h5>Day 1: 1,800m</h5>
+              <small>Trailhead Gate</small>
+            </div>
+            <div style="padding:14px; background:var(--bg-surface); border-radius:8px;">
+              <h5>Day 3: 3,000m</h5>
+              <small>Shira Plateau</small>
+            </div>
+            <div style="padding:14px; background:var(--bg-surface); border-radius:8px;">
+              <h5>Day 5: 4,600m</h5>
+              <small>Lava Tower Acclimatization</small>
+            </div>
+            <div style="padding:14px; background:var(--bg-surface); border-radius:8px;">
+              <h5>Day 7: 5,895m</h5>
+              <small>Uhuru Summit Ridge</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: FIELD MEDICAL EQUIPMENT AUDIT -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Field Medical Kit Inspection Audit</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Log Inspection</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:14px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <strong>Hyperbaric Gamow Bag</strong>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:4px;">Pressure seals checked Oct 2026. Certified optimal.</p>
+            </div>
+            <div style="padding:14px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <strong>Oxygen Cylinders (3x 4L)</strong>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:4px;">Full 200 bar gauge pressure verified.</p>
+            </div>
+            <div style="padding:14px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <strong>Trauma & Splint Kits</strong>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:4px;">Sterile dressings and sam splints stocked.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 6: PORTER & CREW WELFARE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Porter Welfare & Load Compliance (IPPG)</h3>
+            <span class="dash-status confirmed"><i class="fa-solid fa-check"></i> 100% Compliant</span>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted);">All 24 porters provided with 4-season sleeping bags, waterproof outerwear, and load-bearing packs under 20 kg.</p>
+        </div>
+
+        <!-- SECTION 7: GUIDE INCIDENT REPORTING TOOL -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Field Incident Reporting Tool</h3>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:16px;">Submit routine trail obstacle, wildlife movement, or medical check notices to central headquarters.</p>
+          <a href="404.html" class="btn btn-primary dash-action-btn"><i class="fa-solid fa-file-shield"></i> File Field Dispatch</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+

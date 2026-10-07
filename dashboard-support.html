@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24/7 Field Support | Stackly Travel & Tourism</title>
+  <meta name="description" content="Reach the Stackly 24/7 global operations support desk. Field communications, gear help, and itinerary emergencies.">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Full Viewport Site Loader -->
+  <div id="siteLoader" class="site-loader" aria-live="polite">
+    <div class="loader-content">
+      <div class="loader-logo-wrap">
+        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
+      </div>
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading Support Desk...</div>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <!-- Logo click redirects strictly to index.html -->
+        <a href="index.html" title="Return to Stackly Home">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">24/7 Field Support</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Main Menu</div>
+        <a href="dashboard-traveler.html" class="dash-nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-expeditions.html" class="dash-nav-item">
+          <i class="fa-solid fa-compass"></i>
+          <span>Expeditions</span>
+        </a>
+        <a href="dashboard-itineraries.html" class="dash-nav-item">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Itineraries</span>
+        </a>
+        <a href="dashboard-safety.html" class="dash-nav-item">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Safety & Permits</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Preferences</div>
+        <a href="dashboard-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-support.html" class="dash-nav-item active">
+          <i class="fa-solid fa-headset"></i>
+          <span>24/7 Field Support</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">EX</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Explorer</div>
+            <div class="dash-user-role-label">Traveler</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-greeting-box">
+          <h2>24/7 Global Field Operations Desk</h2>
+          <p>Direct satellite link with our emergency flight & trail dispatch center</p>
+        </div>
+        <div class="dash-top-actions">
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Urgent Assistance Call</a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: DISPATCH KPIS -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon primary"><i class="fa-solid fa-clock"></i></div>
+            <div class="kpi-meta">
+              <h4>Avg Response Time</h4>
+              <div class="kpi-value">&lt; 3 Mins</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-tower-broadcast"></i></div>
+            <div class="kpi-meta">
+              <h4>Satellite Uplink</h4>
+              <div class="kpi-value">100% Online</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon accent"><i class="fa-solid fa-headset"></i></div>
+            <div class="kpi-meta">
+              <h4>Officers On Duty</h4>
+              <div class="kpi-value">12 Specialists</div>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon info"><i class="fa-solid fa-kit-medical"></i></div>
+            <div class="kpi-meta">
+              <h4>Physician Consult</h4>
+              <div class="kpi-value">Available 24/7</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: DISPATCH HOTLINES -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Emergency Communications Channels</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:16px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Global Direct Phone</strong>
+              <p style="font-size:1.1rem; font-weight:700; color:var(--primary); margin-top:4px;">+91 9876543210</p>
+              <small style="color:var(--text-muted);">Dedicated 24/7 Hotline</small>
+            </div>
+            <div style="padding:16px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Email Operations Desk</strong>
+              <p style="font-size:1.1rem; font-weight:700; color:var(--primary); margin-top:4px;">hello@thestackly.com</p>
+              <small style="color:var(--text-muted);">Encrypted Inbound Dispatch</small>
+            </div>
+            <div style="padding:16px; background:var(--bg-subtle); border-radius:8px;">
+              <strong>Garmin inReach SOS</strong>
+              <p style="font-size:1.1rem; font-weight:700; color:var(--secondary); margin-top:4px;">Channel #STK-SOS</p>
+              <small style="color:var(--text-muted);">Satellite direct packet link</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: SUBMIT EXPEDITION TICKET -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Create Priority Support Ticket</h3>
+          </div>
+          <form style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-control">
+                <option>Active Tour Logistics Adjustment</option>
+                <option>Flight Transfer Change</option>
+                <option>Medical Consultation Request</option>
+                <option>Gear Delivery Assistance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Urgency Level</label>
+              <select class="form-control">
+                <option>Normal (Within 4 Hours)</option>
+                <option>High (Within 1 Hour)</option>
+                <option>Immediate Emergency (Instant)</option>
+              </select>
+            </div>
+            <div class="form-group" style="grid-column: span 2;">
+              <label class="form-label">Brief Description of Situation</label>
+              <textarea rows="3" class="form-control" placeholder="Describe your expedition situation..."></textarea>
+            </div>
+            <div style="grid-column: span 2;">
+              <a href="404.html" class="btn btn-primary dash-action-btn">Transmit Ticket to Desk</a>
+            </div>
+          </form>
+        </div>
+
+        <!-- SECTION 4: FREQUENT FIELD ADVICE -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Field Quick Protocols</h3>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:10px; font-size:0.9rem; color:var(--text-muted);">
+            <div><strong>Lost luggage on arrival flight?</strong> Show baggage claim tag to our airport Land Cruiser driver; our Salem ops desk tracks internal courier delivery.</div>
+            <div><strong>Feeling early signs of altitude headache?</strong> Notify your IFMGA guide immediately to begin hydration and resting saturation checks.</div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: OPERATIONS DESK HEADQUARTERS ADDRESS -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Central Operations Headquarters</h3>
+          </div>
+          <p style="font-size:0.92rem; color:var(--text-main);">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008, India.</p>
+        </div>
+
+        <!-- SECTION 6: SATELLITE COMMUNICATIONS TEST -->
+        <div class="dash-card">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Test Field Beacon Connection</h3>
+          </div>
+          <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:12px;">Verify that your satellite messenger has paired with our central tracking grid before setting off into no-cellular wilderness zones.</p>
+          <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Send Test Ping</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
+
