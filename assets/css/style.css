@@ -367,11 +367,14 @@ button, input, select, textarea {
   gap: 10px;
   cursor: pointer;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
   height: 44px;
   width: auto;
+  max-width: none;
+  flex-shrink: 0;
   object-fit: contain;
   filter: brightness(0.12); /* Sharp dark silhouette on light backgrounds */
   transition: transform var(--transition-fast);
@@ -693,6 +696,49 @@ button, input, select, textarea {
 
 .section-padding-sm {
   padding: 50px 0;
+}
+
+/* ==========================================================================
+   CONTENT + IMAGE SPLIT LAYOUT (OVERVIEW & GUARANTEE SECTIONS)
+   ========================================================================== */
+.split-layout,
+.content-image-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+.split-layout.split-layout-wide,
+.split-layout-wide {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+}
+
+.split-layout > div,
+.split-content,
+.split-media,
+.content-image-split > div {
+  min-width: 0;
+  width: 100%;
+}
+
+.split-layout img,
+.split-media img,
+.content-image-split img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  object-fit: cover;
+  display: block;
+}
+
+.about-stats-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .section-header {
@@ -1630,16 +1676,53 @@ select.form-control {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  height: 60px;
+  height: 64px;
   flex-shrink: 0;
   padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   background: #FFFFFF;
   border-bottom: 1px solid var(--border);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   z-index: 100;
+}
+
+.auth-fixed-header .brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0 !important;
+}
+
+.auth-fixed-header .brand-logo-img {
+  height: 42px;
+  width: auto;
+  max-width: none !important;
+  flex-shrink: 0 !important;
+  object-fit: contain;
+}
+
+.auth-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.auth-header-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.auth-header-actions .btn.active {
+  background: var(--bg-surface);
+  color: var(--primary);
+  border-color: var(--primary);
+  font-weight: 700;
+  pointer-events: none;
 }
 
 .auth-body-container {

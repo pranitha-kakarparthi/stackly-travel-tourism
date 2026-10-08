@@ -350,6 +350,29 @@
   color: var(--dark);
 }
 
+.emergency-hotline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.emergency-hotline-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.emergency-hotline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .dash-table-wrap {
   width: 100%;
   overflow-x: auto;
@@ -567,5 +590,27 @@
 
   .dash-greeting-box h2 {
     font-size: 1.15rem;
+  }
+
+  /* Emergency Hotline Row Responsive Alignment */
+  .emergency-hotline-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+  }
+
+  .emergency-hotline-info {
+    width: 100% !important;
+    text-align: left !important;
+  }
+
+  .emergency-hotline-btn {
+    width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 11px 16px !important;
+    box-sizing: border-box !important;
   }
 }
