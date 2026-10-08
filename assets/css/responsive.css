@@ -357,10 +357,6 @@
     gap: 6px;
   }
 
-  .auth-header-actions .btn.active {
-    display: none !important;
-  }
-
   .split-layout,
   .content-image-split,
   .split-layout-wide,
