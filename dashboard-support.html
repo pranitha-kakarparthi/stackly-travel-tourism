@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
 
@@ -98,28 +100,28 @@
       <div class="dash-content">
         <!-- SECTION 1: DISPATCH KPIS -->
         <div class="kpi-grid">
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon primary"><i class="fa-solid fa-clock"></i></div>
             <div class="kpi-meta">
               <h4>Avg Response Time</h4>
               <div class="kpi-value">&lt; 3 Mins</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon secondary"><i class="fa-solid fa-tower-broadcast"></i></div>
             <div class="kpi-meta">
               <h4>Satellite Uplink</h4>
               <div class="kpi-value">100% Online</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon accent"><i class="fa-solid fa-headset"></i></div>
             <div class="kpi-meta">
               <h4>Officers On Duty</h4>
               <div class="kpi-value">12 Specialists</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon info"><i class="fa-solid fa-kit-medical"></i></div>
             <div class="kpi-meta">
               <h4>Physician Consult</h4>
@@ -129,7 +131,7 @@
         </div>
 
         <!-- SECTION 2: DISPATCH HOTLINES -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Emergency Communications Channels</h3>
           </div>
@@ -153,7 +155,7 @@
         </div>
 
         <!-- SECTION 3: SUBMIT EXPEDITION TICKET -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Create Priority Support Ticket</h3>
           </div>
@@ -186,7 +188,7 @@
         </div>
 
         <!-- SECTION 4: FREQUENT FIELD ADVICE -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Field Quick Protocols</h3>
           </div>
@@ -197,7 +199,7 @@
         </div>
 
         <!-- SECTION 5: OPERATIONS DESK HEADQUARTERS ADDRESS -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Central Operations Headquarters</h3>
           </div>
@@ -205,17 +207,106 @@
         </div>
 
         <!-- SECTION 6: SATELLITE COMMUNICATIONS TEST -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Test Field Beacon Connection</h3>
           </div>
           <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:12px;">Verify that your satellite messenger has paired with our central tracking grid before setting off into no-cellular wilderness zones.</p>
           <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Send Test Ping</a>
         </div>
+
+        <!-- SECTION 7: GLOBAL EMERGENCY CONCIERGE DISPATCH PROTOCOL & URGENT ASSISTANCE -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Global Emergency Concierge Dispatch & Crisis Escalation</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Tier-1 Escalation Protocols for Urgent Flight Rebooking, Lost Passports & Medical Incidents</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn"><i class="fa-solid fa-bolt"></i> Dispatch Duty Manager</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong><i class="fa-solid fa-passport" style="color:var(--primary);"></i> Lost Passport Protocol</strong>
+                <span class="dash-status confirmed">Active SOP</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Immediate dispatch of local concierge to nearest consular mission with digital identity packet.</p>
+              <small style="color:var(--text-main);">Avg response time: 30 minutes in European capitals.</small>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong><i class="fa-solid fa-plane-circle-exclamation" style="color:var(--secondary);"></i> Irregular Flight Rebooking</strong>
+                <span class="dash-status confirmed">GDS Priority</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Direct automated protection on next available partner flight via Star Alliance / SkyTeam desk.</p>
+              <small style="color:var(--text-main);">Zero change fee on Stackly protected journeys.</small>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong><i class="fa-solid fa-heart-pulse" style="color:#10B981;"></i> Medical Tele-Triage Desk</strong>
+                <span class="dash-status confirmed">24/7 Physician</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Video consult with English-speaking emergency physician for non-critical health queries.</p>
+              <small style="color:var(--text-main);">Direct pharmacy prescription delivery in major cities.</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 8: TRAVEL INSURANCE CLAIM FILING & INCIDENT DOCUMENTATION PORTAL -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Instant Travel Insurance Claims & Disruption Proof Vault</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Automated Claim Submissions for Flight Delays > 3h, Medical Invoices & Lost Baggage</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">File New Claim Online</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Claim ID</th>
+                  <th>Incident Type</th>
+                  <th>Affected Journey</th>
+                  <th>Claimed Amount</th>
+                  <th>Underwriter Status</th>
+                  <th>Documentation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#CLM-2026-881</strong></td>
+                  <td>Flight Delay > 4h (EU261 Compensation)</td>
+                  <td>Swiss Alps Glacier Tour (AF-1402)</td>
+                  <td>€600.00 EUR</td>
+                  <td><span class="dash-status confirmed">Approved / Paid</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Payout Receipt</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#CLM-2026-904</strong></td>
+                  <td>Delayed Baggage Out-of-Pocket Essentials</td>
+                  <td>Kyoto & Fuji Cultural (JL-042)</td>
+                  <td>$350.00 USD</td>
+                  <td><span class="dash-status confirmed">Reimbursed</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Audit Summary</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#CLM-2026-920</strong></td>
+                  <td>Outpatient Clinic Altitude Check</td>
+                  <td>Zermatt Health Station</td>
+                  <td>CHF 180.00</td>
+                  <td><span class="dash-status in-progress">Under Review</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Upload Invoice</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </main>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>

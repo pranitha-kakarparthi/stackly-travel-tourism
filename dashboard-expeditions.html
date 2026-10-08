@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
 
@@ -98,28 +100,28 @@
       <div class="dash-content">
         <!-- SECTION 1: EXPEDITION SUMMARY KPIS -->
         <div class="kpi-grid">
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon primary"><i class="fa-solid fa-ticket"></i></div>
             <div class="kpi-meta">
               <h4>Confirmed Bookings</h4>
               <div class="kpi-value">3 Tours</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon secondary"><i class="fa-solid fa-clock-rotate-left"></i></div>
             <div class="kpi-meta">
               <h4>Past Expeditions</h4>
               <div class="kpi-value">11 Completed</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon accent"><i class="fa-solid fa-dollar-sign"></i></div>
             <div class="kpi-meta">
               <h4>Total Investment</h4>
               <div class="kpi-value">$14,200</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon info"><i class="fa-solid fa-compass"></i></div>
             <div class="kpi-meta">
               <h4>Next Departure</h4>
@@ -129,7 +131,7 @@
         </div>
 
         <!-- SECTION 2: ACTIVE EXPEDITIONS DETAIL TABLE -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Active Booking Roster</h3>
             <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download Receipts</a>
@@ -148,26 +150,26 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>#EXP-7721</td>
-                  <td>Serengeti Safari & Ngorongoro</td>
+                  <td>#TRP-7721</td>
+                  <td>Paris & Rome Grand Heritage Tour</td>
                   <td>Oct 24 - Oct 31, 2026</td>
-                  <td>Wilderness Pro</td>
+                  <td>Premium Grand Tour</td>
                   <td><span class="dash-status confirmed">Paid Full</span></td>
                   <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">View Voucher</a></td>
                 </tr>
                 <tr>
-                  <td>#EXP-7744</td>
-                  <td>Swiss Alpine Glacier Trail</td>
+                  <td>#TRP-7744</td>
+                  <td>Swiss Alps Panoramic Glacier Express</td>
                   <td>Dec 10 - Dec 16, 2026</td>
-                  <td>Explorer Standard</td>
+                  <td>Classic World Explorer</td>
                   <td><span class="dash-status confirmed">Paid Full</span></td>
                   <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">View Voucher</a></td>
                 </tr>
                 <tr>
-                  <td>#EXP-7802</td>
-                  <td>Kyoto Zen & Ancient Nakasendo</td>
+                  <td>#TRP-7802</td>
+                  <td>Tokyo & Kyoto Bullet Train Discovery</td>
                   <td>Mar 15 - Mar 23, 2027</td>
-                  <td>Wilderness Pro</td>
+                  <td>Premium Grand Tour</td>
                   <td><span class="dash-status pending">Deposit Paid (20%)</span></td>
                   <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Complete Balance</a></td>
                 </tr>
@@ -177,37 +179,37 @@
         </div>
 
         <!-- SECTION 3: EXPEDITION PERMIT STATUS -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
-            <h3 class="dash-card-title">National Park Entry Permits</h3>
+            <h3 class="dash-card-title">Museum & Transit Reservations</h3>
           </div>
           <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
             <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
-              <strong>TANAPA Wildlife Permit</strong>
-              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Permit #TZ-8849 Issued & Cleared.</p>
+              <strong>Louvre & Colosseum VIP Passes</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Skip-the-line reservation #EU-8849 Confirmed.</p>
             </div>
             <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
-              <strong>Swiss Alpine Hut Vouchers</strong>
-              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Zermatt SAC reservation #CH-9921 Active.</p>
+              <strong>Glacier Express Panoramic Seats</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Zermatt to St. Moritz car #CH-9921 Active.</p>
             </div>
             <div style="padding:14px; background:var(--bg-subtle); border-radius:8px;">
-              <strong>Nakasendo Historic Way Clearance</strong>
-              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">Ryokan stay certificates confirmed.</p>
+              <strong>Japan Shinkansen & Ryokan Passes</strong>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">First-class Green Car pass verified.</p>
             </div>
           </div>
         </div>
 
         <!-- SECTION 4: PRE-TRIP FIELD PREPARATION -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
-            <h3 class="dash-card-title">Mandatory Expedition Prerequisites</h3>
+            <h3 class="dash-card-title">Pre-Trip Travel Prerequisites</h3>
           </div>
-          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:14px;">Ensure all health disclosures and passport copies are submitted at least 14 days before tour departure.</p>
-          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Submit Health Clearance</a>
+          <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:14px;">Ensure all passport copies and flight arrival details are submitted at least 14 days before tour departure.</p>
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Submit Travel Info</a>
         </div>
 
         <!-- SECTION 5: PRIVATE GROUP MODIFICATIONS -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Custom Group Adjustments</h3>
           </div>
@@ -215,17 +217,114 @@
         </div>
 
         <!-- SECTION 6: CANCELLATION & TRANSFER PROTECTION -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Stackly Flexible Booking Guarantee</h3>
             <span class="dash-status confirmed">Active Policy</span>
           </div>
           <p style="font-size:0.92rem; color:var(--text-muted);">All booked tours include 100% deposit transferability up to 60 days before scheduled departure date.</p>
         </div>
+
+        <!-- SECTION 7: INTERNATIONAL FLIGHT & HIGH-SPEED RAIL CONNECTION TIMETABLE -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Worldwide Flight & High-Speed Rail Transfer Timetable</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Live Terminal Gates, Train Platforms & Private Chauffeur Synchronization</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Re-Sync Schedule</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Connection Segment</th>
+                  <th>Carrier / Train Line</th>
+                  <th>Departure / Arrival</th>
+                  <th>Platform / Gate</th>
+                  <th>Luggage Transfer</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Zurich HB &rarr; Zermatt</strong></td>
+                  <td>SBB Swiss Federal Railways IC-8</td>
+                  <td>08:32 &rarr; 11:46</td>
+                  <td>Platform 5 (Zurich HB)</td>
+                  <td>Direct Porter Transfer</td>
+                  <td><span class="dash-status confirmed">On Time</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Tokyo &rarr; Kyoto</strong></td>
+                  <td>JR Central Tokaido Shinkansen (Nozomi 41)</td>
+                  <td>09:15 &rarr; 11:27</td>
+                  <td>Track 14 (Tokyo Station)</td>
+                  <td>Included Yamato Courier</td>
+                  <td><span class="dash-status confirmed">Confirmed</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Rome Termini &rarr; Napoli Centrale</strong></td>
+                  <td>Trenitalia Frecciarossa 1000 High-Speed</td>
+                  <td>10:00 &rarr; 11:12</td>
+                  <td>Track 8 (Rome Termini)</td>
+                  <td>Chauffeur at Platform</td>
+                  <td><span class="dash-status confirmed">Confirmed</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Nairobi Wilson &rarr; Mara North Airstrip</strong></td>
+                  <td>Safarilink Aviation Caravan C208</td>
+                  <td>14:00 &rarr; 14:55</td>
+                  <td>Gate 2 (Wilson Airport)</td>
+                  <td>Bush Weight Checked (15kg)</td>
+                  <td><span class="dash-status confirmed">Cleared</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 8: DOOR-TO-DOOR LUGGAGE COURIER & EQUIPMENT FORWARDING TRACKER -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Worldwide Luggage Forwarding & Gear Courier Tracker</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Real-time GPS AirTag & Luxury Hotel Front Desk Delivery Status</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Track Courier GPS</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong>Rimowa Classic Trunk #1 (Swiss Gear)</strong>
+                <span class="dash-status confirmed">Delivered</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Signed by Concierge at The Omnia Luxury Lodge, Zermatt.</p>
+              <small style="color:var(--text-main);">Tracking: STK-FEDEX-99201CH</small>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong>Pelican Camera Case (Japan Safari)</strong>
+                <span class="dash-status in-progress">In Transit</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">En route from Kansai Airport (KIX) to Hoshinoya Kyoto Ryokan.</p>
+              <small style="color:var(--text-main);">Tracking: STK-YAMATO-77182JP</small>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong>Tumi Expedition Duffel (Amalfi Cruise)</strong>
+                <span class="dash-status confirmed">Vessel Checked</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Safely stowed aboard Private Yacht Marina Grande, Capri.</p>
+              <small style="color:var(--text-main);">Tracking: STK-DHL-44810IT</small>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>

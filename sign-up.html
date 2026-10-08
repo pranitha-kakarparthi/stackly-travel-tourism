@@ -12,6 +12,8 @@
   <!-- Core Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body class="auth-page-wrapper">
 
@@ -32,44 +34,44 @@
   </header>
 
   <!-- Split Layout Container -->
-  <main class="auth-body-container" style="align-items:flex-start; margin-top:20px; margin-bottom:40px;">
+  <main class="auth-body-container">
     <!-- Left Hero & Benefits Column -->
-    <div class="auth-sidebar-hero" style="position:sticky; top:95px;">
+    <div class="auth-sidebar-hero" data-aos="fade-right">
       <div class="auth-hero-header">
         <span class="badge-tag badge-secondary" style="background:rgba(232,96,76,0.3); color:#FFFFFF;">
           <i class="fa-solid fa-compass"></i> Join The Collective
         </span>
-        <h2>Unlock The World's Great Expeditions</h2>
+        <h2>Unlock The World's Great Destinations</h2>
         <p>Register as a Traveler, Tour Guide, Agency Partner, or Administrator to access the complete Stackly ecosystem.</p>
       </div>
 
       <ul class="auth-benefits-list">
         <li>
           <i class="fa-solid fa-circle-check"></i>
-          <span>Guaranteed first access to limited-capacity seasonal tours</span>
+          <span>Guaranteed first access to seasonal worldwide holiday packages</span>
         </li>
         <li>
           <i class="fa-solid fa-circle-check"></i>
-          <span>Direct satellite manifest tracking and digital gear checklists</span>
+          <span>Dedicated 24/7 global travel concierge and flight assistance</span>
         </li>
         <li>
           <i class="fa-solid fa-circle-check"></i>
-          <span>Dedicated 24/7 expedition support desk</span>
+          <span>Instant reservation vouchers and skip-the-line museum passes</span>
         </li>
         <li>
           <i class="fa-solid fa-circle-check"></i>
-          <span>Earn Adventure Points redeemable for future expeditions</span>
+          <span>Earn Travel Rewards redeemable for future international journeys</span>
         </li>
       </ul>
 
       <div class="auth-testimonial-pill">
-        <p>"Signing up took minutes, and being able to choose my specific role gave me exactly the tools I needed for our alpine crew."</p>
-        <strong style="font-size:0.8rem; color:#FFFFFF;">— David S., Alpine Explorer</strong>
+        <p>"Signing up took minutes, and being able to access all our European rail tickets and hotel vouchers in one place made our holiday seamless."</p>
+        <strong style="font-size:0.8rem; color:#FFFFFF;">— David Sterling, World Explorer</strong>
       </div>
     </div>
 
     <!-- Right Registration Form Card -->
-    <div class="auth-form-card">
+    <div class="auth-form-card" data-aos="fade-left">
       <h1 class="auth-form-title">Create Your Account</h1>
       <p class="auth-form-sub">Join thousands of adventurers worldwide. All fields marked (<span style="color:var(--error);">*</span>) are required.</p>
 
@@ -78,7 +80,7 @@
 
       <form id="signUpForm" novalidate>
         <!-- Username & Role -->
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+        <div class="form-row-2col">
           <div class="form-group">
             <label for="regUsername" class="form-label">Username <span class="req">*</span></label>
             <input type="text" id="regUsername" class="form-control" placeholder="explorer_alex" required autocomplete="username">
@@ -98,7 +100,7 @@
         </div>
 
         <!-- First & Last Name -->
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px;">
+        <div class="form-row-2col">
           <div class="form-group">
             <label for="regFirstName" class="form-label">First Name <span class="req">*</span></label>
             <input type="text" id="regFirstName" class="form-control" placeholder="Alex" required autocomplete="given-name">
@@ -149,7 +151,7 @@
         <!-- Mobile Number with Split Country Code -->
         <div class="form-group">
           <label class="form-label">Mobile Number <span class="req">*</span></label>
-          <div style="display:grid; grid-template-columns: 110px 1fr; gap:10px;">
+          <div class="phone-input-wrap">
             <select id="regPhoneCode" class="form-control" aria-label="Country Code">
               <option value="+91">+91 (IN)</option>
               <option value="+1">+1 (US)</option>
@@ -226,6 +228,7 @@
   </main>
 
   <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/auth.js"></script>
 </body>
 </html>

@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
 
@@ -104,28 +106,28 @@
       <div class="dash-content">
         <!-- SECTION 1: GLOBAL PLATFORM KPIS -->
         <div class="kpi-grid">
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon primary"><i class="fa-solid fa-globe"></i></div>
             <div class="kpi-meta">
               <h4>Total Bookings</h4>
               <div class="kpi-value">1,280</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon secondary"><i class="fa-solid fa-dollar-sign"></i></div>
             <div class="kpi-meta">
               <h4>Gross Revenue</h4>
               <div class="kpi-value">$1,420,000</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon accent"><i class="fa-solid fa-user-shield"></i></div>
             <div class="kpi-meta">
               <h4>Active Guides</h4>
               <div class="kpi-value">64 In Field</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon info"><i class="fa-solid fa-server"></i></div>
             <div class="kpi-meta">
               <h4>Telemetry Health</h4>
@@ -135,7 +137,7 @@
         </div>
 
         <!-- SECTION 2: GLOBAL OPERATIONS DISPATCH TABLE -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Real-Time Field Operations Dispatch</h3>
             <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Launch Map Grid</a>
@@ -191,7 +193,7 @@
         </div>
 
         <!-- SECTION 3: SATELLITE FLEET TELEMETRY -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Garmin inReach & Starlink Terminal Health</h3>
             <span style="font-size:0.8rem; color:var(--primary); font-weight:700;"><i class="fa-solid fa-satellite"></i> 48 Terminals Online</span>
@@ -200,7 +202,7 @@
         </div>
 
         <!-- SECTION 4: CRISIS MEDEVAC RESPONSE CENTER -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Emergency Response & Medevac Standing Orders</h3>
           </div>
@@ -214,7 +216,7 @@
         </div>
 
         <!-- SECTION 5: USER ROLE GOVERNANCE -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Registered Accounts & Access Roles</h3>
             <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage Users</a>
@@ -240,7 +242,7 @@
         </div>
 
         <!-- SECTION 6: REVENUE ANALYTICS & SETTLEMENT -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Financial Settlement & Park Concession Taxes</h3>
           </div>
@@ -261,7 +263,7 @@
         </div>
 
         <!-- SECTION 7: CONSERVATION & TREE COUNTER -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Environmental Conservation & Carbon Offset Audit</h3>
           </div>
@@ -269,10 +271,70 @@
             <strong>240,000 Native Trees Planted</strong> across Tanzanian and Andean buffer zones. Verified by Global Carbon Registry.
           </p>
         </div>
+
+        <!-- SECTION 8: SYSTEM INFRASTRUCTURE, GLOBAL API GATEWAYS & CLOUD HEALTH -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Global GDS Infrastructure, API Gateways & Edge Cloud Health</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Real-time Telemetry across Frankfurt, Tokyo & Virginia AWS Availability Zones</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">System Audit Log</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Integrated Provider</th>
+                  <th>Gateway Endpoint</th>
+                  <th>Latency</th>
+                  <th>Uptime (30d)</th>
+                  <th>Current State</th>
+                  <th>Diagnostics</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Amadeus Global Travel GDS</strong></td>
+                  <td>api.amadeus.com/v2/flight-offers</td>
+                  <td>42 ms</td>
+                  <td>99.98%</td>
+                  <td><span class="dash-status confirmed">Operational</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Ping Test</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Eurail & Swiss Travel System API</strong></td>
+                  <td>gateway.eurail.eu/v1/tariffs</td>
+                  <td>68 ms</td>
+                  <td>99.94%</td>
+                  <td><span class="dash-status confirmed">Operational</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Ping Test</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Stripe Multi-Currency Settlement Engine</strong></td>
+                  <td>api.stripe.com/v1/payment_intents</td>
+                  <td>35 ms</td>
+                  <td>100.00%</td>
+                  <td><span class="dash-status confirmed">Operational</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Ping Test</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Iridium Satellite SOS Dispatch Gateway</strong></td>
+                  <td>telemetry.iridium.com/v3/sos</td>
+                  <td>120 ms</td>
+                  <td>99.99%</td>
+                  <td><span class="dash-status confirmed">Operational</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Ping Test</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </main>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>

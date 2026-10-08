@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
 
@@ -108,28 +110,28 @@
       <div class="dash-content">
         <!-- SECTION 1: KPI CARDS -->
         <div class="kpi-grid">
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon primary"><i class="fa-solid fa-compass"></i></div>
             <div class="kpi-meta">
               <h4>Active Expeditions</h4>
               <div class="kpi-value">2</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon secondary"><i class="fa-solid fa-earth-americas"></i></div>
             <div class="kpi-meta">
               <h4>Visited Regions</h4>
               <div class="kpi-value">14</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon accent"><i class="fa-solid fa-award"></i></div>
             <div class="kpi-meta">
               <h4>Adventure Points</h4>
               <div class="kpi-value">2,850</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon info"><i class="fa-solid fa-heart"></i></div>
             <div class="kpi-meta">
               <h4>Wishlist Tours</h4>
@@ -141,7 +143,7 @@
         <!-- SECTION 2 & 3: BOOKINGS TABLE & TIMELINE -->
         <div class="dash-two-col">
           <!-- SECTION 2: BOOKED EXPEDITIONS TABLE -->
-          <div class="dash-card">
+          <div class="dash-card" data-aos="fade-up">
             <div class="dash-card-header">
               <h3 class="dash-card-title">My Booked Expeditions</h3>
               <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Book New Tour</a>
@@ -159,23 +161,23 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><strong>Serengeti Safari & Ngorongoro</strong><br><small style="color:var(--text-muted);">Tanzania, Africa</small></td>
+                    <td><strong>Paris & Rome Grand Heritage Tour</strong><br><small style="color:var(--text-muted);">France & Italy, Europe</small></td>
                     <td>Oct 24, 2026</td>
                     <td>2 Guests</td>
                     <td><span class="dash-status confirmed">Confirmed</span></td>
                     <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Manage</a></td>
                   </tr>
                   <tr>
-                    <td><strong>Swiss Alpine Glacier Trail</strong><br><small style="color:var(--text-muted);">Zermatt, Switzerland</small></td>
+                    <td><strong>Swiss Alps Panoramic Glacier Express</strong><br><small style="color:var(--text-muted);">Zermatt, Switzerland</small></td>
                     <td>Dec 10, 2026</td>
                     <td>4 Guests</td>
-                    <td><span class="dash-status pending">Pending Gear Check</span></td>
+                    <td><span class="dash-status confirmed">Confirmed</span></td>
                     <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Manage</a></td>
                   </tr>
                   <tr>
-                    <td><strong>Kyoto Zen & Bamboo Groves</strong><br><small style="color:var(--text-muted);">Kyoto, Japan</small></td>
+                    <td><strong>Tokyo & Kyoto Bullet Train Discovery</strong><br><small style="color:var(--text-muted);">Tokyo & Kyoto, Japan</small></td>
                     <td>Mar 15, 2027</td>
-                    <td>1 Guest</td>
+                    <td>2 Guests</td>
                     <td><span class="dash-status completed">Paid & Ready</span></td>
                     <td><a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Manage</a></td>
                   </tr>
@@ -185,30 +187,30 @@
           </div>
 
           <!-- SECTION 3: TRIP TIMELINE & DISPATCH -->
-          <div class="dash-card">
+          <div class="dash-card" data-aos="fade-up">
             <div class="dash-card-header">
-              <h3 class="dash-card-title">Expedition Day-by-Day</h3>
+              <h3 class="dash-card-title">Trip Day-by-Day (Paris & Rome)</h3>
             </div>
             <div class="timeline-list">
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                  <h5>Oct 23: Virtual Guide Briefing</h5>
-                  <p>Pre-trip briefing with Dr. Amara Ndidi at 18:00 IST.</p>
+                  <h5>Oct 23: Virtual Tour Director Briefing</h5>
+                  <p>Pre-trip welcome call with Claire Beaumont at 18:00 IST.</p>
                 </div>
               </div>
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                  <h5>Oct 24: Kilimanjaro Airport Arrival</h5>
-                  <p>Private 4x4 transfer to Arusha Eco Wilderness Camp.</p>
+                  <h5>Oct 24: Paris CDG Airport Chauffeur Arrival</h5>
+                  <p>Private Mercedes transfer to Hotel Le Meurice in central Paris.</p>
                 </div>
               </div>
               <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                  <h5>Oct 26: Ngorongoro Crater Descent</h5>
-                  <p>Full day game drive tracking black rhino and big cats.</p>
+                  <h5>Oct 26: Private Louvre Curator Tour & Seine Cruise</h5>
+                  <p>VIP skip-the-line museum entry and champagne sunset cruise.</p>
                 </div>
               </div>
             </div>
@@ -216,86 +218,86 @@
         </div>
 
         <!-- SECTION 4: GEAR MANIFEST CHECKLIST -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
-            <h3 class="dash-card-title">Wilderness Gear Checklist (Serengeti Safari)</h3>
-            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download Full PDF</a>
+            <h3 class="dash-card-title">Travel Preparation Checklist (Paris & Rome)</h3>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download Itinerary PDF</a>
           </div>
           <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
             <div style="padding:14px; background:var(--bg-subtle); border-radius:8px; border:1px solid var(--border);">
               <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong>Neutral Bush Attire</strong>
-                <span class="dash-status confirmed"><i class="fa-solid fa-check"></i> Packed</span>
+                <strong>Passport & Schengen Visa</strong>
+                <span class="dash-status confirmed"><i class="fa-solid fa-check"></i> Verified</span>
               </div>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">Khaki/tan long sleeves, wide-brim safari hat.</p>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">Valid passport + verified entry documentation.</p>
             </div>
             <div style="padding:14px; background:var(--bg-subtle); border-radius:8px; border:1px solid var(--border);">
               <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong>Telephoto Lens & Body</strong>
-                <span class="dash-status confirmed"><i class="fa-solid fa-check"></i> Packed</span>
+                <strong>TGV & Frecciarossa Passes</strong>
+                <span class="dash-status confirmed"><i class="fa-solid fa-check"></i> Issued</span>
               </div>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">100-400mm lens + spare dust-sealed camera body.</p>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">First-class reserved seat e-tickets ready in app.</p>
             </div>
             <div style="padding:14px; background:var(--bg-subtle); border-radius:8px; border:1px solid var(--border);">
               <div style="display:flex; justify-content:space-between; align-items:center;">
-                <strong>Yellow Fever Card</strong>
-                <span class="dash-status pending"><i class="fa-solid fa-clock"></i> Upload Needed</span>
+                <strong>Universal Power Adapter</strong>
+                <span class="dash-status confirmed"><i class="fa-solid fa-check"></i> Packed</span>
               </div>
-              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">Mandatory for Tanzanian immigration clearance.</p>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-top:6px;">Europlug Type C/F compatible adapter packed.</p>
             </div>
           </div>
         </div>
 
         <!-- SECTION 5: LIVE WEATHER & FIELD ADVISORY -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
-            <h3 class="dash-card-title">Field Weather & Trail Advisory</h3>
-            <span style="font-size:0.8rem; color:var(--primary); font-weight:700;"><i class="fa-solid fa-signal"></i> Telemetry Live</span>
+            <h3 class="dash-card-title">Destination Weather & Local Forecast</h3>
+            <span style="font-size:0.8rem; color:var(--primary); font-weight:700;"><i class="fa-solid fa-signal"></i> Live Forecast</span>
           </div>
           <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:20px;">
             <div style="text-align:center; padding:16px; background:#F8FAFC; border-radius:8px;">
+              <i class="fa-solid fa-cloud-sun" style="font-size:2rem; color:#F59E0B; margin-bottom:8px;"></i>
+              <h4 style="font-size:1rem; margin-bottom:2px;">Paris, France</h4>
+              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">19°C / 66°F</p>
+              <small style="color:var(--text-muted);">Pleasant autumn breeze, ideal for city walks</small>
+            </div>
+            <div style="text-align:center; padding:16px; background:#F8FAFC; border-radius:8px;">
               <i class="fa-solid fa-sun" style="font-size:2rem; color:#F59E0B; margin-bottom:8px;"></i>
-              <h4 style="font-size:1rem; margin-bottom:2px;">Serengeti Central</h4>
-              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">28°C / 82°F</p>
-              <small style="color:var(--text-muted);">Dry savannah conditions, ideal visibility</small>
+              <h4 style="font-size:1rem; margin-bottom:2px;">Rome, Italy</h4>
+              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">23°C / 73°F</p>
+              <small style="color:var(--text-muted);">Warm Mediterranean sunshine, clear skies</small>
             </div>
             <div style="text-align:center; padding:16px; background:#F8FAFC; border-radius:8px;">
-              <i class="fa-solid fa-cloud-sun" style="font-size:2rem; color:#3B82F6; margin-bottom:8px;"></i>
-              <h4 style="font-size:1rem; margin-bottom:2px;">Ngorongoro Rim</h4>
-              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">16°C / 61°F</p>
-              <small style="color:var(--text-muted);">Chilly evening winds, fleece layer required</small>
-            </div>
-            <div style="text-align:center; padding:16px; background:#F8FAFC; border-radius:8px;">
-              <i class="fa-solid fa-mountain" style="font-size:2rem; color:#10B981; margin-bottom:8px;"></i>
-              <h4 style="font-size:1rem; margin-bottom:2px;">Kilimanjaro Base</h4>
-              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">12°C / 54°F</p>
-              <small style="color:var(--text-muted);">Clear skies across Machame trailhead</small>
+              <i class="fa-solid fa-mountain" style="font-size:2rem; color:#3B82F6; margin-bottom:8px;"></i>
+              <h4 style="font-size:1rem; margin-bottom:2px;">Zermatt, Switzerland</h4>
+              <p style="font-size:1.4rem; font-weight:800; color:var(--dark);">9°C / 48°F</p>
+              <small style="color:var(--text-muted);">Crisp alpine conditions, light jacket advised</small>
             </div>
           </div>
         </div>
 
         <!-- SECTION 6: DIRECT GUIDE DISPATCH MESSAGES -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
-            <h3 class="dash-card-title">Field Guide Dispatch Chat</h3>
-            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Open SAT Chat</a>
+            <h3 class="dash-card-title">Tour Director & Concierge Messages</h3>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Message Concierge</a>
           </div>
           <div style="display:flex; flex-direction:column; gap:12px;">
             <div style="display:flex; gap:14px; padding:12px; background:var(--bg-subtle); border-radius:8px;">
-              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop" style="width:44px; height:44px; border-radius:50%; object-fit:cover;" alt="Dr. Amara Ndidi">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=120&auto=format&fit=crop" style="width:44px; height:44px; border-radius:50%; object-fit:cover;" alt="Claire Beaumont">
               <div>
-                <strong>Dr. Amara Ndidi (Lead Safari Naturalist)</strong>
-                <p style="font-size:0.88rem; color:var(--text-main); margin-top:2px;">"Jambo! Our tracking team spotted the pride of lions near the Mara crossing yesterday. The camp setup is ready for your arrival next week."</p>
-                <small style="color:var(--text-muted);">Sent today via Satellite Uplink #2</small>
+                <strong>Claire Beaumont (European Tour Director)</strong>
+                <p style="font-size:0.88rem; color:var(--text-main); margin-top:2px;">"Bonjour! We have confirmed your private after-hours reservations at the Vatican Museums and the Louvre. Your chauffeur will be waiting at Paris Charles de Gaulle with your name placard."</p>
+                <small style="color:var(--text-muted);">Sent today at 11:30 AM via Stackly Concierge</small>
               </div>
             </div>
           </div>
         </div>
 
         <!-- SECTION 7: PERMIT & DOCUMENT VAULT -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
-            <h3 class="dash-card-title">Digital Travel & Permit Vault</h3>
+            <h3 class="dash-card-title">Digital Travel & Ticket Vault</h3>
             <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Upload Document</a>
           </div>
           <div class="dash-table-wrap">
@@ -303,7 +305,7 @@
               <thead>
                 <tr>
                   <th>Document Type</th>
-                  <th>Authority / Park</th>
+                  <th>Destination / Provider</th>
                   <th>Expiry Date</th>
                   <th>Status</th>
                   <th>Action</th>
@@ -311,15 +313,15 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Tanzania TANAPA Conservation Pass</strong></td>
-                  <td>Serengeti National Park</td>
-                  <td>Valid for Tour</td>
+                  <td><strong>European Museum VIP Passes</strong></td>
+                  <td>Louvre & Colosseum Fast-Track</td>
+                  <td>Oct 2026</td>
                   <td><span class="dash-status confirmed">Verified</span></td>
                   <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
                 </tr>
                 <tr>
-                  <td><strong>Garmin Medevac High-Altitude Policy</strong></td>
-                  <td>Global Rescue Alliance</td>
+                  <td><strong>Worldwide Travel Insurance Policy</strong></td>
+                  <td>Allianz Global Assistance</td>
                   <td>Nov 2026</td>
                   <td><span class="dash-status confirmed">Active</span></td>
                   <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
@@ -328,10 +330,57 @@
             </table>
           </div>
         </div>
+
+        <!-- SECTION 8: WORLDWIDE LOYALTY REWARDS, CARBON OFFSET & MILESTONE PERKS -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Global Odyssey Loyalty & Carbon Offset Ledger</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Tier Status: <strong>Platinum Meridian Explorer</strong> &bull; 18,450 / 25,000 km to Diamond Tier</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Redeem Rewards</a>
+          </div>
+          <div style="background:var(--bg-subtle); border-radius:var(--radius-md); padding:16px 20px; margin-bottom:20px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.9rem;">
+              <span><strong>Progress to Diamond Odyssey (25,000 km)</strong></span>
+              <span style="color:var(--primary); font-weight:700;">74% Achieved</span>
+            </div>
+            <div style="width:100%; height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+              <div style="width:74%; height:100%; background:linear-gradient(90deg, var(--primary), var(--secondary)); border-radius:4px;"></div>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px;">
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:18px; background:#FFFFFF;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <span class="badge-tag badge-primary" style="font-size:0.75rem;"><i class="fa-solid fa-gift"></i> Ready</span>
+                <strong style="color:var(--dark);">Free Alpine Glacier Express Upgrade</strong>
+              </div>
+              <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:12px;">Complimentary 1st-class panorama upgrade voucher on your next Swiss Alps journey.</p>
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn" style="width:100%;">Claim Voucher</a>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:18px; background:#FFFFFF;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <span class="badge-tag badge-secondary" style="font-size:0.75rem;"><i class="fa-solid fa-seedling"></i> 100% Certified</span>
+                <strong style="color:var(--dark);">Carbon Neutral Offset (1.85 T)</strong>
+              </div>
+              <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:12px;">Verified Gold Standard reforestation units retired for your 2026 European and African travels.</p>
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn" style="width:100%;">Download Audit PDF</a>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:18px; background:#FFFFFF;">
+              <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+                <span class="badge-tag badge-primary" style="font-size:0.75rem;"><i class="fa-solid fa-champagne-glasses"></i> VIP Access</span>
+                <strong style="color:var(--dark);">Bespoke Sommelier Tasting</strong>
+              </div>
+              <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:12px;">Private cellar master tasting for 2 in Saint-Émilion, Bordeaux with luxury pairings.</p>
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn" style="width:100%;">Reserve Table</a>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>

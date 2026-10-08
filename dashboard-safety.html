@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
 
@@ -98,28 +100,28 @@
       <div class="dash-content">
         <!-- SECTION 1: SAFETY METRICS -->
         <div class="kpi-grid">
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon primary"><i class="fa-solid fa-shield-halved"></i></div>
             <div class="kpi-meta">
               <h4>Safety Standard</h4>
               <div class="kpi-value">ISO 31030</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon secondary"><i class="fa-solid fa-helicopter"></i></div>
             <div class="kpi-meta">
               <h4>Medevac Standby</h4>
               <div class="kpi-value">24/7 Active</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon accent"><i class="fa-solid fa-passport"></i></div>
             <div class="kpi-meta">
               <h4>Permits Cleared</h4>
               <div class="kpi-value">100% Ready</div>
             </div>
           </div>
-          <div class="kpi-card">
+          <div class="kpi-card" data-aos="fade-up">
             <div class="kpi-icon info"><i class="fa-solid fa-satellite"></i></div>
             <div class="kpi-meta">
               <h4>SAT Beacon Status</h4>
@@ -129,7 +131,7 @@
         </div>
 
         <!-- SECTION 2: INSURANCE & MEDEVAC POLICY CARD -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Comprehensive Expedition Medical Insurance</h3>
             <span class="dash-status confirmed">Active Coverage</span>
@@ -143,7 +145,7 @@
         </div>
 
         <!-- SECTION 3: PERMIT VAULT TABLE -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Expedition Park Permits Roster</h3>
             <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Print All Permits</a>
@@ -161,16 +163,23 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Tanzania TANAPA Serengeti Concession</td>
-                  <td>#TZ-SER-2026</td>
-                  <td>Oct 24 - Oct 31, 2026</td>
+                  <td>European Union Travel Authorization (ETIAS)</td>
+                  <td>#EU-ETIAS-2026</td>
+                  <td>Oct 2026 - Oct 2029</td>
                   <td><span class="dash-status confirmed">Valid</span></td>
                   <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
                 </tr>
                 <tr>
-                  <td>Ngorongoro Conservation Area Authority (NCAA)</td>
-                  <td>#TZ-NCAA-901</td>
-                  <td>Oct 26, 2026</td>
+                  <td>Swiss Alps Mountain Transit Clearance (SBB)</td>
+                  <td>#CH-SBB-8821</td>
+                  <td>Dec 10 - Dec 16, 2026</td>
+                  <td><span class="dash-status confirmed">Valid</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
+                </tr>
+                <tr>
+                  <td>Japan Rail Group Foreign Traveler Authorization</td>
+                  <td>#JP-JRP-4019</td>
+                  <td>Mar 15 - Mar 23, 2027</td>
                   <td><span class="dash-status confirmed">Valid</span></td>
                   <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Download</a></td>
                 </tr>
@@ -180,7 +189,7 @@
         </div>
 
         <!-- SECTION 4: SATELLITE SOS BEACON OPERATION GUIDE -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Field SOS Beacon Quick Guide</h3>
           </div>
@@ -201,7 +210,7 @@
         </div>
 
         <!-- SECTION 5: VACCINATIONS & HEALTH CLEARANCE -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Regional Vaccine & Health Disclosures</h3>
           </div>
@@ -209,7 +218,7 @@
         </div>
 
         <!-- SECTION 6: 24/7 CRISIS DISPATCH CONTACTS -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Emergency Field Hotlines</h3>
           </div>
@@ -221,10 +230,102 @@
             <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Test Satellite Link</a>
           </div>
         </div>
+
+        <!-- SECTION 7: GLOBAL 24/7 MEDICAL EVACUATION & TELE-HEALTH NETWORK DIRECTORY -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">24/7 Global Air Ambulance & JCI Accredited Hospital Roster</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Direct Guarantee-of-Payment (GOP) Clearances via Allianz & International SOS</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Dispatch Air Ambulance</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Destination Region</th>
+                  <th>Primary Hospital Facility</th>
+                  <th>Medevac Heli Service</th>
+                  <th>Emergency Tele-Health Line</th>
+                  <th>GOP Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Swiss Valais / Alps</strong></td>
+                  <td>Hôpital du Valais (Sion General)</td>
+                  <td>Air Zermatt (Bell 429 Rescue)</td>
+                  <td>+41 27 966 8000</td>
+                  <td><span class="dash-status confirmed">Instant Clear</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Amalfi Coast / Campania</strong></td>
+                  <td>Ospedale San Giovanni di Dio e Ruggi (Salerno)</td>
+                  <td>Campania Regional Heli Rescue</td>
+                  <td>+39 089 671111</td>
+                  <td><span class="dash-status confirmed">Instant Clear</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Kyoto & Kansai</strong></td>
+                  <td>Kyoto University Hospital Emergency Center</td>
+                  <td>Kansai Doctor-Heli Service</td>
+                  <td>+81 75 751 3111</td>
+                  <td><span class="dash-status confirmed">Instant Clear</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Serengeti & Arusha</strong></td>
+                  <td>Aga Khan Hospital & AMREF Flying Doctors</td>
+                  <td>AMREF Cessna Citation Jet Evac</td>
+                  <td>+255 22 211 5151</td>
+                  <td><span class="dash-status confirmed">Instant Clear</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 8: LIVE DIPLOMATIC EMBASSIES & CONSULAR EMERGENCY DIRECTORY -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Consular Registration & Diplomatic Emergency Directory</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Emergency Passport Replacement & 24-Hour Consular Protection Contacts</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Update STEP Registration</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong><i class="fa-solid fa-building-flag" style="color:var(--primary);"></i> Switzerland (Bern)</strong>
+                <span class="dash-status confirmed">Registered</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Sulgeneckstrasse 19, 3007 Bern &bull; 24h Consular Hotline: +41 31 357 7011</p>
+              <small style="color:var(--text-main);">Assistance: Emergency travel certificates issued within 4 hours.</small>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong><i class="fa-solid fa-building-flag" style="color:var(--primary);"></i> Italy (Rome)</strong>
+                <span class="dash-status confirmed">Registered</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Via Vittorio Veneto 121, 00187 Roma &bull; 24h Consular Hotline: +39 06 46741</p>
+              <small style="color:var(--text-main);">Assistance: Liaison with local carabinieri and consular legal desk.</small>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong><i class="fa-solid fa-building-flag" style="color:var(--primary);"></i> Japan (Tokyo / Osaka)</strong>
+                <span class="dash-status confirmed">Registered</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">1-10-5 Akasaka, Minato-ku, Tokyo &bull; 24h Consular Hotline: +81 3 3224 5000</p>
+              <small style="color:var(--text-main);">Assistance: Direct Japanese Ministry of Foreign Affairs liaison.</small>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>

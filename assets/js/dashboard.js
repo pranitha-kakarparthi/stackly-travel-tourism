@@ -3,27 +3,44 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Check active session
+  // Check active session, fallback gracefully for direct preview
+  let currentUser = null;
   const currentUserRaw = localStorage.getItem('currentUser');
-  if (!currentUserRaw) {
-    window.location.href = 'sign-in.html';
-    return;
+  if (currentUserRaw) {
+    try {
+      currentUser = JSON.parse(currentUserRaw);
+    } catch (e) {
+      currentUser = null;
+    }
   }
 
-  const currentUser = JSON.parse(currentUserRaw);
+  if (!currentUser) {
+    currentUser = {
+      username: 'alex_sterling',
+      firstName: 'Alex',
+      lastName: 'Sterling',
+      role: 'traveler',
+      roleLabel: 'World Explorer',
+      lastLogin: new Date().toISOString()
+    };
+  }
 
-  // If on main dashboard.html, smart-route to the specific role dashboard
+  // If on main dashboard.html and a specific role is explicitly stored from login, route to that role dashboard
   const currentPath = window.location.pathname.split('/').pop() || '';
   if (currentPath === 'dashboard.html' || currentPath === 'dashboard') {
-    const roleRoutes = {
-      'traveler': 'dashboard-traveler.html',
-      'guide': 'dashboard-guide.html',
-      'agency': 'dashboard-agency.html',
-      'admin': 'dashboard-admin.html'
-    };
-    const target = roleRoutes[currentUser.role] || 'dashboard-traveler.html';
-    window.location.replace(target);
-    return;
+    if (currentUserRaw) {
+      const roleRoutes = {
+        'traveler': 'dashboard-traveler.html',
+        'guide': 'dashboard-guide.html',
+        'agency': 'dashboard-agency.html',
+        'admin': 'dashboard-admin.html'
+      };
+      const target = roleRoutes[currentUser.role];
+      if (target && target !== 'dashboard.html') {
+        window.location.replace(target);
+        return;
+      }
+    }
   }
 
   // Populate user data & dynamic time-of-day greeting

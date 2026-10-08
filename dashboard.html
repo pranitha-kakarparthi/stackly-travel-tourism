@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
 
@@ -100,13 +102,291 @@
 
       <div class="dash-content">
         <div id="dashRoleContainer">
-          <!-- Populated or redirected by dashboard.js based on role -->
+          <!-- SECTION 1: GLOBAL PLATFORM KPIS -->
+          <div class="kpi-grid" data-aos="fade-up">
+            <div class="kpi-card">
+              <div class="kpi-label">Confirmed World Journeys</div>
+              <div class="kpi-value">3 Tours</div>
+              <div class="kpi-meta">Europe, Asia & East Africa</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Nations Explored</div>
+              <div class="kpi-value">14 Countries</div>
+              <div class="kpi-meta"><i class="fa-solid fa-earth-americas"></i> 4 Continents</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Global Odyssey Miles</div>
+              <div class="kpi-value">18,450 km</div>
+              <div class="kpi-meta" style="color:var(--secondary); font-weight:700;">Platinum Tier</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Certified Carbon Offset</div>
+              <div class="kpi-value">1.85 Tons</div>
+              <div class="kpi-meta" style="color:#10B981;"><i class="fa-solid fa-leaf"></i> 100% Neutral</div>
+            </div>
+          </div>
+
+          <!-- SECTION 2: ACTIVE WORLDWIDE JOURNEYS TABLE -->
+          <div class="dash-card" data-aos="fade-up">
+            <div class="dash-card-header">
+              <div>
+                <h3 class="dash-card-title">Active Worldwide Bookings & Expeditions</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Real-time Confirmation across Swiss Alps, Japan Cultural & Amalfi Coast</p>
+              </div>
+              <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">+ Book New Expedition</a>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Journey ID</th>
+                    <th>Destination & Package</th>
+                    <th>Dates</th>
+                    <th>Travel Style</th>
+                    <th>Dedicated Director</th>
+                    <th>Booking Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#STK-EU-901</strong></td>
+                    <td><strong>Swiss Alps Glacier Express & Matterhorn</strong></td>
+                    <td>Oct 12 - Oct 19, 2026</td>
+                    <td>Panoramic Luxury Rail</td>
+                    <td>Hanspeter Meyer (IFMGA)</td>
+                    <td><span class="dash-status confirmed">Confirmed</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#STK-AS-442</strong></td>
+                    <td><strong>Kyoto & Mount Fuji Heritage Trail</strong></td>
+                    <td>Nov 02 - Nov 11, 2026</td>
+                    <td>Cultural Ryokan Tour</td>
+                    <td>Kenji Takahashi</td>
+                    <td><span class="dash-status confirmed">Confirmed</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#STK-AF-710</strong></td>
+                    <td><strong>Serengeti Great Migration Private Safari</strong></td>
+                    <td>Dec 05 - Dec 14, 2026</td>
+                    <td>Wildlife & Camp</td>
+                    <td>Juma Mollel</td>
+                    <td><span class="dash-status in-progress">Finalizing Flight</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SECTION 3: LIVE FLIGHT & HIGH-SPEED RAIL CONNECTIONS -->
+          <div class="dash-card" data-aos="fade-up">
+            <div class="dash-card-header">
+              <div>
+                <h3 class="dash-card-title">Live Connecting Flights & Train Platform Tracker</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Synchronized with Zurich HB, Tokyo Shinkansen & Trenitalia Networks</p>
+              </div>
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Refresh Gates</a>
+            </div>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                  <strong><i class="fa-solid fa-train" style="color:var(--primary);"></i> Swiss Rail IC-8 (Zurich &rarr; Zermatt)</strong>
+                  <span class="dash-status confirmed">Platform 5</span>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:4px;">Departure: 08:32 AM &bull; 1st-Class Quiet Coach #4, Seats 21/22</p>
+                <small style="color:var(--text-main);">Chauffeur meet at Platform 5 luggage kiosk.</small>
+              </div>
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                  <strong><i class="fa-solid fa-train-subway" style="color:var(--secondary);"></i> Nozomi Shinkansen #41 (Tokyo &rarr; Kyoto)</strong>
+                  <span class="dash-status confirmed">Track 14</span>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:4px;">Departure: 09:15 AM &bull; Green Car Coach #9, Seats 12A/12B</p>
+                <small style="color:var(--text-main);">Yamato luggage courier already dispatched.</small>
+              </div>
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                  <strong><i class="fa-solid fa-plane-departure" style="color:#10B981;"></i> Air France AF-1402 (CDG &rarr; ZRH)</strong>
+                  <span class="dash-status confirmed">Gate 2F</span>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:4px;">Departure: 06:45 AM &bull; Priority SkyPriority Lounge Boarding</p>
+                <small style="color:var(--text-main);">Baggage auto-routed to Zermatt Lodge.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4: DIGITAL TRAVEL & TICKET VAULT -->
+          <div class="dash-card" data-aos="fade-up">
+            <div class="dash-card-header">
+              <div>
+                <h3 class="dash-card-title">Digital Travel Vault, Museum Passes & E-Tickets</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Confirmed QR Vouchers, Skip-the-Line Museum Passes & Insurance Policy</p>
+              </div>
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Upload Travel Docs</a>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Pass / Document</th>
+                    <th>Location / Attraction</th>
+                    <th>Validity</th>
+                    <th>Verification</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Louvre Museum VIP Private Tour</strong></td>
+                    <td>Paris, France</td>
+                    <td>Oct 14, 2026</td>
+                    <td><span class="dash-status confirmed">Verified</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">PDF Pass</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Vatican Early Entry & Sistine Pass</strong></td>
+                    <td>Rome, Italy</td>
+                    <td>Oct 19, 2026</td>
+                    <td><span class="dash-status confirmed">Verified</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">PDF Pass</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Allianz Worldwide Global Health Policy</strong></td>
+                    <td>Global (120+ Countries)</td>
+                    <td>Dec 31, 2026</td>
+                    <td><span class="dash-status confirmed">Active Policy</span></td>
+                    <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Policy PDF</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- SECTION 5: TOUR DIRECTOR & PRIVATE CONCIERGE CHAT -->
+          <div class="dash-card" data-aos="fade-up">
+            <div class="dash-card-header">
+              <div>
+                <h3 class="dash-card-title">Direct Tour Director & 24/7 Concierge Channel</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Continuous Encrypted Communications with Your In-Country Coordinator</p>
+              </div>
+              <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Message Concierge</a>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:14px;">
+              <div style="background:var(--bg-subtle); padding:16px 20px; border-radius:var(--radius-md); border-left:4px solid var(--primary);">
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <strong>Hanspeter Meyer &bull; Lead Alpine Director</strong>
+                  <span style="font-size:0.8rem; color:var(--text-muted);">Today &bull; 09:15 CET</span>
+                </div>
+                <p style="font-size:0.88rem; color:var(--text-main); margin:0;">"Grüezi Alex! Matterhorn Gornergrat trail visibility is exceptional today. Your private panorama carriage on the Glacier Express is booked with champagne lunch service at 12:30."</p>
+              </div>
+              <div style="background:var(--bg-subtle); padding:16px 20px; border-radius:var(--radius-md); border-left:4px solid var(--secondary);">
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <strong>Elena Rostova &bull; Global Concierge Liaison</strong>
+                  <span style="font-size:0.8rem; color:var(--text-muted);">Yesterday &bull; 17:40 CET</span>
+                </div>
+                <p style="font-size:0.88rem; color:var(--text-main); margin:0;">"Your private boat charter from Positano to Capri has been synchronized with your hotel departure. Chauffeur placards confirmed."</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 6: LIVE WEATHER & REGIONAL ADVISORY -->
+          <div class="dash-card" data-aos="fade-up">
+            <div class="dash-card-header">
+              <div>
+                <h3 class="dash-card-title">Live Global Weather, Avalanche & Maritime Advisory</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Automated Meteorologic Feeds for Your Active Journey Waypoints</p>
+              </div>
+              <span class="dash-status confirmed"><i class="fa-solid fa-circle-check"></i> Safe Conditions</span>
+            </div>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px;">
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <strong>Zermatt / Gornergrat (3,089m)</strong>
+                  <span style="color:var(--primary); font-weight:700;">-2°C Clear</span>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">Wind: 12 km/h NE &bull; Avalanche Risk: Level 1 (Low) &bull; Trail Open</p>
+              </div>
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <strong>Kyoto / Arashiyama (Japan)</strong>
+                  <span style="color:var(--primary); font-weight:700;">19°C Sunny</span>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">Humidity: 48% &bull; Autumn Foliage Index: 92% (Peak Color)</p>
+              </div>
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <strong>Amalfi Coast / Capri (Italy)</strong>
+                  <span style="color:var(--primary); font-weight:700;">24°C Mild</span>
+                </div>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:0;">Swell: 0.4m Calm &bull; Water Temp: 22°C &bull; Yacht Cruising Ideal</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 7: GLOBAL ODYSSEY REWARDS & CARBON OFFSET LEDGER -->
+          <div class="dash-card" data-aos="fade-up">
+            <div class="dash-card-header">
+              <div>
+                <h3 class="dash-card-title">Global Odyssey Loyalty Tier & Carbon Offset Ledger</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Tier Status: <strong>Platinum Meridian Explorer</strong> &bull; 18,450 / 25,000 km to Diamond Tier</p>
+              </div>
+              <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Redeem Rewards</a>
+            </div>
+            <div style="background:var(--bg-subtle); border-radius:var(--radius-md); padding:16px 20px; margin-bottom:20px;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.9rem;">
+                <span><strong>Progress to Diamond Odyssey (25,000 km)</strong></span>
+                <span style="color:var(--primary); font-weight:700;">74% Achieved</span>
+              </div>
+              <div style="width:100%; height:8px; background:var(--border); border-radius:4px; overflow:hidden;">
+                <div style="width:74%; height:100%; background:linear-gradient(90deg, var(--primary), var(--secondary)); border-radius:4px;"></div>
+              </div>
+            </div>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:18px;">
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:18px; background:#FFFFFF;">
+                <strong style="color:var(--dark);">Free Alpine Glacier Express Upgrade</strong>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:6px 0 12px;">Complimentary 1st-class panorama upgrade voucher ready.</p>
+                <a href="404.html" class="btn btn-sm btn-outline dash-action-btn" style="width:100%;">Claim Voucher</a>
+              </div>
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:18px; background:#FFFFFF;">
+                <strong style="color:var(--dark);">Carbon Neutral Offset (1.85 T)</strong>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:6px 0 12px;">Verified Gold Standard reforestation credits retired.</p>
+                <a href="404.html" class="btn btn-sm btn-outline dash-action-btn" style="width:100%;">Download Certificate</a>
+              </div>
+              <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:18px; background:#FFFFFF;">
+                <strong style="color:var(--dark);">Bespoke Sommelier Tasting</strong>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:6px 0 12px;">Private cellar tasting for 2 in Saint-Émilion, Bordeaux.</p>
+                <a href="404.html" class="btn btn-sm btn-outline dash-action-btn" style="width:100%;">Reserve Table</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 8: 24/7 CRISIS DISPATCH & SATELLITE SOS HOTLINES -->
+          <div class="dash-card" data-aos="fade-up">
+            <div class="dash-card-header">
+              <div>
+                <h3 class="dash-card-title">24/7 Global Field Crisis Dispatch & Air Ambulance Roster</h3>
+                <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Emergency Medevac & Consular Support with Direct Hospital Coordination</p>
+              </div>
+              <a href="404.html" class="btn btn-sm btn-primary dash-action-btn"><i class="fa-solid fa-satellite-dish"></i> Test SOS Beacon</a>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-subtle); padding:18px 20px; border-radius:var(--radius-md);">
+              <div>
+                <strong>Global Operations Crisis Response Desk</strong>
+                <p style="font-size:0.85rem; color:var(--text-muted); margin:4px 0 0;">Dedicated 24/7 Satellite Hotline: +91 9876543210 &bull; Direct Allianz GOP Clearance</p>
+              </div>
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Emergency Dispatch Protocol</a>
+            </div>
+          </div>
         </div>
       </div>
     </main>
   </div>
 
   <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>

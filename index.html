@@ -1,717 +1,1340 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stackly Travel & Tourism | Premium Wilderness & Global Expeditions</title>
-  <meta name="description" content="Discover unforgettable global adventures, safaris, alpine expeditions, and eco-tours with Stackly Travel. Curated travel experiences across 85+ destinations worldwide.">
-  <meta name="keywords" content="travel and tourism, roam adventure, wilderness safaris, luxury trekking, guided expeditions, stackly travel">
-  <meta property="og:title" content="Stackly Travel & Tourism | Adventurous Expeditions">
-  <meta property="og:description" content="Embark on thrilling global tours and authentic wilderness safaris with certified guides.">
-  <meta property="og:type" content="website">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Stackly Travel & Tourism | Worldwide Holidays, Tours & Destinations
+    </title>
+    <meta
+      name="description"
+      content="Discover extraordinary travel experiences across Europe, Asia, the Americas, Africa, and Oceania. Handcrafted global vacation packages, flight & hotel bookings, and cultural tours."
+    />
+    <meta
+      name="keywords"
+      content="travel and tourism, global holiday packages, worldwide tours, vacation destinations, travel deals, stackly travel"
+    />
+    <meta
+      property="og:title"
+      content="Stackly Travel & Tourism | Explore The World"
+    />
+    <meta
+      property="og:description"
+      content="Curated worldwide travel packages, iconic city breaks, scenic mountain getaways, and tropical beach holidays across 120+ countries."
+    />
+    <meta property="og:type" content="website" />
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-  <!-- Core Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-</head>
-<body>
-
-  <!-- Full Viewport Site Loader -->
-  <div id="siteLoader" class="site-loader" aria-live="polite">
-    <div class="loader-content">
-      <div class="loader-logo-wrap">
-        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
-      </div>
-      <div class="loader-spinner"></div>
-      <div class="loader-text">Loading Expeditions...</div>
-    </div>
-  </div>
-
-  <!-- Sticky Navbar (100% Full Width) -->
-  <header class="site-header">
-    <div class="nav-container">
-      <!-- Clickable Logo linking to Home -->
-      <a href="index.html" class="brand-logo-link" title="Stackly Travel & Tourism">
-        <img src="assets/images/logoStackly.webp" alt="Stackly Logo" class="brand-logo-img">
-      </a>
-
-      <!-- Desktop Navigation Menu -->
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="tours.html" class="nav-link">Tours & Safaris <i class="fa-solid fa-angle-down" style="font-size:0.75rem; margin-left:3px;"></i></a>
-            <div class="nav-dropdown">
-              <a href="tours.html" class="dropdown-link">All Expeditions <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="safaris.html" class="dropdown-link">African Safaris <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="alpine.html" class="dropdown-link">Alpine Treks <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="marine.html" class="dropdown-link">Island & Marine Escapes <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="cultural.html" class="dropdown-link">Cultural Odysseys <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="pricing.html" class="nav-link">Pricing & Packages</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-
-      <!-- Nav Actions: Sign In, Sign Up, Mobile Toggle -->
-      <div class="nav-actions">
-        <a href="sign-in.html" class="btn btn-outline btn-sm">Sign In</a>
-        <a href="sign-up.html" class="btn btn-primary btn-sm">Sign Up</a>
-        <button type="button" class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Mobile Navigation Overlay & Drawer -->
-  <div class="mobile-nav-overlay" id="mobileNavOverlay">
-    <div class="mobile-nav-drawer">
-      <div>
-        <div class="mobile-drawer-header">
-          <a href="index.html" class="brand-logo-link">
-            <img src="assets/images/logoStackly.webp" alt="Stackly Logo" style="height:36px;">
-          </a>
-          <button type="button" class="mobile-drawer-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- AOS Animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+  </head>
+  <body>
+    <!-- Full Viewport Site Loader -->
+    <div id="siteLoader" class="site-loader" aria-live="polite">
+      <div class="loader-content">
+        <div class="loader-logo-wrap">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Travel" />
         </div>
-        <ul class="mobile-nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="tours.html" class="nav-link">Tours & Safaris</a></li>
-          <li><a href="pricing.html" class="nav-link">Pricing & Packages</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
-      <div class="mobile-nav-cta">
-        <a href="sign-in.html" class="btn btn-outline btn-block">Sign In</a>
-        <a href="sign-up.html" class="btn btn-primary btn-block">Sign Up</a>
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Discovering Destinations...</div>
       </div>
     </div>
-  </div>
 
-  <main>
-    <!-- SECTION 1: HERO SECTION -->
-    <section class="hero-main">
-      <div class="hero-overlay"></div>
-      <div class="container hero-container">
-        <div class="hero-content">
-          <!-- Dynamic Greeting based on time of day -->
-          <div class="hero-greeting">
-            <i class="fa-solid fa-sun"></i>
-            <span class="dynamic-greeting" data-suffix=", Explorer!">Welcome, Explorer!</span>
-          </div>
-          <h1 class="hero-title">
-            Roam The Uncharted <span>Wilderness</span> Across The Globe
-          </h1>
-          <p class="hero-subtitle">
-            Immerse yourself in authentic safaris, glacial summits, and remote archipelagos. Curated with certified local experts, eco-conscious lodges, and 24/7 wilderness safety.
-          </p>
-          <div class="hero-actions">
-            <!-- All action buttons redirect to 404 per instructions -->
-            <a href="404.html" class="btn btn-primary btn-lg btn-action">
-              <i class="fa-solid fa-compass"></i> Explore Expeditions
-            </a>
-            <a href="about.html" class="btn btn-outline-white btn-lg">
-              <i class="fa-solid fa-circle-play"></i> Watch Our Story
-            </a>
-          </div>
+    <!-- Sticky Navbar (100% Full Width) -->
+    <header class="site-header">
+      <div class="nav-container">
+        <a
+          href="index.html"
+          class="brand-logo-link"
+          title="Stackly Travel & Tourism"
+        >
+          <img
+            src="assets/images/logoStackly.webp"
+            alt="Stackly Logo"
+            class="brand-logo-img"
+          />
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="tours.html" class="nav-link"
+                >Tours & Destinations
+                <i
+                  class="fa-solid fa-angle-down"
+                  style="font-size: 0.75rem; margin-left: 3px"
+                ></i
+              ></a>
+              <div class="nav-dropdown">
+                <a href="tours.html" class="dropdown-link"
+                  >All Worldwide Tours <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <a href="cultural.html" class="dropdown-link"
+                  >Historic Cities & Europe
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <a href="marine.html" class="dropdown-link"
+                  >Tropical Beaches & Islands
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <a href="alpine.html" class="dropdown-link"
+                  >Scenic Alps & Mountain Escapes
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <a href="safaris.html" class="dropdown-link"
+                  >Wildlife Safaris & Nature
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="pricing.html" class="nav-link">Pricing & Packages</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Nav Actions -->
+        <div class="nav-actions">
+          <a href="sign-in.html" class="btn btn-outline btn-sm">Sign In</a>
+          <a href="sign-up.html" class="btn btn-primary btn-sm">Sign Up</a>
+          <button
+            type="button"
+            class="mobile-toggle"
+            id="mobileMenuToggle"
+            aria-label="Toggle navigation menu"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- SECTION 2: SEARCH / TOUR BOOKING BAR -->
-    <section class="search-strip-wrap">
-      <div class="container">
-        <div class="search-box-card">
-          <form class="search-form-grid search-form" id="heroSearchForm">
-            <div class="search-field">
-              <label><i class="fa-solid fa-location-dot"></i> Destination</label>
-              <select required aria-label="Select Destination">
-                <option value="">Where do you want to roam?</option>
-                <option value="tanzania">Serengeti & Kilimanjaro, Tanzania</option>
-                <option value="swiss">Zermatt & Swiss Alps, Switzerland</option>
-                <option value="japan">Kyoto & Hokkaido, Japan</option>
-                <option value="iceland">Reykjavik & Glacial Caves, Iceland</option>
-                <option value="costa-rica">Monteverde Cloud Forest, Costa Rica</option>
-                <option value="norway">Lofoten Islands & Fjords, Norway</option>
-              </select>
-            </div>
-            <div class="search-field">
-              <label><i class="fa-solid fa-person-hiking"></i> Adventure Type</label>
-              <select required aria-label="Select Adventure Type">
-                <option value="">Activity Style</option>
-                <option value="wildlife">Wildlife Safari & Big Five</option>
-                <option value="alpine">Mountain Trekking & Alpine</option>
-                <option value="marine">Scuba & Marine Archipelago</option>
-                <option value="cultural">Heritage & Cultural Immersion</option>
-                <option value="wellness">Eco-Resort & Forest Wellness</option>
-              </select>
-            </div>
-            <div class="search-field">
-              <label><i class="fa-solid fa-calendar-days"></i> Departure Month</label>
-              <input type="month" required aria-label="Departure Month" value="2026-11">
-            </div>
-            <div class="search-field">
-              <label><i class="fa-solid fa-users"></i> Guests</label>
-              <select required aria-label="Number of Guests">
-                <option value="1">1 Solo Explorer</option>
-                <option value="2" selected>2 Travelers</option>
-                <option value="4">Small Group (3-5)</option>
-                <option value="8">Expedition Crew (6+)</option>
-              </select>
-            </div>
-            <!-- Action button redirecting to 404 -->
-            <button type="submit" class="btn btn-primary btn-action" style="height: 52px;">
-              <i class="fa-solid fa-magnifying-glass"></i> Find Tours
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+      <div class="mobile-nav-drawer">
+        <div>
+          <div class="mobile-drawer-header">
+            <a href="index.html" class="brand-logo-link">
+              <img
+                src="assets/images/logoStackly.webp"
+                alt="Stackly Logo"
+                style="height: 36px"
+              />
+            </a>
+            <button
+              type="button"
+              class="mobile-drawer-close"
+              id="mobileNavClose"
+              aria-label="Close menu"
+            >
+              &times;
             </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: POPULAR ADVENTURE DESTINATIONS -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge-tag badge-secondary"><i class="fa-solid fa-fire"></i> Trending Escapes</span>
-          <h2 class="section-title">Iconic Destinations Handpicked For You</h2>
-          <p class="section-desc">From sweeping savannahs to frosted glaciers, embark on breathtaking journeys led by passionate explorers.</p>
-        </div>
-
-        <div class="tour-grid">
-          <!-- Card 1 -->
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800&auto=format&fit=crop" alt="Serengeti Safari Tanzania">
-              <span class="tour-badge">Wildlife Safari</span>
-              <div class="tour-price-badge">From <span>$2,850</span></div>
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-clock"></i> 8 Days / 7 Nights</span>
-                <span><i class="fa-solid fa-location-dot"></i> Tanzania</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">The Great Serengeti Migration & Ngorongoro</a></h3>
-              <p class="tour-desc">Witness millions of wildebeest traverse the Mara River, stay in luxury tented camps, and track the legendary Big Five.</p>
-              <div class="tour-footer">
-                <div class="tour-rating">
-                  <i class="fa-solid fa-star"></i> 4.96 <span>(128 reviews)</span>
-                </div>
-                <a href="404.html" class="btn btn-sm btn-outline btn-action">View Details</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop" alt="Swiss Alps Hiking">
-              <span class="tour-badge">Alpine Trek</span>
-              <div class="tour-price-badge">From <span>$1,980</span></div>
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-clock"></i> 6 Days / 5 Nights</span>
-                <span><i class="fa-solid fa-location-dot"></i> Switzerland</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">Zermatt Glacier Circuit & Matterhorn Ridge</a></h3>
-              <p class="tour-desc">Traverse panoramic suspension bridges, alpine meadows, and historic mountain chalets beneath the iconic Matterhorn.</p>
-              <div class="tour-footer">
-                <div class="tour-rating">
-                  <i class="fa-solid fa-star"></i> 4.92 <span>(94 reviews)</span>
-                </div>
-                <a href="404.html" class="btn btn-sm btn-outline btn-action">View Details</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800&auto=format&fit=crop" alt="Lofoten Islands Norway">
-              <span class="tour-badge">Arctic Discovery</span>
-              <div class="tour-price-badge">From <span>$2,450</span></div>
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-clock"></i> 7 Days / 6 Nights</span>
-                <span><i class="fa-solid fa-location-dot"></i> Norway</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">Lofoten Aurora Borealis & Fjord Kayaking</a></h3>
-              <p class="tour-desc">Paddle glassy glacial fjords under the midnight sun or witness the ethereal Northern Lights dancing across Arctic crags.</p>
-              <div class="tour-footer">
-                <div class="tour-rating">
-                  <i class="fa-solid fa-star"></i> 4.98 <span>(115 reviews)</span>
-                </div>
-                <a href="404.html" class="btn btn-sm btn-outline btn-action">View Details</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 4: ABOUT STACKLY TRAVEL & WHY CHOOSE US -->
-    <section class="section-padding" style="background-color: var(--bg-subtle);">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge-tag badge-primary"><i class="fa-solid fa-award"></i> The Stackly Difference</span>
-          <h2 class="section-title">Built For Bold Explorers, Grounded In Safety</h2>
-          <p class="section-desc">We bridge raw backcountry thrills with white-glove hospitality, ensuring each expedition is unforgettable and safe.</p>
-        </div>
-
-        <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fa-solid fa-compass-drafting"></i>
-            </div>
-            <h3 class="feature-title">Hand-Crafted Itineraries</h3>
-            <p class="feature-desc">Every route is meticulously scouted by native mountaineers and rangers to skip commercial tourist traps and reach authentic wild terrain.</p>
           </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <h3 class="feature-title">24/7 Satellite Dispatch</h3>
-            <p class="feature-desc">All expeditions carry high-altitude satellite transmitters, emergency medical packs, and dedicated operations monitoring around the clock.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fa-solid fa-seedling"></i>
-            </div>
-            <h3 class="feature-title">100% Regenerative Tourism</h3>
-            <p class="feature-desc">We follow strict Leave-No-Trace protocols and reinvest 10% of every booking directly into indigenous wildlife conservancies.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fa-solid fa-user-check"></i>
-            </div>
-            <h3 class="feature-title">Certified Local Guides</h3>
-            <p class="feature-desc">Learn oral histories, botany, and wildlife habits from certified local naturalists who call these untamed terrains home.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fa-solid fa-utensils"></i>
-            </div>
-            <h3 class="feature-title">Wilderness Gourmet Dining</h3>
-            <p class="feature-desc">Enjoy chef-prepared feasts around the campfire featuring organic regional produce, fine wines, and custom dietary accommodations.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon-box">
-              <i class="fa-solid fa-hand-holding-dollar"></i>
-            </div>
-            <h3 class="feature-title">Zero Hidden Fees Guarantee</h3>
-            <p class="feature-desc">All permits, park entries, gear, internal transport, and lodging are 100% transparent with flexible cancellation terms.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5: ADVENTURE TRAVEL CATEGORIES / SERVICES -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge-tag badge-secondary"><i class="fa-solid fa-cubes"></i> Our Disciplines</span>
-          <h2 class="section-title">How Do You Want To Roam?</h2>
-          <p class="section-desc">Select your preferred adventure style and let our specialists craft your bespoke itinerary.</p>
-        </div>
-
-        <div class="service-grid">
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-paw"></i></div>
-            <h3 class="service-title">Wildlife Safaris</h3>
-            <p class="service-desc">Exclusive game drives through Serengeti, Maasai Mara, and Kruger National Park.</p>
-            <a href="404.html" class="btn btn-sm btn-outline btn-action">Explore Safaris</a>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-mountain-sun"></i></div>
-            <h3 class="service-title">Alpine Treks</h3>
-            <p class="service-desc">Guided summits through the Swiss Alps, Himalayas, and the Patagonian Andes.</p>
-            <a href="404.html" class="btn btn-sm btn-outline btn-action">Explore Treks</a>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-water"></i></div>
-            <h3 class="service-title">Marine & Scuba</h3>
-            <p class="service-desc">Diving with manta rays and coral gardens in Raja Ampat and Galápagos.</p>
-            <a href="404.html" class="btn btn-sm btn-outline btn-action">Explore Marine</a>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon"><i class="fa-solid fa-campground"></i></div>
-            <h3 class="service-title">Luxury Glamping</h3>
-            <p class="service-desc">Bespoke geodesic domes and luxury safari lodges under starlit skies.</p>
-            <a href="404.html" class="btn btn-sm btn-outline btn-action">Explore Glamping</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 6: CURATED TOUR PACKAGES -->
-    <section class="section-padding" style="background-color: var(--bg-surface);">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge-tag badge-primary"><i class="fa-solid fa-star"></i> Signature Journeys</span>
-          <h2 class="section-title">Expeditions Leaving This Season</h2>
-          <p class="section-desc">Limited group capacities to ensure an intimate, low-impact wilderness encounter.</p>
-        </div>
-
-        <div class="tour-grid">
-          <!-- Tour 1 -->
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop" alt="Costa Rica Rainforest">
-              <span class="tour-badge">Eco Expeditions</span>
-              <div class="tour-price-badge">From <span>$1,750</span></div>
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-clock"></i> 7 Days</span>
-                <span><i class="fa-solid fa-users"></i> Max 10 Guests</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">Costa Rica Cloud Forest & Volcano Odyssey</a></h3>
-              <p class="tour-desc">Canopy skywalks, hot springs, sloths, and white-water rapids through untouched biodiversity sanctuaries.</p>
-              <div class="tour-footer">
-                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.95 <span>(78)</span></div>
-                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Expedition</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Tour 2 -->
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=800&auto=format&fit=crop" alt="Patagonia Glaciers">
-              <span class="tour-badge">Hiking & Ice</span>
-              <div class="tour-price-badge">From <span>$3,200</span></div>
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-clock"></i> 10 Days</span>
-                <span><i class="fa-solid fa-users"></i> Max 8 Guests</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">Patagonia Torres del Paine & Perito Moreno</a></h3>
-              <p class="tour-desc">Granite towers, ice caves, and howling winds across Southern Patagonia with experienced alpine leaders.</p>
-              <div class="tour-footer">
-                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.99 <span>(142)</span></div>
-                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Expedition</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Tour 3 -->
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop" alt="Kyoto Bamboo Japan">
-              <span class="tour-badge">Cultural Trek</span>
-              <div class="tour-price-badge">From <span>$2,100</span></div>
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-clock"></i> 9 Days</span>
-                <span><i class="fa-solid fa-users"></i> Max 12 Guests</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">Ancient Kyoto Pilgrimage & Nakasendo Way</a></h3>
-              <p class="tour-desc">Walk the historic postal trails of the Samurai, stay in secluded Ryokans, and meditate in ancient cedar groves.</p>
-              <div class="tour-footer">
-                <div class="tour-rating"><i class="fa-solid fa-star"></i> 4.94 <span>(64)</span></div>
-                <a href="404.html" class="btn btn-sm btn-primary btn-action">Book Expedition</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 7: TRAVEL STATISTICS COUNTER -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="stats-bar">
-          <div class="stats-grid">
-            <div class="stat-item">
-              <h3>52,000+</h3>
-              <p>Happy Adventurers</p>
-            </div>
-            <div class="stat-item">
-              <h3>85+</h3>
-              <p>Global Destinations</p>
-            </div>
-            <div class="stat-item">
-              <h3>120+</h3>
-              <p>Certified Guides</p>
-            </div>
-            <div class="stat-item">
-              <h3>99.4%</h3>
-              <p>Safety Excellence</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 8: TESTIMONIALS SECTION -->
-    <section class="section-padding" style="background-color: var(--bg-subtle);">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge-tag badge-secondary"><i class="fa-solid fa-heart"></i> Stories From The Trail</span>
-          <h2 class="section-title">Voices Of Real Explorers</h2>
-          <p class="section-desc">Read genuine dispatches from adventurers who traveled the world with Stackly.</p>
-        </div>
-
-        <div class="testi-grid">
-          <!-- Testimonial 1 -->
-          <div class="testi-card">
-            <div>
-              <div class="testi-rating">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <p class="testi-quote">
-                "Our safari across Serengeti was purely magical. From waking up to lions roaring in the distance to the five-star meals around the campfire, Stackly provided the adventure of a lifetime."
-              </p>
-            </div>
-            <div class="testi-user">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" alt="Elena Rostova" class="testi-avatar">
-              <div>
-                <div class="testi-name">Elena Rostova</div>
-                <div class="testi-role">Wildlife Photographer, Germany</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="testi-card">
-            <div>
-              <div class="testi-rating">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <p class="testi-quote">
-                "Trekking the Swiss Alps with Stackly's mountain lead was seamless. The satellite check-ins gave my family total peace of mind, and the views at sunrise above Zermatt were unreal."
-              </p>
-            </div>
-            <div class="testi-user">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="David Sterling" class="testi-avatar">
-              <div>
-                <div class="testi-name">David Sterling</div>
-                <div class="testi-role">Alpine Enthusiast, UK</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="testi-card">
-            <div>
-              <div class="testi-rating">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <p class="testi-quote">
-                "The focus on sustainability and supporting local Sherpa families made this expedition deeply meaningful. Transparent pricing, wonderful teammates, and flawless organization."
-              </p>
-            </div>
-            <div class="testi-user">
-              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop" alt="Aisha Patel" class="testi-avatar">
-              <div>
-                <div class="testi-name">Aisha Patel</div>
-                <div class="testi-role">Eco-Tourism Advocate, India</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 9: TRAVEL JOURNAL / ARTICLES -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge-tag badge-primary"><i class="fa-solid fa-book-open"></i> Expedition Journal</span>
-          <h2 class="section-title">Field Notes & Adventure Guides</h2>
-          <p class="section-desc">Practical tips, gear recommendations, and cultural etiquette for your next journey.</p>
-        </div>
-
-        <div class="tour-grid">
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop" alt="How to pack for Safari">
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-calendar"></i> October 2026</span>
-                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">The Ultimate Packing Checklist For African Safaris</a></h3>
-              <p class="tour-desc">Essential camera lenses, neutral bush fabrics, binoculars, and malaria prophylaxis guidance from veteran guides.</p>
-              <div class="tour-footer">
-                <a href="404.html" class="btn btn-sm btn-outline btn-action">Read Journal</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="High Altitude Acclimatization">
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-calendar"></i> September 2026</span>
-                <span><i class="fa-regular fa-clock"></i> 7 min read</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">Mastering Altitude Acclimatization in the Andes</a></h3>
-              <p class="tour-desc">Scientific strategies on hydration, pacing, nutrition, and diamox protocols for high-altitude trekking success.</p>
-              <div class="tour-footer">
-                <a href="404.html" class="btn btn-sm btn-outline btn-action">Read Journal</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="tour-card">
-            <div class="tour-thumb">
-              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop" alt="Scuba Diving Galápagos">
-            </div>
-            <div class="tour-body">
-              <div class="tour-meta">
-                <span><i class="fa-regular fa-calendar"></i> August 2026</span>
-                <span><i class="fa-regular fa-clock"></i> 6 min read</span>
-              </div>
-              <h3 class="tour-title"><a href="404.html" class="btn-action">Diving Darwin's Arch: Shark Encounters</a></h3>
-              <p class="tour-desc">What it feels like to swim alongside hundreds of hammerheads and whale sharks in the Galápagos marine sanctuary.</p>
-              <div class="tour-footer">
-                <a href="404.html" class="btn btn-sm btn-outline btn-action">Read Journal</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 10: CALL TO ACTION BANNER -->
-    <section class="section-padding-sm" style="margin-bottom: 60px;">
-      <div class="container">
-        <div class="cta-banner">
-          <h2>Ready To Venture Beyond The Ordinary?</h2>
-          <p>Join thousands of worldly travelers discovering pristine corners of the earth. Secure your 2026-2027 expedition slot today.</p>
-          <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-            <!-- Redirect all action buttons to 404 per instructions -->
-            <a href="404.html" class="btn btn-primary btn-lg btn-action">
-              <i class="fa-solid fa-map-location-dot"></i> Start Your Journey
-            </a>
-            <a href="contact.html" class="btn btn-outline-white btn-lg">
-              <i class="fa-solid fa-envelope"></i> Talk To An Expedition Specialist
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- CONSISTENT FOOTER ACROSS THE WEBSITE -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Brand Info -->
-        <div class="footer-brand">
-          <a href="index.html" title="Stackly Travel & Tourism">
-            <img src="assets/images/logoStackly.webp" alt="Stackly Travel Logo" class="footer-logo-img">
-          </a>
-          <p>
-            Stackly Travel & Tourism is an adventurous expedition operator dedicated to responsible, awe-inspiring global journeys across wilderness summits, deep oceans, and wildlife habitats.
-          </p>
-          <!-- Social buttons redirect to 404 -->
-          <div class="social-links">
-            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="404.html" class="social-btn" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-
-        <!-- Quick Links (Only these are NOT redirected to 404) -->
-        <div>
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Tours & Safaris</a></li>
-            <li><a href="pricing.html"><i class="fa-solid fa-chevron-right"></i> Pricing & Packages</a></li>
-            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
-            <li><a href="sign-in.html"><i class="fa-solid fa-chevron-right"></i> Traveler Sign In</a></li>
-            <li><a href="sign-up.html"><i class="fa-solid fa-chevron-right"></i> Register Account</a></li>
+          <ul class="mobile-nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li>
+              <a href="tours.html" class="nav-link">Tours & Destinations</a>
+            </li>
+            <li>
+              <a href="pricing.html" class="nav-link">Pricing & Packages</a>
+            </li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
         </div>
-
-        <!-- Expeditions & Services (Redirected to 404 per specs) -->
-        <div>
-          <h4 class="footer-title">Expeditions</h4>
-          <ul class="footer-links">
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Serengeti Safaris</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Swiss Alps Trekking</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Arctic Aurora Trails</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Galápagos Marine Eco</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Patagonian Glaciers</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Kyoto Historic Routes</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Information (Redirected to 404 per specs) -->
-        <div>
-          <h4 class="footer-title">Contact Expedition HQ</h4>
-          <ul class="footer-contact-list">
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <span>MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <a href="404.html">+91 9876543210</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <a href="404.html">hello@thestackly.com</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-clock"></i>
-              <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="footer-bottom">
-        <div>
-          &copy; 2026 Stackly Travel & Tourism. All rights reserved. Designed for Adventurers.
-        </div>
-        <div class="footer-legal-links">
-          <a href="404.html">Privacy Policy</a>
-          <a href="404.html">Terms & Conditions</a>
-          <a href="404.html">Cookie Policy</a>
-          <a href="404.html">Sitemap</a>
+        <div class="mobile-nav-cta">
+          <a href="sign-in.html" class="btn btn-outline btn-block">Sign In</a>
+          <a href="sign-up.html" class="btn btn-primary btn-block">Sign Up</a>
         </div>
       </div>
     </div>
-  </footer>
 
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-</body>
+    <main>
+      <!-- SECTION 1: HERO SECTION -->
+      <section
+        class="hero-main"
+        style="
+          background:
+            linear-gradient(
+              180deg,
+              rgba(15, 81, 50, 0.05) 0%,
+              rgba(255, 255, 255, 0) 100%
+            ),
+            url(&quot;https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2000&auto=format&fit=crop&quot;)
+              center/cover no-repeat;
+        "
+      >
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="hero-greeting">
+              <i class="fa-solid fa-globe"></i>
+              <span class="dynamic-greeting" data-suffix=", Traveler!"
+                >Welcome, Traveler!</span
+              >
+            </div>
+            <h1 class="hero-title">
+              Explore The World's Most <span>Iconic Destinations</span>
+            </h1>
+            <p class="hero-subtitle">
+              From the romantic streets of Paris and ancient temples of Kyoto to
+              the sun-drenched Amalfi Coast, Swiss peaks, and tropical Bali
+              beaches. Seamless worldwide vacations crafted for you.
+            </p>
+            <div class="hero-actions">
+              <!-- All action buttons redirect to 404 per instructions -->
+              <a href="404.html" class="btn btn-primary btn-lg btn-action">
+                <i class="fa-solid fa-compass"></i> Explore Worldwide Tours
+              </a>
+              <a href="404.html" class="btn btn-outline-white btn-lg">
+                <i class="fa-solid fa-circle-play"></i> Why Travel With Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: GLOBAL SEARCH & BOOKING BAR -->
+      <section class="search-strip-wrap">
+        <div class="container">
+          <div class="search-box-card" data-aos="fade-up" data-aos-delay="100">
+            <form class="search-form-grid search-form" id="heroSearchForm">
+              <div class="search-field">
+                <label
+                  ><i class="fa-solid fa-earth-americas"></i> Destination /
+                  Country</label
+                >
+                <select required aria-label="Select Worldwide Destination">
+                  <option value="">Where do you want to go?</option>
+                  <option value="france">
+                    France — Paris, Nice & Provence
+                  </option>
+                  <option value="italy">
+                    Italy — Rome, Venice & Amalfi Coast
+                  </option>
+                  <option value="japan">
+                    Japan — Tokyo, Kyoto & Mount Fuji
+                  </option>
+                  <option value="switzerland">
+                    Switzerland — Zermatt & Interlaken
+                  </option>
+                  <option value="indonesia">
+                    Indonesia — Bali & Komodo Islands
+                  </option>
+                  <option value="greece">Greece — Santorini & Mykonos</option>
+                  <option value="usa">
+                    USA — New York & California Pacific
+                  </option>
+                  <option value="uae">UAE — Dubai & Abu Dhabi</option>
+                  <option value="australia">
+                    Australia — Sydney & Great Barrier Reef
+                  </option>
+                  <option value="uk">
+                    United Kingdom — London & Scottish Highlands
+                  </option>
+                  <option value="brazil">
+                    Brazil & Peru — Rio & Machu Picchu
+                  </option>
+                </select>
+              </div>
+              <div class="search-field">
+                <label
+                  ><i class="fa-solid fa-suitcase-rolling"></i> Travel
+                  Style</label
+                >
+                <select required aria-label="Select Holiday Style">
+                  <option value="">Vacation Type</option>
+                  <option value="city">City Breaks & Heritage</option>
+                  <option value="beach">Tropical Island & Beach Resorts</option>
+                  <option value="scenic">Scenic Mountains & Lakes</option>
+                  <option value="family">Family Holiday & Leisure</option>
+                  <option value="honeymoon">
+                    Romantic & Honeymoon Escapes
+                  </option>
+                  <option value="adventure">Outdoor Adventure & Nature</option>
+                </select>
+              </div>
+              <div class="search-field">
+                <label
+                  ><i class="fa-solid fa-calendar-days"></i> Travel Month</label
+                >
+                <input
+                  type="month"
+                  required
+                  aria-label="Travel Month"
+                  value="2026-11"
+                />
+              </div>
+              <div class="search-field">
+                <label><i class="fa-solid fa-users"></i> Travelers</label>
+                <select required aria-label="Traveler Count">
+                  <option value="1">1 Solo Traveler</option>
+                  <option value="2" selected>2 Travelers (Couple)</option>
+                  <option value="4">Family (3 - 5 Guests)</option>
+                  <option value="8">Group Tour (6+ Guests)</option>
+                </select>
+              </div>
+              <!-- Action button redirecting to 404 -->
+              <button
+                type="submit"
+                class="btn btn-primary btn-action"
+                style="height: 52px"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i> Search Holidays
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: TOP WORLDWIDE DESTINATIONS -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="badge-tag badge-secondary"
+              ><i class="fa-solid fa-fire"></i> World Favorites</span
+            >
+            <h2 class="section-title">
+              Trending Destinations Around The Globe
+            </h2>
+            <p class="section-desc">
+              Experience vibrant global capitals, romantic coastal villages, and
+              awe-inspiring natural wonders across 6 continents.
+            </p>
+          </div>
+
+          <div class="tour-grid">
+            <!-- Card 1: Europe (Italy & France) -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop"
+                  alt="Santorini Greece"
+                />
+                <span class="tour-badge">Europe</span>
+                <div class="tour-price-badge">From <span>$1,890</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 8 Days / 7 Nights</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-location-dot"></i> Greece &
+                    Italy</span
+                  >
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Mediterranean Jewels: Santorini & Amalfi Coast</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Whitewashed Aegean cliff towns, world-class Italian cuisine in
+                  Positano, and sunset sailing around the Isle of Capri.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.97
+                    <span>(218 reviews)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >View Details</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Asia (Japan) -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800&auto=format&fit=crop"
+                  alt="Tokyo and Kyoto Japan"
+                />
+                <span class="tour-badge">East Asia</span>
+                <div class="tour-price-badge">From <span>$2,250</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 9 Days / 8 Nights</span
+                  >
+                  <span><i class="fa-solid fa-location-dot"></i> Japan</span>
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Tokyo, Kyoto & Mount Fuji Discovery</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Futuristic Tokyo neon districts, bullet train rides with views
+                  of Mount Fuji, sacred Kyoto shrines, and thermal onsens.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.98
+                    <span>(312 reviews)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >View Details</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Americas (Peru & Brazil) -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1526392060635-9d6019884377?q=80&w=800&auto=format&fit=crop"
+                  alt="Machu Picchu Peru"
+                />
+                <span class="tour-badge">South America</span>
+                <div class="tour-price-badge">From <span>$2,600</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 10 Days / 9
+                    Nights</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-location-dot"></i> Peru &
+                    Brazil</span
+                  >
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Inca Citadel of Machu Picchu & Rio Carnival</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Traverse the Sacred Valley by panoramic train, explore
+                  cloud-forest Inca ruins, and unwind on Rio de Janeiro's
+                  Copacabana.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.95
+                    <span>(164 reviews)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >View Details</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 4: Southeast Asia (Bali Indonesia) -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=800&auto=format&fit=crop"
+                  alt="Bali Indonesia Temples and Beaches"
+                />
+                <span class="tour-badge">Southeast Asia</span>
+                <div class="tour-price-badge">From <span>$1,420</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 7 Days / 6 Nights</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-location-dot"></i> Indonesia</span
+                  >
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Tropical Bali Paradise & Nusa Penida Cliffs</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Lush emerald rice terraces in Ubud, beachfront private
+                  infinity villas in Seminyak, and crystal-clear manta ray
+                  snorkeling.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.96
+                    <span>(285 reviews)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >View Details</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 5: Western Europe (Paris, London, Rome) -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop"
+                  alt="Paris Eiffel Tower France"
+                />
+                <span class="tour-badge">Western Europe</span>
+                <div class="tour-price-badge">From <span>$2,450</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 10 Days / 9
+                    Nights</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-location-dot"></i> France & UK</span
+                  >
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Paris & London Grand Heritage Grand Tour</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Skip-the-line Louvre and Eiffel Tower visits, Seine river
+                  cruise, Eurostar high-speed rail, and London West End theater
+                  nights.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.94
+                    <span>(340 reviews)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >View Details</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 6: Middle East (Dubai & Desert) -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop"
+                  alt="Dubai UAE Skyline and Desert"
+                />
+                <span class="tour-badge">Middle East</span>
+                <div class="tour-price-badge">From <span>$1,650</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 6 Days / 5 Nights</span
+                  >
+                  <span><i class="fa-solid fa-location-dot"></i> UAE</span>
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Dubai Luxury Skyline & Desert Safari Oasis</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Burj Khalifa observation deck, private luxury yacht marina
+                  cruise, traditional gold souks, and dune glamping under the
+                  stars.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.93
+                    <span>(198 reviews)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >View Details</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: WHY CHOOSE STACKLY TRAVEL -->
+      <section
+        class="section-padding"
+        style="background-color: var(--bg-subtle)"
+      >
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="badge-tag badge-primary"
+              ><i class="fa-solid fa-star"></i> Seamless Travel</span
+            >
+            <h2 class="section-title">Why World Travelers Choose Stackly</h2>
+            <p class="section-desc">
+              We combine effortless global booking with deep local connections
+              to deliver seamless holidays in over 120 countries.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-hotel"></i>
+              </div>
+              <h3 class="feature-title">Hand-Picked 4 & 5 Star Stays</h3>
+              <p class="feature-desc">
+                Every hotel, heritage riad, and boutique beachfront resort is
+                personally inspected for comfort, prime location, and
+                authenticity.
+              </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-user-tie"></i>
+              </div>
+              <h3 class="feature-title">Expert Local Guides</h3>
+              <p class="feature-desc">
+                Explore with native licensed guides who share insider secrets,
+                skip tourist queues, and reveal authentic neighborhood dining.
+              </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-plane-circle-check"></i>
+              </div>
+              <h3 class="feature-title">All-Inclusive Travel Packages</h3>
+              <p class="feature-desc">
+                International airport transfers, intra-country high-speed
+                trains, scenic flights, and monument tickets included without
+                hidden surcharges.
+              </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-headset"></i>
+              </div>
+              <h3 class="feature-title">24/7 Global Traveler Concierge</h3>
+              <p class="feature-desc">
+                Our multilingual operations centers across time zones provide
+                immediate support from booking until your return flight home.
+              </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+              </div>
+              <h3 class="feature-title">Best Price & Value Guarantee</h3>
+              <p class="feature-desc">
+                Transparent pricing with locked-in currency rates. Enjoy luxury
+                amenities at exclusive negotiated group rates.
+              </p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-shield-heart"></i>
+              </div>
+              <h3 class="feature-title">100% Flexible Booking</h3>
+              <p class="feature-desc">
+                Life happens. Enjoy free date transfers, flexible down payments,
+                and comprehensive travel insurance integration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: WORLDWIDE TRAVEL STYLES & CATEGORIES -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="badge-tag badge-secondary"
+              ><i class="fa-solid fa-shapes"></i> Travel Categories</span
+            >
+            <h2 class="section-title">Vacations Tailored To Your Dreams</h2>
+            <p class="section-desc">
+              Whatever your holiday style, discover our curated collections
+              spanning romantic escapes to grand family journeys.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-city"></i></div>
+              <h3 class="service-title">City Breaks & Heritage</h3>
+              <p class="service-desc">
+                Iconic capitals, museums, and historic cathedrals in Paris,
+                Rome, London, and Kyoto.
+              </p>
+              <a href="404.html" class="btn btn-sm btn-outline"
+                >Explore Cities</a
+              >
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-umbrella-beach"></i>
+              </div>
+              <h3 class="service-title">Beach & Island Resorts</h3>
+              <p class="service-desc">
+                Pristine turquoise waters, private villas, and water sports in
+                Maldives, Bali, and Greece.
+              </p>
+              <a href="404.html" class="btn btn-sm btn-outline"
+                >Explore Beaches</a
+              >
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fa-solid fa-mountain"></i>
+              </div>
+              <h3 class="service-title">Alpine & Scenic Lakes</h3>
+              <p class="service-desc">
+                Panoramic cogwheel trains, sparkling lakes, and fresh air in
+                Switzerland and Banff.
+              </p>
+              <a href="404.html" class="btn btn-sm btn-outline"
+                >Explore Scenic</a
+              >
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon"><i class="fa-solid fa-paw"></i></div>
+              <h3 class="service-title">Wildlife & Natural Parks</h3>
+              <p class="service-desc">
+                Grand Canyon, Yellowstone, Galápagos marine reserves, and
+                Serengeti wildlife sanctuaries.
+              </p>
+              <a href="404.html" class="btn btn-sm btn-outline"
+                >Explore Nature</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: CURATED POPULAR HOLIDAY PACKAGES -->
+      <section
+        class="section-padding"
+        style="background-color: var(--bg-surface)"
+      >
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="badge-tag badge-primary"
+              ><i class="fa-solid fa-sparkles"></i> Featured Packages</span
+            >
+            <h2 class="section-title">
+              Best-Selling Holiday Packages (2026 - 2027)
+            </h2>
+            <p class="section-desc">
+              Comprehensive itineraries packed with flights, luxury
+              accommodations, daily breakfast, and private guided excursions.
+            </p>
+          </div>
+
+          <div class="tour-grid">
+            <!-- Package 1: Swiss Alps & Northern Italy -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=800&auto=format&fit=crop"
+                  alt="Swiss Alps and Lake Geneva"
+                />
+                <span class="tour-badge">Switzerland & Italy</span>
+                <div class="tour-price-badge">From <span>$2,190</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 8 Days / 7 Nights</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-users"></i> Small Group (12
+                    max)</span
+                  >
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Swiss Alpine Peaks, Glacier Express & Lake Como</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Ride the legendary Glacier Express through snow-capped
+                  valleys, stay in Zermatt chalets, and cruise Lake Como's
+                  historic villas.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.98 <span>(184)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-primary btn-action"
+                    >Book Package</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Package 2: Australian East Coast & Great Barrier Reef -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=800&auto=format&fit=crop"
+                  alt="Sydney Opera House Australia"
+                />
+                <span class="tour-badge">Australia</span>
+                <div class="tour-price-badge">From <span>$2,850</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 11 Days / 10
+                    Nights</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-users"></i> Small Group (10
+                    max)</span
+                  >
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Sydney Harbour, Blue Mountains & Barrier Reef</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Opera House VIP tour, wildlife encounters with koalas, and
+                  catamaran cruising over the kaleidoscope colors of the Great
+                  Barrier Reef.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.96 <span>(142)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-primary btn-action"
+                    >Book Package</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Package 3: United Kingdom & Scotland -->
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800&auto=format&fit=crop"
+                  alt="London Big Ben and Edinburgh Castle"
+                />
+                <span class="tour-badge">United Kingdom</span>
+                <div class="tour-price-badge">From <span>$1,980</span></div>
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-clock"></i> 9 Days / 8 Nights</span
+                  >
+                  <span
+                    ><i class="fa-solid fa-users"></i> Small Group (14
+                    max)</span
+                  >
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Royal London & Scottish Highlands Castles</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Tower of London, Buckingham Palace, scenic rail to Edinburgh
+                  Castle, and a private boat tour on misty Loch Ness.
+                </p>
+                <div class="tour-footer">
+                  <div class="tour-rating">
+                    <i class="fa-solid fa-star"></i> 4.94 <span>(209)</span>
+                  </div>
+                  <a href="404.html" class="btn btn-sm btn-primary btn-action"
+                    >Book Package</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: GLOBAL TOURISM STATS -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="stats-bar" data-aos="fade-up">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <h3>120+</h3>
+                <p>Countries Covered</p>
+              </div>
+              <div class="stat-item">
+                <h3>85,000+</h3>
+                <p>Delighted Travelers</p>
+              </div>
+              <div class="stat-item">
+                <h3>650+</h3>
+                <p>Curated Tour Packages</p>
+              </div>
+              <div class="stat-item">
+                <h3>99.6%</h3>
+                <p>Customer Satisfaction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: WORLDWIDE TRAVELER TESTIMONIALS -->
+      <section
+        class="section-padding"
+        style="background-color: var(--bg-subtle)"
+      >
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="badge-tag badge-secondary"
+              ><i class="fa-solid fa-comments"></i> Real Stories</span
+            >
+            <h2 class="section-title">What Our Global Guests Say</h2>
+            <p class="section-desc">
+              Read feedback from travelers who explored Europe, Asia, and the
+              Americas with Stackly.
+            </p>
+          </div>
+
+          <div class="testi-grid">
+            <!-- Testimonial 1 -->
+            <div class="testi-card">
+              <div>
+                <div class="testi-rating">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote">
+                  "Our European tour across Rome, Florence, and Paris was
+                  flawlessly executed. The hotels were right in the heart of
+                  each city, and our skip-the-line museum passes saved hours of
+                  waiting."
+                </p>
+              </div>
+              <div class="testi-user">
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
+                  alt="Sarah Jenkins"
+                  class="testi-avatar"
+                />
+                <div>
+                  <div class="testi-name">Sarah Jenkins</div>
+                  <div class="testi-role">Traveled to France & Italy</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testi-card">
+              <div>
+                <div class="testi-rating">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote">
+                  "Japan had been on our bucket list for a decade. Stackly's
+                  local guide in Kyoto made history come alive, and our
+                  traditional ryokan stay with Mount Fuji views was the
+                  highlight of our lives."
+                </p>
+              </div>
+              <div class="testi-user">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop"
+                  alt="Marcus Vance"
+                  class="testi-avatar"
+                />
+                <div>
+                  <div class="testi-name">Marcus Vance</div>
+                  <div class="testi-role">Traveled to Japan & Bali</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testi-card">
+              <div>
+                <div class="testi-rating">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testi-quote">
+                  "Booking our family holiday to Switzerland and London was
+                  effortless. Having 24/7 WhatsApp concierge support while
+                  traveling with two young kids gave us total peace of mind."
+                </p>
+              </div>
+              <div class="testi-user">
+                <img
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop"
+                  alt="Ananya Sharma"
+                  class="testi-avatar"
+                />
+                <div>
+                  <div class="testi-name">Ananya Sharma</div>
+                  <div class="testi-role">
+                    Traveled with Family to Switzerland & UK
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 9: GLOBAL TRAVEL INSPIRATION & GUIDES -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="badge-tag badge-primary"
+              ><i class="fa-solid fa-newspaper"></i> Travel Insights</span
+            >
+            <h2 class="section-title">Worldwide Travel Guides & Tips</h2>
+            <p class="section-desc">
+              Expert itineraries, packing secrets, and seasonal highlights from
+              our global destination specialists.
+            </p>
+          </div>
+
+          <div class="tour-grid">
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=800&auto=format&fit=crop"
+                  alt="Paris café and streets"
+                />
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-calendar"></i> October 2026</span
+                  >
+                  <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >The First-Timer's Guide to Exploring Paris Like a Local</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  How to navigate the Metro, book museum passes in advance, and
+                  discover the most charming hidden bakeries in Le Marais.
+                </p>
+                <div class="tour-footer">
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >Read Guide</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=800&auto=format&fit=crop"
+                  alt="Kyoto autumn foliage"
+                />
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-calendar"></i> September 2026</span
+                  >
+                  <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Best Seasons to Visit Japan: Cherry Blossoms vs. Autumn
+                    Leaves</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Comparing spring Hanami festivals and fiery red Momiji foliage
+                  across Tokyo, Kyoto, and the Japanese Alps.
+                </p>
+                <div class="tour-footer">
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >Read Guide</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="tour-card">
+              <div class="tour-thumb">
+                <img
+                  src="https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=800&auto=format&fit=crop"
+                  alt="Greek Island sunset"
+                />
+              </div>
+              <div class="tour-body">
+                <div class="tour-meta">
+                  <span
+                    ><i class="fa-regular fa-calendar"></i> August 2026</span
+                  >
+                  <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+                </div>
+                <h3 class="tour-title">
+                  <a href="404.html" class="btn-action"
+                    >Island Hopping in Greece: Santorini, Mykonos & Milos</a
+                  >
+                </h3>
+                <p class="tour-desc">
+                  Ferry booking hacks, best cliffside boutique hotels, and
+                  uncrowded volcanic beaches for an idyllic summer getaway.
+                </p>
+                <div class="tour-footer">
+                  <a href="404.html" class="btn btn-sm btn-outline btn-action"
+                    >Read Guide</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 10: CONVERSION CTA BANNER -->
+      <section class="section-padding-sm" style="margin-bottom: 60px">
+        <div class="container">
+          <div
+            class="cta-banner"
+            data-aos="zoom-in"
+            style="
+              background:
+                linear-gradient(
+                  135deg,
+                  rgba(15, 81, 50, 0.94) 0%,
+                  rgba(9, 55, 34, 0.98) 100%
+                ),
+                url(&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2000&auto=format&fit=crop&quot;)
+                  center/cover no-repeat;
+            "
+          >
+            <h2>Start Planning Your Dream Holiday Today</h2>
+            <p>
+              Join over 85,000 satisfied travelers exploring 120+ countries with
+              Stackly. Unlock exclusive flight & hotel packages with flexible
+              deposits.
+            </p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                flex-wrap: wrap;
+              "
+            >
+              <a href="404.html" class="btn btn-primary btn-lg btn-action">
+                <i class="fa-solid fa-map-location-dot"></i> Browse All 120+
+                Countries
+              </a>
+              <a href="404.html" class="btn btn-outline-white btn-lg">
+                <i class="fa-solid fa-phone"></i> Consult A Travel Specialist
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- CONSISTENT FOOTER ACROSS THE WEBSITE -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" title="Stackly Travel & Tourism">
+              <img
+                src="assets/images/logoStackly.webp"
+                alt="Stackly Travel Logo"
+                class="footer-logo-img"
+              />
+            </a>
+            <p>
+              Stackly Travel & Tourism is a premier global tour operator
+              dedicated to crafting unforgettable vacations across Europe, Asia,
+              the Americas, Africa, and Oceania with hand-picked hotels and
+              expert local guides.
+            </p>
+            <div class="social-links">
+              <a href="404.html" class="social-btn" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="Twitter X"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fa-solid fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="tours.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Tours &
+                  Destinations</a
+                >
+              </li>
+              <li>
+                <a href="pricing.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Pricing &
+                  Packages</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="sign-in.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Traveler Sign In</a
+                >
+              </li>
+              <li>
+                <a href="sign-up.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Register Account</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Popular Destinations</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> France & Paris
+                  Escapes</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Italy &
+                  Mediterranean</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Japan & Mount
+                  Fuji</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Switzerland Alpine
+                  Rail</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Bali & Indonesia
+                  Islands</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Australia & Sydney
+                  Coast</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Contact Headquarters</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span
+                  >MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu
+                  636008</span
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="404.html">+91 9876543210</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="404.html">hello@thestackly.com</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 Stackly Travel & Tourism. All rights reserved.
+            Connecting Worldwide Travelers.
+          </div>
+          <div class="footer-legal-links">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms & Conditions</a>
+            <a href="404.html">Cookie Policy</a>
+            <a href="404.html">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
-

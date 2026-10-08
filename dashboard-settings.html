@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dashboard.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
 
@@ -97,7 +99,7 @@
 
       <div class="dash-content">
         <!-- SECTION 1: PROFILE OVERVIEW -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Explorer Profile Details</h3>
           </div>
@@ -114,7 +116,7 @@
         </div>
 
         <!-- SECTION 2: EMERGENCY CONTACTS -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Emergency Kin Contacts</h3>
           </div>
@@ -131,7 +133,7 @@
         </div>
 
         <!-- SECTION 3: DIETARY & HEALTH PREFERENCES -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Expedition Dietary & Medical Disclosures</h3>
           </div>
@@ -153,7 +155,7 @@
         </div>
 
         <!-- SECTION 4: NOTIFICATION SETTINGS -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Satellite Dispatch & SMS Notifications</h3>
           </div>
@@ -168,7 +170,7 @@
         </div>
 
         <!-- SECTION 5: SECURITY & TWO-FACTOR AUTH -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Two-Factor Authentication (2FA)</h3>
             <span class="dash-status confirmed">Enabled</span>
@@ -177,17 +179,86 @@
         </div>
 
         <!-- SECTION 6: DATA PRIVACY & STORAGE -->
-        <div class="dash-card">
+        <div class="dash-card" data-aos="fade-up">
           <div class="dash-card-header">
             <h3 class="dash-card-title">Local Session & Cache Controls</h3>
           </div>
           <p style="font-size:0.9rem; color:var(--text-muted); margin-bottom:12px;">Your session data is securely maintained in browser local storage.</p>
           <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Export Profile Data (JSON)</a>
         </div>
+
+        <!-- SECTION 7: CONNECTED TRAVEL LOYALTY & AIRLINE FREQUENT FLYER ACCOUNTS -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Connected Airline Alliances & Hotel Loyalty Accounts</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Automatic Mileage Accrual & Elite Status Recognition on Confirmed Bookings</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">+ Link New Loyalty Program</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong>Star Alliance &bull; Miles & More</strong>
+                <span class="dash-status confirmed">Senator Elite</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Swiss International Air Lines & Lufthansa &bull; #9920-4102-8819</p>
+              <small style="color:var(--text-main);">Benefit: Lounge access & priority boarding on all European connections.</small>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong>SkyTeam &bull; Flying Blue</strong>
+                <span class="dash-status confirmed">Gold Tier</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Air France & KLM Royal Dutch &bull; #FB-209-441-002</p>
+              <small style="color:var(--text-main);">Benefit: Extra baggage allowance on transatlantic routes.</small>
+            </div>
+            <div style="border:1px solid var(--border); border-radius:var(--radius-md); padding:16px; background:var(--bg-subtle);">
+              <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                <strong>Marriott Bonvoy Global</strong>
+                <span class="dash-status confirmed">Titanium Elite</span>
+              </div>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">The Ritz-Carlton & Luxury Collection &bull; #MB-881-903-412</p>
+              <small style="color:var(--text-main);">Benefit: Guaranteed 4:00 PM late check-out & suite upgrades.</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 8: DATA PRIVACY, GDPR COMPLIANCE & PERMANENT ACCOUNT DATA EXPORT -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">GDPR Data Privacy, Consent Governance & Records Portability</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Full Article 15/17 Rights Management under EU GDPR and Swiss FADP</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Privacy Compliance Audit</a>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:14px; font-size:0.9rem;">
+            <label style="display:flex; gap:12px; align-items:flex-start; cursor:pointer;">
+              <input type="checkbox" checked style="margin-top:3px; width:16px; height:16px;">
+              <div>
+                <strong>Global Travel Analytics & Personalization</strong>
+                <p style="font-size:0.84rem; color:var(--text-muted); margin:2px 0 0;">Permit Stackly to utilize your dietary, climate, and historical tour preferences to curate bespoke seasonal recommendations.</p>
+              </div>
+            </label>
+            <label style="display:flex; gap:12px; align-items:flex-start; cursor:pointer;">
+              <input type="checkbox" style="margin-top:3px; width:16px; height:16px;">
+              <div>
+                <strong>Third-Party Luxury Partner Sharing</strong>
+                <p style="font-size:0.84rem; color:var(--text-muted); margin:2px 0 0;">Strictly share booking profile with verified 5-star hotel concierge desks and private air charter operators only.</p>
+              </div>
+            </label>
+            <div style="display:flex; gap:12px; margin-top:8px;">
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn"><i class="fa-solid fa-download"></i> Download Full Travel Records (CSV/PDF)</a>
+              <a href="404.html" class="btn btn-sm btn-outline dash-action-btn" style="color:var(--error); border-color:var(--error);"><i class="fa-solid fa-trash-can"></i> Request Account Erasure</a>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/dashboard.js"></script>
 </body>

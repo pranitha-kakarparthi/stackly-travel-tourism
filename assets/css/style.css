@@ -176,6 +176,39 @@ button, input, select, textarea {
   50% { transform: scale(1.05); opacity: 1; }
 }
 
+/* Eye-Catching Keyframe Animations */
+@keyframes floatDecor {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 96, 76, 0.45); }
+  50% { box-shadow: 0 0 0 10px rgba(232, 96, 76, 0); }
+}
+
+@keyframes subtleShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes badgeBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.65; }
+}
+
+.anim-float {
+  animation: floatDecor 4s ease-in-out infinite;
+}
+
+.anim-pulse {
+  animation: pulseGlow 2.5s infinite;
+}
+
+.badge-tag.badge-secondary {
+  animation: pulseGlow 3s infinite;
+}
+
 /* ==========================================================================
    BUTTON SYSTEM (Variants: Primary, Secondary, Outline, Glass)
    ========================================================================== */
@@ -193,6 +226,25 @@ button, input, select, textarea {
   border: 2px solid transparent;
   line-height: 1;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.btn:hover::after {
+  left: 140%;
+  transition: left 0.75s ease-in-out;
 }
 
 /* Variant 1: Primary Action (Adventurous Coral/Orange) */
@@ -203,8 +255,8 @@ button, input, select, textarea {
 }
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--secondary-hover) 0%, #E8604C 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(232, 96, 76, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(232, 96, 76, 0.45);
   color: #FFFFFF;
 }
 
@@ -1429,106 +1481,145 @@ button, input, select, textarea {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1.15fr;
-  max-width: 1280px;
-  margin: 30px auto;
+  max-width: 1220px;
+  width: 100%;
+  margin: 36px auto;
   padding: 0 24px;
-  gap: 40px;
-  align-items: center;
+  gap: 36px;
+  align-items: stretch;
 }
 
 .auth-sidebar-hero {
-  background: linear-gradient(135deg, rgba(9, 55, 34, 0.92) 0%, rgba(15, 81, 50, 0.88) 100%),
+  background: linear-gradient(135deg, rgba(9, 55, 34, 0.94) 0%, rgba(15, 81, 50, 0.90) 100%),
               url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=1000&auto=format&fit=crop') center/cover no-repeat;
   border-radius: var(--radius-lg);
-  padding: 50px 40px;
+  padding: 44px 38px;
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 600px;
+  min-height: 100%;
   box-shadow: var(--shadow-lg);
 }
 
 .auth-hero-header h2 {
   color: #FFFFFF;
-  font-size: 2.2rem;
-  margin-bottom: 16px;
+  font-size: 2.1rem;
+  line-height: 1.25;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 .auth-hero-header p {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .auth-benefits-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin: 30px 0;
+  gap: 15px;
+  margin: 28px 0;
 }
 
 .auth-benefits-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.94rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .auth-benefits-list i {
   color: var(--accent);
+  margin-top: 3px;
+  flex-shrink: 0;
 }
 
 .auth-testimonial-pill {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(8px);
-  padding: 16px 20px;
+  padding: 18px 20px;
   border-radius: var(--radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .auth-testimonial-pill p {
   font-size: 0.88rem;
   font-style: italic;
   margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 .auth-form-card {
   background: #FFFFFF;
   border-radius: var(--radius-lg);
-  padding: 44px 40px;
+  padding: 44px 38px;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .auth-form-title {
   font-size: 1.9rem;
   font-weight: 800;
   margin-bottom: 6px;
+  color: var(--dark);
 }
 
 .auth-form-sub {
   color: var(--text-muted);
-  font-size: 0.95rem;
-  margin-bottom: 28px;
+  font-size: 0.94rem;
+  margin-bottom: 24px;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.phone-input-wrap {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px;
 }
 
 .password-input-wrap {
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrap .form-control {
+  padding-right: 48px;
+  width: 100%;
 }
 
 .password-toggle-btn {
   position: absolute;
-  right: 14px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
+  background: transparent;
   border: none;
   color: var(--text-muted);
   cursor: pointer;
-  padding: 4px;
-  font-size: 1rem;
+  padding: 8px;
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.password-toggle-btn:hover {
+  color: var(--primary);
 }
 
 .pwd-strength-bar {

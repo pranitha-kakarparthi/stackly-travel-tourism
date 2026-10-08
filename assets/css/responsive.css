@@ -147,6 +147,15 @@
   .auth-form-card {
     padding: 30px 20px;
   }
+
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .phone-input-wrap {
+    grid-template-columns: 95px 1fr;
+  }
   
   .social-auth-grid {
     grid-template-columns: repeat(2, 1fr);

@@ -43,6 +43,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 8. Search / Tour filter forms
   initSearchForms();
+
+  // 9. Initialize AOS (Animate on Scroll)
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50
+    });
+  }
 });
 
 // Helper: Active nav item based on current URL path
