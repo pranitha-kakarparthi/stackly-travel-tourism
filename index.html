@@ -33,6 +33,7 @@
     <!-- Core Styles -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
     <!-- AOS Animations -->
     <link
       rel="stylesheet"
@@ -213,7 +214,7 @@
               rgba(15, 81, 50, 0.05) 0%,
               rgba(255, 255, 255, 0) 100%
             ),
-            url(&quot;assets/images/global-travel-hero.webp)
+            url('assets/images/global-travel-hero.webp')
               center/cover no-repeat;
         "
       >
@@ -711,19 +712,19 @@
           </div>
 
           <div class="service-grid">
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up">
               <div class="service-icon"><i class="fa-solid fa-city"></i></div>
               <h3 class="service-title">City Breaks & Heritage</h3>
               <p class="service-desc">
                 Iconic capitals, museums, and historic cathedrals in Paris,
                 Rome, London, and Kyoto.
               </p>
-              <a href="pages/404.html" class="btn btn-sm btn-outline"
+              <a href="pages/404.html" class="btn btn-sm btn-outline btn-action"
                 >Explore Cities</a
               >
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
               <div class="service-icon">
                 <i class="fa-solid fa-umbrella-beach"></i>
               </div>
@@ -732,12 +733,12 @@
                 Pristine turquoise waters, private villas, and water sports in
                 Maldives, Bali, and Greece.
               </p>
-              <a href="pages/404.html" class="btn btn-sm btn-outline"
+              <a href="pages/404.html" class="btn btn-sm btn-outline btn-action"
                 >Explore Beaches</a
               >
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
               <div class="service-icon">
                 <i class="fa-solid fa-mountain"></i>
               </div>
@@ -746,19 +747,19 @@
                 Panoramic cogwheel trains, sparkling lakes, and fresh air in
                 Switzerland and Banff.
               </p>
-              <a href="pages/404.html" class="btn btn-sm btn-outline"
+              <a href="pages/404.html" class="btn btn-sm btn-outline btn-action"
                 >Explore Scenic</a
               >
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
               <div class="service-icon"><i class="fa-solid fa-paw"></i></div>
               <h3 class="service-title">Wildlife & Natural Parks</h3>
               <p class="service-desc">
                 Grand Canyon, Yellowstone, Galápagos marine reserves, and
                 Serengeti wildlife sanctuaries.
               </p>
-              <a href="pages/404.html" class="btn btn-sm btn-outline"
+              <a href="pages/404.html" class="btn btn-sm btn-outline btn-action"
                 >Explore Nature</a
               >
             </div>
@@ -1175,7 +1176,7 @@
                   rgba(15, 81, 50, 0.94) 0%,
                   rgba(9, 55, 34, 0.98) 100%
                 ),
-                url(&quot;assets/images/tropical-beach-coastline.webp)
+                url('assets/images/tropical-beach-coastline.webp')
                   center/cover no-repeat;
             "
           >
@@ -1371,5 +1372,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
   </body>
 </html>

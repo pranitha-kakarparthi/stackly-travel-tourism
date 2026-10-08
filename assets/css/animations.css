@@ -1,0 +1,195 @@
+/* ==========================================================================
+   STACKLY TRAVEL & TOURISM - PREMIUM ANIMATION LAYER
+   Isolated, Hardware-Accelerated (60fps), Accessible Micro-Interactions
+   ========================================================================== */
+
+/* 1. Top Viewport Scroll Progress Bar */
+#scrollProgressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #D94833 0%, #E08538 50%, #1B4332 100%);
+  z-index: 99999;
+  pointer-events: none;
+  transition: width 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+}
+
+/* 2. Hardware-Accelerated 3D Card Tilt & Elevation */
+.dest-card,
+.tour-card,
+.category-card,
+.specialist-card,
+.pricing-card,
+.kpi-card {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, box-shadow;
+}
+
+.dest-card:hover,
+.tour-card:hover,
+.category-card:hover,
+.specialist-card:hover,
+.pricing-card:hover {
+  box-shadow: 0 16px 36px -10px rgba(12, 26, 20, 0.15) !important;
+}
+
+/* 3. Card Image Zoom & Sheen Reveal */
+.dest-card-img-wrap,
+.tour-card-img-wrap,
+.category-card-img-wrap,
+.destination-hero-img-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.dest-card-img-wrap img,
+.tour-card-img-wrap img,
+.category-card img,
+.specialist-img-wrap img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.dest-card:hover .dest-card-img-wrap img,
+.tour-card:hover .tour-card-img-wrap img,
+.category-card:hover img {
+  transform: scale(1.055);
+}
+
+.specialist-card:hover .specialist-img-wrap img {
+  transform: scale(1.04);
+}
+
+/* 4. Staggered Cascade In-View Reveal */
+[data-anim-stagger] {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-anim-stagger].in-view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* 5. Tactile Button Micro-Interactions */
+.btn,
+.social-btn {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease;
+  will-change: transform;
+}
+
+.btn:hover,
+.social-btn:hover {
+  transform: translate3d(0, -2px, 0);
+}
+
+.btn:active,
+.social-btn:active {
+  transform: translate3d(0, 1px, 0) scale(0.985);
+}
+
+/* 6. Organic Ambient Drift for Badges */
+@keyframes ambientDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+.floating-badge,
+.hero-badge-float {
+  animation: ambientDrift 4.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* 7. Subtle Luxury Shimmer Sweep */
+@keyframes luxuryShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.badge-accent,
+.pill-accent-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-accent::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  animation: luxuryShimmer 5s infinite;
+}
+
+/* 8. Dashboard Live Micro-Interactions */
+.kpi-card:hover {
+  transform: translate3d(0, -3px, 0);
+  box-shadow: 0 10px 22px -6px rgba(12, 26, 20, 0.1) !important;
+}
+
+@keyframes timelinePulseRadar {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(27, 67, 50, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(27, 67, 50, 0);
+  }
+}
+
+.timeline-dot {
+  animation: timelinePulseRadar 2.8s infinite;
+}
+
+.dash-table tbody tr {
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s ease;
+}
+
+.dash-table tbody tr:hover {
+  background-color: rgba(27, 67, 50, 0.035);
+}
+
+/* 9. Navigation Dropdown Spring Entrance */
+.nav-dropdown {
+  transform-origin: top center;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s ease !important;
+}
+
+/* 10. Strict Accessibility Killswitch for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important;
+  }
+
+  #scrollProgressBar {
+    display: none !important;
+  }
+
+  [data-anim-stagger] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+

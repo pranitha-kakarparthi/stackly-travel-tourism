@@ -18,6 +18,7 @@
     <!-- Core Styles -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css">
     <!-- AOS Animations -->
     <link
       rel="stylesheet"
@@ -327,7 +328,7 @@
                     id="contactName"
                     class="form-control"
                     placeholder="Letters only, e.g. Liam Sterling"
-                    value="Alexander Sterling"
+                    value=""
                     required
                     pattern="[A-Za-z\s]+"
                   />
@@ -347,7 +348,7 @@
                     id="contactEmail"
                     class="form-control"
                     placeholder="name@domain.com"
-                    value="alexander.sterling@example.com"
+                    value=""
                     required
                   />
                   <div class="invalid-feedback">
@@ -373,8 +374,8 @@
                       required
                       aria-label="Select Country Code"
                     >
-                      <option value="+91">+91 (IN)</option>
                       <option value="+1" selected>+1 (US)</option>
+                      <option value="+91">+91 (IN)</option>
                       <option value="+44">+44 (UK)</option>
                       <option value="+41">+41 (CH)</option>
                       <option value="+255">+255 (TZ)</option>
@@ -386,7 +387,7 @@
                       id="contactPhone"
                       class="form-control"
                       placeholder="10-digit mobile number"
-                      value="9876543210"
+                      value=""
                       maxlength="10"
                       required
                     />
@@ -403,7 +404,10 @@
                     >Expedition Subject <span class="req">*</span></label
                   >
                   <select id="contactSubject" class="form-control" required>
-                    <option value="bespoke" selected>
+                    <option value="" selected disabled>
+                      Select an Expedition Subject...
+                    </option>
+                    <option value="bespoke">
                       Bespoke Private Group Expedition
                     </option>
                     <option value="safari">
@@ -435,8 +439,8 @@
                     class="form-control"
                     maxlength="500"
                     placeholder="Optional notes regarding travel dates, group size, physical readiness, or dietary preferences..."
-                  >Inquiring about a tailored 14-day European alpine and Mediterranean journey for four explorers.</textarea>
-                  <div class="char-counter" id="charCount">94/500</div>
+                  ></textarea>
+                  <div class="char-counter" id="charCount">0/500</div>
                 </div>
 
                 <!-- Submit Button (Triggers validation then redirects to 404) -->
@@ -748,5 +752,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="../assets/js/main.js"></script>
-  </body>
+    <script src="../assets/js/animations.js"></script>
+</body>
 </html>

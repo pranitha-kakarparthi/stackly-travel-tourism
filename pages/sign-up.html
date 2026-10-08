@@ -12,6 +12,7 @@
   <!-- Core Styles -->
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
 </head>
 <body class="auth-page-wrapper">
 
@@ -81,13 +82,14 @@
         <div class="form-row-2col">
           <div class="form-group">
             <label for="regUsername" class="form-label">Username <span class="req">*</span></label>
-            <input type="text" id="regUsername" class="form-control" placeholder="explorer_alex" value="alex_sterling" required autocomplete="username">
+            <input type="text" id="regUsername" class="form-control" placeholder="explorer_alex" value="" required autocomplete="username">
             <div class="invalid-feedback">Username must be at least 3 characters.</div>
           </div>
           <div class="form-group">
             <label for="regRole" class="form-label">Account Role <span class="req">*</span></label>
             <select id="regRole" class="form-control" required>
-              <option value="traveler" selected>Traveler / Explorer</option>
+              <option value="" selected disabled>Select an account role...</option>
+              <option value="traveler">Traveler / Explorer</option>
               <option value="guide">Tour Guide / Operator</option>
               <option value="agency">Agency Partner</option>
               <option value="admin">Travel Admin</option>
@@ -100,12 +102,12 @@
         <div class="form-row-2col">
           <div class="form-group">
             <label for="regFirstName" class="form-label">First Name <span class="req">*</span></label>
-            <input type="text" id="regFirstName" class="form-control" placeholder="Alex" value="Alexander" required autocomplete="given-name">
+            <input type="text" id="regFirstName" class="form-control" placeholder="Alex" value="" required autocomplete="given-name">
             <div class="invalid-feedback">First name must only contain alphabets (min. 2 chars).</div>
           </div>
           <div class="form-group">
             <label for="regLastName" class="form-label">Last Name <span class="req">*</span></label>
-            <input type="text" id="regLastName" class="form-control" placeholder="Sterling" value="Sterling" required autocomplete="family-name">
+            <input type="text" id="regLastName" class="form-control" placeholder="Sterling" value="" required autocomplete="family-name">
             <div class="invalid-feedback">Last name must only contain alphabets (min. 2 chars).</div>
           </div>
         </div>
@@ -114,22 +116,22 @@
         <div class="form-row-2col">
           <div class="form-group">
             <label for="regEmail" class="form-label">Email Address <span class="req">*</span></label>
-            <input type="email" id="regEmail" class="form-control" placeholder="alex@example.com" value="alexander.sterling@stackly.com" required autocomplete="email">
+            <input type="email" id="regEmail" class="form-control" placeholder="alex@example.com" value="" required autocomplete="email">
             <div class="invalid-feedback">Please enter a valid email address.</div>
           </div>
           <div class="form-group">
             <label class="form-label">Mobile Number <span class="req">*</span></label>
             <div class="phone-input-wrap">
               <select id="regPhoneCode" class="form-control" aria-label="Country Code">
-                <option value="+91">+91</option>
                 <option value="+1" selected>+1</option>
+                <option value="+91">+91</option>
                 <option value="+44">+44</option>
                 <option value="+41">+41</option>
                 <option value="+255">+255</option>
                 <option value="+81">+81</option>
                 <option value="+61">+61</option>
               </select>
-              <input type="tel" id="regPhone" class="form-control" placeholder="9876543210" value="9876543210" maxlength="10" required>
+              <input type="tel" id="regPhone" class="form-control" placeholder="9876543210" value="" maxlength="10" required>
             </div>
             <div class="invalid-feedback">Mobile number must contain exactly 10 digits.</div>
           </div>
@@ -140,21 +142,21 @@
           <div class="form-group">
             <label for="regPassword" class="form-label">Password <span class="req">*</span></label>
             <div class="password-input-wrap">
-              <input type="password" id="regPassword" class="form-control" placeholder="Min. 8 chars, Aa1@" value="Password@123" required autocomplete="new-password">
+              <input type="password" id="regPassword" class="form-control" placeholder="Min. 8 chars, Aa1@" value="" required autocomplete="new-password">
               <button type="button" class="password-toggle-btn" data-target="regPassword" aria-label="Toggle password visibility">
                 <i class="fa-solid fa-eye"></i>
               </button>
             </div>
             <div class="pwd-strength-bar">
-              <div class="pwd-strength-fill" id="pwdStrengthFill" style="width: 100%; background: #10B981;"></div>
+              <div class="pwd-strength-fill" id="pwdStrengthFill" style="width: 0%; background: #EF4444;"></div>
             </div>
-            <div class="pwd-strength-text" id="pwdStrengthText" style="color: #10B981;">Strong: Meets all security criteria</div>
+            <div class="pwd-strength-text" id="pwdStrengthText" style="color: var(--text-muted);">Enter password to check strength</div>
             <div class="invalid-feedback">8+ chars, upper, lower, digit & symbol.</div>
           </div>
           <div class="form-group">
             <label for="regConfirmPassword" class="form-label">Confirm Password <span class="req">*</span></label>
             <div class="password-input-wrap">
-              <input type="password" id="regConfirmPassword" class="form-control" placeholder="Re-enter password" value="Password@123" required autocomplete="new-password">
+              <input type="password" id="regConfirmPassword" class="form-control" placeholder="Re-enter password" value="" required autocomplete="new-password">
               <button type="button" class="password-toggle-btn" data-target="regConfirmPassword" aria-label="Toggle password visibility">
                 <i class="fa-solid fa-eye"></i>
               </button>
@@ -166,13 +168,13 @@
         <!-- Residential Address (Row 5) -->
         <div class="form-group">
           <label for="regAddress" class="form-label">Residential Address <span class="opt">(Optional)</span></label>
-          <input type="text" id="regAddress" class="form-control" placeholder="City, State, Country" value="742 Evergreen Terrace, New York, NY">
+          <input type="text" id="regAddress" class="form-control" placeholder="City, State, Country" value="">
         </div>
 
         <!-- Terms & Conditions Checkbox (Mandatory, links strictly to 404) -->
         <div class="form-group" style="margin-bottom:8px;">
           <label style="display:flex; align-items:center; gap:8px; font-size:0.82rem; cursor:pointer; margin-bottom:0;">
-            <input type="checkbox" id="regTerms" required checked style="width:15px; height:15px; accent-color:var(--primary);">
+            <input type="checkbox" id="regTerms" required style="width:15px; height:15px; accent-color:var(--primary);">
             <span>
               I agree to the <a href="404.html" style="color:var(--primary); text-decoration:underline;">Terms of Use</a> and <a href="404.html" style="color:var(--primary); text-decoration:underline;">Privacy Policy</a>. <span class="req">*</span>
             </span>
@@ -215,5 +217,6 @@
 
   <!-- Scripts -->
   <script src="../assets/js/auth.js"></script>
+  <script src="../assets/js/animations.js"></script>
 </body>
 </html>
