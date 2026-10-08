@@ -7,7 +7,7 @@
   min-height: 100vh;
   background-color: #F4F7F5;
   width: 100%;
-  overflow-x: hidden;
+  overflow: visible;
   position: relative;
 }
 
@@ -19,12 +19,15 @@
   color: #E2ECE6;
   display: flex;
   flex-direction: column;
-  transition: left var(--transition-normal), transform var(--transition-normal);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  bottom: 0;
   height: 100vh;
-  z-index: 100;
+  z-index: 1000;
   flex-shrink: 0;
+  overflow: hidden; /* Avoid double scrollbar with child .dash-nav */
+  transition: left var(--transition-normal), transform var(--transition-normal);
 }
 
 .dash-sidebar-brand {
@@ -58,8 +61,9 @@
 .dash-role-badge {
   display: inline-block;
   padding: 4px 10px;
-  background: rgba(232, 96, 76, 0.2);
-  color: var(--secondary);
+  background: rgba(255, 126, 107, 0.18);
+  color: #FFA392;
+  border: 1px solid rgba(255, 126, 107, 0.35);
   border-radius: var(--radius-full);
   font-size: 0.72rem;
   font-weight: 700;
@@ -81,7 +85,7 @@
   font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #6C8276;
+  color: #8EA598;
   padding: 10px 12px 4px 12px;
   letter-spacing: 0.08em;
 }
@@ -92,7 +96,7 @@
   gap: 12px;
   padding: 10px 14px;
   border-radius: var(--radius-sm);
-  color: #A3B8AC;
+  color: #D1E0D7;
   font-weight: 500;
   font-size: 0.92rem;
   transition: all var(--transition-fast);
@@ -162,18 +166,20 @@
 
 .dash-user-role-label {
   font-size: 0.74rem;
-  color: #7B9386;
+  color: #9EBAAA;
 }
 
 /* Main Dashboard Area */
 .dash-main {
   flex: 1;
   min-width: 0; /* Prevents horizontal cutoff in CSS flex layouts */
-  width: 100%;
-  max-width: 100%;
+  margin-left: 270px;
+  width: calc(100% - 270px);
+  max-width: calc(100% - 270px);
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .dash-topbar {
@@ -485,17 +491,24 @@
   .dash-sidebar {
     position: fixed;
     top: 0;
-    left: -290px;
-    width: 280px;
+    left: -100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
     height: 100vh;
     z-index: 1050;
-    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.4);
-    transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: none;
+    transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex !important;
   }
 
   .dash-sidebar.open {
-    left: 0;
+    left: 0 !important;
+  }
+
+  .dash-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .dash-two-col {

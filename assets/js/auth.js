@@ -83,8 +83,9 @@ function initSignIn(form) {
       if (!firstInvalid) firstInvalid = emailInput;
     }
 
-    // Validate Password (min 6 characters)
-    if (!passwordInput.value.trim() || passwordInput.value.trim().length < 6) {
+    // Validate Password: Must meet all expectations as per register form (8+ chars, upper, lower, number, special char)
+    const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^_-])[A-Za-z\d@$!%*?&#^_-]{8,}$/;
+    if (!passwordInput.value || !pwdRegex.test(passwordInput.value)) {
       passwordInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = passwordInput;
     }
@@ -127,7 +128,7 @@ function initSignIn(form) {
       localStorage.setItem('users', JSON.stringify(users));
     }
 
-    // Store active session in localStorage
+    // Store active session in both localStorage and sessionStorage for entire session consistency
     const sessionUser = {
       id: matchedUser.id,
       username: matchedUser.username || matchedUser.firstName,
@@ -139,6 +140,9 @@ function initSignIn(form) {
       lastLogin: new Date().toISOString()
     };
     localStorage.setItem('currentUser', JSON.stringify(sessionUser));
+    sessionStorage.setItem('currentUser', JSON.stringify(sessionUser));
+    sessionStorage.setItem('userRole', matchedUser.role);
+    sessionStorage.setItem('userRoleLabel', sessionUser.roleLabel);
 
     if (alertBox) {
       alertBox.className = 'alert alert-success';

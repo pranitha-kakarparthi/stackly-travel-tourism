@@ -3,15 +3,22 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Check active session, fallback gracefully for direct preview
+  // Check active session from sessionStorage (priority for session consistency) then localStorage
   let currentUser = null;
-  const currentUserRaw = localStorage.getItem('currentUser');
-  if (currentUserRaw) {
+  const sessionRaw = sessionStorage.getItem('currentUser') || localStorage.getItem('currentUser');
+  if (sessionRaw) {
     try {
-      currentUser = JSON.parse(currentUserRaw);
+      currentUser = JSON.parse(sessionRaw);
     } catch (e) {
       currentUser = null;
     }
+  }
+
+  // Ensure role consistency from sessionStorage
+  const storedRole = sessionStorage.getItem('userRole');
+  if (currentUser && storedRole && currentUser.role !== storedRole) {
+    currentUser.role = storedRole;
+    currentUser.roleLabel = sessionStorage.getItem('userRoleLabel') || currentUser.roleLabel;
   }
 
   if (!currentUser) {
@@ -19,8 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
       username: 'alex_sterling',
       firstName: 'Alex',
       lastName: 'Sterling',
-      role: 'traveler',
-      roleLabel: 'World Explorer',
+      role: storedRole || 'traveler',
+      roleLabel: sessionStorage.getItem('userRoleLabel') || 'World Explorer',
       lastLogin: new Date().toISOString()
     };
   }
@@ -28,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // If on main dashboard.html and a specific role is explicitly stored from login, route to that role dashboard
   const currentPath = window.location.pathname.split('/').pop() || '';
   if (currentPath === 'dashboard.html' || currentPath === 'dashboard') {
-    if (currentUserRaw) {
+    if (sessionRaw || storedRole) {
       const roleRoutes = {
         'traveler': 'dashboard-traveler.html',
         'guide': 'dashboard-guide.html',
@@ -46,11 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Populate user data & dynamic time-of-day greeting
   setupDashboardUser(currentUser);
 
-  // Handle Sign Out: clear session and redirect to sign-in.html
+  // Handle Sign Out: clear both session & local storage and redirect to sign-in.html
   const signOutBtn = document.getElementById('dashSignOutBtn');
   if (signOutBtn) {
     signOutBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      sessionStorage.clear();
       localStorage.removeItem('currentUser');
       window.location.href = 'sign-in.html';
     });
@@ -72,12 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sidebar) sidebar.classList.add('open');
     if (overlay) overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   };
 
   const closeSidebar = () => {
     if (sidebar) sidebar.classList.remove('open');
     if (overlay) overlay.classList.remove('open');
     document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   };
 
   if (sidebarToggle) sidebarToggle.addEventListener('click', openSidebar);

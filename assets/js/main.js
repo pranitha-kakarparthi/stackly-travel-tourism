@@ -93,11 +93,13 @@ function initMobileMenu() {
   const openMenu = () => {
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   };
 
   const closeMenu = () => {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
   };
 
   toggleBtn.addEventListener('click', openMenu);
@@ -118,16 +120,12 @@ function initMobileMenu() {
   mobileDropdownBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      btn.classList.toggle('active');
+      const isActive = btn.classList.toggle('active');
       const item = btn.closest('.mobile-dropdown-item');
       if (item) {
         const subMenu = item.querySelector('.mobile-sub-menu');
         if (subMenu) {
-          if (subMenu.style.display === 'none') {
-            subMenu.style.display = 'flex';
-          } else {
-            subMenu.style.display = subMenu.style.display === 'flex' ? 'none' : 'flex';
-          }
+          subMenu.style.display = isActive ? 'flex' : 'none';
         }
       }
     });

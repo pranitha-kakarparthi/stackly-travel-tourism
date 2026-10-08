@@ -80,7 +80,7 @@
         <!-- Email Field -->
         <div class="form-group">
           <label for="loginEmail" class="form-label">Email Address <span class="req">*</span></label>
-          <input type="email" id="loginEmail" class="form-control" placeholder="explorer@example.com" required autocomplete="email">
+          <input type="email" id="loginEmail" class="form-control" placeholder="explorer@example.com" value="alexander.sterling@stackly.com" required autocomplete="email">
           <div class="invalid-feedback">Please enter a valid email address (e.g., explorer@example.com).</div>
         </div>
 
@@ -92,20 +92,20 @@
             <a href="404.html" class="forgot-pwd-link" style="font-size:0.82rem; color:var(--secondary); font-weight:600;">Forgot Password?</a>
           </div>
           <div class="password-input-wrap">
-            <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" required autocomplete="current-password">
+            <input type="password" id="loginPassword" class="form-control" placeholder="••••••••" value="Password@123" required autocomplete="current-password">
             <button type="button" class="password-toggle-btn" data-target="loginPassword" aria-label="Toggle password visibility">
               <i class="fa-solid fa-eye"></i>
             </button>
           </div>
-          <div class="invalid-feedback">Please enter your account password (minimum 6 characters).</div>
+          <small class="form-text" style="color:var(--text-muted); font-size:0.78rem;">Must contain at least 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special symbol (@$!%*?&#^_-).</small>
+          <div class="invalid-feedback">Password must be at least 8 characters with uppercase, lowercase, number, and special character.</div>
         </div>
 
         <!-- Role Selector Dropdown -->
         <div class="form-group">
           <label for="loginRole" class="form-label">Login As / Role <span class="req">*</span></label>
           <select id="loginRole" class="form-control" required>
-            <option value="">Select your role...</option>
-            <option value="traveler">Traveler / Explorer</option>
+            <option value="traveler" selected>Traveler / Explorer</option>
             <option value="guide">Tour Guide / Operator</option>
             <option value="agency">Agency Partner</option>
             <option value="admin">Travel Admin</option>
@@ -126,16 +126,16 @@
 
       <div class="social-auth-grid">
         <a href="404.html" class="social-auth-btn" title="Sign In with Google" aria-label="Google">
-          <i class="fa-brands fa-google"></i>
+          <i class="fa-brands fa-google"></i> <span>Google</span>
         </a>
         <a href="404.html" class="social-auth-btn" title="Sign In with Apple" aria-label="Apple">
-          <i class="fa-brands fa-apple"></i>
+          <i class="fa-brands fa-apple"></i> <span>Apple</span>
         </a>
         <a href="404.html" class="social-auth-btn" title="Sign In with Microsoft" aria-label="Microsoft">
-          <i class="fa-brands fa-microsoft"></i>
+          <i class="fa-brands fa-microsoft"></i> <span>Microsoft</span>
         </a>
         <a href="404.html" class="social-auth-btn" title="Sign In with Facebook" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-facebook-f"></i> <span>Facebook</span>
         </a>
       </div>
 

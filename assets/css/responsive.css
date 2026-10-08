@@ -31,14 +31,15 @@
   }
 }
 
-/* Tablets (max-width: 991px) */
+/* Tablets & Mobile (max-width: 991px) */
 @media (max-width: 991px) {
-  .nav-menu, .nav-actions .btn-outline {
-    display: none;
+  .nav-menu, 
+  .nav-actions .btn {
+    display: none !important;
   }
   
   .mobile-toggle {
-    display: block;
+    display: flex;
   }
   
   .hero-title {
@@ -78,18 +79,20 @@
 
   .auth-body-container {
     grid-template-columns: 1fr;
-    max-width: 600px;
+    max-width: 100%;
     height: auto !important;
     max-height: none !important;
-    margin: 24px auto;
-    padding: 16px 20px 40px;
+    margin: 0;
+    padding: 0;
   }
   
   .auth-sidebar-hero {
+    position: relative;
+    top: 0;
     min-height: auto;
     height: auto !important;
     max-height: none !important;
-    padding: 28px 24px;
+    padding: 36px 24px;
     overflow: visible !important;
   }
 
@@ -97,6 +100,9 @@
     height: auto !important;
     max-height: none !important;
     overflow: visible !important;
+    padding: 36px 24px 48px;
+    max-width: 580px;
+    margin: 0 auto;
   }
 }
 
@@ -252,10 +258,57 @@
 }
 
 /* ==========================================================================
+   NON-DASHBOARD CONTENT & IMAGE RESPONSIVE WRAPPING GUARANTEES
+   ========================================================================== */
+.container,
+.page-hero,
+.section-padding,
+.section-padding-sm {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tour-card,
+.feature-card,
+.specialist-card,
+.destination-card,
+.pricing-card,
+.testi-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.tour-card img,
+.specialist-card img,
+.destination-card img,
+.feature-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.breadcrumbs,
+.tour-meta,
+.tour-inclusions,
+.section-header,
+.hero-badges,
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ==========================================================================
    DASHBOARD RESPONSIVE GUARANTEES (PREVENT ANY CUTOFF ON MOBILE)
    ========================================================================== */
 @media (max-width: 991px) {
   .dash-main {
+    margin-left: 0 !important;
+    width: 100% !important;
     min-width: 0 !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
