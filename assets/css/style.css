@@ -568,6 +568,21 @@ button, input, select, textarea {
   border-bottom: 1px solid var(--border);
 }
 
+.mobile-drawer-header .brand-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.mobile-drawer-header .brand-logo-img,
+.mobile-drawer-header img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
 .mobile-drawer-close {
   background: none;
   border: none;
