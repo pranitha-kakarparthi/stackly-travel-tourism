@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Destination Not Found | Stackly Travel & Tourism</title>
+  <meta name="description" content="The page or adventure you are looking for cannot be found. Return to Stackly Travel homepage.">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <!-- AOS Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+  <!-- Full Viewport Error Page -->
+  <main class="error-page-wrapper">
+    <div class="error-card">
+      <!-- Clicking logo strictly redirects to index.html -->
+      <a href="../index.html" title="Return to Stackly Home">
+        <img src="../assets/images/logoStackly.webp" alt="Stackly Travel Logo" class="error-logo-img">
+      </a>
+      
+      <div class="error-code">404</div>
+      <h1 class="error-title">Destination Not Found</h1>
+      <p class="error-message">
+        The trail you are exploring seems to have wandered off the map. This expedition page or requested action is currently unavailable or still being chartered.
+      </p>
+
+      <!-- STRICTLY ONLY HOME BUTTON AND GO BACK BUTTON -->
+      <div class="error-actions">
+        <a href="../index.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+        <button type="button" class="btn btn-outline-white btn-lg" onclick="window.history.length > 1 ? window.history.back() : window.location.href='../index.html'">
+          <i class="fa-solid fa-arrow-left"></i> Go Back
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</body>
+</html>

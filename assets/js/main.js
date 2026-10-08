@@ -154,6 +154,11 @@ function applyDynamicGreeting() {
   });
 }
 
+// Helper: Determine appropriate 404 URL whether on root or in pages/
+function get404Url() {
+  return window.location.pathname.includes('/pages/') ? '404.html' : 'pages/404.html';
+}
+
 // Helper: Redirect Action Buttons to 404 as requested
 function initActionButtons() {
   // Select any element explicitly designated as an action button or with data-action="404"
@@ -163,7 +168,7 @@ function initActionButtons() {
     btn.addEventListener('click', (e) => {
       // If it's not a direct navigation to a valid main page, redirect to 404
       e.preventDefault();
-      window.location.href = '404.html';
+      window.location.href = get404Url();
     });
   });
 }
@@ -243,7 +248,7 @@ function initSearchForms() {
     }
 
     setTimeout(() => {
-      window.location.href = '404.html';
+      window.location.href = get404Url();
     }, 700);
   });
 }
@@ -314,7 +319,7 @@ function initToursFilterForm() {
     }
 
     setTimeout(() => {
-      window.location.href = '404.html';
+      window.location.href = get404Url();
     }, 700);
   });
 }
@@ -444,7 +449,7 @@ function initContactForm() {
       if (charCount) charCount.textContent = '0/500';
 
       setTimeout(() => {
-        window.location.href = '404.html';
+        window.location.href = get404Url();
       }, 1200);
     }
   });
