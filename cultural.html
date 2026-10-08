@@ -85,7 +85,41 @@
         <ul class="mobile-nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="tours.html" class="nav-link">Tours & Destinations</a></li>
+          <li class="mobile-dropdown-item">
+            <div class="mobile-dropdown-header">
+              <a href="tours.html" class="nav-link">Tours & Destinations</a>
+              <button type="button" class="mobile-dropdown-btn" aria-label="Toggle Tours Submenu">
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+            </div>
+            <ul class="mobile-sub-menu">
+              <li>
+                <a href="tours.html" class="mobile-sub-link">
+                  <i class="fa-solid fa-earth-americas"></i> All Worldwide Tours
+                </a>
+              </li>
+              <li>
+                <a href="cultural.html" class="mobile-sub-link">
+                  <i class="fa-solid fa-landmark"></i> Historic Cities & Europe
+                </a>
+              </li>
+              <li>
+                <a href="marine.html" class="mobile-sub-link">
+                  <i class="fa-solid fa-umbrella-beach"></i> Tropical Beaches & Islands
+                </a>
+              </li>
+              <li>
+                <a href="alpine.html" class="mobile-sub-link">
+                  <i class="fa-solid fa-mountain"></i> Scenic Alps & Mountain Escapes
+                </a>
+              </li>
+              <li>
+                <a href="safaris.html" class="mobile-sub-link">
+                  <i class="fa-solid fa-paw"></i> Wildlife Safaris & Nature
+                </a>
+              </li>
+            </ul>
+          </li>
           <li><a href="pricing.html" class="nav-link">Pricing & Packages</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
@@ -104,9 +138,9 @@
         <h1 class="page-hero-title">Historic Cities & Cultural Odysseys</h1>
         <p class="page-hero-desc">Discover humanity's greatest architectural wonders, imperial capitals, and living ancestral traditions across Europe, Asia, the Middle East, and the Americas.</p>
         <div class="breadcrumbs">
-          <a href="index.html">Home</a>
+          <a href="404.html">Home</a>
           <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i>
-          <a href="tours.html">Tours & Destinations</a>
+          <a href="404.html">Tours & Destinations</a>
           <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i>
           <span>Historic Cities & Culture</span>
         </div>
@@ -366,7 +400,7 @@
             <a href="404.html" class="btn btn-primary btn-lg btn-action">
               <i class="fa-solid fa-torii-gate"></i> Explore Cultural Dates
             </a>
-            <a href="contact.html" class="btn btn-outline-white btn-lg">
+            <a href="404.html" class="btn btn-outline-white btn-lg">
               <i class="fa-solid fa-envelope"></i> Speak With A Historian
             </a>
           </div>
@@ -377,85 +411,166 @@
 
   <!-- CONSISTENT FOOTER ACROSS THE WEBSITE -->
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" title="Stackly Travel & Tourism">
-            <img src="assets/images/logoStackly.webp" alt="Stackly Travel Logo" class="footer-logo-img">
-          </a>
-          <p>
-            Stackly Travel & Tourism is a world-class travel operator offering curated international holidays, cultural discoveries, scenic mountain escapes, and luxury island retreats across 120+ countries.
-          </p>
-          <div class="social-links">
-            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="404.html" class="social-btn" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" title="Stackly Travel & Tourism">
+              <img
+                src="assets/images/logoStackly.webp"
+                alt="Stackly Travel Logo"
+                class="footer-logo-img"
+              />
+            </a>
+            <p>
+              Stackly Travel & Tourism is a premier global tour operator
+              dedicated to crafting unforgettable vacations across Europe, Asia,
+              the Americas, Africa, and Oceania with hand-picked hotels and
+              expert local guides.
+            </p>
+            <div class="social-links">
+              <a href="404.html" class="social-btn" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="Twitter X"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fa-solid fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="tours.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Tours &
+                  Destinations</a
+                >
+              </li>
+              <li>
+                <a href="pricing.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Pricing &
+                  Packages</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="sign-in.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Traveler Sign In</a
+                >
+              </li>
+              <li>
+                <a href="sign-up.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Register Account</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Popular Destinations</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> France & Paris
+                  Escapes</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Italy &
+                  Mediterranean</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Japan & Mount
+                  Fuji</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Switzerland Alpine
+                  Rail</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Bali & Indonesia
+                  Islands</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Australia & Sydney
+                  Coast</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Contact Headquarters</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span
+                  >MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu
+                  636008</span
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="404.html">+91 9876543210</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="404.html">hello@thestackly.com</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div>
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Tours & Destinations</a></li>
-            <li><a href="pricing.html"><i class="fa-solid fa-chevron-right"></i> Pricing & Packages</a></li>
-            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
-            <li><a href="sign-in.html"><i class="fa-solid fa-chevron-right"></i> Traveler Sign In</a></li>
-            <li><a href="sign-up.html"><i class="fa-solid fa-chevron-right"></i> Register Account</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Global Destinations</h4>
-          <ul class="footer-links">
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Paris & Rome Grand Tour</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Swiss Alps & Lakes</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Tokyo & Kyoto Bullet Rail</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Santorini & Greek Islands</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> New York & East Coast</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Sydney & Great Barrier Reef</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="footer-title">Contact Travel HQ</h4>
-          <ul class="footer-contact-list">
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <span>MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <a href="404.html">+91 9876543210</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <a href="404.html">hello@thestackly.com</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-clock"></i>
-              <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
-            </li>
-          </ul>
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 Stackly Travel & Tourism. All rights reserved.
+            Connecting Worldwide Travelers.
+          </div>
+          <div class="footer-legal-links">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms & Conditions</a>
+            <a href="404.html">Cookie Policy</a>
+            <a href="404.html">Sitemap</a>
+          </div>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <div>
-          &copy; 2026 Stackly Travel & Tourism. All rights reserved. Designed for Global Explorers.
-        </div>
-        <div class="footer-legal-links">
-          <a href="404.html">Privacy Policy</a>
-          <a href="404.html">Terms & Conditions</a>
-          <a href="404.html">Cookie Policy</a>
-          <a href="404.html">Sitemap</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="assets/js/main.js"></script>

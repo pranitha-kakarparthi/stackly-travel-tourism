@@ -56,10 +56,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Per specifications: All action buttons in dashboard redirect to 404
-  const dashActionButtons = document.querySelectorAll('.dash-action-btn, [data-action="404"]');
-  dashActionButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  // Mobile sidebar drawer handling
+  const sidebarToggle = document.getElementById('dashSidebarToggle');
+  const sidebarClose = document.getElementById('dashSidebarClose');
+  const sidebar = document.querySelector('.dash-sidebar');
+  let overlay = document.querySelector('.dash-sidebar-overlay');
+
+  if (sidebar && !overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'dash-sidebar-overlay';
+    document.body.appendChild(overlay);
+  }
+
+  const openSidebar = () => {
+    if (sidebar) sidebar.classList.add('open');
+    if (overlay) overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeSidebar = () => {
+    if (sidebar) sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  if (sidebarToggle) sidebarToggle.addEventListener('click', openSidebar);
+  if (sidebarClose) sidebarClose.addEventListener('click', closeSidebar);
+  if (overlay) overlay.addEventListener('click', closeSidebar);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSidebar();
+  });
+
+  // Per specifications: Every link and action button in dashboard content strictly redirects to 404
+  const dashContentLinks = document.querySelectorAll('.dash-main a, .dash-content a, .dash-content button, .dash-action-btn, [data-action="404"]');
+  dashContentLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (link.id === 'dashSignOutBtn' || link.id === 'dashSidebarToggle' || link.id === 'dashSidebarClose') return;
       e.preventDefault();
       window.location.href = '404.html';
     });

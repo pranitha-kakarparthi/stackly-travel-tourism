@@ -36,7 +36,7 @@
         <!-- Brand logo strictly redirects to index.html -->
         <a href="index.html" title="Return to Stackly Home">
           <img src="assets/images/logoStackly.webp" alt="Stackly Logo">
-        </a>
+        </a>        <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close Sidebar">&times;</button>
       </div>
 
       <div style="padding:14px 20px 4px 20px;">
@@ -90,9 +90,14 @@
     <!-- Main Content Area -->
     <main class="dash-main">
       <header class="dash-topbar">
-        <div class="dash-greeting-box">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-sidebar-toggle" id="dashSidebarToggle" aria-label="Toggle Dashboard Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dash-greeting-box">
           <h2 id="dashGreetingHeading">Welcome, Administrator!</h2>
           <p id="dashLoginTimestamp">Operations System: Global Fleet Green Across All Zones</p>
+        </div>
         </div>
 
         <div class="dash-top-actions">

@@ -1,402 +1,750 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Stackly Travel & Tourism</title>
-  <meta name="description" content="Reach our expedition headquarters in Salem, Tamil Nadu. Talk to certified tour guides, plan bespoke itineraries, and book your wilderness adventure.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Stackly Travel & Tourism</title>
+    <meta
+      name="description"
+      content="Reach our expedition headquarters in Salem, Tamil Nadu. Talk to certified tour guides, plan bespoke itineraries, and book your wilderness adventure."
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-  <!-- Core Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
-  <!-- AOS Animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</head>
-<body>
-
-  <!-- Full Viewport Site Loader -->
-  <div id="siteLoader" class="site-loader" aria-live="polite">
-    <div class="loader-content">
-      <div class="loader-logo-wrap">
-        <img src="assets/images/logoStackly.webp" alt="Stackly Travel">
-      </div>
-      <div class="loader-spinner"></div>
-      <div class="loader-text">Loading Contact Portal...</div>
-    </div>
-  </div>
-
-  <!-- Sticky Navbar (100% Full Width) -->
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="brand-logo-link" title="Stackly Travel & Tourism">
-        <img src="assets/images/logoStackly.webp" alt="Stackly Logo" class="brand-logo-img">
-      </a>
-
-      <nav aria-label="Main Navigation">
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="tours.html" class="nav-link">Tours & Destinations <i class="fa-solid fa-angle-down" style="font-size:0.75rem; margin-left:3px;"></i></a>
-            <div class="nav-dropdown">
-              <a href="tours.html" class="dropdown-link">All Worldwide Tours <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="cultural.html" class="dropdown-link">Historic Cities & Culture <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="marine.html" class="dropdown-link">Tropical Islands & Beaches <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="alpine.html" class="dropdown-link">Alpine & Mountain Escapes <i class="fa-solid fa-arrow-right"></i></a>
-              <a href="safaris.html" class="dropdown-link">Wildlife & Nature Wonders <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="pricing.html" class="nav-link">Pricing & Packages</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="nav-actions">
-        <a href="sign-in.html" class="btn btn-outline btn-sm">Sign In</a>
-        <a href="sign-up.html" class="btn btn-primary btn-sm">Sign Up</a>
-        <button type="button" class="mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- AOS Animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+  </head>
+  <body>
+    <!-- Full Viewport Site Loader -->
+    <div id="siteLoader" class="site-loader" aria-live="polite">
+      <div class="loader-content">
+        <div class="loader-logo-wrap">
+          <img src="assets/images/logoStackly.webp" alt="Stackly Travel" />
+        </div>
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Loading Contact Portal...</div>
       </div>
     </div>
-  </header>
 
-  <!-- Mobile Navigation Drawer -->
-  <div class="mobile-nav-overlay" id="mobileNavOverlay">
-    <div class="mobile-nav-drawer">
-      <div>
-        <div class="mobile-drawer-header">
-          <a href="index.html" class="brand-logo-link">
-            <img src="assets/images/logoStackly.webp" alt="Stackly Logo" style="height:36px;">
-          </a>
-          <button type="button" class="mobile-drawer-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
-        </div>
-        <ul class="mobile-nav-links">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="tours.html" class="nav-link">Tours & Destinations</a></li>
-          <li><a href="pricing.html" class="nav-link">Pricing & Packages</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
-      <div class="mobile-nav-cta">
-        <a href="sign-in.html" class="btn btn-outline btn-block">Sign In</a>
-        <a href="sign-up.html" class="btn btn-primary btn-block">Sign Up</a>
-      </div>
-    </div>
-  </div>
+    <!-- Sticky Navbar (100% Full Width) -->
+    <header class="site-header">
+      <div class="nav-container">
+        <a
+          href="index.html"
+          class="brand-logo-link"
+          title="Stackly Travel & Tourism"
+        >
+          <img
+            src="assets/images/logoStackly.webp"
+            alt="Stackly Logo"
+            class="brand-logo-img"
+          />
+        </a>
 
-  <main>
-    <!-- SECTION 1: HERO SECTION WITH BREADCRUMBS -->
-    <section class="page-hero">
-      <div class="container">
-        <h1 class="page-hero-title">Contact Expedition Headquarters</h1>
-        <p class="page-hero-desc">Have a question or wish to draft a tailored expedition? Our wilderness specialists are here to guide you.</p>
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a>
-          <i class="fa-solid fa-chevron-right" style="font-size:0.75rem;"></i>
-          <span>Contact Us</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2 & 3: CONTACT INFO & CONTACT FORM -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="contact-layout">
-          <!-- CONTACT INFORMATION SECTION -->
-          <div class="contact-info-card">
-            <span class="badge-tag badge-secondary"><i class="fa-solid fa-map-pin"></i> Direct Dispatch</span>
-            <h2 style="font-size:2rem; margin-bottom:16px;">Let's Talk Travel</h2>
-            <p style="color:var(--text-muted); margin-bottom:32px;">
-              Whether you are organizing a private group climb, corporate summit retreat, or booking a solo wildlife safari, we respond within 12 business hours.
-            </p>
-
-            <div class="info-item">
-              <div class="info-icon">
-                <i class="fa-solid fa-location-dot"></i>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="tours.html" class="nav-link"
+                >Tours & Destinations
+                <i
+                  class="fa-solid fa-angle-down"
+                  style="font-size: 0.75rem; margin-left: 3px"
+                ></i
+              ></a>
+              <div class="nav-dropdown">
+                <a href="tours.html" class="dropdown-link"
+                  >All Worldwide Tours <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <a href="cultural.html" class="dropdown-link"
+                  >Historic Cities & Culture
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <a href="marine.html" class="dropdown-link"
+                  >Tropical Islands & Beaches
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <a href="alpine.html" class="dropdown-link"
+                  >Alpine & Mountain Escapes
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
+                <a href="safaris.html" class="dropdown-link"
+                  >Wildlife & Nature Wonders
+                  <i class="fa-solid fa-arrow-right"></i
+                ></a>
               </div>
-              <div class="info-content">
-                <h4>Expedition Headquarters</h4>
-                <p>MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
-              </div>
-            </div>
+            </li>
+            <li class="nav-item">
+              <a href="pricing.html" class="nav-link">Pricing & Packages</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
-            <div class="info-item">
-              <div class="info-icon">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="info-content">
-                <h4>Mobile Number</h4>
-                <!-- Redirects to 404 page per instruction -->
-                <a href="404.html" title="Call Salem HQ">+91 9876543210</a>
-                <p style="font-size:0.8rem; margin-top:2px;">Available Mon-Sat: 9am - 7pm IST</p>
-              </div>
-            </div>
-
-            <div class="info-item">
-              <div class="info-icon">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div class="info-content">
-                <h4>Email Address</h4>
-                <!-- Redirects to 404 page per instruction -->
-                <a href="404.html" title="Email Salem HQ">hello@thestackly.com</a>
-                <p style="font-size:0.8rem; margin-top:2px;">24/7 Field Support Desk</p>
-              </div>
-            </div>
-
-            <!-- Social Media Links (Redirect to 404 page per instruction) -->
-            <div>
-              <h4 style="font-size:0.95rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); margin-bottom:12px;">
-                Social Media Channels
-              </h4>
-              <div class="social-links" style="margin-top:0;">
-                <a href="404.html" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="404.html" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="404.html" class="social-btn" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="404.html" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- CONTACT FORM WITH STRICT VALIDATIONS -->
-          <div class="contact-form-box">
-            <h3 style="font-size:1.8rem; margin-bottom:8px;">Send An Expedition Inquiry</h3>
-            <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:24px;">
-              Please complete all mandatory fields (<span style="color:var(--error);">*</span>).
-            </p>
-
-            <div id="formAlert" style="display:none;"></div>
-
-            <form id="contactForm" novalidate>
-              <!-- 1. Name: Required & accepts ONLY alphabets -->
-              <div class="form-group">
-                <label for="contactName" class="form-label">Full Name <span class="req">*</span></label>
-                <input type="text" id="contactName" class="form-control" placeholder="Letters only, e.g. Liam Sterling" required pattern="[A-Za-z\s]+">
-                <div class="invalid-feedback">Name is required and must contain ONLY alphabets (minimum 2 letters).</div>
-              </div>
-
-              <!-- 2. Email: Required -->
-              <div class="form-group">
-                <label for="contactEmail" class="form-label">Email Address <span class="req">*</span></label>
-                <input type="email" id="contactEmail" class="form-control" placeholder="name@domain.com" required>
-                <div class="invalid-feedback">Please enter a valid email address.</div>
-              </div>
-
-              <!-- 3. Country Code Selector + 4. Mobile Number (Fixed 10 digit length) -->
-              <div class="form-group">
-                <label class="form-label">Mobile Number <span class="req">*</span></label>
-                <div style="display:grid; grid-template-columns: 130px 1fr; gap:12px;">
-                  <select id="contactCountryCode" class="form-control" required aria-label="Select Country Code">
-                    <option value="+91" selected>+91 (IN)</option>
-                    <option value="+1">+1 (US)</option>
-                    <option value="+44">+44 (UK)</option>
-                    <option value="+41">+41 (CH)</option>
-                    <option value="+255">+255 (TZ)</option>
-                    <option value="+81">+81 (JP)</option>
-                    <option value="+61">+61 (AU)</option>
-                  </select>
-                  <input type="tel" id="contactPhone" class="form-control" placeholder="10-digit mobile number" maxlength="10" required>
-                </div>
-                <div class="invalid-feedback">Mobile number is required and must be exactly 10 numeric digits.</div>
-              </div>
-
-              <!-- 5. Subject: Required -->
-              <div class="form-group">
-                <label for="contactSubject" class="form-label">Expedition Subject <span class="req">*</span></label>
-                <select id="contactSubject" class="form-control" required>
-                  <option value="">Select an expedition subject...</option>
-                  <option value="safari">African Wildlife Safari Booking</option>
-                  <option value="alpine">Swiss / Alpine Trekking Consultation</option>
-                  <option value="marine">Galápagos & Marine Charter Booking</option>
-                  <option value="cultural">Kyoto & Nakasendo Cultural Tour</option>
-                  <option value="bespoke">Bespoke Private Group Expedition</option>
-                </select>
-                <div class="invalid-feedback">Please select a subject for your inquiry.</div>
-              </div>
-
-              <!-- 6. Message: OPTIONAL with Character Counter (Max 500) -->
-              <div class="form-group">
-                <label for="contactMessage" class="form-label">Message Details <span class="opt">(Optional)</span></label>
-                <textarea id="contactMessage" rows="5" class="form-control" maxlength="500" placeholder="Optional notes regarding travel dates, group size, physical readiness, or dietary preferences..."></textarea>
-                <div class="char-counter" id="charCount">0/500</div>
-              </div>
-
-              <!-- Submit Button (Triggers validation then redirects to 404) -->
-              <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top:10px;">
-                <i class="fa-solid fa-paper-plane"></i> Send Expedition Request
-              </button>
-            </form>
-          </div>
+        <div class="nav-actions">
+          <a href="sign-in.html" class="btn btn-outline btn-sm">Sign In</a>
+          <a href="sign-up.html" class="btn btn-primary btn-sm">Sign Up</a>
+          <button
+            type="button"
+            class="mobile-toggle"
+            id="mobileMenuToggle"
+            aria-label="Toggle navigation menu"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- SECTION 4: GOOGLE MAP SECTION -->
-    <section class="section-padding-sm" style="background-color: var(--bg-subtle);">
-      <div class="container">
-        <div class="section-header" style="margin-bottom:30px;">
-          <span class="badge-tag badge-primary"><i class="fa-solid fa-location-crosshairs"></i> Global Operations Base</span>
-          <h2 class="section-title">Visit Our Salem Headquarters</h2>
-          <p class="section-desc">MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</p>
-        </div>
-
-        <div class="map-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1648939766984!2d78.1633519758778!3d11.682775688527376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf038f4d80a15%3A0xe54d6f78816c7f4!2sChinna%20Tirupathi%2C%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Stackly Headquarters Map Location - Salem, Tamil Nadu">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 5: TRAVEL FAQ SECTION -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <span class="badge-tag badge-secondary"><i class="fa-solid fa-circle-question"></i> Advisory Questions</span>
-          <h2 class="section-title">Expedition Booking FAQ</h2>
-        </div>
-
-        <div style="max-width:850px; margin:0 auto; display:flex; flex-direction:column; gap:16px;">
-          <div style="background:#FFFFFF; border-radius:var(--radius-md); padding:24px; border:1px solid var(--border);">
-            <h4 style="font-size:1.1rem; margin-bottom:8px;"><i class="fa-solid fa-circle-info" style="color:var(--primary); margin-right:8px;"></i> How far in advance should I book?</h4>
-            <p style="color:var(--text-muted); font-size:0.92rem;">For high-demand wildlife seasons (like the Great Migration in Tanzania) or gorilla trekking permits in Rwanda, we recommend booking 4 to 8 months in advance due to strict park permit caps.</p>
-          </div>
-
-          <div style="background:#FFFFFF; border-radius:var(--radius-md); padding:24px; border:1px solid var(--border);">
-            <h4 style="font-size:1.1rem; margin-bottom:8px;"><i class="fa-solid fa-circle-info" style="color:var(--primary); margin-right:8px;"></i> Can you customize a private itinerary for our family?</h4>
-            <p style="color:var(--text-muted); font-size:0.92rem;">Yes. Over 35% of our bookings are fully bespoke private charters. We customize pace, lodges, vehicles, and activities tailored specifically for multi-generational families.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 6: FINAL CTA -->
-    <section class="section-padding-sm" style="margin-bottom: 60px;">
-      <div class="container">
-        <div class="cta-banner" data-aos="zoom-in">
-          <h2>Ready To Plan Your Unforgettable Journey?</h2>
-          <p>Schedule a 20-minute video consultation with our senior adventure coordinators today.</p>
-          <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
-            <a href="404.html" class="btn btn-primary btn-lg btn-action">
-              <i class="fa-solid fa-calendar-plus"></i> Schedule Video Call
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+      <div class="mobile-nav-drawer">
+        <div>
+          <div class="mobile-drawer-header">
+            <a href="index.html" class="brand-logo-link">
+              <img
+                src="assets/images/logoStackly.webp"
+                alt="Stackly Logo"
+                style="height: 36px"
+              />
             </a>
-            <a href="tours.html" class="btn btn-outline-white btn-lg">
-              <i class="fa-solid fa-compass"></i> Browse Tour Dates
-            </a>
+            <button
+              type="button"
+              class="mobile-drawer-close"
+              id="mobileNavClose"
+              aria-label="Close menu"
+            >
+              &times;
+            </button>
           </div>
+          <ul class="mobile-nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li class="mobile-dropdown-item">
+              <div class="mobile-dropdown-header">
+                <a href="tours.html" class="nav-link">Tours & Destinations</a>
+                <button type="button" class="mobile-dropdown-btn" aria-label="Toggle Tours Submenu">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="mobile-sub-menu">
+                <li>
+                  <a href="tours.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-earth-americas"></i> All Worldwide Tours
+                  </a>
+                </li>
+                <li>
+                  <a href="cultural.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-landmark"></i> Historic Cities & Europe
+                  </a>
+                </li>
+                <li>
+                  <a href="marine.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-umbrella-beach"></i> Tropical Beaches & Islands
+                  </a>
+                </li>
+                <li>
+                  <a href="alpine.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-mountain"></i> Scenic Alps & Mountain Escapes
+                  </a>
+                </li>
+                <li>
+                  <a href="safaris.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-paw"></i> Wildlife Safaris & Nature
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="pricing.html" class="nav-link">Pricing & Packages</a>
+            </li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+        <div class="mobile-nav-cta">
+          <a href="sign-in.html" class="btn btn-outline btn-block">Sign In</a>
+          <a href="sign-up.html" class="btn btn-primary btn-block">Sign Up</a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
 
-  <!-- CONSISTENT FOOTER ACROSS THE WEBSITE -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <!-- Logo strictly redirects to index.html -->
-          <a href="index.html" title="Stackly Travel & Tourism">
-            <img src="assets/images/logoStackly.webp" alt="Stackly Travel Logo" class="footer-logo-img">
-          </a>
-          <p>
-            Stackly Travel & Tourism is a world-class travel operator offering curated international holidays, cultural discoveries, scenic mountain escapes, and luxury island retreats across 120+ countries.
+    <main>
+      <!-- SECTION 1: HERO SECTION WITH BREADCRUMBS -->
+      <section class="page-hero">
+        <div class="container">
+          <h1 class="page-hero-title">Contact Expedition Headquarters</h1>
+          <p class="page-hero-desc">
+            Have a question or wish to draft a tailored expedition? Our
+            wilderness specialists are here to guide you.
           </p>
-          <div class="social-links">
-            <a href="404.html" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="404.html" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="404.html" class="social-btn" aria-label="Twitter X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="404.html" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="404.html" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <div class="breadcrumbs">
+            <a href="404.html">Home</a>
+            <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem"></i>
+            <span>Contact Us</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2 & 3: CONTACT INFO & CONTACT FORM -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="contact-layout">
+            <!-- CONTACT INFORMATION SECTION -->
+            <div class="contact-info-card">
+              <span class="badge-tag badge-secondary"
+                ><i class="fa-solid fa-map-pin"></i> Direct Dispatch</span
+              >
+              <h2 style="font-size: 2rem; margin-bottom: 16px">
+                Let's Talk Travel
+              </h2>
+              <p style="color: var(--text-muted); margin-bottom: 32px">
+                Whether you are organizing a private group climb, corporate
+                summit retreat, or booking a solo wildlife safari, we respond
+                within 12 business hours.
+              </p>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Expedition Headquarters</h4>
+                  <p>
+                    MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Mobile Number</h4>
+                  <!-- Redirects to 404 page per instruction -->
+                  <a href="404.html" title="Call Salem HQ">+91 9876543210</a>
+                  <p style="font-size: 0.8rem; margin-top: 2px">
+                    Available Mon-Sat: 9am - 7pm IST
+                  </p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <h4>Email Address</h4>
+                  <!-- Redirects to 404 page per instruction -->
+                  <a href="404.html" title="Email Salem HQ"
+                    >hello@thestackly.com</a
+                  >
+                  <p style="font-size: 0.8rem; margin-top: 2px">
+                    24/7 Field Support Desk
+                  </p>
+                </div>
+              </div>
+
+              <!-- Social Media Links (Redirect to 404 page per instruction) -->
+              <div>
+                <h4
+                  style="
+                    font-size: 0.95rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.05em;
+                    color: var(--text-muted);
+                    margin-bottom: 12px;
+                  "
+                >
+                  Social Media Channels
+                </h4>
+                <div class="social-links" style="margin-top: 0">
+                  <a href="404.html" class="social-btn" aria-label="Facebook"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a href="404.html" class="social-btn" aria-label="Instagram"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="404.html" class="social-btn" aria-label="Twitter X"
+                    ><i class="fa-brands fa-x-twitter"></i
+                  ></a>
+                  <a href="404.html" class="social-btn" aria-label="LinkedIn"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a href="404.html" class="social-btn" aria-label="YouTube"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTACT FORM WITH STRICT VALIDATIONS -->
+            <div class="contact-form-box">
+              <h3 style="font-size: 1.8rem; margin-bottom: 8px">
+                Send An Expedition Inquiry
+              </h3>
+              <p
+                style="
+                  color: var(--text-muted);
+                  font-size: 0.95rem;
+                  margin-bottom: 24px;
+                "
+              >
+                Please complete all mandatory fields (<span
+                  style="color: var(--error)"
+                  >*</span
+                >).
+              </p>
+
+              <div id="formAlert" style="display: none"></div>
+
+              <form id="contactForm" novalidate>
+                <!-- 1. Name: Required & accepts ONLY alphabets -->
+                <div class="form-group">
+                  <label for="contactName" class="form-label"
+                    >Full Name <span class="req">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="contactName"
+                    class="form-control"
+                    placeholder="Letters only, e.g. Liam Sterling"
+                    required
+                    pattern="[A-Za-z\s]+"
+                  />
+                  <div class="invalid-feedback">
+                    Name is required and must contain ONLY alphabets (minimum 2
+                    letters).
+                  </div>
+                </div>
+
+                <!-- 2. Email: Required -->
+                <div class="form-group">
+                  <label for="contactEmail" class="form-label"
+                    >Email Address <span class="req">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    class="form-control"
+                    placeholder="name@domain.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+
+                <!-- 3. Country Code Selector + 4. Mobile Number (Fixed 10 digit length) -->
+                <div class="form-group">
+                  <label class="form-label"
+                    >Mobile Number <span class="req">*</span></label
+                  >
+                  <div
+                    style="
+                      display: grid;
+                      grid-template-columns: 130px 1fr;
+                      gap: 12px;
+                    "
+                  >
+                    <select
+                      id="contactCountryCode"
+                      class="form-control"
+                      required
+                      aria-label="Select Country Code"
+                    >
+                      <option value="+91" selected>+91 (IN)</option>
+                      <option value="+1">+1 (US)</option>
+                      <option value="+44">+44 (UK)</option>
+                      <option value="+41">+41 (CH)</option>
+                      <option value="+255">+255 (TZ)</option>
+                      <option value="+81">+81 (JP)</option>
+                      <option value="+61">+61 (AU)</option>
+                    </select>
+                    <input
+                      type="tel"
+                      id="contactPhone"
+                      class="form-control"
+                      placeholder="10-digit mobile number"
+                      maxlength="10"
+                      required
+                    />
+                  </div>
+                  <div class="invalid-feedback">
+                    Mobile number is required and must be exactly 10 numeric
+                    digits.
+                  </div>
+                </div>
+
+                <!-- 5. Subject: Required -->
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label"
+                    >Expedition Subject <span class="req">*</span></label
+                  >
+                  <select id="contactSubject" class="form-control" required>
+                    <option value="">Select an expedition subject...</option>
+                    <option value="safari">
+                      African Wildlife Safari Booking
+                    </option>
+                    <option value="alpine">
+                      Swiss / Alpine Trekking Consultation
+                    </option>
+                    <option value="marine">
+                      Galápagos & Marine Charter Booking
+                    </option>
+                    <option value="cultural">
+                      Kyoto & Nakasendo Cultural Tour
+                    </option>
+                    <option value="bespoke">
+                      Bespoke Private Group Expedition
+                    </option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please select a subject for your inquiry.
+                  </div>
+                </div>
+
+                <!-- 6. Message: OPTIONAL with Character Counter (Max 500) -->
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label"
+                    >Message Details <span class="opt">(Optional)</span></label
+                  >
+                  <textarea
+                    id="contactMessage"
+                    rows="5"
+                    class="form-control"
+                    maxlength="500"
+                    placeholder="Optional notes regarding travel dates, group size, physical readiness, or dietary preferences..."
+                  ></textarea>
+                  <div class="char-counter" id="charCount">0/500</div>
+                </div>
+
+                <!-- Submit Button (Triggers validation then redirects to 404) -->
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block btn-lg"
+                  style="margin-top: 10px"
+                >
+                  <i class="fa-solid fa-paper-plane"></i> Send Expedition
+                  Request
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: GOOGLE MAP SECTION -->
+      <section
+        class="section-padding-sm"
+        style="background-color: var(--bg-subtle)"
+      >
+        <div class="container">
+          <div class="section-header" style="margin-bottom: 30px">
+            <span class="badge-tag badge-primary"
+              ><i class="fa-solid fa-location-crosshairs"></i> Global Operations
+              Base</span
+            >
+            <h2 class="section-title">Visit Our Salem Headquarters</h2>
+            <p class="section-desc">
+              MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008
+            </p>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.1648939766984!2d78.1633519758778!3d11.682775688527376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf038f4d80a15%3A0xe54d6f78816c7f4!2sChinna%20Tirupathi%2C%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Stackly Headquarters Map Location - Salem, Tamil Nadu"
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: TRAVEL FAQ SECTION -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header" data-aos="fade-up">
+            <span class="badge-tag badge-secondary"
+              ><i class="fa-solid fa-circle-question"></i> Advisory
+              Questions</span
+            >
+            <h2 class="section-title">Expedition Booking FAQ</h2>
+          </div>
+
+          <div
+            style="
+              max-width: 850px;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              gap: 16px;
+            "
+          >
+            <div
+              style="
+                background: #ffffff;
+                border-radius: var(--radius-md);
+                padding: 24px;
+                border: 1px solid var(--border);
+              "
+            >
+              <h4 style="font-size: 1.1rem; margin-bottom: 8px">
+                <i
+                  class="fa-solid fa-circle-info"
+                  style="color: var(--primary); margin-right: 8px"
+                ></i>
+                How far in advance should I book?
+              </h4>
+              <p style="color: var(--text-muted); font-size: 0.92rem">
+                For high-demand wildlife seasons (like the Great Migration in
+                Tanzania) or gorilla trekking permits in Rwanda, we recommend
+                booking 4 to 8 months in advance due to strict park permit caps.
+              </p>
+            </div>
+
+            <div
+              style="
+                background: #ffffff;
+                border-radius: var(--radius-md);
+                padding: 24px;
+                border: 1px solid var(--border);
+              "
+            >
+              <h4 style="font-size: 1.1rem; margin-bottom: 8px">
+                <i
+                  class="fa-solid fa-circle-info"
+                  style="color: var(--primary); margin-right: 8px"
+                ></i>
+                Can you customize a private itinerary for our family?
+              </h4>
+              <p style="color: var(--text-muted); font-size: 0.92rem">
+                Yes. Over 35% of our bookings are fully bespoke private
+                charters. We customize pace, lodges, vehicles, and activities
+                tailored specifically for multi-generational families.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: FINAL CTA -->
+      <section class="section-padding-sm" style="margin-bottom: 60px">
+        <div class="container">
+          <div class="cta-banner" data-aos="zoom-in">
+            <h2>Ready To Plan Your Unforgettable Journey?</h2>
+            <p>
+              Schedule a 20-minute video consultation with our senior adventure
+              coordinators today.
+            </p>
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                flex-wrap: wrap;
+              "
+            >
+              <a href="404.html" class="btn btn-primary btn-lg btn-action">
+                <i class="fa-solid fa-calendar-plus"></i> Schedule Video Call
+              </a>
+              <a href="404.html" class="btn btn-outline-white btn-lg">
+                <i class="fa-solid fa-compass"></i> Browse Tour Dates
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- CONSISTENT FOOTER ACROSS THE WEBSITE -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" title="Stackly Travel & Tourism">
+              <img
+                src="assets/images/logoStackly.webp"
+                alt="Stackly Travel Logo"
+                class="footer-logo-img"
+              />
+            </a>
+            <p>
+              Stackly Travel & Tourism is a premier global tour operator
+              dedicated to crafting unforgettable vacations across Europe, Asia,
+              the Americas, Africa, and Oceania with hand-picked hotels and
+              expert local guides.
+            </p>
+            <div class="social-links">
+              <a href="404.html" class="social-btn" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="Twitter X"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="404.html" class="social-btn" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="index.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html"
+                  ><i class="fa-solid fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="tours.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Tours &
+                  Destinations</a
+                >
+              </li>
+              <li>
+                <a href="pricing.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Pricing &
+                  Packages</a
+                >
+              </li>
+              <li>
+                <a href="contact.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="sign-in.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Traveler Sign In</a
+                >
+              </li>
+              <li>
+                <a href="sign-up.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Register Account</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Popular Destinations</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> France & Paris
+                  Escapes</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Italy &
+                  Mediterranean</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Japan & Mount
+                  Fuji</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Switzerland Alpine
+                  Rail</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Bali & Indonesia
+                  Islands</a
+                >
+              </li>
+              <li>
+                <a href="404.html"
+                  ><i class="fa-solid fa-chevron-right"></i> Australia & Sydney
+                  Coast</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Contact Headquarters</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="fa-solid fa-location-dot"></i>
+                <span
+                  >MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu
+                  636008</span
+                >
+              </li>
+              <li>
+                <i class="fa-solid fa-phone"></i>
+                <a href="404.html">+91 9876543210</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="404.html">hello@thestackly.com</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i>
+                <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- Quick Links (ONLY these are not redirected to 404) -->
-        <div>
-          <h4 class="footer-title">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
-            <li><a href="tours.html"><i class="fa-solid fa-chevron-right"></i> Tours & Destinations</a></li>
-            <li><a href="pricing.html"><i class="fa-solid fa-chevron-right"></i> Pricing & Packages</a></li>
-            <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
-            <li><a href="sign-in.html"><i class="fa-solid fa-chevron-right"></i> Traveler Sign In</a></li>
-            <li><a href="sign-up.html"><i class="fa-solid fa-chevron-right"></i> Register Account</a></li>
-          </ul>
-        </div>
-
-        <!-- Destinations (Redirected to 404 per specs) -->
-        <div>
-          <h4 class="footer-title">Global Destinations</h4>
-          <ul class="footer-links">
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Paris & Rome Grand Tour</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Swiss Alps & Lakes</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Tokyo & Kyoto Bullet Rail</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Santorini & Greek Islands</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> New York & East Coast</a></li>
-            <li><a href="404.html"><i class="fa-solid fa-chevron-right"></i> Sydney & Great Barrier Reef</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Information (Redirected to 404 per specs) -->
-        <div>
-          <h4 class="footer-title">Contact Travel HQ</h4>
-          <ul class="footer-contact-list">
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <span>MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
-              <a href="404.html">+91 9876543210</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <a href="404.html">hello@thestackly.com</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-clock"></i>
-              <span>Mon - Sat: 9:00 AM - 7:00 PM IST</span>
-            </li>
-          </ul>
+        <div class="footer-bottom">
+          <div>
+            &copy; 2026 Stackly Travel & Tourism. All rights reserved.
+            Connecting Worldwide Travelers.
+          </div>
+          <div class="footer-legal-links">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms & Conditions</a>
+            <a href="404.html">Cookie Policy</a>
+            <a href="404.html">Sitemap</a>
+          </div>
         </div>
       </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <div>
-          &copy; 2026 Stackly Travel & Tourism. All rights reserved. Designed for Global Explorers.
-        </div>
-        <div class="footer-legal-links">
-          <a href="404.html">Privacy Policy</a>
-          <a href="404.html">Terms & Conditions</a>
-          <a href="404.html">Cookie Policy</a>
-          <a href="404.html">Sitemap</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

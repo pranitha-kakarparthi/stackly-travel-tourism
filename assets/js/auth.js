@@ -61,6 +61,10 @@ function initSignIn(form) {
         field.classList.remove('is-invalid');
         if (alertBox) alertBox.style.display = 'none';
       });
+      field.addEventListener('change', () => {
+        field.classList.remove('is-invalid');
+        if (alertBox) alertBox.style.display = 'none';
+      });
     }
   });
 
@@ -73,14 +77,14 @@ function initSignIn(form) {
     if (alertBox) alertBox.style.display = 'none';
 
     // Validate Email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
       emailInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = emailInput;
     }
 
-    // Validate Password
-    if (!passwordInput.value.trim()) {
+    // Validate Password (min 6 characters)
+    if (!passwordInput.value.trim() || passwordInput.value.trim().length < 6) {
       passwordInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = passwordInput;
     }
@@ -172,6 +176,28 @@ function initSignUp(form) {
   const strengthFill = document.getElementById('pwdStrengthFill');
   const strengthText = document.getElementById('pwdStrengthText');
 
+  // Strict Alphabets-only masking for Name inputs
+  if (firstNameInput) {
+    firstNameInput.addEventListener('input', () => {
+      firstNameInput.value = firstNameInput.value.replace(/[^A-Za-z\s]/g, '');
+      firstNameInput.classList.remove('is-invalid');
+    });
+  }
+  if (lastNameInput) {
+    lastNameInput.addEventListener('input', () => {
+      lastNameInput.value = lastNameInput.value.replace(/[^A-Za-z\s]/g, '');
+      lastNameInput.classList.remove('is-invalid');
+    });
+  }
+
+  // Strict Digits-only & 10 digits max masking for Phone input
+  if (phoneInput) {
+    phoneInput.addEventListener('input', () => {
+      phoneInput.value = phoneInput.value.replace(/\D/g, '').slice(0, 10);
+      phoneInput.classList.remove('is-invalid');
+    });
+  }
+
   // Real-time password strength indicator
   if (passwordInput && strengthFill && strengthText) {
     passwordInput.addEventListener('input', () => {
@@ -184,7 +210,7 @@ function initSignUp(form) {
     });
   }
 
-  // Remove invalid state on typing
+  // Remove invalid state on typing/change
   [usernameInput, firstNameInput, lastNameInput, emailInput, passwordInput, confirmPasswordInput, roleSelect, phoneInput, addressInput, termsCheckbox].forEach(el => {
     if (el) {
       el.addEventListener('input', () => el.classList.remove('is-invalid'));
@@ -220,18 +246,19 @@ function initSignUp(form) {
       }
     }
 
-    // 2. First & Last Name
-    if (!firstNameInput.value.trim() || firstNameInput.value.trim().length < 2) {
+    // 2. First & Last Name: ONLY alphabets and at least 2 chars
+    const alphaRegex = /^[A-Za-z\s]{2,}$/;
+    if (!firstNameInput.value.trim() || !alphaRegex.test(firstNameInput.value.trim())) {
       firstNameInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = firstNameInput;
     }
-    if (!lastNameInput.value.trim() || lastNameInput.value.trim().length < 2) {
+    if (!lastNameInput.value.trim() || !alphaRegex.test(lastNameInput.value.trim())) {
       lastNameInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = lastNameInput;
     }
 
     // 3. Email Validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const email = emailInput.value.trim().toLowerCase();
     if (!email || !emailRegex.test(email)) {
       emailInput.classList.add('is-invalid');
@@ -246,41 +273,37 @@ function initSignUp(form) {
       }
     }
 
-    // 4. Password Standards (Uppercase, Lowercase, Number, Special Char, 8+ chars)
-    const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    // 4. Mobile Phone: EXACTLY 10 digits
+    const phoneVal = phoneInput.value.trim().replace(/\D/g, '');
+    if (!phoneVal || phoneVal.length !== 10 || !/^\d{10}$/.test(phoneVal)) {
+      phoneInput.classList.add('is-invalid');
+      if (!firstInvalid) firstInvalid = phoneInput;
+    }
+
+    // 5. Password Standards (Uppercase, Lowercase, Number, Special Char, 8+ chars)
+    const pwdRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#^_-])[A-Za-z\d@$!%*?&#^_-]{8,}$/;
     if (!passwordInput.value || !pwdRegex.test(passwordInput.value)) {
       passwordInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = passwordInput;
     }
 
-    // 5. Confirm Password
-    if (confirmPasswordInput.value !== passwordInput.value) {
+    // 6. Confirm Password
+    if (!confirmPasswordInput.value || confirmPasswordInput.value !== passwordInput.value) {
       confirmPasswordInput.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = confirmPasswordInput;
     }
 
-    // 6. Role Selection
+    // 7. Role Selection
     if (!roleSelect.value) {
       roleSelect.classList.add('is-invalid');
       if (!firstInvalid) firstInvalid = roleSelect;
     }
 
-    // 7. Mobile Phone
-    const phoneVal = phoneInput.value.trim();
-    if (!phoneVal || !/^\d{7,14}$/.test(phoneVal.replace(/\s+/g, ''))) {
-      phoneInput.classList.add('is-invalid');
-      if (!firstInvalid) firstInvalid = phoneInput;
-    }
-
-    // 8. Address
-    if (addressInput && addressInput.value.trim().length < 5) {
-      addressInput.classList.add('is-invalid');
-      if (!firstInvalid) firstInvalid = addressInput;
-    }
-
-    // 9. Terms Checkbox
+    // 8. Terms Checkbox
     if (termsCheckbox && !termsCheckbox.checked) {
       termsCheckbox.classList.add('is-invalid');
+      const termsFb = document.getElementById('termsFeedback');
+      if (termsFb) termsFb.style.display = 'block';
       if (!firstInvalid) firstInvalid = termsCheckbox;
     }
 
@@ -334,7 +357,7 @@ function evaluatePasswordStrength(password) {
   if (/[A-Z]/.test(password)) score++;
   if (/[a-z]/.test(password)) score++;
   if (/\d/.test(password)) score++;
-  if (/[@$!%*?&]/.test(password)) score++;
+  if (/[@$!%*?&#^_-]/.test(password)) score++;
 
   if (score <= 2) {
     return { percent: 30, color: '#EF4444', text: 'Weak: Add uppercase, number & symbol' };
@@ -364,4 +387,3 @@ function getRoleDashboard(role) {
   };
   return dashboards[role] || 'dashboard.html';
 }
-

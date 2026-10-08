@@ -70,14 +70,33 @@
     grid-template-columns: 1fr;
   }
   
+  .auth-page-wrapper {
+    height: auto !important;
+    min-height: 100vh;
+    overflow-y: auto !important;
+  }
+
   .auth-body-container {
     grid-template-columns: 1fr;
     max-width: 600px;
+    height: auto !important;
+    max-height: none !important;
+    margin: 24px auto;
+    padding: 16px 20px 40px;
   }
   
   .auth-sidebar-hero {
     min-height: auto;
-    padding: 36px 28px;
+    height: auto !important;
+    max-height: none !important;
+    padding: 28px 24px;
+    overflow: visible !important;
+  }
+
+  .auth-form-card {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
 }
 
@@ -229,6 +248,65 @@
   
   .pricing-price {
     font-size: 2.4rem;
+  }
+}
+
+/* ==========================================================================
+   DASHBOARD RESPONSIVE GUARANTEES (PREVENT ANY CUTOFF ON MOBILE)
+   ========================================================================== */
+@media (max-width: 991px) {
+  .dash-main {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .dash-content {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .dash-card {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .dash-card-header {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .dash-content {
+    padding: 16px 12px !important;
+  }
+
+  .dash-card {
+    padding: 16px 12px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .dash-content [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .dash-table-wrap {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .dash-table {
+    min-width: 580px !important;
   }
 }
 

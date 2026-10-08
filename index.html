@@ -154,8 +154,40 @@
           <ul class="mobile-nav-links">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li><a href="about.html" class="nav-link">About Us</a></li>
-            <li>
-              <a href="tours.html" class="nav-link">Tours & Destinations</a>
+            <li class="mobile-dropdown-item">
+              <div class="mobile-dropdown-header">
+                <a href="tours.html" class="nav-link">Tours & Destinations</a>
+                <button type="button" class="mobile-dropdown-btn" aria-label="Toggle Tours Submenu">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="mobile-sub-menu">
+                <li>
+                  <a href="tours.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-earth-americas"></i> All Worldwide Tours
+                  </a>
+                </li>
+                <li>
+                  <a href="cultural.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-landmark"></i> Historic Cities & Europe
+                  </a>
+                </li>
+                <li>
+                  <a href="marine.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-umbrella-beach"></i> Tropical Beaches & Islands
+                  </a>
+                </li>
+                <li>
+                  <a href="alpine.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-mountain"></i> Scenic Alps & Mountain Escapes
+                  </a>
+                </li>
+                <li>
+                  <a href="safaris.html" class="mobile-sub-link">
+                    <i class="fa-solid fa-paw"></i> Wildlife Safaris & Nature
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href="pricing.html" class="nav-link">Pricing & Packages</a>
@@ -219,13 +251,13 @@
       <section class="search-strip-wrap">
         <div class="container">
           <div class="search-box-card" data-aos="fade-up" data-aos-delay="100">
-            <form class="search-form-grid search-form" id="heroSearchForm">
+            <form class="search-form-grid search-form" id="heroSearchForm" novalidate>
               <div class="search-field">
-                <label
+                <label for="heroSearchDest"
                   ><i class="fa-solid fa-earth-americas"></i> Destination /
                   Country</label
                 >
-                <select required aria-label="Select Worldwide Destination">
+                <select id="heroSearchDest" required aria-label="Select Worldwide Destination">
                   <option value="">Where do you want to go?</option>
                   <option value="france">
                     France — Paris, Nice & Provence
@@ -257,13 +289,14 @@
                     Brazil & Peru — Rio & Machu Picchu
                   </option>
                 </select>
+                <div class="invalid-feedback">Please choose a destination.</div>
               </div>
               <div class="search-field">
-                <label
+                <label for="heroSearchStyle"
                   ><i class="fa-solid fa-suitcase-rolling"></i> Travel
                   Style</label
                 >
-                <select required aria-label="Select Holiday Style">
+                <select id="heroSearchStyle" required aria-label="Select Holiday Style">
                   <option value="">Vacation Type</option>
                   <option value="city">City Breaks & Heritage</option>
                   <option value="beach">Tropical Island & Beach Resorts</option>
@@ -274,21 +307,24 @@
                   </option>
                   <option value="adventure">Outdoor Adventure & Nature</option>
                 </select>
+                <div class="invalid-feedback">Please choose a travel style.</div>
               </div>
               <div class="search-field">
-                <label
+                <label for="heroSearchMonth"
                   ><i class="fa-solid fa-calendar-days"></i> Travel Month</label
                 >
                 <input
                   type="month"
+                  id="heroSearchMonth"
                   required
                   aria-label="Travel Month"
                   value="2026-11"
                 />
+                <div class="invalid-feedback">Please select travel month.</div>
               </div>
               <div class="search-field">
-                <label><i class="fa-solid fa-users"></i> Travelers</label>
-                <select required aria-label="Traveler Count">
+                <label for="heroSearchTravelers"><i class="fa-solid fa-users"></i> Travelers</label>
+                <select id="heroSearchTravelers" required aria-label="Traveler Count">
                   <option value="1">1 Solo Traveler</option>
                   <option value="2" selected>2 Travelers (Couple)</option>
                   <option value="4">Family (3 - 5 Guests)</option>
@@ -298,12 +334,13 @@
               <!-- Action button redirecting to 404 -->
               <button
                 type="submit"
-                class="btn btn-primary btn-action"
+                class="btn btn-primary"
                 style="height: 52px"
               >
                 <i class="fa-solid fa-magnifying-glass"></i> Search Holidays
               </button>
             </form>
+            <div id="heroSearchAlertBox" style="display:none; margin-top:14px;"></div>
           </div>
         </div>
       </section>
