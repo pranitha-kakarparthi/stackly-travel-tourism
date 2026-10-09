@@ -21,34 +21,55 @@ document.addEventListener('DOMContentLoaded', () => {
     currentUser.roleLabel = sessionStorage.getItem('userRoleLabel') || currentUser.roleLabel;
   }
 
+  const currentPath = window.location.pathname.split('/').pop() || '';
+  const isAgentPath = currentPath.includes('agent') || currentPath.includes('agency');
+  const isTravellerPath = currentPath.includes('traveler') || currentPath.includes('traveller');
+
   if (!currentUser) {
+    const isAgentRole = storedRole === 'agent' || storedRole === 'agency' || isAgentPath;
     currentUser = {
-      username: 'alex_sterling',
-      firstName: 'Alex',
-      lastName: 'Sterling',
-      role: storedRole || 'traveler',
-      roleLabel: sessionStorage.getItem('userRoleLabel') || 'World Explorer',
+      username: isAgentRole ? 'agent_lead' : 'alex_sterling',
+      firstName: isAgentRole ? 'Partner' : 'Alex',
+      lastName: isAgentRole ? 'Lead' : 'Sterling',
+      role: isAgentRole ? 'agent' : 'traveler',
+      roleLabel: isAgentRole ? 'Travel Agent' : 'Traveller',
       lastLogin: new Date().toISOString()
     };
-  }
-
-  // If on main dashboard.html and a specific role is explicitly stored from login, route to that role dashboard
-  const currentPath = window.location.pathname.split('/').pop() || '';
-  if (currentPath === 'dashboard.html' || currentPath === 'dashboard') {
-    if (sessionRaw || storedRole) {
-      const roleRoutes = {
-        'traveler': 'dashboard-traveler.html',
-        'guide': 'dashboard-guide.html',
-        'agency': 'dashboard-agency.html',
-        'admin': 'dashboard-admin.html'
-      };
-      const target = roleRoutes[currentUser.role];
-      if (target && target !== 'dashboard.html') {
-        window.location.replace(target);
-        return;
-      }
+  } else if (!storedRole) {
+    if (isAgentPath) {
+      currentUser.role = 'agent';
+      currentUser.roleLabel = 'Travel Agent';
+    } else if (isTravellerPath) {
+      currentUser.role = 'traveler';
+      currentUser.roleLabel = 'Traveller';
     }
   }
+
+  // If on main dashboard.html, cleanly route to the role-specific dashboard
+  if (currentPath === 'dashboard.html' || currentPath === 'dashboard') {
+    const roleRoutes = {
+      'traveler': 'dashboard-traveler.html',
+      'traveller': 'dashboard-traveler.html',
+      'agent': 'dashboard-agent.html',
+      'agency': 'dashboard-agent.html'
+    };
+    const target = roleRoutes[currentUser.role] || 'dashboard-traveler.html';
+    if (target && target !== 'dashboard.html') {
+      window.location.replace(target);
+      return;
+    }
+  }
+
+  // Ensure sidebar Overview link always navigates to user's independent role dashboard
+  const isAgent = currentUser.role === 'agent' || currentUser.role === 'agency';
+  const roleOverviewTarget = isAgent ? 'dashboard-agent.html' : 'dashboard-traveler.html';
+  const overviewNavItems = document.querySelectorAll('.dash-nav-item');
+  overviewNavItems.forEach(item => {
+    const span = item.querySelector('span');
+    if (span && span.textContent.trim() === 'Overview') {
+      item.href = roleOverviewTarget;
+    }
+  });
 
   // Populate user data & dynamic time-of-day greeting
   setupDashboardUser(currentUser);
@@ -116,9 +137,11 @@ function setupDashboardUser(user) {
   else if (hours >= 12 && hours < 18) timeGreeting = 'Good afternoon';
   else timeGreeting = 'Good evening';
 
-  const welcomeHeading = document.getElementById('dashGreetingHeading');
+  const currentPath = window.location.pathname.split('/').pop() || '';
+  const isAgentPath = currentPath.includes('agent') || currentPath.includes('agency');
+  const isAgent = user.role === 'agent' || user.role === 'agency' || isAgentPath;
   if (welcomeHeading) {
-    const rolePrefix = user.role === 'guide' ? 'Lead Guide' : user.role === 'admin' ? 'Administrator' : user.role === 'agency' ? 'Agency Partner' : 'Explorer';
+    const rolePrefix = isAgent ? 'Travel Agent' : 'Explorer';
     const displayName = user.firstName || user.username || rolePrefix;
     welcomeHeading.textContent = `${timeGreeting}, ${displayName}!`;
   }
@@ -127,19 +150,29 @@ function setupDashboardUser(user) {
   const userNameElements = document.querySelectorAll('.dash-user-display-name');
   userNameElements.forEach(el => {
     const fullName = `${user.firstName || ''} ${user.lastName || ''}`.trim();
-    el.textContent = fullName || user.username || 'Explorer';
+    el.textContent = fullName || user.username || (isAgent ? 'Travel Agent' : 'Explorer');
   });
 
   // Display role label
   const userRoleElements = document.querySelectorAll('.dash-user-display-role');
   userRoleElements.forEach(el => {
-    el.textContent = user.roleLabel || user.role || 'Traveler';
+    el.textContent = isAgent ? 'Travel Agent' : 'Traveller';
+  });
+
+  // Display role badges
+  const roleBadgeElements = document.querySelectorAll('.dash-role-badge');
+  roleBadgeElements.forEach(el => {
+    if (!el.textContent.includes('Portal') && !el.textContent.includes('Tier')) {
+      el.textContent = isAgent ? 'Travel Agent' : 'Traveller';
+    }
   });
 
   // Display user avatar initials
   const userAvatarElements = document.querySelectorAll('.dash-user-initials');
-  const fInitial = (user.firstName || user.username || 'S').charAt(0).toUpperCase();
-  const lInitial = (user.lastName || 'T').charAt(0).toUpperCase();
+  const defaultFirst = isAgent ? 'T' : 'S';
+  const defaultLast = isAgent ? 'A' : 'T';
+  const fInitial = (user.firstName || user.username || defaultFirst).charAt(0).toUpperCase();
+  const lInitial = (user.lastName || defaultLast).charAt(0).toUpperCase();
   userAvatarElements.forEach(el => {
     el.textContent = `${fInitial}${lInitial}`;
   });

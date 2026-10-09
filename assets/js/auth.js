@@ -117,7 +117,7 @@ function initSignIn(form) {
         id: 'USR-' + Date.now(),
         username: email.split('@')[0],
         firstName: formattedName,
-        lastName: 'Explorer',
+        lastName: (role === 'agent' || role === 'agency') ? 'Agent' : 'Explorer',
         email: email,
         password: password,
         role: role,
@@ -374,20 +374,20 @@ function evaluatePasswordStrength(password) {
 
 function getRoleLabel(role) {
   const roles = {
-    'traveler': 'Traveler / Explorer',
-    'guide': 'Tour Guide / Operator',
-    'agency': 'Agency Partner',
-    'admin': 'Travel Admin'
+    'traveler': 'Traveller',
+    'traveller': 'Traveller',
+    'agent': 'Travel Agent',
+    'agency': 'Travel Agent'
   };
-  return roles[role] || 'Traveler / Explorer';
+  return roles[role] || 'Traveller';
 }
 
 function getRoleDashboard(role) {
   const dashboards = {
     'traveler': 'dashboard-traveler.html',
-    'guide': 'dashboard-guide.html',
-    'agency': 'dashboard-agency.html',
-    'admin': 'dashboard-admin.html'
+    'traveller': 'dashboard-traveler.html',
+    'agent': 'dashboard-agent.html',
+    'agency': 'dashboard-agent.html'
   };
-  return dashboards[role] || 'dashboard.html';
+  return dashboards[role] || 'dashboard-traveler.html';
 }
