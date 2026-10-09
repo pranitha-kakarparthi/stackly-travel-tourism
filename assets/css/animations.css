@@ -171,6 +171,134 @@
   transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s ease !important;
 }
 
+/* ==========================================================================
+   SCENIC HERO HEARTBEAT & PULSE ANIMATION SYSTEM
+   ========================================================================== */
+
+/* Organic Scenic Hero Background Heartbeat Scaling */
+@keyframes heroScenicHeartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.04);
+  }
+  28% {
+    transform: scale(1.015);
+  }
+  42% {
+    transform: scale(1.055);
+  }
+  70% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hero Pulse / Heartbeat Glow Badge */
+@keyframes pulseHeartbeatBadge {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(224, 133, 56, 0.45);
+  }
+  15% {
+    transform: scale(1.045);
+    box-shadow: 0 0 0 6px rgba(224, 133, 56, 0.35);
+  }
+  30% {
+    transform: scale(1.01);
+    box-shadow: 0 0 0 3px rgba(224, 133, 56, 0.2);
+  }
+  45% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 10px rgba(224, 133, 56, 0);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(224, 133, 56, 0);
+  }
+}
+
+/* Living Heartbeat Indicator Dot */
+@keyframes heartbeatDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+    box-shadow: 0 0 4px #E08538;
+  }
+  15% {
+    transform: scale(1.45);
+    opacity: 1;
+    box-shadow: 0 0 12px #E08538, 0 0 18px rgba(224, 133, 56, 0.6);
+  }
+  30% {
+    transform: scale(1.1);
+    opacity: 0.95;
+    box-shadow: 0 0 6px #E08538;
+  }
+  45% {
+    transform: scale(1.55);
+    opacity: 1;
+    box-shadow: 0 0 14px #E08538, 0 0 22px rgba(224, 133, 56, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.95;
+    box-shadow: 0 0 4px #E08538;
+  }
+}
+
+/* Heartbeat Icon Throb */
+@keyframes heartbeatIcon {
+  0%, 100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scale(1.08);
+  }
+  45% {
+    transform: scale(1.38);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+
+.hero-main-bg,
+.page-hero-bg,
+.auth-hero-bg {
+  animation: heroScenicHeartbeat 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.hero-heartbeat-badge {
+  animation: pulseHeartbeatBadge 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  will-change: transform, box-shadow;
+}
+
+.heartbeat-indicator {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #E08538;
+  display: inline-block;
+  animation: heartbeatDot 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  vertical-align: middle;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.heartbeat-pulse-icon {
+  display: inline-block;
+  color: #E08538;
+  animation: heartbeatIcon 2.8s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
 /* 10. Strict Accessibility Killswitch for Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
