@@ -531,3 +531,4 @@ When editing or extending the template:
 1. **Verify Relative Paths**: Interior pages in `pages/` reference assets via `../assets/`, whereas root `index.html` references `assets/`.
 2. **Maintain Role Separation**: Keep `dashboard-traveller.html` and `dashboard-agent.html` workflows clean and independent without cross-linking subpages.
 3. **Preserve Overlay & Text-Shadow Rules**: When swapping hero images, maintain the `.page-hero-overlay` gradient to guarantee WCAG AAA text legibility.
+
