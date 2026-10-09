@@ -6,529 +6,365 @@
 
 ---
 
-## 1. Introduction
+## Introduction
 
-**Stackly Travel & Tourism** is a comprehensive, production-ready, fully responsive HTML5 website template engineered for luxury tour operators, destination management companies (DMCs), travel agencies, and independent wilderness expeditions. It pairs a high-converting public marketing website (Home, About, Tours directory, Alpine, Marine, Safari, and Cultural tour deep-dives, Pricing & Membership, and Contact) with an enterprise-grade authenticated area (Sign In, Sign Up) and **two completely independent role-based user dashboard systems**:
+Stackly Travel & Tourism is a fully responsive HTML5 website template engineered for luxury tour operators, destination management companies (DMCs), travel agencies, wilderness expeditions, and holiday booking portals. It combines a high-converting public marketing website (home, about, tours directory, specialized category expeditions, transparent pricing, and 24/7 global dispatch contact) with an authenticated explorer and agency portal (sign in, registration, and dual role-based dashboards).
 
-1. **Traveller Dashboard**: Tailored for consumers and explorers to review confirmed expeditions, active flight and high-speed rail itineraries, emergency satellite tracking, and medical evacuation safety protocols.
-2. **Travel Agent Dashboard**: Tailored for B2B wholesale travel agents, affiliates, and brokers to manage wholesale tour packages, monitor commissions, manage agency partner agreements, and access direct agency support desk hotlines.
-
-The template is crafted with semantic HTML5, a pure custom CSS3 design system with CSS custom properties (variables), Font Awesome 6.5.1 vector icons, AOS (Animate On Scroll) motion effects, and lightweight vanilla ES6+ JavaScript. It features zero dependencies on jQuery, ensuring blazing-fast render performance and straightforward backend integration.
+The template is built with modern HTML5 and pure CSS3, uses Font Awesome 6.5.1 vector icons and AOS (Animate On Scroll) motion effects, and includes custom vanilla JavaScript for navigation, role-based dashboard switching, dynamic greeting personalizations, and authentication form validation. It operates without any third-party frameworks or jQuery dependencies.
 
 ### Template Features
 
-- **Fully Responsive HTML5 & CSS3 Layout**: Fluid grid architecture optimized across mobile devices (320px–480px), tablets (768px–991px), laptops (1024px–1280px), and ultra-wide desktops (1440px+).
-- **Luxury Travel UI/UX Design System**: Visual identity centered around deep forest pine (`#0B3B24`), warm sunset amber (`#E08538`), bright sun gold (`#FBBF24`), and frosted glassmorphism overlays.
-- **Dual Independent Role-Based Dashboards**: Clean separation of Traveller and Travel Agent workflows with dedicated navigation sidebars, subpages, and zero cross-role page contamination.
-- **Dynamic Explorer Greeting & User Personalization**: Intelligently parses user email/name on login and injects personalized greetings across both public and dashboard views based on the user's local time.
-- **Scenic Destination Heros with Organic Heartbeat Animations**: Unique, high-resolution tourist destination backdrops on every page featuring GPU-accelerated breathing pulse keyframe animations (`heroScenicHeartbeat`).
-- **Diversified Theme Identity**: Every single page features an entirely distinct travel theme (ancient citadel, historic river capital, Caribbean cruise port, snowcapped alpine summit, coral lagoon, African savannah, Kyoto shrine, Mediterranean cliffside, Parisian landmark, desert pyramids, and tropical sunset beach).
-- **Authentication Pages with Client-Side Validation**: Interactive login and registration forms featuring live email pattern validation, dynamic password strength meters, and show/hide password toggles.
-- **WCAG AAA Contrast Standards**: Multi-stop dark gradient masks paired with bright `#FFFFFF` headings, `#FBBF24` highlight spans, and layered text-shadows ensure crisp legibility over all photographic backdrops.
-- **Accessibility & Reduced-Motion Killswitch**: Native `@media (prefers-reduced-motion: reduce)` overrides to instantly disable heavy transforms for users with motion sensitivity.
-- **Interactive Search & Tour Filters**: Dynamic filtering interface by Continent, Holiday Style, Duration, and Budget range.
-- **Custom 404 Error Page**: Dedicated fallback error page with clean return-to-home actions.
-- **Zero-Dependency Vanilla JavaScript**: Clean, modular, well-commented JS files for maintainability and extensibility.
+• Fully Responsive HTML5 Layout (desktop, laptop, tablet, mobile)  
+• Modern, luxury travel-themed UI/UX design  
+• Dual Role-Based User Dashboards (independent Traveller and Travel Agent portals)  
+• Wholesale Tours Inventory & Commission Tracking for Travel Agents  
+• Expedition Itineraries, Live Flight & Rail Tracking, and Emergency SOS Protocols for Travellers  
+• Sign In & Registration pages with live client-side validation and password strength assessment  
+• Tours & Holiday Packages directory with multi-parameter filter criteria (continent, travel style, duration, budget)  
+• Dedicated tour category deep-dive pages (Alpine, Marine, Safaris, and Cultural journeys)  
+• Transparent pricing and tiered membership packages page  
+• Contact page with 24/7 global expedition dispatch desk and Google Maps integration  
+• Scenic destination hero banners with continuous breathing heartbeat animations and live status badges  
+• Diversified visual themes across all pages with unique scenic destinations  
+• Sticky header navigation with frosted glassmorphism effect and mobile off-canvas drawer  
+• Contextual fixed auth header for distraction-free login and registration  
+• Custom 404 error page with quick return-to-home actions  
+• Cross-browser compatible across all modern evergreen browsers  
+• Clean, organized, well-commented modular architecture  
 
 ---
 
-## 2. Technologies Used
+## Technologies Used
 
-| Technology | Purpose & Description |
+| Technology | Description |
 | :--- | :--- |
-| **HTML5** | Semantic markup (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`), structured metadata, and accessibility ARIA landmarks. |
-| **CSS3** | Modular styling architecture leveraging CSS Variables, Flexbox, CSS Grid, custom keyframe animations, glassmorphism (`backdrop-filter`), and responsive media queries. |
-| **JavaScript (Vanilla ES6+)** | Lightweight client-side application logic for navigation drawers, role switching, sticky header behavior, form validation, password strength meters, and greeting personalization. |
-| **Font Awesome 6.5.1** | Vector icon library loaded via CDN for high-density navigation, badge, utility, and action icons. |
-| **AOS 2.3.4 (Animate On Scroll)** | Modern scroll-triggered fade and slide micro-interactions loaded via CDN. |
-| **WebP Image Format** | Modern next-gen lossy/lossless image format providing high visual fidelity with up to 70% smaller file sizes compared to traditional PNG/JPEG. |
+| **HTML5** | Page structure, semantic markup, and accessible document layout |
+| **CSS3** | Global and page-specific styling, CSS variables, grid, flexbox, and keyframe animations |
+| **JavaScript (Vanilla)** | Navigation drawer, sticky header, dynamic time-of-day greeting, role switching, and form validation |
+| **Font Awesome 6.5.1** | Vector icon library loaded via CDN |
+| **AOS (Animate On Scroll)** | Scroll-triggered reveal animations loaded via CDN |
+| **Google Fonts** | Plus Jakarta Sans typographic family |
+| **Google Maps Embed** | Interactive location map embed on the Contact page |
 
 ---
 
-## 3. Folder Structure
+## Folder Structure
 
 ```
 Travel & Tourism/
-├── index.html                                 # Public Homepage / Landing Page
-├── 404.html                                   # Root 404 Redirect Fallback
-│
+|
+├── index.html
+├── 404.html
+|
 ├── pages/
-│   ├── about.html                             # About Us / Company Heritage
-│   ├── tours.html                             # Worldwide Tours & Holiday Packages Directory
-│   ├── alpine.html                            # Alpine & Mountain Escapes Tour Deep-Dive
-│   ├── marine.html                            # Tropical Islands & Marine Escapes Tour Deep-Dive
-│   ├── safaris.html                           # Wildlife Safaris & African Savannah Tour Deep-Dive
-│   ├── cultural.html                          # Cultural Journeys & Ancient Capitals Tour Deep-Dive
-│   ├── pricing.html                           # Transparent Pricing & Membership Packages
-│   ├── contact.html                           # Contact & 24/7 Global Dispatch Desk
-│   ├── sign-in.html                           # User Login Page (Explorer & Agent Portal)
-│   ├── sign-up.html                           # User Registration Page (Role Selection)
-│   ├── 404.html                               # Dedicated Styled 404 Error Page
-│   │
-│   ├── dashboard-traveller.html               # Traveller Main Overview Dashboard
-│   ├── dashboard-expeditions.html             # Traveller Active Expeditions Subpage
-│   ├── dashboard-itineraries.html             # Traveller Flight & Rail Itineraries Subpage
-│   ├── dashboard-safety.html                  # Traveller Medical & Safety Protocols Subpage
-│   ├── dashboard-settings.html                # Traveller Account & Privacy Settings Subpage
-│   ├── dashboard-support.html                 # Traveller Concierge & Field Support Subpage
-│   │
-│   ├── dashboard-agent.html                   # Travel Agent Main Overview Dashboard
-│   ├── dashboard-agent-tours.html             # Travel Agent Wholesale Tours Inventory Subpage
-│   ├── dashboard-agent-commissions.html       # Travel Agent Commission & Revenue Subpage
-│   ├── dashboard-agent-agreement.html         # Travel Agent Partner Agreement Subpage
-│   ├── dashboard-agent-settings.html          # Travel Agent Agency Settings Subpage
-│   ├── dashboard-agent-support.html           # Travel Agent Partner Support Desk Subpage
-│   │
-│   ├── dashboard.html                         # Smart Role-Based Dashboard Dispatcher
-│   ├── dashboard-traveler.html                # Canonical Alias to Traveller Dashboard
-│   ├── dashboard-agency.html                  # Canonical Alias to Agent Dashboard
-│   ├── dashboard-admin.html                   # Admin Role Fallback Alias
-│   └── dashboard-guide.html                   # Tour Guide Role Fallback Alias
-│
+│   ├── about.html
+│   ├── tours.html
+│   ├── alpine.html
+│   ├── marine.html
+│   ├── safaris.html
+│   ├── cultural.html
+│   ├── pricing.html
+│   ├── contact.html
+│   ├── sign-in.html
+│   ├── sign-up.html
+│   ├── 404.html
+│   ├── dashboard-traveller.html
+│   ├── dashboard-expeditions.html
+│   ├── dashboard-itineraries.html
+│   ├── dashboard-safety.html
+│   ├── dashboard-settings.html
+│   ├── dashboard-support.html
+│   ├── dashboard-agent.html
+│   ├── dashboard-agent-tours.html
+│   ├── dashboard-agent-commissions.html
+│   ├── dashboard-agent-agreement.html
+│   ├── dashboard-agent-settings.html
+│   └── dashboard-agent-support.html
+|
 └── assets/
     ├── css/
-    │   ├── style.css                          # Global Master Stylesheet (Variables, Reset, Components, Layout)
-    │   ├── responsive.css                     # Responsive Media Queries (Mobile, Tablet, Desktop Breakpoints)
-    │   ├── animations.css                     # Keyframe Animations, Heartbeat Pulse, Shimmer, Reduced Motion
-    │   └── dashboard.css                      # Unified Dashboard Theme, Table Styling, KPI Cards, Sidebar
-    │
+    │   ├── style.css (global design system & master styles)
+    │   ├── responsive.css (media queries & layout reflow)
+    │   ├── animations.css (heartbeat, shimmer, & motion keyframes)
+    │   └── dashboard.css (unified dashboard & table styles)
     ├── js/
-    │   ├── main.js                            # Global Navigation, Sticky Header, Mobile Drawer, Dynamic Greeting
-    │   ├── auth.js                            # Form Validation, Password Strength, Show/Hide, Local Authentication
-    │   ├── dashboard.js                       # Dashboard Sidebar Toggle, Role Name Resolution, Table Interactivity
-    │   └── animations.js                      # AOS Initialization, Intersection Observer Scroll Effects
-    │
+    │   ├── main.js (navigation, header, dynamic greeting, search)
+    │   ├── auth.js (login, registration, validation, strength meter)
+    │   ├── dashboard.js (sidebar toggle, role name resolution, tables)
+    │   └── animations.js (AOS initialization & scroll effects)
     └── images/
-        ├── logoStackly.webp                   # Primary Brand Logo (WebP)
-        ├── logo.svg                           # Primary Brand Logo (Vector SVG)
-        ├── logo-white.svg                     # High-Contrast Monochrome Brand Logo
-        ├── machu-picchu-citadel.webp          # Homepage Hero: Ancient Lost Citadel in Andes
-        ├── london-heritage-bigben.webp        # About Us Hero: London Tower Bridge & River Thames
-        ├── caribbean-st-lucia-pitons.webp     # Tours Directory Hero: Caribbean Cruise Port & Archipelago
-        ├── swiss-alps-matterhorn.webp         # Alpine Tour Hero: Matterhorn Swiss Summit
-        ├── maldives-overwater-villas.webp     # Marine Tour Hero: Maldives Overwater Coral Villas
-        ├── serengeti-safari-savannah.webp     # Safari Tour Hero: Serengeti Acacia Savannah
-        ├── kyoto-historic-shrine.webp         # Cultural Tour Hero: Kyoto Shinto Shrine & Pagoda
-        ├── santorini-greece-oia.webp          # Pricing Hero: Santorini Aegean Cliffside Village
-        ├── paris-louvre-eiffel.webp           # Contact Hero: Paris Eiffel Tower & Seine River
-        ├── cairo-giza-pyramids.webp           # Sign In Hero: Egyptian Desert Pyramids of Giza
-        ├── tropical-beach-coastline.webp      # Sign Up Hero: Golden Sunset Beach & Ocean Shoreline
-        ├── banff-canadian-rockies.webp        # Destination Gallery Asset
-        ├── italian-dolomites-peaks.webp       # Destination Gallery Asset
-        ├── new-zealand-southern-alps.webp     # Destination Gallery Asset
-        ├── patagonia-glacial-fjord.webp       # Destination Gallery Asset
-        ├── rome-colosseum-sunset.webp         # Destination Gallery Asset
-        ├── athens-acropolis-parthenon.webp    # Destination Gallery Asset
-        └── specialist-*.webp                  # Tour Directors & Destination Specialist Headshots
+        ├── logoStackly.webp
+        ├── logo.svg
+        ├── logo-white.svg
+        └── (destination & tour photographs)
 ```
 
 ---
 
-## 4. Installation & Setup Guide
+## Installation & Setup Guide
 
-### Local Development Setup
+### Local Setup
 
-1. **Clone or Download the Project**:
-   ```bash
-   git clone https://github.com/your-username/travel-and-tourism.git
-   cd travel-and-tourism
-   ```
-2. **Open in Code Editor**:
-   Open the root project folder in your preferred code editor (VS Code, Cursor, WebStorm, etc.).
-3. **Launch with a Local Server**:
-   To ensure that relative paths between `/pages/` and `/assets/` resolve properly and web fonts/icons render without local file-origin CORS warnings, run a lightweight HTTP server:
-   - **VS Code Live Server Extension**: Right-click `index.html` and click **Open with Live Server**.
-   - **Python 3**:
-     ```bash
-     python -m http.server 3000
-     ```
-   - **Node.js (`npx serve`)**:
-     ```bash
-     npx serve .
-     ```
-4. Access the site in your browser at `http://localhost:3000`.
+1. Download or clone the project ZIP package to your local workstation.  
+2. Extract the ZIP archive into your preferred working folder.  
+3. Open the project folder in your code editor (such as VS Code, Cursor, or Sublime Text).  
+4. Run `index.html` directly in the browser or launch it using a local HTTP server (such as VS Code Live Server, Node `serve`, or Python `http.server`) so that relative paths across the root, `/pages/`, and `/assets/` directories resolve consistently.  
 
-### GitHub Pages Hosting Setup
+### GitHub Hosting Setup
 
-1. Create a new repository on GitHub (e.g., `stackly-travel-tourism`).
-2. Push your project files to GitHub, preserving the root `index.html`, `pages/`, and `assets/` structure:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit of Stackly Travel website"
-   git branch -M main
-   git remote add origin https://github.com/your-username/stackly-travel-tourism.git
-   git push -u origin main
-   ```
-3. In GitHub, navigate to **Settings** > **Pages** (under Code and automation).
-4. Under **Build and deployment**:
-   - **Source**: Deploy from a branch.
-   - **Branch**: `main`, folder: `/ (root)`.
-   - Click **Save**.
-5. Wait 1–2 minutes. Access your live website at:  
-   `https://<your-username>.github.io/stackly-travel-tourism/`
+#### Upload the Template to GitHub
+5. Log in to your GitHub account.  
+6. Create a new public or private repository (for example, `stackly-travel-tourism`).  
+7. Upload or push all project files, strictly preserving the root `index.html`, `pages/`, and `assets/` directory hierarchy.  
+8. Commit and push the changes to your `main` branch.  
 
-### cPanel / Traditional Web Hosting Setup
+#### Enable GitHub Pages
+9. Open the repository **Settings** tab.  
+10. Navigate to the **Pages** section in the left sidebar.  
+11. Under **Build and deployment > Source**, select **Deploy from a branch**.  
+12. Set the branch to `main` and the folder to `/ (root)`.  
+13. Click **Save**.  
+14. Allow 1 to 2 minutes for the deployment workflow to complete.  
+15. Open your generated live GitHub Pages URL in any browser.  
 
-1. Compress the project folder into a `.zip` archive (ensure `index.html` is at the archive root).
-2. Log in to your cPanel dashboard.
-3. Open **File Manager** and navigate to your web root (`public_html` or domain document root).
-4. Upload the `.zip` archive and click **Extract**.
-5. Ensure `index.html`, `pages/`, and `assets/` sit directly under `public_html`.
-6. Open your custom domain in the browser to confirm proper loading.
+### cPanel Hosting Setup
+
+16. Log in to your hosting cPanel control panel.  
+17. Open the **File Manager** utility.  
+18. Navigate to your primary web root directory (typically `public_html` or your domain document root).  
+19. Upload the project ZIP package.  
+20. Extract the ZIP archive directly inside `public_html`, ensuring that `index.html`, `pages/`, and `assets/` reside at the top level of the public web root.  
+21. Enter your registered domain name in the browser address bar to verify that all pages, styles, and assets load properly.  
 
 ---
 
-## 5. Main HTML Pages Summary
+## Main HTML Pages
 
-| File Path | Page Title | Primary Purpose |
-| :--- | :--- | :--- |
-| `index.html` | Stackly Travel - Explore The World | Homepage featuring dynamic greeting, search filter bar, tour highlights, and brand storytelling. |
-| `pages/about.html` | About Us - Stackly Travel | Brand vision, team credentials, sustainability stewardship, and company milestones. |
-| `pages/tours.html` | Extraordinary Tours & Packages | Comprehensive tour directory with multi-criteria filtering, duration badges, and pricing cards. |
-| `pages/alpine.html` | Majestic Alpine & Mountain Escapes | Specialized itinerary deep-dive for high-altitude trekking, ski chalets, and glacier routes. |
-| `pages/marine.html` | Tropical Islands & Marine Escapes | Specialized itinerary deep-dive for coral reefs, overwater bungalows, and yacht expeditions. |
-| `pages/safaris.html` | Wildlife Safaris & African Savannah | Specialized itinerary deep-dive for game drives, luxury tented camps, and conservation treks. |
-| `pages/cultural.html` | Historic Capitals & Cultural Journeys | Specialized itinerary deep-dive for UNESCO shrines, art pilgrimages, and culinary tours. |
-| `pages/pricing.html` | Transparent Pricing & Membership Packages | Tiered membership plans, all-inclusive inclusions table, and transparent cost breakdown. |
-| `pages/contact.html` | Contact Expedition Headquarters | 24/7 global dispatch desk inquiry form, direct phone hotlines, and office locations. |
-| `pages/sign-in.html` | Sign In - Stackly Travel | Explorer & Agent login portal with role selection, password show/hide, and email validation. |
-| `pages/sign-up.html` | Create Your Account - Stackly Travel | Registration page for Travellers and Travel Agents with live password strength evaluation. |
-| `pages/dashboard-traveller.html`| Traveller Expedition Portal | Overview dashboard for booked expeditions, flight/rail vouchers, and emergency contacts. |
-| `pages/dashboard-expeditions.html`| Active Expeditions | Dedicated subpage for upcoming, in-progress, and past holiday bookings. |
-| `pages/dashboard-itineraries.html`| Real-Time Travel Itineraries | Live flight tracker, rail timetable, hotel confirmation vouchers, and transfer times. |
-| `pages/dashboard-safety.html` | Field Safety & Medical Evacuation | Satellite communication tracking, medical insurance, and emergency SOS protocols. |
-| `pages/dashboard-settings.html` | Explorer Account Settings | Profile management, password updates, currency preferences, and privacy controls. |
-| `pages/dashboard-support.html` | 24/7 Concierge Support | Direct live chat ticketing, hotline numbers, and tour director messaging. |
-| `pages/dashboard-agent.html` | Travel Agent Partner Portal | Overview dashboard for agency performance, gross bookings, and net payouts. |
-| `pages/dashboard-agent-tours.html`| Wholesale Tours Inventory | Direct access to wholesale B2B pricing, group allocation holds, and white-label booking tools. |
-| `pages/dashboard-agent-commissions.html`| Agent Commission Tracking | Tiered commission rates (12%–18%), payout history, and pending settlement reports. |
-| `pages/dashboard-agent-agreement.html`| Agency Partner Agreement | Signed B2B contracts, liability guidelines, cancellation policies, and renewal status. |
-| `pages/dashboard-agent-settings.html`| Agency Profile & Billing Settings | Agency licensing details, IATA/CLIA registration, banking info, and payout preferences. |
-| `pages/dashboard-agent-support.html` | Dedicated B2B Agency Support Desk | Direct hotline to priority reservations, emergency field re-ticketing, and agent liaisons. |
-| `pages/404.html` | 404 - Destination Not Found | Custom error experience with navigation back to Home and previous page fallback. |
+| Page | Description |
+| :--- | :--- |
+| `index.html` | Public Homepage / Marketing Landing Page |
+| `pages/about.html` | About Us / Company Heritage & Leadership |
+| `pages/tours.html` | Worldwide Tours & Holiday Packages Directory |
+| `pages/alpine.html` | Scenic Alps & Mountain Escapes Category Page |
+| `pages/marine.html` | Tropical Islands & Marine Escapes Category Page |
+| `pages/safaris.html` | Wildlife Safaris & Nature Category Page |
+| `pages/cultural.html` | Historic Capitals & Cultural Journeys Category Page |
+| `pages/pricing.html` | Transparent Pricing & Tiered Membership Packages |
+| `pages/contact.html` | Contact Page with 24/7 Global Dispatch Desk & Map |
+| `pages/sign-in.html` | User Login Portal (Traveller & Agent access) |
+| `pages/sign-up.html` | User Registration Page with Role Selection |
+| `pages/dashboard-traveller.html` | Primary Traveller Expedition Portal |
+| `pages/dashboard-agent.html` | Primary Travel Agent B2B Partner Portal |
+| `404.html` | Custom Error Page |
 
 ---
 
-## 6. Detailed Page Descriptions
+## Page Descriptions
 
 ### Homepage (`index.html`)
-The primary gateway to the brand. Features a full-viewport hero section with the ancient **Machu Picchu Citadel** backdrop, GPU-accelerated heartbeat pulse animation, and a dynamic local time greeting badge. Below the hero sits the **Global Search & Filter Strip**, followed by curated destination cards, signature expeditions, client testimonials, travel director biographies, and an email newsletter subscription footer.
+The main landing page of the website. It includes the top-level sticky navigation bar, a high-contrast hero banner featuring the Machu Picchu citadel with an organic heartbeat pulse animation, a dynamic time-of-day greeting badge, an interactive global search and filter strip, signature tour packages, client testimonials, travel specialist profiles, and the comprehensive site footer.
 
-### About Us (`pages/about.html`)
-Highlights the ten-year journey of Stackly Travel. Backed by the **London Tower Bridge & River Thames** hero image, it communicates company milestones, ethical ecotourism commitments, senior expedition leaders, and industry certifications.
+### About (`pages/about.html`)
+Provides company history, vision, sustainability stewardship, and executive team information. Helps prospective travelers and agencies build trust through accreditation highlights, company milestones, and core values. Backed by the historic London Tower Bridge and Thames river hero image.
 
-### Tours & Packages Directory (`pages/tours.html`)
-Presents the complete inventory of worldwide travel programs. Framed by a **Caribbean Island Cruise Port** backdrop, it includes dynamic multi-parameter filter selects (Continent, Travel Style, Duration, Budget Range) and structured tour cards showing departure dates, duration badges, and transparent net prices.
+### Tours & Packages (`pages/tours.html`)
+Displays the complete worldwide tour catalog. Includes an interactive multi-parameter filter strip (Continent, Travel Style, Duration, Budget Range), sortable tour cards, departure schedules, duration badges, and direct inquiry call-to-actions. Backed by the Caribbean island cruise port hero image.
 
-### Tour Category Subpages (`alpine.html`, `marine.html`, `safaris.html`, `cultural.html`)
-Specialized deep-dive landing pages for distinct traveler passions:
-- **Alpine (`alpine.html`)**: Features the iconic **Matterhorn** summit; focuses on the Swiss Alps, Dolomites, and high-altitude hut-to-hut treks.
-- **Marine (`marine.html`)**: Features the **Maldives Overwater Villas**; highlights private island atolls, scuba diving, and yacht charters.
-- **Safaris (`safaris.html`)**: Features the **Serengeti Savannah**; showcases Big Five game drives, luxury safari lodges, and ranger-led walks.
-- **Cultural (`cultural.html`)**: Features **Kyoto's Shinto Shrine & Pagoda**; focuses on architectural wonders, ancient tea ceremonies, and culinary tours.
+### Tour Categories (`alpine.html`, `marine.html`, `safaris.html`, `cultural.html`)
+Curated showcases highlighting themed travel collections:
+• **Alpine Escapes (`pages/alpine.html`)**: High-altitude trekking, ski chalets, and glacier routes, backed by the Swiss Alps Matterhorn.  
+• **Marine Escapes (`pages/marine.html`)**: Coral atolls, overwater villas, and yacht charters, backed by the Maldives lagoons.  
+• **Wildlife Safaris (`pages/safaris.html`)**: Big Five game drives, tented camps, and conservation walks, backed by the Serengeti savannah.  
+• **Cultural Journeys (`pages/cultural.html`)**: UNESCO heritage shrines, art pilgrimages, and historic capitals, backed by Kyoto shrines.  
 
 ### Pricing & Packages (`pages/pricing.html`)
-Structured around the **Santorini Aegean Cliffside** backdrop, this page offers complete transparency into tiered membership packages (Explorer, Odyssey, Sovereign VIP), an all-inclusive feature breakdown table, and clear explanations of net pricing with zero hidden fees.
+Presents transparent, all-inclusive pricing tiers (Explorer, Odyssey, Sovereign VIP), complete inclusions comparison tables, net booking benefits with zero hidden fees, and membership privileges. Backed by the Santorini cliffside village hero image.
 
-### Contact Us (`pages/contact.html`)
-Backed by the **Paris Eiffel Tower & River Seine** backdrop, this page houses the 24/7 Global Expedition Dispatch Desk. It includes a comprehensive inquiry form with field validation, direct telephone hotlines across London, New York, and Tokyo, and interactive Google Maps office embeddings.
+### Contact (`pages/contact.html`)
+Enables visitors to reach the 24/7 global dispatch headquarters through an expedition inquiry form, direct telephone hotlines across regional offices, direct email addresses, and an embedded Google Map for office locations. Backed by the Paris Eiffel Tower hero image.
 
-### Authentication (`pages/sign-in.html` & `pages/sign-up.html`)
-Built with a sleek two-column split layout:
-- **Left Column**: High-resolution scenic travel image (**Giza Pyramids** for Sign In; **Tropical Sunset Coastline** for Sign Up) with living pulse badge, benefit bullet points, and client testimonial pill.
-- **Right Column**: Clean card holding the login/registration form, single contextual button header, password visibility eye toggles, password strength scoring, and social login fallbacks.
+### Sign In (`pages/sign-in.html`)
+Handles user authentication for both Travellers and Travel Agents. Features a two-column split layout with an Egyptian Pyramids scenic hero sidebar, client-side email validation, password visibility toggles, and seamless role redirection into dedicated dashboard pages.
 
-### Role-Based User Dashboards
-The dashboard architecture is strictly segregated into two dedicated roles:
-- **Traveller Portal (`dashboard-traveller.html` + 5 subpages)**: Displays upcoming departure countdowns, e-ticket downloads, confirmed flight and train schedules, emergency satellite communication check-ins, and personal expedition histories.
-- **Travel Agent Portal (`dashboard-agent.html` + 5 subpages)**: Displays wholesale booking volume, gross sales KPIs, real-time commission statements (12%–18%), exclusive B2B wholesale tour allocations, agency partner agreements, and priority dispatch hotlines.
-- **Independent Layout Guarantee**: Each role operates with its own distinct sidebar navigation, tailored subpage links, and dedicated CSS rules, preventing cross-role layout bleeding and accidental redirection.
+### Sign Up (`pages/sign-up.html`)
+Allows new users to register as either a Traveller or Travel Agent. Includes full name, email, phone number, role selector, real-time password strength meter, and terms agreement check. Backed by a tropical sunset beach scenic sidebar.
 
----
+### User Dashboards (`pages/dashboard-*.html`)
+Strictly isolated, role-based dashboards for signed-in users:
+• **Traveller Portal (`pages/dashboard-traveller.html`)**: Displays upcoming countdowns, confirmed flight and high-speed rail itineraries, e-ticket downloads, field safety checklists, emergency satellite tracking, and medical evacuation SOS protocols.  
+• **Travel Agent Portal (`pages/dashboard-agent.html`)**: Displays wholesale booking volumes, gross sales revenue KPIs, tiered commission statement tracking (12%–18%), exclusive B2B wholesale tour inventories, agency partner agreements, and priority dispatch hotlines.  
 
-## 7. Reusable Component Patterns
-
-### 1. Main Navigation Header
-The primary header (`.header-main`) remains sticky on scroll with a frosted glass background (`backdrop-filter: blur(12px)`). It features:
-- Responsive desktop navbar with dropdown menus for Tour subcategories.
-- Mobile hamburger menu triggering an off-canvas drawer with full keyboard and backdrop support.
-- Direct links to Sign In and Sign Up actions.
-
-### 2. Fixed Auth Header
-Found on `pages/sign-in.html` and `pages/sign-up.html`, this minimalist header maintains a distraction-free experience:
-- Clickable brand logo linking back to `../index.html`.
-- Home button with both icon and text (`<i class="fa-solid fa-arrow-left"></i> Home`).
-- Single contextual alternate action button ("Create Account" on Sign In; "Sign In" on Sign Up).
-
-### 3. Page Hero Section (`.page-hero`)
-A standardized component structure across all interior pages:
-```html
-<section class="page-hero">
-  <div class="page-hero-bg" style="background-image: url('../assets/images/scenic-image.webp');"></div>
-  <div class="page-hero-overlay"></div>
-  <div class="container">
-    <div class="hero-pill-badge hero-heartbeat-badge">
-      <span class="heartbeat-indicator"></span>
-      <i class="fa-solid fa-icon-name"></i>
-      <span>Badge Text</span>
-    </div>
-    <h1 class="page-hero-title">Page Title <span>Highlighted Text</span></h1>
-    <p class="page-hero-desc">Descriptive lead copy.</p>
-    <div class="breadcrumbs">
-      <a href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
-      <i class="fa-solid fa-chevron-right"></i>
-      <span>Current Page</span>
-    </div>
-  </div>
-</section>
-```
-
-### 4. Dashboard Shell Layout
-The dashboard interface utilizes an asynchronous, non-overlapping grid structure:
-- **Collapsible Sidebar (`.dash-sidebar`)**: Contains role-specific navigation links, brand badge, and profile logout trigger.
-- **Dashboard Topbar (`.dash-topbar`)**: Contains mobile toggle button, current page title, live notification bell, and user profile avatar with dynamically parsed email name.
-- **Main Viewport (`.dash-content`)**: Scrolls independently without double-header jitter.
+### 404 Error Page (`404.html`, `pages/404.html`)
+A dedicated branded error page displayed when a requested URL cannot be found. Offers direct navigation back to the Homepage or the previous page.
 
 ---
 
-## 8. CSS Architecture & Customization
+## Reusable Components
 
-The CSS codebase is organized into four clean, purpose-driven stylesheets inside `assets/css/`:
+### Primary Navigation Header
+The main header is shared across marketing pages. It features a sticky glassmorphic container on scroll, active page link highlighting, multi-level dropdowns for tour categories, a mobile off-canvas drawer with toggle controls, and quick action buttons for Sign In and Sign Up.
 
-1. `style.css`: Core design system, CSS variables, typography, buttons, cards, forms, and layout components.
-2. `responsive.css`: Breakpoint-specific media queries ensuring clean reflow across devices.
-3. `animations.css`: Keyframe definitions, pulse/heartbeat breathing animations, button hover shines, and accessibility overrides.
-4. `dashboard.css`: Unified dashboard component styles, KPI cards, tables, status tags, and sidebar transitions.
+### Fixed Auth Header
+A specialized minimalist header utilized on Sign In and Sign Up pages. Features the clickable brand logo linking to the homepage, a dedicated "Home" button with arrow icon, and a single contextual alternative action button ("Create Account" on Sign In; "Sign In" on Sign Up).
 
-### Design Tokens (CSS Variables)
+### Page Hero Component
+Standardized hero banner present on interior pages. Composed of an absolute-positioned background image layer running the continuous breathing pulse animation, a dark multi-stop gradient overlay for WCAG AAA contrast, a pill badge with animated status dot, a main title with warm gold accent highlights, lead description copy, and breadcrumb navigation links.
 
-Located at the root of `assets/css/style.css`:
-
-```css
-:root {
-  /* Brand Palette */
-  --primary: #0B3B24;          /* Deep Forest Pine */
-  --primary-light: #165335;    /* Light Pine */
-  --primary-dark: #072718;     /* Midnight Pine */
-  --secondary: #E08538;        /* Warm Sunset Amber */
-  --secondary-hover: #C97227;  /* Dark Amber */
-  --accent: #FBBF24;           /* Radiant Sun Gold */
-  
-  /* Neutral Palette */
-  --dark: #0A1C14;             /* Obsidian Dark */
-  --dark-soft: #142E22;        /* Dark Surface */
-  --light: #F8FAFC;            /* Clean Off-White */
-  --bg-subtle: #F1F5F9;        /* Subtle Grey Background */
-  --border: #E2E8F0;           /* Default Border */
-  --border-dark: #1E4535;      /* Dark Mode Border */
-  --text-muted: #64748B;       /* Secondary Text */
-  
-  /* Status Colors */
-  --success: #10B981;          /* Emerald Success */
-  --warning: #F59E0B;          /* Amber Warning */
-  --error: #EF4444;            /* Red Error */
-  --info: #3B82F6;             /* Blue Info */
-  
-  /* Typography */
-  --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  
-  /* Shadows & Elevation */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
-  --shadow-lg: 0 10px 28px rgba(0, 0, 0, 0.14);
-  
-  /* Border Radii */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-full: 9999px;
-  
-  /* Transitions */
-  --transition-fast: 0.18s ease;
-  --transition-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-}
-```
-
-### Customizing Styles
-
-Developers can easily adjust the site's branding by editing `:root` variables:
-- **Change Primary Brand Color**: Modify `--primary` and `--primary-light`.
-- **Change Button & CTA Accent Color**: Modify `--secondary` and `--secondary-hover`.
-- **Change Typography**: Update `--font-main` with any Google Font or system font stack.
-- **Adjust Hero Image Opacity**: Tune the alpha stops in `.hero-overlay` and `.page-hero-overlay` in `assets/css/style.css`.
+### Dashboard Shell
+A clean dashboard layout containing an independently collapsible sidebar with role-specific menu items, a sticky topbar with notification indicators and user name extracted from the login email, and an independent content viewport preventing double-header jitter during scroll.
 
 ---
 
-## 9. JavaScript Architecture & Files
+## CSS Customization
 
-All client-side scripts are located in `assets/js/` and written in modular Vanilla ES6+:
+### Stylesheet Locations
+• Global styles, design tokens, and components: `assets/css/style.css`  
+• Responsive breakpoints and device layout: `assets/css/responsive.css`  
+• Keyframe animations, pulse effects, and reduced motion: `assets/css/animations.css`  
+• Unified dashboard layout and table formatting: `assets/css/dashboard.css`  
 
-| File | Primary Responsibilities |
+### Customizable Design Elements
+You can easily adjust the look and feel of the website by modifying the design tokens defined at the top of the global stylesheet:
+• **Brand Colors**: Primary deep forest pine, secondary sunset amber, accent gold, and neutral slate tones  
+• **Typography**: Font family, base font sizes, line heights, and heading weights  
+• **Layout Spacing**: Section paddings, container max-widths, and grid gap intervals  
+• **Buttons & Tags**: Border radii, hover transforms, button sizes, and badge backgrounds  
+• **Hero Overlay Opacity**: Dark gradient overlay density to fine-tune background image visibility  
+• **Responsive Breakpoints**: Media query thresholds for tablets and mobile devices  
+
+---
+
+## JavaScript Files
+
+All scripts are located in `assets/js/` and operate using vanilla ES6+ without external library dependencies:
+
+| File | Responsibility |
 | :--- | :--- |
-| `main.js` | Mobile drawer toggle, sticky header glass effect on scroll, active navigation item highlighting, dynamic time-of-day explorer greeting, search bar query filtering, and smooth scroll anchors. |
-| `auth.js` | Sign In and Sign Up form handling, live email regex validation, password strength scoring algorithm, password visibility toggles, session token simulation, and role dispatching. |
-| `dashboard.js` | Responsive sidebar collapse/expand, dynamic user name extraction from login email, role switching simulation, interactive tables, tab switching, and safe logout handling. |
-| `animations.js` | AOS (Animate On Scroll) configuration, lazy-loading intersection observers, scroll progress indicator, and reduced-motion event listeners. |
-
-### Dynamic User Name Extraction Example (`dashboard.js`)
-When users sign in with any email (e.g., `alex.sterling@example.com`), the script extracts and formats their name cleanly:
-```javascript
-function resolveDisplayName(email) {
-  if (!email || !email.includes('@')) return 'Alex Sterling';
-  const localPart = email.split('@')[0];
-  return localPart
-    .replace(/[._-]+/g, ' ')
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-```
+| `main.js` | Mobile navigation drawer open/close, sticky header scroll observer, active navigation highlighting, dynamic time-of-day greeting ("Good morning/afternoon/evening, Explorer!"), search bar filtering, and smooth scroll handling |
+| `auth.js` | Client-side login and registration form validation, email pattern checks, dynamic password strength meter calculation, password visibility toggle, and role-based redirect dispatcher |
+| `dashboard.js` | Collapsible sidebar toggle (desktop and mobile drawer), dynamic user name extraction and formatting from login email, interactive table search/filtering, tab switching, and logout handling |
+| `animations.js` | AOS animation initialization, scroll progress bar indicator, and accessibility reduced-motion event listeners |
 
 ---
 
-## 10. Image Asset Management & Replacement Guide
+## Image Replacement Guide
 
-All images are optimized and placed under `assets/images/`.
+### Replace Brand Logo
+The primary brand logo files are located at:
+• `assets/images/logoStackly.webp` (Primary WebP logo)  
+• `assets/images/logo.svg` (Primary vector SVG)  
+• `assets/images/logo-white.svg` (Monochrome white SVG)  
+To update the logo, replace these files with your brand artwork using the same file names, or update the `src` references within the HTML headers. Recommended height is 36px to 48px.
 
-### Replacing the Brand Logo
-- File location: `assets/images/logoStackly.webp` and `assets/images/logo.svg`.
-- Recommended dimensions: **200px × 48px** (SVG or WebP format with transparent background).
-- Update the `src` attribute in HTML or keep the same file name to automatically replace it site-wide.
+### Replace Hero & Section Images
+Hero images are organized inside `assets/images/`. Each page features a dedicated, unique scenic destination to maintain visual diversity:
 
-### Scenic Hero Images & Unique Themes Mapping
-
-To maintain visual diversity and avoid theme repetition, each page is assigned a dedicated scenic image:
-
-| Page | Image Path | Theme Description |
+| Page | File Name | Destination Theme |
 | :--- | :--- | :--- |
-| `index.html` | `assets/images/machu-picchu-citadel.webp` | Ancient Lost Citadel in Andes Mountains |
-| `pages/about.html` | `assets/images/london-heritage-bigben.webp` | Historic River Capital & Tower Bridge |
-| `pages/tours.html` | `assets/images/caribbean-st-lucia-pitons.webp`| Caribbean Cruise Port & Island Archipelago |
-| `pages/alpine.html` | `assets/images/swiss-alps-matterhorn.webp` | Swiss Alps Matterhorn Snow Summit |
-| `pages/marine.html` | `assets/images/maldives-overwater-villas.webp`| Maldives Turquoise Coral Atoll & Villas |
-| `pages/safaris.html`| `assets/images/serengeti-safari-savannah.webp`| Serengeti Golden Acacia Grasslands |
-| `pages/cultural.html`| `assets/images/kyoto-historic-shrine.webp` | Kyoto Shinto Torii Shrine & Pagoda |
-| `pages/pricing.html`| `assets/images/santorini-greece-oia.webp` | Santorini Whitewashed Aegean Village |
-| `pages/contact.html`| `assets/images/paris-louvre-eiffel.webp` | Paris Eiffel Tower & Seine River at Dusk |
-| `pages/sign-in.html`| `assets/images/cairo-giza-pyramids.webp` | Egyptian Desert Pyramids of Giza |
-| `pages/sign-up.html`| `assets/images/tropical-beach-coastline.webp`| Golden Sunset Shoreline & Ocean Waves |
+| Homepage | `machu-picchu-citadel.webp` | Ancient Lost Citadel & Mountain Sanctuary |
+| About Us | `london-heritage-bigben.webp` | Historic River Capital & Tower Bridge |
+| Tours Directory | `caribbean-st-lucia-pitons.webp` | Caribbean Island Cruise Port & Archipelago |
+| Alpine Escapes | `swiss-alps-matterhorn.webp` | Swiss Alps Matterhorn Snow Summit |
+| Marine Escapes | `maldives-overwater-villas.webp` | Maldives Turquoise Coral Atoll & Villas |
+| Wildlife Safaris | `serengeti-safari-savannah.webp` | Serengeti Golden Acacia Grasslands |
+| Cultural Journeys | `kyoto-historic-shrine.webp` | Kyoto Shinto Torii Shrine & Pagoda |
+| Pricing & Packages | `santorini-greece-oia.webp` | Santorini Whitewashed Aegean Village |
+| Contact Us | `paris-louvre-eiffel.webp` | Paris Eiffel Tower & Seine River |
+| Sign In | `cairo-giza-pyramids.webp` | Egyptian Desert Pyramids of Giza |
+| Sign Up | `tropical-beach-coastline.webp` | Golden Sunset Shoreline & Ocean Beach |
 
-**Recommended Replacement Specifications**:
-- **Format**: Modern WebP (or optimized JPEG).
-- **Dimensions**: 1920px × 1080px (Hero banners) or 1200px × 800px (Cards).
-- **Compression**: 80–85% quality to keep file size under 100 KB.
+When replacing images, maintain a 16:9 or 3:2 landscape aspect ratio (recommended 1920 × 1080 pixels) and compress them in modern WebP format for fast load speeds.
 
 ---
 
-## 11. Responsive Breakpoints & Browser Compatibility
+## Fonts & Icons
 
-### Responsive Breakpoints (`responsive.css`)
+### Typography
+The template uses the **Plus Jakarta Sans** font family loaded via Google Fonts CDN, providing clean readability across both high-density digital displays and mobile viewports.
 
-```css
-/* Ultra-Wide Displays */
-@media (min-width: 1400px) { ... }
-
-/* Standard Desktops & Laptops */
-@media (min-width: 992px) and (max-width: 1199px) { ... }
-
-/* Tablets & Small Laptops */
-@media (min-width: 768px) and (max-width: 991px) { ... }
-
-/* Mobile Devices */
-@media (max-width: 767px) { ... }
-
-/* Small Mobile Screens */
-@media (max-width: 480px) { ... }
-```
-
-### Browser Compatibility
-
-The template has been tested across all modern Evergreen browsers:
-- **Google Chrome**: Version 100+
-- **Mozilla Firefox**: Version 100+
-- **Microsoft Edge**: Version 100+
-- **Apple Safari**: Version 15+ (macOS & iOS)
-- **Opera**: Version 85+
+### Font Awesome Icons
+All UI, navigation, and feature icons are powered by Font Awesome 6.5.1 loaded via CDN. Icon classes can be updated directly within HTML markup by referencing official icon names (e.g., `fa-compass`, `fa-plane`, `fa-shield-heart`).
 
 ---
 
-## 12. Backend Integration Guides
+## Responsive Design
 
-The template is fully wired for front-end presentation and client-side simulation. Follow the guides below to connect it to a production backend.
-
-### 1. Booking & Tour Inquiry Integration
-The search bar (`#tourSearchForm`) and tour booking buttons can be connected to any RESTful or GraphQL API:
-```javascript
-// Example Node.js / Express fetch submission
-async function submitBookingInquiry(formData) {
-  const response = await fetch('/api/v1/bookings', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(formData)
-  });
-  return await response.json();
-}
-```
-
-### 2. Contact Form & 24/7 Dispatch Desk Integration
-The contact form on `pages/contact.html` contains fields for Full Name, Email, Phone, Destination, Group Size, and Message. To connect:
-- **PHP Mailer / Laravel**: Point `action="/api/contact"` with `method="POST"`.
-- **Node.js / Express / Resend**: Send an async POST request to your mailer endpoint.
-- **Serverless (Formspree / Netlify Forms)**: Add `action="https://formspree.io/f/YOUR_ID"` to `<form>`.
-
-### 3. Authentication & Role-Based Dashboard Integration
-To replace local client simulation with persistent authentication:
-1. **JWT / Session API**: On login form submission, send credentials to `/api/auth/login`.
-2. **Store Session Token**: Store the received JWT token in `HttpOnly` cookies (recommended) or `sessionStorage`.
-3. **Route by Role**:
-   - If user role is `traveller` -> redirect to `pages/dashboard-traveller.html`.
-   - If user role is `agent` -> redirect to `pages/dashboard-agent.html`.
-4. **Attach Authorization Header**: In `dashboard.js`, fetch dynamic bookings and commission records using `Bearer <token>`.
+The template is fully responsive and supports all screen sizes:
+• **Ultra-Wide Screens & Desktops** (1400px and above)  
+• **Standard Desktops & Laptops** (992px to 1199px)  
+• **Tablets & Small Laptops** (768px to 991px)  
+• **Mobile Devices** (320px to 767px)  
 
 ---
 
-## 13. Performance, SEO & Accessibility (WCAG AAA)
+## Browser Compatibility
 
-### Performance Optimization
-- **WebP Assets**: All photographs utilize WebP compression, reducing page weight by over 60%.
-- **GPU-Accelerated Animations**: Heartbeat animations run via `transform: scale()` on isolated `-25px` inset layers with `will-change: transform`, preventing browser reflows.
-- **Resource Hints**: Preconnects configured for Google Fonts and Cloudflare CDNs.
-
-### Search Engine Optimization (SEO)
-- Unique `<title>` and descriptive `<meta name="description">` on every page.
-- Semantic HTML tags (`<h1>` to `<h3>`, `<article>`, `<nav>`, `<main>`) for clean web crawlers.
-- Open Graph tags (`og:title`, `og:image`, `og:description`) for rich social previews.
-
-### Accessibility Standards
-- High color contrast ratio (> 10:1) on all hero headings and badges against scenic photographic overlays.
-- ARIA labels on icon buttons, drawer toggles, and modal dismiss elements.
-- Strict reduced-motion fallback:
-  ```css
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.001ms !important;
-      transition-duration: 0.001ms !important;
-      transform: none !important;
-    }
-  }
-  ```
+Tested and fully supported across all modern evergreen browsers:
+• Google Chrome  
+• Mozilla Firefox  
+• Microsoft Edge  
+• Apple Safari (macOS & iOS)  
+• Opera  
 
 ---
 
-## 14. Credits & Third-Party Assets
+## Backend & Integration Guide
 
-- **Font Awesome 6.5.1**: [https://fontawesome.com](https://fontawesome.com)
-- **Google Fonts (Plus Jakarta Sans)**: [https://fonts.google.com](https://fonts.google.com)
-- **AOS (Animate On Scroll)**: [https://michalsnik.github.io/aos/](https://michalsnik.github.io/aos/)
-- **Photography Assets**: Licensed via Unsplash & Pexels (optimized for Stackly Travel).
+The template currently provides interactive client-side form handling and validation. To connect it to a production backend, integrate with any of the following architectures:
+
+### Tour Booking & Inquiry Integration
+Connect the search and booking inquiry forms to one of the following:
+• A custom Node.js / Express REST API with a PostgreSQL, MySQL, or MongoDB database  
+• A PHP / Laravel backend  
+• A Python / Django or FastAPI backend  
+• A headless booking API or cloud database (Firebase, Supabase)  
+
+### Contact Form Integration
+Connect the dispatch desk inquiry form to an email delivery service:
+• PHP `mail()` or PHPMailer script  
+• A serverless mail API (SendGrid, Resend, Mailgun, Postmark)  
+• Form endpoints such as Formspree or Netlify Forms  
+
+### Authentication & Dashboard Integration
+Replace the client-side session simulation with your production identity provider:
+• Custom REST API with JWT tokens or secure HTTP-only session cookies  
+• Firebase Authentication or Supabase Auth  
+• Auth0, Clerk, or enterprise OAuth2 / OpenID Connect providers  
 
 ---
 
-## 15. Maintenance & Support Information
+## Performance Optimization Tips
 
-When editing or extending the template:
-1. **Verify Relative Paths**: Interior pages in `pages/` reference assets via `../assets/`, whereas root `index.html` references `assets/`.
-2. **Maintain Role Separation**: Keep `dashboard-traveller.html` and `dashboard-agent.html` workflows clean and independent without cross-linking subpages.
-3. **Preserve Overlay & Text-Shadow Rules**: When swapping hero images, maintain the `.page-hero-overlay` gradient to guarantee WCAG AAA text legibility.
+• Use compressed WebP image assets to keep initial page weight under 1 MB.  
+• Minify global CSS and JavaScript files prior to production deployment.  
+• Utilize CDN delivery for Google Fonts and Font Awesome assets (already pre-configured).  
+• Enable Gzip or Brotli compression on your production web server.  
+• Enable HTTP browser caching headers for static assets (images, CSS, JS).  
 
+---
+
+## SEO & Accessibility Optimization
+
+• Add unique meta titles and descriptive meta descriptions to each HTML page.  
+• Maintain semantic HTML5 landmark tags (`<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`).  
+• Provide descriptive `alt` text attributes for all content images.  
+• Retain the built-in WCAG AAA text contrast ratios and dark gradient overlays.  
+• The built-in `@media (prefers-reduced-motion: reduce)` media query automatically disables heavy transforms for users with motion sensitivities.  
+
+---
+
+## Credits
+
+• **Font Awesome 6.5.1**: Icon vector library (https://fontawesome.com)  
+• **Google Fonts**: Plus Jakarta Sans typographic family (https://fonts.google.com)  
+• **AOS Library**: Animate On Scroll micro-interactions (https://michalsnik.github.io/aos/)  
+• **Unsplash & Pexels**: Licensed high-resolution destination imagery  
+
+---
+
+## Support & Maintenance Information
+
+If you encounter any issues while setting up or customizing the template:
+• Ensure all relative file paths are maintained (use `../assets/` on subpages inside `pages/` and `assets/` on root `index.html`).  
+• When adding new subpages to dashboards, keep the Traveller and Travel Agent workflows independent to prevent role conflicts.  
+• Verify that all image assets exist in `assets/images/` with identical file names when moving files between environments.  
