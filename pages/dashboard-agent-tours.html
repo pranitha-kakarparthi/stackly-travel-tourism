@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wholesale Tours | Travel Agent Portal | Stackly Adventures</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-body">
+  <!-- Emergency Support Ticker -->
+  <div class="dash-ticker-bar">
+    <div class="dash-ticker-inner">
+      <span class="ticker-tag" style="background:#0D9488;"><i class="fa-solid fa-briefcase"></i> B2B WHOLESALE DESK</span>
+      <span class="ticker-text">Travel Agent Tier 1 Portal &bull; Dedicated Wholesale Tour Allotments &bull; 24/7 Priority Partner Dispatch: <strong>+91 9876543210</strong></span>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <a href="../index.html" title="Return to Stackly Home">
+          <img src="../assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+        <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close Sidebar">&times;</button>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Travel Agent</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Travel Agent Portal</div>
+        <a href="dashboard-agent.html" class="dash-nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-agent-tours.html" class="dash-nav-item active">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Wholesale Tours</span>
+        </a>
+        <a href="dashboard-agent-commissions.html" class="dash-nav-item">
+          <i class="fa-solid fa-receipt"></i>
+          <span>Commission Ledger</span>
+        </a>
+        <a href="dashboard-agent-agreement.html" class="dash-nav-item">
+          <i class="fa-solid fa-file-contract"></i>
+          <span>Agent Agreement</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Marketing & Support</div>
+        <a href="dashboard-agent-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-agent-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>Agent Desk</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">TA</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Partner Lead</div>
+            <div class="dash-user-role-label dash-user-display-role">Travel Agent</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-sidebar-toggle" id="dashSidebarToggle" aria-label="Toggle Dashboard Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dash-greeting-box">
+            <h2>Wholesale Tours & Allotments</h2>
+            <p>Manage B2B wholesale inventory, group block allocations, and net partner pricing</p>
+          </div>
+        </div>
+
+        <div class="dash-top-actions">
+          <span class="dash-role-badge">Travel Agent</span>
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">
+            <i class="fa-solid fa-plus"></i> Request Block Allocation
+          </a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: WHOLESALE INVENTORY KPIS -->
+        <div class="kpi-grid">
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon primary"><i class="fa-solid fa-cubes"></i></div>
+            <div class="kpi-meta">
+              <h4>Allotted Group Seats</h4>
+              <div class="kpi-value">120 Seats</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-check-double"></i></div>
+            <div class="kpi-meta">
+              <h4>Confirmed Client Bookings</h4>
+              <div class="kpi-value">84 Seats (70%)</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon accent"><i class="fa-solid fa-hourglass-half"></i></div>
+            <div class="kpi-meta">
+              <h4>Remaining Block Holds</h4>
+              <div class="kpi-value">36 Seats</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon info"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <div class="kpi-meta">
+              <h4>Wholesale Contract Value</h4>
+              <div class="kpi-value">$148,500 USD</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: ACTIVE WHOLESALE TOUR BLOCKS TABLE -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Contracted B2B Tour Packages & Seat Allocations</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Guaranteed partner wholesale net rates versus public retail MSRP</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Export Allotment Report</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Block ID</th>
+                  <th>Tour Expedition</th>
+                  <th>Departure Window</th>
+                  <th>Net B2B / Retail MSRP</th>
+                  <th>Seat Allotment</th>
+                  <th>Release Deadline</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#BLK-2026-EU01</strong></td>
+                  <td>Swiss Alps Grand Alpine Traverse</td>
+                  <td>Oct 15 - Oct 27, 2026</td>
+                  <td>$3,250 <span style="font-size:0.8rem; color:var(--text-muted); text-decoration:line-through;">$4,200</span></td>
+                  <td><strong style="color:var(--primary);">18 / 25 confirmed</strong></td>
+                  <td><span class="dash-status confirmed">Sep 15, 2026</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage Seats</a></td>
+                </tr>
+                <tr>
+                  <td>#BLK-2026-SA04</td>
+                  <td>Patagonia Torres del Paine Wilderness</td>
+                  <td>Nov 05 - Nov 18, 2026</td>
+                  <td>$2,980 <span style="font-size:0.8rem; color:var(--text-muted); text-decoration:line-through;">$3,850</span></td>
+                  <td><strong style="color:var(--primary);">20 / 20 SOLD OUT</strong></td>
+                  <td><span class="dash-status confirmed">Closed</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">View Roster</a></td>
+                </tr>
+                <tr>
+                  <td>#BLK-2026-JP09</td>
+                  <td>Kyoto Ancient Forest & Alpine Onsen</td>
+                  <td>Dec 01 - Dec 14, 2026</td>
+                  <td>$3,800 <span style="font-size:0.8rem; color:var(--text-muted); text-decoration:line-through;">$4,900</span></td>
+                  <td><strong style="color:var(--accent);">12 / 20 confirmed</strong></td>
+                  <td><span class="dash-status pending">Oct 30, 2026</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage Seats</a></td>
+                </tr>
+                <tr>
+                  <td>#BLK-2027-CR02</td>
+                  <td>Costa Rica Cloud Forest Canopy & Coast</td>
+                  <td>Jan 10 - Jan 22, 2027</td>
+                  <td>$2,450 <span style="font-size:0.8rem; color:var(--text-muted); text-decoration:line-through;">$3,150</span></td>
+                  <td><strong style="color:var(--primary);">24 / 30 confirmed</strong></td>
+                  <td><span class="dash-status confirmed">Nov 15, 2026</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage Seats</a></td>
+                </tr>
+                <tr>
+                  <td>#BLK-2027-GL01</td>
+                  <td>Galápagos Islands Marine Expedition</td>
+                  <td>Feb 14 - Feb 26, 2027</td>
+                  <td>$5,100 <span style="font-size:0.8rem; color:var(--text-muted); text-decoration:line-through;">$6,500</span></td>
+                  <td><strong style="color:var(--accent);">10 / 25 confirmed</strong></td>
+                  <td><span class="dash-status pending">Dec 15, 2026</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Manage Seats</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 3: GROUP CHARTER & VESSEL BUYOUTS -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Full Vessel & Lodge Buyout Charters</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Exclusive wholesale charter inventory reserved under Agency Partner contract</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">Request Custom Charter</a>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:18px; background:var(--bg-subtle); border-radius:10px; border:1px solid var(--border);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span class="badge" style="background:#0D9488; color:#fff; font-size:0.75rem; padding:3px 8px; border-radius:4px;">CATAMARAN CHARTER</span>
+                <span style="font-weight:700; color:var(--primary); font-size:0.9rem;">16 PAX</span>
+              </div>
+              <h4 style="font-size:1.05rem; margin-bottom:6px;">Galápagos Luxury Eco-Catamaran</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Full vessel charter with naturalist guide, crew & VIP dive permits.</p>
+              <div style="font-size:0.85rem; font-weight:600; color:var(--dark);">Status: <span style="color:#10B981;">Confirmed (Dec 2026)</span></div>
+            </div>
+
+            <div style="padding:18px; background:var(--bg-subtle); border-radius:10px; border:1px solid var(--border);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span class="badge" style="background:#2563EB; color:#fff; font-size:0.75rem; padding:3px 8px; border-radius:4px;">SAFARI CAMP</span>
+                <span style="font-weight:700; color:var(--primary); font-size:0.9rem;">24 PAX</span>
+              </div>
+              <h4 style="font-size:1.05rem; margin-bottom:6px;">Serengeti Private Mobile Glamping</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Full tented camp exclusive buyout during the Great Migration corridor.</p>
+              <div style="font-size:0.85rem; font-weight:600; color:var(--dark);">Status: <span style="color:#F59E0B;">Contract Pending</span></div>
+            </div>
+
+            <div style="padding:18px; background:var(--bg-subtle); border-radius:10px; border:1px solid var(--border);">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+                <span class="badge" style="background:#7C3AED; color:#fff; font-size:0.75rem; padding:3px 8px; border-radius:4px;">GLACIER EXPRESS</span>
+                <span style="font-weight:700; color:var(--primary); font-size:0.9rem;">32 PAX</span>
+              </div>
+              <h4 style="font-size:1.05rem; margin-bottom:6px;">Swiss Panoramic Carriage Buyout</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:12px;">Private first-class panoramic coach between Zermatt and St. Moritz.</p>
+              <div style="font-size:0.85rem; font-weight:600; color:var(--dark);">Status: <span style="color:#10B981;">Allotted (July 2027)</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: B2B CONTRACT RULES -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Wholesale Booking Terms & Seat Release Windows</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:20px; font-size:0.9rem; color:var(--text-muted);">
+            <div style="padding:14px; background:#F8FAFC; border-radius:8px;">
+              <strong style="color:var(--dark); display:block; margin-bottom:4px;"><i class="fa-solid fa-calendar-check" style="color:var(--primary);"></i> Seat Release Timetable</strong>
+              Unsold block seats must be confirmed with passenger name records (PNR) at least 30 days prior to departure, after which seats revert to the general B2B pool without attrition penalty.
+            </div>
+            <div style="padding:14px; background:#F8FAFC; border-radius:8px;">
+              <strong style="color:var(--dark); display:block; margin-bottom:4px;"><i class="fa-solid fa-shield-halved" style="color:#10B981;"></i> Guaranteed Net Margins</strong>
+              Agency Net B2B rates provide a guaranteed 15.0% to 22.4% yield against standard retail pricing, protected against foreign exchange volatility upon deposit confirmation.
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

@@ -14,8 +14,16 @@
   <link rel="stylesheet" href="../assets/css/dashboard.css">
   <link rel="stylesheet" href="../assets/css/responsive.css">
     <link rel="stylesheet" href="../assets/css/animations.css">
-  <!-- AOS Animations -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script>
+    (function() {
+      var role = sessionStorage.getItem('userRole');
+      if (role === 'agent' || role === 'agency') {
+        window.location.replace('dashboard-agent.html');
+      } else {
+        window.location.replace('dashboard-traveler.html');
+      }
+    })();
+  </script>
 </head>
 <body>
 

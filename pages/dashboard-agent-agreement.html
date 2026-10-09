@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Agreement & Compliance | Travel Agent Portal | Stackly Adventures</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-body">
+  <!-- Emergency Support Ticker -->
+  <div class="dash-ticker-bar">
+    <div class="dash-ticker-inner">
+      <span class="ticker-tag" style="background:#0D9488;"><i class="fa-solid fa-briefcase"></i> B2B WHOLESALE DESK</span>
+      <span class="ticker-text">Travel Agent Tier 1 Portal &bull; Dedicated Wholesale Tour Allotments &bull; 24/7 Priority Partner Dispatch: <strong>+91 9876543210</strong></span>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <a href="../index.html" title="Return to Stackly Home">
+          <img src="../assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+        <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close Sidebar">&times;</button>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Travel Agent</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Travel Agent Portal</div>
+        <a href="dashboard-agent.html" class="dash-nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-agent-tours.html" class="dash-nav-item">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Wholesale Tours</span>
+        </a>
+        <a href="dashboard-agent-commissions.html" class="dash-nav-item">
+          <i class="fa-solid fa-receipt"></i>
+          <span>Commission Ledger</span>
+        </a>
+        <a href="dashboard-agent-agreement.html" class="dash-nav-item active">
+          <i class="fa-solid fa-file-contract"></i>
+          <span>Agent Agreement</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Marketing & Support</div>
+        <a href="dashboard-agent-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-agent-support.html" class="dash-nav-item">
+          <i class="fa-solid fa-headset"></i>
+          <span>Agent Desk</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">TA</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Partner Lead</div>
+            <div class="dash-user-role-label dash-user-display-role">Travel Agent</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-sidebar-toggle" id="dashSidebarToggle" aria-label="Toggle Dashboard Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dash-greeting-box">
+            <h2>Partner Agreement & Compliance</h2>
+            <p>Authorized B2B Partner Terms, IATA/CLIA verification, and professional liability indemnity</p>
+          </div>
+        </div>
+
+        <div class="dash-top-actions">
+          <span class="dash-role-badge">Travel Agent</span>
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">
+            <i class="fa-solid fa-file-pdf"></i> Download Signed Agreement
+          </a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: COMPLIANCE KPIS -->
+        <div class="kpi-grid">
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon primary"><i class="fa-solid fa-certificate"></i></div>
+            <div class="kpi-meta">
+              <h4>Partner Standing</h4>
+              <div class="kpi-value">Tier 1 Active</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-plane-departure"></i></div>
+            <div class="kpi-meta">
+              <h4>IATA Verification</h4>
+              <div class="kpi-value">#96-29104 Valid</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon accent"><i class="fa-solid fa-anchor"></i></div>
+            <div class="kpi-meta">
+              <h4>CLIA Agency ID</h4>
+              <div class="kpi-value">#004918-A Valid</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon info"><i class="fa-solid fa-shield-virus"></i></div>
+            <div class="kpi-meta">
+              <h4>Liability Indemnity</h4>
+              <div class="kpi-value">$10M USD Policy</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: MASTER B2B AGREEMENT OVERVIEW -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Master B2B Wholesale Distribution Agreement (2026-2028)</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Signed electronically on January 02, 2026 &bull; Renewable every 24 months</p>
+            </div>
+            <span class="badge" style="background:#10B981; color:#fff; font-size:0.8rem; padding:4px 10px; border-radius:4px;"><i class="fa-solid fa-check"></i> CONTRACT IN FORCE</span>
+          </div>
+          <div style="font-size:0.92rem; color:var(--text-muted); line-height:1.6;">
+            <p><strong>Article 1: Wholesale Scope & Capacity</strong> &mdash; Stackly Adventures grants the Travel Agent non-exclusive global rights to distribute expedition departures, private charters, and adventure packages to retail clients at preferred wholesale net rates.</p>
+            <p><strong>Article 2: Commission Remittance & Net Pricing</strong> &mdash; Travel Agent receives 15.0% base gross commission on standard group departures and 18.0% to 22.4% on volume allocations exceeding 50 annual passengers. Payouts are remitted via SWIFT bank transfer within 14 calendar days of departure conclusion.</p>
+            <p><strong>Article 3: Passenger Safety & Emergency Indemnity</strong> &mdash; All passenger bookings include Stackly Global Medical & Evacuation Insurance coverage up to $500,000 per traveler, with global satellite SOS tracking and 24/7 emergency dispatch response.</p>
+            <p><strong>Article 4: Confidentiality & Non-Circumvention</strong> &mdash; Direct traveler relationships booked through the Agent remain exclusive to the Agency. Stackly Adventures covenants not to market directly to client records originated by the Agent.</p>
+          </div>
+        </div>
+
+        <!-- SECTION 3: VERIFIED LICENSES & INSURANCE POLICIES -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Verified Accreditation & Insurance Certificates</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <div style="color:var(--primary); font-size:1.4rem; margin-bottom:8px;"><i class="fa-solid fa-id-card"></i></div>
+              <h4 style="font-size:0.95rem; margin-bottom:4px;">IATA / ARC Accreditation</h4>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:8px;">Global Air & Expedition Booking License</p>
+              <span class="dash-status confirmed" style="font-size:0.75rem;">Verified Thru Dec 2027</span>
+            </div>
+
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <div style="color:#0D9488; font-size:1.4rem; margin-bottom:8px;"><i class="fa-solid fa-ship"></i></div>
+              <h4 style="font-size:0.95rem; margin-bottom:4px;">CLIA Master Partner</h4>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:8px;">Cruise Lines International Association</p>
+              <span class="dash-status confirmed" style="font-size:0.75rem;">Verified Thru Nov 2027</span>
+            </div>
+
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <div style="color:#7C3AED; font-size:1.4rem; margin-bottom:8px;"><i class="fa-solid fa-umbrella"></i></div>
+              <h4 style="font-size:0.95rem; margin-bottom:4px;">Lloyd's of London Policy</h4>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:8px;">$10,000,000 B2B Commercial Indemnity</p>
+              <span class="dash-status confirmed" style="font-size:0.75rem;">Active Policy #LL-9820</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

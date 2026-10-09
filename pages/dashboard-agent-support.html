@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Desk | Travel Agent Portal | Stackly Adventures</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+</head>
+<body class="dash-body">
+  <!-- Emergency Support Ticker -->
+  <div class="dash-ticker-bar">
+    <div class="dash-ticker-inner">
+      <span class="ticker-tag" style="background:#0D9488;"><i class="fa-solid fa-briefcase"></i> B2B WHOLESALE DESK</span>
+      <span class="ticker-text">Travel Agent Tier 1 Portal &bull; Dedicated Wholesale Tour Allotments &bull; 24/7 Priority Partner Dispatch: <strong>+91 9876543210</strong></span>
+    </div>
+  </div>
+
+  <div class="dash-wrapper">
+    <!-- Sidebar -->
+    <aside class="dash-sidebar">
+      <div class="dash-sidebar-brand">
+        <a href="../index.html" title="Return to Stackly Home">
+          <img src="../assets/images/logoStackly.webp" alt="Stackly Logo">
+        </a>
+        <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close Sidebar">&times;</button>
+      </div>
+
+      <div style="padding:14px 20px 4px 20px;">
+        <span class="dash-role-badge">Travel Agent</span>
+      </div>
+
+      <nav class="dash-nav" aria-label="Dashboard Navigation">
+        <div class="dash-nav-header">Travel Agent Portal</div>
+        <a href="dashboard-agent.html" class="dash-nav-item">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Overview</span>
+        </a>
+        <a href="dashboard-agent-tours.html" class="dash-nav-item">
+          <i class="fa-solid fa-box-archive"></i>
+          <span>Wholesale Tours</span>
+        </a>
+        <a href="dashboard-agent-commissions.html" class="dash-nav-item">
+          <i class="fa-solid fa-receipt"></i>
+          <span>Commission Ledger</span>
+        </a>
+        <a href="dashboard-agent-agreement.html" class="dash-nav-item">
+          <i class="fa-solid fa-file-contract"></i>
+          <span>Agent Agreement</span>
+        </a>
+
+        <div class="dash-nav-header" style="margin-top:14px;">Marketing & Support</div>
+        <a href="dashboard-agent-settings.html" class="dash-nav-item">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="dashboard-agent-support.html" class="dash-nav-item active">
+          <i class="fa-solid fa-headset"></i>
+          <span>Agent Desk</span>
+        </a>
+      </nav>
+
+      <div class="dash-user-footer">
+        <div class="dash-user-info">
+          <div class="dash-user-avatar dash-user-initials">TA</div>
+          <div class="dash-user-text">
+            <div class="dash-user-name dash-user-display-name">Partner Lead</div>
+            <div class="dash-user-role-label dash-user-display-role">Travel Agent</div>
+          </div>
+        </div>
+        <button type="button" id="dashSignOutBtn" title="Sign Out" style="background:none; border:none; color:#EF4444; cursor:pointer; font-size:1.15rem; padding:4px;">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-topbar-left">
+          <button type="button" class="dash-sidebar-toggle" id="dashSidebarToggle" aria-label="Toggle Dashboard Menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dash-greeting-box">
+            <h2>Dedicated Wholesale Operations Desk</h2>
+            <p>24/7 dedicated partner dispatch, passenger rerouting, and emergency logistics</p>
+          </div>
+        </div>
+
+        <div class="dash-top-actions">
+          <span class="dash-role-badge">Travel Agent</span>
+          <a href="404.html" class="btn btn-sm btn-primary dash-action-btn">
+            <i class="fa-solid fa-ticket"></i> Open Priority Ticket
+          </a>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <!-- SECTION 1: SUPPORT SLA KPIS -->
+        <div class="kpi-grid">
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon primary"><i class="fa-solid fa-stopwatch"></i></div>
+            <div class="kpi-meta">
+              <h4>Guaranteed SLA</h4>
+              <div class="kpi-value">&lt; 2 Hours</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon secondary"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="kpi-meta">
+              <h4>Wholesale Lead</h4>
+              <div class="kpi-value">Marcus Vance</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon accent"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="kpi-meta">
+              <h4>Priority Hotline</h4>
+              <div class="kpi-value">+91 9876543210</div>
+            </div>
+          </div>
+          <div class="kpi-card" data-aos="fade-up">
+            <div class="kpi-icon info"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <div class="kpi-meta">
+              <h4>Open Inquiries</h4>
+              <div class="kpi-value">1 Active Ticket</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: ACTIVE SUPPORT QUEUE -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <div>
+              <h3 class="dash-card-title">Recent Partner Operations Inquiries</h3>
+              <p style="color:var(--text-muted); font-size:0.88rem; margin:0;">Real-time tracking of passenger itinerary modifications and flight updates</p>
+            </div>
+            <a href="404.html" class="btn btn-sm btn-outline dash-action-btn">View All Closed</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Ticket Ref</th>
+                  <th>Client / Group</th>
+                  <th>Category</th>
+                  <th>Priority</th>
+                  <th>Assigned Agent</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#TKT-2026-891</strong></td>
+                  <td>Vanderbilt Private Party (4 pax)</td>
+                  <td>Glacier Train Seat Upgrade</td>
+                  <td><span class="badge" style="background:#EF4444; color:#fff; font-size:0.75rem; padding:2px 6px; border-radius:4px;">URGENT</span></td>
+                  <td>Marcus Vance</td>
+                  <td><span class="dash-status in-progress">In Review</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">View Details</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#TKT-2026-874</strong></td>
+                  <td>Hiroshi Tanaka Group</td>
+                  <td>High-Altitude Medical Clearance</td>
+                  <td><span class="badge" style="background:#F59E0B; color:#fff; font-size:0.75rem; padding:2px 6px; border-radius:4px;">NORMAL</span></td>
+                  <td>Elena Rostova</td>
+                  <td><span class="dash-status confirmed">Resolved</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Transcript</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#TKT-2026-850</strong></td>
+                  <td>Sarah Jenkins Party</td>
+                  <td>Allotment Date Modification</td>
+                  <td><span class="badge" style="background:#3B82F6; color:#fff; font-size:0.75rem; padding:2px 6px; border-radius:4px;">LOW</span></td>
+                  <td>Operations Desk</td>
+                  <td><span class="dash-status confirmed">Resolved</span></td>
+                  <td><a href="404.html" class="btn btn-sm btn-outline dash-action-btn">Transcript</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 3: EMERGENCY DUTY DESK CHANNELS -->
+        <div class="dash-card" data-aos="fade-up">
+          <div class="dash-card-header">
+            <h3 class="dash-card-title">Direct Emergency Dispatch & Duty of Care Channels</h3>
+          </div>
+          <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <div style="color:var(--primary); font-size:1.3rem; margin-bottom:8px;"><i class="fa-solid fa-phone"></i></div>
+              <h4 style="font-size:0.95rem; margin-bottom:4px;">Direct Phone Line</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Wholesale desk emergency hotline</p>
+              <strong style="color:var(--primary); font-size:1rem;">+91 9876543210</strong>
+            </div>
+
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <div style="color:#10B981; font-size:1.3rem; margin-bottom:8px;"><i class="fa-brands fa-whatsapp"></i></div>
+              <h4 style="font-size:0.95rem; margin-bottom:4px;">Partner WhatsApp Desk</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Instant messaging with dispatch team</p>
+              <strong style="color:#10B981; font-size:1rem;">+91 9876543210</strong>
+            </div>
+
+            <div style="padding:16px; background:#F8FAFC; border-radius:8px; border:1px solid var(--border);">
+              <div style="color:#2563EB; font-size:1.3rem; margin-bottom:8px;"><i class="fa-solid fa-envelope"></i></div>
+              <h4 style="font-size:0.95rem; margin-bottom:4px;">Wholesale Desk Email</h4>
+              <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:6px;">Monitored 24/7 with auto-ticketing</p>
+              <strong style="color:var(--dark); font-size:0.9rem;">ops-agents@stacklyadventures.com</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/animations.js"></script>
+</body>
+</html>

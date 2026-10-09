@@ -23,10 +23,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const currentPath = window.location.pathname.split('/').pop() || '';
   const isAgentPath = currentPath.includes('agent') || currentPath.includes('agency');
-  const isTravellerPath = currentPath.includes('traveler') || currentPath.includes('traveller');
+  const travellerPages = [
+    'dashboard-traveler.html', 'dashboard-traveller.html', 
+    'dashboard-expeditions.html', 'dashboard-itineraries.html', 
+    'dashboard-safety.html', 'dashboard-settings.html', 'dashboard-support.html'
+  ];
+  const isTravellerPath = currentPath.includes('traveler') || currentPath.includes('traveller') || travellerPages.includes(currentPath);
 
-  if (!currentUser) {
-    const isAgentRole = storedRole === 'agent' || storedRole === 'agency' || isAgentPath;
+  // Maintain strict role isolation according to the page being accessed or stored session
+  if (isAgentPath) {
+    currentUser = {
+      username: 'agent_lead',
+      firstName: 'Partner',
+      lastName: 'Lead',
+      role: 'agent',
+      roleLabel: 'Travel Agent',
+      lastLogin: new Date().toISOString()
+    };
+    sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+    sessionStorage.setItem('userRole', 'agent');
+    sessionStorage.setItem('userRoleLabel', 'Travel Agent');
+  } else if (isTravellerPath) {
+    currentUser = {
+      username: 'alex_sterling',
+      firstName: 'Alex',
+      lastName: 'Sterling',
+      role: 'traveler',
+      roleLabel: 'Traveller',
+      lastLogin: new Date().toISOString()
+    };
+    sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+    sessionStorage.setItem('userRole', 'traveler');
+    sessionStorage.setItem('userRoleLabel', 'Traveller');
+  } else if (!currentUser) {
+    const isAgentRole = storedRole === 'agent' || storedRole === 'agency';
     currentUser = {
       username: isAgentRole ? 'agent_lead' : 'alex_sterling',
       firstName: isAgentRole ? 'Partner' : 'Alex',
@@ -35,14 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
       roleLabel: isAgentRole ? 'Travel Agent' : 'Traveller',
       lastLogin: new Date().toISOString()
     };
-  } else if (!storedRole) {
-    if (isAgentPath) {
-      currentUser.role = 'agent';
-      currentUser.roleLabel = 'Travel Agent';
-    } else if (isTravellerPath) {
-      currentUser.role = 'traveler';
-      currentUser.roleLabel = 'Traveller';
-    }
   }
 
   // If on main dashboard.html, cleanly route to the role-specific dashboard
@@ -61,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Ensure sidebar Overview link always navigates to user's independent role dashboard
-  const isAgent = currentUser.role === 'agent' || currentUser.role === 'agency';
+  const isAgent = currentUser.role === 'agent' || currentUser.role === 'agency' || isAgentPath;
   const roleOverviewTarget = isAgent ? 'dashboard-agent.html' : 'dashboard-traveler.html';
   const overviewNavItems = document.querySelectorAll('.dash-nav-item');
   overviewNavItems.forEach(item => {
@@ -138,8 +160,8 @@ function setupDashboardUser(user) {
   else timeGreeting = 'Good evening';
 
   const currentPath = window.location.pathname.split('/').pop() || '';
-  const isAgentPath = currentPath.includes('agent') || currentPath.includes('agency');
-  const isAgent = user.role === 'agent' || user.role === 'agency' || isAgentPath;
+  const isAgent = user.role === 'agent' || user.role === 'agency' || currentPath.includes('agent') || currentPath.includes('agency');
+  const welcomeHeading = document.getElementById('dashGreetingHeading');
   if (welcomeHeading) {
     const rolePrefix = isAgent ? 'Travel Agent' : 'Explorer';
     const displayName = user.firstName || user.username || rolePrefix;
