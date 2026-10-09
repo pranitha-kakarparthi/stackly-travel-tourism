@@ -109,15 +109,17 @@ function initSignIn(form) {
     const users = JSON.parse(localStorage.getItem('users') || '[]');
     let matchedUser = users.find(u => u.email.toLowerCase() === email && u.role === role);
 
+    const nameInfo = getNameFromEmail(email);
+
     if (!matchedUser) {
       // Per specification: "Should be able to login to dashboard with any valid email address and password that passes the form validations."
-      const namePart = email.split('@')[0].replace(/[._-]/g, ' ');
-      const formattedName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
       matchedUser = {
         id: 'USR-' + Date.now(),
         username: email.split('@')[0],
-        firstName: formattedName,
-        lastName: (role === 'agent' || role === 'agency') ? 'Agent' : 'Explorer',
+        firstName: nameInfo.firstName,
+        lastName: nameInfo.lastName,
+        fullName: nameInfo.fullName,
+        initials: nameInfo.initials,
         email: email,
         password: password,
         role: role,
@@ -126,22 +128,34 @@ function initSignIn(form) {
       };
       users.push(matchedUser);
       localStorage.setItem('users', JSON.stringify(users));
+    } else {
+      matchedUser.firstName = nameInfo.firstName;
+      matchedUser.lastName = nameInfo.lastName;
+      matchedUser.fullName = nameInfo.fullName;
+      matchedUser.initials = nameInfo.initials;
+      matchedUser.role = role;
+      matchedUser.roleLabel = getRoleLabel(role);
+      matchedUser.lastLogin = new Date().toISOString();
+      localStorage.setItem('users', JSON.stringify(users));
     }
 
     // Store active session in both localStorage and sessionStorage for entire session consistency
     const sessionUser = {
       id: matchedUser.id,
-      username: matchedUser.username || matchedUser.firstName,
-      firstName: matchedUser.firstName,
-      lastName: matchedUser.lastName,
-      email: matchedUser.email,
-      role: matchedUser.role,
-      roleLabel: matchedUser.roleLabel || getRoleLabel(matchedUser.role),
+      username: email.split('@')[0],
+      firstName: nameInfo.firstName,
+      lastName: nameInfo.lastName,
+      fullName: nameInfo.fullName,
+      initials: nameInfo.initials,
+      email: email,
+      role: role,
+      roleLabel: getRoleLabel(role),
       lastLogin: new Date().toISOString()
     };
     localStorage.setItem('currentUser', JSON.stringify(sessionUser));
     sessionStorage.setItem('currentUser', JSON.stringify(sessionUser));
-    sessionStorage.setItem('userRole', matchedUser.role);
+    sessionStorage.setItem('userEmail', email);
+    sessionStorage.setItem('userRole', role);
     sessionStorage.setItem('userRoleLabel', sessionUser.roleLabel);
 
     if (alertBox) {
@@ -391,3 +405,50 @@ function getRoleDashboard(role) {
   };
   return dashboards[role] || 'dashboard-traveler.html';
 }
+
+function getNameFromEmail(email) {
+  if (!email || typeof email !== 'string') {
+    return { firstName: 'User', lastName: '', fullName: 'User', initials: 'U' };
+  }
+  const cleanEmail = email.trim().toLowerCase();
+  const handle = cleanEmail.split('@')[0].trim();
+  if (!handle) {
+    return { firstName: 'User', lastName: '', fullName: 'User', initials: 'U' };
+  }
+
+  const rawParts = handle.split(/[._\-+]+/).filter(Boolean);
+  const words = [];
+
+  for (const part of rawParts) {
+    if (/^\d+$/.test(part)) {
+      if (words.length === 0) words.push(part);
+      continue;
+    }
+    let cleaned = part.replace(/\d+$/, '');
+    if (!cleaned || cleaned.length < 2) cleaned = part;
+    const formatted = cleaned.charAt(0).toUpperCase() + cleaned.slice(1).toLowerCase();
+    if (formatted) words.push(formatted);
+  }
+
+  if (words.length === 0) {
+    const fallback = handle.charAt(0).toUpperCase() + handle.slice(1).toLowerCase();
+    words.push(fallback);
+  }
+
+  const firstName = words[0];
+  const lastName = words.slice(1).join(' ');
+  const fullName = lastName ? `${firstName} ${lastName}` : firstName;
+
+  let initials = '';
+  if (lastName) {
+    const lastWord = words[words.length - 1];
+    initials = (firstName.charAt(0) + lastWord.charAt(0)).toUpperCase();
+  } else if (firstName.length >= 2) {
+    initials = firstName.slice(0, 2).toUpperCase();
+  } else {
+    initials = firstName.charAt(0).toUpperCase();
+  }
+
+  return { firstName, lastName, fullName, initials };
+}
+

@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Ensure role consistency from sessionStorage
-  const storedRole = sessionStorage.getItem('userRole');
-  if (currentUser && storedRole && currentUser.role !== storedRole) {
-    currentUser.role = storedRole;
-    currentUser.roleLabel = sessionStorage.getItem('userRoleLabel') || currentUser.roleLabel;
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramEmail = urlParams.get('email');
+  if (paramEmail) {
+    sessionStorage.setItem('userEmail', paramEmail);
   }
+
+  const storedRole = sessionStorage.getItem('userRole');
+  const storedEmail = paramEmail || sessionStorage.getItem('userEmail') || (currentUser && currentUser.email);
 
   const currentPath = window.location.pathname.split('/').pop() || '';
   const isAgentPath = currentPath.includes('agent') || currentPath.includes('agency');
@@ -30,42 +32,44 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
   const isTravellerPath = currentPath.includes('traveler') || currentPath.includes('traveller') || travellerPages.includes(currentPath);
 
-  // Maintain strict role isolation according to the page being accessed or stored session
+  // Determine effective role maintaining strict isolation
+  let role = 'traveler';
   if (isAgentPath) {
-    currentUser = {
-      username: 'agent_lead',
-      firstName: 'Partner',
-      lastName: 'Lead',
-      role: 'agent',
-      roleLabel: 'Travel Agent',
-      lastLogin: new Date().toISOString()
-    };
-    sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
-    sessionStorage.setItem('userRole', 'agent');
-    sessionStorage.setItem('userRoleLabel', 'Travel Agent');
+    role = 'agent';
   } else if (isTravellerPath) {
-    currentUser = {
-      username: 'alex_sterling',
-      firstName: 'Alex',
-      lastName: 'Sterling',
-      role: 'traveler',
-      roleLabel: 'Traveller',
-      lastLogin: new Date().toISOString()
-    };
-    sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
-    sessionStorage.setItem('userRole', 'traveler');
-    sessionStorage.setItem('userRoleLabel', 'Traveller');
-  } else if (!currentUser) {
-    const isAgentRole = storedRole === 'agent' || storedRole === 'agency';
-    currentUser = {
-      username: isAgentRole ? 'agent_lead' : 'alex_sterling',
-      firstName: isAgentRole ? 'Partner' : 'Alex',
-      lastName: isAgentRole ? 'Lead' : 'Sterling',
-      role: isAgentRole ? 'agent' : 'traveler',
-      roleLabel: isAgentRole ? 'Travel Agent' : 'Traveller',
-      lastLogin: new Date().toISOString()
-    };
+    role = 'traveler';
+  } else if (storedRole) {
+    role = storedRole;
+  } else if (currentUser && currentUser.role) {
+    role = currentUser.role;
   }
+
+  // Determine effective email from login session or fallback default
+  let email = storedEmail || (currentUser && currentUser.email);
+  if (!email) {
+    email = (role === 'agent' || role === 'agency') ? 'agent.lead@stacklyadventures.com' : 'alex.sterling@stacklyadventures.com';
+  }
+
+  // Derive User name strictly according to the login email ID
+  const nameInfo = getNameFromEmail(email);
+
+  currentUser = {
+    ...(currentUser || {}),
+    email: email,
+    username: email.split('@')[0],
+    firstName: nameInfo.firstName,
+    lastName: nameInfo.lastName,
+    fullName: nameInfo.fullName,
+    initials: nameInfo.initials,
+    role: (role === 'agent' || role === 'agency') ? 'agent' : 'traveler',
+    roleLabel: (role === 'agent' || role === 'agency') ? 'Travel Agent' : 'Traveller',
+    lastLogin: (currentUser && currentUser.lastLogin) ? currentUser.lastLogin : new Date().toISOString()
+  };
+
+  sessionStorage.setItem('currentUser', JSON.stringify(currentUser));
+  sessionStorage.setItem('userEmail', email);
+  sessionStorage.setItem('userRole', currentUser.role);
+  sessionStorage.setItem('userRoleLabel', currentUser.roleLabel);
 
   // If on main dashboard.html, cleanly route to the role-specific dashboard
   if (currentPath === 'dashboard.html' || currentPath === 'dashboard') {
@@ -163,16 +167,14 @@ function setupDashboardUser(user) {
   const isAgent = user.role === 'agent' || user.role === 'agency' || currentPath.includes('agent') || currentPath.includes('agency');
   const welcomeHeading = document.getElementById('dashGreetingHeading');
   if (welcomeHeading) {
-    const rolePrefix = isAgent ? 'Travel Agent' : 'Explorer';
-    const displayName = user.firstName || user.username || rolePrefix;
+    const displayName = user.fullName || user.firstName || (isAgent ? 'Travel Agent' : 'Traveller');
     welcomeHeading.textContent = `${timeGreeting}, ${displayName}!`;
   }
 
-  // Display user name
+  // Display User Name in sidebar profile & cards
   const userNameElements = document.querySelectorAll('.dash-user-display-name');
   userNameElements.forEach(el => {
-    const fullName = `${user.firstName || ''} ${user.lastName || ''}`.trim();
-    el.textContent = fullName || user.username || (isAgent ? 'Travel Agent' : 'Explorer');
+    el.textContent = user.fullName || `${user.firstName || ''} ${user.lastName || ''}`.trim() || (isAgent ? 'Travel Agent' : 'Traveller');
   });
 
   // Display role label
@@ -189,20 +191,75 @@ function setupDashboardUser(user) {
     }
   });
 
-  // Display user avatar initials
+  // Display user avatar initials computed from login email name
   const userAvatarElements = document.querySelectorAll('.dash-user-initials');
-  const defaultFirst = isAgent ? 'T' : 'S';
-  const defaultLast = isAgent ? 'A' : 'T';
-  const fInitial = (user.firstName || user.username || defaultFirst).charAt(0).toUpperCase();
-  const lInitial = (user.lastName || defaultLast).charAt(0).toUpperCase();
   userAvatarElements.forEach(el => {
-    el.textContent = `${fInitial}${lInitial}`;
+    el.textContent = user.initials || (isAgent ? 'TA' : 'TR');
   });
 
-  // Display login timestamp
+  // Display login timestamp with user email
   const loginTimeElement = document.getElementById('dashLoginTimestamp');
   if (loginTimeElement) {
     const loginDate = user.lastLogin ? new Date(user.lastLogin) : new Date();
-    loginTimeElement.textContent = `Logged in: ${loginDate.toLocaleDateString()} at ${loginDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+    const roleDesc = isAgent ? 'Authorized Travel Agent' : 'Expedition Member';
+    const emailInfo = user.email ? ` &bull; ${user.email}` : '';
+    loginTimeElement.innerHTML = `${roleDesc} &bull; Logged in: ${loginDate.toLocaleDateString()} at ${loginDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}${emailInfo}`;
   }
+
+  // Sync profile fields on Settings pages if present
+  const profileNameInputs = document.querySelectorAll('.form-control[value="Alexander Sterling"], input[name="fullName"], #settingsFullName');
+  profileNameInputs.forEach(input => {
+    if (user.fullName) input.value = user.fullName;
+  });
+  const profileEmailInputs = document.querySelectorAll('.form-control[value="alexander.sterling@example.com"], .form-control[value="agent.partner@apex-travel.com"], input[name="email"], #settingsEmail');
+  profileEmailInputs.forEach(input => {
+    if (user.email) input.value = user.email;
+  });
 }
+
+function getNameFromEmail(email) {
+  if (!email || typeof email !== 'string') {
+    return { firstName: 'User', lastName: '', fullName: 'User', initials: 'U' };
+  }
+  const cleanEmail = email.trim().toLowerCase();
+  const handle = cleanEmail.split('@')[0].trim();
+  if (!handle) {
+    return { firstName: 'User', lastName: '', fullName: 'User', initials: 'U' };
+  }
+
+  const rawParts = handle.split(/[._\-+]+/).filter(Boolean);
+  const words = [];
+
+  for (const part of rawParts) {
+    if (/^\d+$/.test(part)) {
+      if (words.length === 0) words.push(part);
+      continue;
+    }
+    let cleaned = part.replace(/\d+$/, '');
+    if (!cleaned || cleaned.length < 2) cleaned = part;
+    const formatted = cleaned.charAt(0).toUpperCase() + cleaned.slice(1).toLowerCase();
+    if (formatted) words.push(formatted);
+  }
+
+  if (words.length === 0) {
+    const fallback = handle.charAt(0).toUpperCase() + handle.slice(1).toLowerCase();
+    words.push(fallback);
+  }
+
+  const firstName = words[0];
+  const lastName = words.slice(1).join(' ');
+  const fullName = lastName ? `${firstName} ${lastName}` : firstName;
+
+  let initials = '';
+  if (lastName) {
+    const lastWord = words[words.length - 1];
+    initials = (firstName.charAt(0) + lastWord.charAt(0)).toUpperCase();
+  } else if (firstName.length >= 2) {
+    initials = firstName.slice(0, 2).toUpperCase();
+  } else {
+    initials = firstName.charAt(0).toUpperCase();
+  }
+
+  return { firstName, lastName, fullName, initials };
+}
+
