@@ -804,6 +804,7 @@ button, input, select, textarea {
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 0;
+  opacity: 1;
 }
 
 .hero-overlay {
@@ -811,9 +812,9 @@ button, input, select, textarea {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(10, 26, 18, 0.94) 0%,
-    rgba(10, 26, 18, 0.82) 50%,
-    rgba(10, 26, 18, 0.5) 100%
+    rgba(10, 26, 18, 0.76) 0%,
+    rgba(10, 26, 18, 0.48) 52%,
+    rgba(10, 26, 18, 0.18) 100%
   );
   z-index: 1;
 }
@@ -851,7 +852,7 @@ button, input, select, textarea {
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95);
 }
 
 .hero-title span {
@@ -864,7 +865,7 @@ button, input, select, textarea {
   line-height: 1.65;
   margin-bottom: 38px;
   font-weight: 400;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.80), 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .hero-actions {
@@ -895,6 +896,7 @@ button, input, select, textarea {
   background-position: center center;
   background-repeat: no-repeat;
   z-index: 0;
+  opacity: 1;
 }
 
 .page-hero-overlay {
@@ -902,9 +904,9 @@ button, input, select, textarea {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(10, 26, 18, 0.72) 0%,
-    rgba(10, 26, 18, 0.86) 55%,
-    rgba(10, 26, 18, 0.95) 100%
+    rgba(10, 26, 18, 0.40) 0%,
+    rgba(10, 26, 18, 0.52) 55%,
+    rgba(10, 26, 18, 0.70) 100%
   );
   z-index: 1;
 }
@@ -940,7 +942,7 @@ button, input, select, textarea {
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 18px;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95);
 }
 
 .page-hero-title span {
@@ -953,7 +955,7 @@ button, input, select, textarea {
   max-width: 740px;
   line-height: 1.65;
   margin: 0 auto 24px auto;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.80), 0 1px 3px rgba(0, 0, 0, 0.9);
 }
 
 .breadcrumbs {
@@ -1840,6 +1842,7 @@ select.form-control {
   background-repeat: no-repeat;
   z-index: 0;
   pointer-events: none;
+  opacity: 1;
 }
 
 .auth-hero-overlay {
@@ -1847,9 +1850,9 @@ select.form-control {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(10, 26, 18, 0.78) 0%,
-    rgba(10, 26, 18, 0.88) 55%,
-    rgba(10, 26, 18, 0.96) 100%
+    rgba(10, 26, 18, 0.48) 0%,
+    rgba(10, 26, 18, 0.58) 55%,
+    rgba(10, 26, 18, 0.74) 100%
   );
   z-index: 1;
   pointer-events: none;
